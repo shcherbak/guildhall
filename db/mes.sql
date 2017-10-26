@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.5
 -- Dumped by pg_dump version 9.6.5
 
--- Started on 2017-10-24 02:33:11 EEST
+-- Started on 2017-10-27 01:39:38 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,6 +37,16 @@ CREATE SCHEMA binding;
 ALTER SCHEMA binding OWNER TO postgres;
 
 --
+-- TOC entry 37 (class 2615 OID 33671)
+-- Name: changelog; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA changelog;
+
+
+ALTER SCHEMA changelog OWNER TO postgres;
+
+--
 -- TOC entry 12 (class 2615 OID 30093)
 -- Name: common; Type: SCHEMA; Schema: -; Owner: postgres
 --
@@ -47,7 +57,7 @@ CREATE SCHEMA common;
 ALTER SCHEMA common OWNER TO postgres;
 
 --
--- TOC entry 4060 (class 0 OID 0)
+-- TOC entry 4078 (class 0 OID 0)
 -- Dependencies: 12
 -- Name: SCHEMA common; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -66,7 +76,7 @@ CREATE SCHEMA component;
 ALTER SCHEMA component OWNER TO postgres;
 
 --
--- TOC entry 4061 (class 0 OID 0)
+-- TOC entry 4079 (class 0 OID 0)
 -- Dependencies: 13
 -- Name: SCHEMA component; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -85,7 +95,7 @@ CREATE SCHEMA ebom;
 ALTER SCHEMA ebom OWNER TO postgres;
 
 --
--- TOC entry 4062 (class 0 OID 0)
+-- TOC entry 4080 (class 0 OID 0)
 -- Dependencies: 14
 -- Name: SCHEMA ebom; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -124,7 +134,7 @@ CREATE SCHEMA inspection;
 ALTER SCHEMA inspection OWNER TO postgres;
 
 --
--- TOC entry 4063 (class 0 OID 0)
+-- TOC entry 4081 (class 0 OID 0)
 -- Dependencies: 15
 -- Name: SCHEMA inspection; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -143,7 +153,7 @@ CREATE SCHEMA inventory;
 ALTER SCHEMA inventory OWNER TO postgres;
 
 --
--- TOC entry 4064 (class 0 OID 0)
+-- TOC entry 4082 (class 0 OID 0)
 -- Dependencies: 16
 -- Name: SCHEMA inventory; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -152,7 +162,7 @@ COMMENT ON SCHEMA inventory IS 'inventory items definition';
 
 
 --
--- TOC entry 37 (class 2615 OID 31176)
+-- TOC entry 36 (class 2615 OID 31176)
 -- Name: maintenance; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -172,7 +182,7 @@ CREATE SCHEMA material;
 ALTER SCHEMA material OWNER TO postgres;
 
 --
--- TOC entry 4065 (class 0 OID 0)
+-- TOC entry 4083 (class 0 OID 0)
 -- Dependencies: 17
 -- Name: SCHEMA material; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -191,7 +201,7 @@ CREATE SCHEMA mbom;
 ALTER SCHEMA mbom OWNER TO postgres;
 
 --
--- TOC entry 4066 (class 0 OID 0)
+-- TOC entry 4084 (class 0 OID 0)
 -- Dependencies: 24
 -- Name: SCHEMA mbom; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -210,7 +220,7 @@ CREATE SCHEMA movement;
 ALTER SCHEMA movement OWNER TO postgres;
 
 --
--- TOC entry 4067 (class 0 OID 0)
+-- TOC entry 4085 (class 0 OID 0)
 -- Dependencies: 18
 -- Name: SCHEMA movement; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -229,7 +239,7 @@ CREATE SCHEMA operation;
 ALTER SCHEMA operation OWNER TO postgres;
 
 --
--- TOC entry 4068 (class 0 OID 0)
+-- TOC entry 4086 (class 0 OID 0)
 -- Dependencies: 19
 -- Name: SCHEMA operation; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -278,7 +288,7 @@ CREATE SCHEMA process;
 ALTER SCHEMA process OWNER TO postgres;
 
 --
--- TOC entry 4069 (class 0 OID 0)
+-- TOC entry 4087 (class 0 OID 0)
 -- Dependencies: 20
 -- Name: SCHEMA process; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -297,7 +307,7 @@ CREATE SCHEMA product;
 ALTER SCHEMA product OWNER TO postgres;
 
 --
--- TOC entry 4070 (class 0 OID 0)
+-- TOC entry 4088 (class 0 OID 0)
 -- Dependencies: 21
 -- Name: SCHEMA product; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -316,7 +326,7 @@ CREATE SCHEMA production;
 ALTER SCHEMA production OWNER TO postgres;
 
 --
--- TOC entry 4071 (class 0 OID 0)
+-- TOC entry 4089 (class 0 OID 0)
 -- Dependencies: 22
 -- Name: SCHEMA production; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -365,14 +375,14 @@ CREATE SCHEMA tests;
 ALTER SCHEMA tests OWNER TO postgres;
 
 --
--- TOC entry 36 (class 2615 OID 31090)
--- Name: tool; Type: SCHEMA; Schema: -; Owner: postgres
+-- TOC entry 38 (class 2615 OID 31090)
+-- Name: tooling; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA tool;
+CREATE SCHEMA tooling;
 
 
-ALTER SCHEMA tool OWNER TO postgres;
+ALTER SCHEMA tooling OWNER TO postgres;
 
 --
 -- TOC entry 2 (class 3079 OID 13343)
@@ -383,7 +393,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 4073 (class 0 OID 0)
+-- TOC entry 4091 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -400,7 +410,7 @@ CREATE EXTENSION IF NOT EXISTS adminpack WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 4074 (class 0 OID 0)
+-- TOC entry 4092 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION adminpack; Type: COMMENT; Schema: -; Owner: 
 --
@@ -417,7 +427,7 @@ CREATE EXTENSION IF NOT EXISTS pldbgapi WITH SCHEMA public;
 
 
 --
--- TOC entry 4075 (class 0 OID 0)
+-- TOC entry 4093 (class 0 OID 0)
 -- Dependencies: 5
 -- Name: EXTENSION pldbgapi; Type: COMMENT; Schema: -; Owner: 
 --
@@ -434,7 +444,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql_check WITH SCHEMA public;
 
 
 --
--- TOC entry 4076 (class 0 OID 0)
+-- TOC entry 4094 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: EXTENSION plpgsql_check; Type: COMMENT; Schema: -; Owner: 
 --
@@ -451,7 +461,7 @@ CREATE EXTENSION IF NOT EXISTS plprofiler WITH SCHEMA public;
 
 
 --
--- TOC entry 4077 (class 0 OID 0)
+-- TOC entry 4095 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION plprofiler; Type: COMMENT; Schema: -; Owner: 
 --
@@ -468,7 +478,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 4078 (class 0 OID 0)
+-- TOC entry 4096 (class 0 OID 0)
 -- Dependencies: 6
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
 --
@@ -479,7 +489,7 @@ COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UU
 SET search_path = common, pg_catalog;
 
 --
--- TOC entry 686 (class 1247 OID 30116)
+-- TOC entry 689 (class 1247 OID 30116)
 -- Name: component_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -493,7 +503,7 @@ CREATE TYPE component_kind AS ENUM (
 ALTER TYPE component_kind OWNER TO postgres;
 
 --
--- TOC entry 689 (class 1247 OID 30124)
+-- TOC entry 692 (class 1247 OID 30124)
 -- Name: dependency_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -528,7 +538,7 @@ CREATE TYPE document_fsmt AS ENUM (
 ALTER TYPE document_fsmt OWNER TO postgres;
 
 --
--- TOC entry 692 (class 1247 OID 30146)
+-- TOC entry 695 (class 1247 OID 30146)
 -- Name: inventory_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -548,7 +558,7 @@ CREATE TYPE inventory_kind AS ENUM (
 ALTER TYPE inventory_kind OWNER TO postgres;
 
 --
--- TOC entry 774 (class 1247 OID 30160)
+-- TOC entry 777 (class 1247 OID 30160)
 -- Name: job_order_command_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -567,7 +577,7 @@ CREATE TYPE job_order_command_kind AS ENUM (
 ALTER TYPE job_order_command_kind OWNER TO postgres;
 
 --
--- TOC entry 777 (class 1247 OID 30178)
+-- TOC entry 780 (class 1247 OID 30178)
 -- Name: material_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -582,7 +592,7 @@ CREATE TYPE material_kind AS ENUM (
 ALTER TYPE material_kind OWNER TO postgres;
 
 --
--- TOC entry 780 (class 1247 OID 30184)
+-- TOC entry 783 (class 1247 OID 30184)
 -- Name: material_use_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -595,7 +605,7 @@ CREATE TYPE material_use_kind AS ENUM (
 ALTER TYPE material_use_kind OWNER TO postgres;
 
 --
--- TOC entry 783 (class 1247 OID 30190)
+-- TOC entry 786 (class 1247 OID 30190)
 -- Name: operations_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -612,7 +622,7 @@ CREATE TYPE operations_kind AS ENUM (
 ALTER TYPE operations_kind OWNER TO postgres;
 
 --
--- TOC entry 786 (class 1247 OID 30204)
+-- TOC entry 789 (class 1247 OID 30204)
 -- Name: process_segment_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -628,7 +638,7 @@ CREATE TYPE process_segment_kind AS ENUM (
 ALTER TYPE process_segment_kind OWNER TO postgres;
 
 --
--- TOC entry 789 (class 1247 OID 30216)
+-- TOC entry 792 (class 1247 OID 30216)
 -- Name: response_state_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -645,7 +655,7 @@ CREATE TYPE response_state_kind AS ENUM (
 ALTER TYPE response_state_kind OWNER TO postgres;
 
 --
--- TOC entry 404 (class 1255 OID 32480)
+-- TOC entry 407 (class 1255 OID 32480)
 -- Name: disallow_editing_of_committed_document_head(); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -677,7 +687,7 @@ $$;
 ALTER FUNCTION common.disallow_editing_of_committed_document_head() OWNER TO postgres;
 
 --
--- TOC entry 405 (class 1255 OID 32481)
+-- TOC entry 408 (class 1255 OID 32481)
 -- Name: set_prev_doc_fsmt(); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -700,7 +710,7 @@ ALTER FUNCTION common.set_prev_doc_fsmt() OWNER TO postgres;
 SET search_path = pgunit, pg_catalog;
 
 --
--- TOC entry 347 (class 1255 OID 32229)
+-- TOC entry 350 (class 1255 OID 32229)
 -- Name: assert_array_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -724,7 +734,7 @@ $$;
 ALTER FUNCTION pgunit.assert_array_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 348 (class 1255 OID 32230)
+-- TOC entry 351 (class 1255 OID 32230)
 -- Name: assert_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -745,7 +755,7 @@ $$;
 ALTER FUNCTION pgunit.assert_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 349 (class 1255 OID 32231)
+-- TOC entry 352 (class 1255 OID 32231)
 -- Name: assert_false(boolean, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -763,7 +773,7 @@ $$;
 ALTER FUNCTION pgunit.assert_false(_value boolean, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 350 (class 1255 OID 32232)
+-- TOC entry 353 (class 1255 OID 32232)
 -- Name: assert_not_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -784,7 +794,7 @@ $$;
 ALTER FUNCTION pgunit.assert_not_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 351 (class 1255 OID 32233)
+-- TOC entry 354 (class 1255 OID 32233)
 -- Name: assert_not_null(anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -802,7 +812,7 @@ $$;
 ALTER FUNCTION pgunit.assert_not_null(_value anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 352 (class 1255 OID 32234)
+-- TOC entry 355 (class 1255 OID 32234)
 -- Name: assert_null(anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -820,7 +830,7 @@ $$;
 ALTER FUNCTION pgunit.assert_null(_value anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 353 (class 1255 OID 32235)
+-- TOC entry 356 (class 1255 OID 32235)
 -- Name: assert_true(boolean, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -838,7 +848,7 @@ $$;
 ALTER FUNCTION pgunit.assert_true(_value boolean, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 354 (class 1255 OID 32236)
+-- TOC entry 357 (class 1255 OID 32236)
 -- Name: fail(character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -854,7 +864,7 @@ $$;
 ALTER FUNCTION pgunit.fail(_message character varying) OWNER TO postgres;
 
 --
--- TOC entry 355 (class 1255 OID 32237)
+-- TOC entry 358 (class 1255 OID 32237)
 -- Name: run_test(character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -874,7 +884,7 @@ $$;
 ALTER FUNCTION pgunit.run_test(_sp character varying) OWNER TO postgres;
 
 --
--- TOC entry 356 (class 1255 OID 32238)
+-- TOC entry 359 (class 1255 OID 32238)
 -- Name: test_assert_array_equals(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -998,7 +1008,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_array_equals() OWNER TO postgres;
 
 --
--- TOC entry 357 (class 1255 OID 32239)
+-- TOC entry 360 (class 1255 OID 32239)
 -- Name: test_assert_equals(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1097,7 +1107,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_equals() OWNER TO postgres;
 
 --
--- TOC entry 358 (class 1255 OID 32240)
+-- TOC entry 361 (class 1255 OID 32240)
 -- Name: test_assert_false(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1139,7 +1149,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_false() OWNER TO postgres;
 
 --
--- TOC entry 359 (class 1255 OID 32241)
+-- TOC entry 362 (class 1255 OID 32241)
 -- Name: test_assert_not_null(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1228,7 +1238,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_not_null() OWNER TO postgres;
 
 --
--- TOC entry 360 (class 1255 OID 32242)
+-- TOC entry 363 (class 1255 OID 32242)
 -- Name: test_assert_null(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1318,7 +1328,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_null() OWNER TO postgres;
 
 --
--- TOC entry 361 (class 1255 OID 32243)
+-- TOC entry 364 (class 1255 OID 32243)
 -- Name: test_assert_true(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1358,7 +1368,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_true() OWNER TO postgres;
 
 --
--- TOC entry 362 (class 1255 OID 32244)
+-- TOC entry 365 (class 1255 OID 32244)
 -- Name: test_fail(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1387,7 +1397,7 @@ ALTER FUNCTION pgunit.test_fail() OWNER TO postgres;
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 332 (class 1255 OID 30229)
+-- TOC entry 335 (class 1255 OID 30229)
 -- Name: child_segment_ref_trigger(); Type: FUNCTION; Schema: process; Owner: postgres
 --
 
@@ -1411,7 +1421,7 @@ ALTER FUNCTION process.child_segment_ref_trigger() OWNER TO postgres;
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 333 (class 1255 OID 30230)
+-- TOC entry 336 (class 1255 OID 30230)
 -- Name: child_segment_ref_trigger(); Type: FUNCTION; Schema: production; Owner: postgres
 --
 
@@ -1435,7 +1445,7 @@ ALTER FUNCTION production.child_segment_ref_trigger() OWNER TO postgres;
 SET search_path = tests, pg_catalog;
 
 --
--- TOC entry 346 (class 1255 OID 31201)
+-- TOC entry 349 (class 1255 OID 31201)
 -- Name: _reset_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1540,7 +1550,7 @@ $$;
 ALTER FUNCTION tests._reset_data() OWNER TO postgres;
 
 --
--- TOC entry 403 (class 1255 OID 32431)
+-- TOC entry 406 (class 1255 OID 32431)
 -- Name: _run_all(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1593,7 +1603,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 215 (class 1259 OID 30231)
+-- TOC entry 216 (class 1259 OID 30231)
 -- Name: information; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -1609,8 +1619,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4079 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 4097 (class 0 OID 0)
+-- Dependencies: 216
 -- Name: TABLE information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -1618,7 +1628,7 @@ COMMENT ON TABLE information IS 'ebom component list';
 
 
 --
--- TOC entry 216 (class 1259 OID 30239)
+-- TOC entry 217 (class 1259 OID 30239)
 -- Name: assembly; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -1631,8 +1641,8 @@ INHERITS (information);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 4080 (class 0 OID 0)
--- Dependencies: 216
+-- TOC entry 4098 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: TABLE assembly; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -1640,7 +1650,7 @@ COMMENT ON TABLE assembly IS 'ebom assembly component';
 
 
 --
--- TOC entry 217 (class 1259 OID 30248)
+-- TOC entry 218 (class 1259 OID 30248)
 -- Name: buyable; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -1654,8 +1664,8 @@ INHERITS (information);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 4081 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 4099 (class 0 OID 0)
+-- Dependencies: 218
 -- Name: TABLE buyable; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -1663,7 +1673,7 @@ COMMENT ON TABLE buyable IS 'ebom buyable component';
 
 
 --
--- TOC entry 218 (class 1259 OID 30258)
+-- TOC entry 219 (class 1259 OID 30258)
 -- Name: part; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -1676,8 +1686,8 @@ INHERITS (information);
 ALTER TABLE part OWNER TO postgres;
 
 --
--- TOC entry 4082 (class 0 OID 0)
--- Dependencies: 218
+-- TOC entry 4100 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: TABLE part; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -1687,7 +1697,7 @@ COMMENT ON TABLE part IS 'ebom part component';
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 219 (class 1259 OID 30267)
+-- TOC entry 220 (class 1259 OID 30267)
 -- Name: component; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1703,7 +1713,7 @@ CREATE TABLE component (
 ALTER TABLE component OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 30273)
+-- TOC entry 221 (class 1259 OID 30273)
 -- Name: assembly; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1716,7 +1726,7 @@ INHERITS (component);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 30279)
+-- TOC entry 222 (class 1259 OID 30279)
 -- Name: buyable; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1729,7 +1739,7 @@ INHERITS (component);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 222 (class 1259 OID 30285)
+-- TOC entry 223 (class 1259 OID 30285)
 -- Name: definition; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1748,7 +1758,7 @@ CREATE TABLE definition (
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 30291)
+-- TOC entry 224 (class 1259 OID 30291)
 -- Name: definition_id_seq; Type: SEQUENCE; Schema: ebom; Owner: postgres
 --
 
@@ -1763,8 +1773,8 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4083 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 4101 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
 
@@ -1772,7 +1782,7 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 
 --
--- TOC entry 319 (class 1259 OID 33629)
+-- TOC entry 320 (class 1259 OID 33629)
 -- Name: information; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1788,7 +1798,7 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 318 (class 1259 OID 33627)
+-- TOC entry 319 (class 1259 OID 33627)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: ebom; Owner: postgres
 --
 
@@ -1803,8 +1813,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4084 (class 0 OID 0)
--- Dependencies: 318
+-- TOC entry 4102 (class 0 OID 0)
+-- Dependencies: 319
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
 
@@ -1812,7 +1822,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 224 (class 1259 OID 30293)
+-- TOC entry 225 (class 1259 OID 30293)
 -- Name: part; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1827,7 +1837,7 @@ ALTER TABLE part OWNER TO postgres;
 SET search_path = equipment, pg_catalog;
 
 --
--- TOC entry 272 (class 1259 OID 30978)
+-- TOC entry 273 (class 1259 OID 30978)
 -- Name: information; Type: TABLE; Schema: equipment; Owner: postgres
 --
 
@@ -1843,8 +1853,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4085 (class 0 OID 0)
--- Dependencies: 272
+-- TOC entry 4103 (class 0 OID 0)
+-- Dependencies: 273
 -- Name: TABLE information; Type: COMMENT; Schema: equipment; Owner: postgres
 --
 
@@ -1852,7 +1862,7 @@ COMMENT ON TABLE information IS 'equipment information';
 
 
 --
--- TOC entry 271 (class 1259 OID 30976)
+-- TOC entry 272 (class 1259 OID 30976)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: equipment; Owner: postgres
 --
 
@@ -1867,8 +1877,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4086 (class 0 OID 0)
--- Dependencies: 271
+-- TOC entry 4104 (class 0 OID 0)
+-- Dependencies: 272
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: equipment; Owner: postgres
 --
 
@@ -1878,7 +1888,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = goal, pg_catalog;
 
 --
--- TOC entry 304 (class 1259 OID 32302)
+-- TOC entry 305 (class 1259 OID 32302)
 -- Name: information; Type: TABLE; Schema: goal; Owner: postgres
 --
 
@@ -1894,8 +1904,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4087 (class 0 OID 0)
--- Dependencies: 304
+-- TOC entry 4105 (class 0 OID 0)
+-- Dependencies: 305
 -- Name: TABLE information; Type: COMMENT; Schema: goal; Owner: postgres
 --
 
@@ -1903,7 +1913,7 @@ COMMENT ON TABLE information IS 'goal information';
 
 
 --
--- TOC entry 303 (class 1259 OID 32300)
+-- TOC entry 304 (class 1259 OID 32300)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: goal; Owner: postgres
 --
 
@@ -1918,8 +1928,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4088 (class 0 OID 0)
--- Dependencies: 303
+-- TOC entry 4106 (class 0 OID 0)
+-- Dependencies: 304
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: goal; Owner: postgres
 --
 
@@ -1929,7 +1939,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 225 (class 1259 OID 30299)
+-- TOC entry 226 (class 1259 OID 30299)
 -- Name: equipment; Type: TABLE; Schema: process; Owner: postgres
 --
 
@@ -1947,7 +1957,7 @@ ALTER TABLE equipment OWNER TO postgres;
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 226 (class 1259 OID 30305)
+-- TOC entry 227 (class 1259 OID 30305)
 -- Name: equipment; Type: TABLE; Schema: inspection; Owner: postgres
 --
 
@@ -1961,7 +1971,7 @@ ALTER TABLE equipment OWNER TO postgres;
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 227 (class 1259 OID 30311)
+-- TOC entry 228 (class 1259 OID 30311)
 -- Name: personnel; Type: TABLE; Schema: process; Owner: postgres
 --
 
@@ -1979,7 +1989,7 @@ ALTER TABLE personnel OWNER TO postgres;
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 228 (class 1259 OID 30317)
+-- TOC entry 229 (class 1259 OID 30317)
 -- Name: personnel; Type: TABLE; Schema: inspection; Owner: postgres
 --
 
@@ -1993,7 +2003,7 @@ ALTER TABLE personnel OWNER TO postgres;
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 229 (class 1259 OID 30323)
+-- TOC entry 230 (class 1259 OID 30323)
 -- Name: segment; Type: TABLE; Schema: process; Owner: postgres
 --
 
@@ -2011,8 +2021,8 @@ CREATE TABLE segment (
 ALTER TABLE segment OWNER TO postgres;
 
 --
--- TOC entry 4089 (class 0 OID 0)
--- Dependencies: 229
+-- TOC entry 4107 (class 0 OID 0)
+-- Dependencies: 230
 -- Name: TABLE segment; Type: COMMENT; Schema: process; Owner: postgres
 --
 
@@ -2022,7 +2032,7 @@ COMMENT ON TABLE segment IS 'segments to specify process';
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 230 (class 1259 OID 30329)
+-- TOC entry 231 (class 1259 OID 30329)
 -- Name: segment; Type: TABLE; Schema: inspection; Owner: postgres
 --
 
@@ -2037,7 +2047,7 @@ ALTER TABLE segment OWNER TO postgres;
 SET search_path = inventory, pg_catalog;
 
 --
--- TOC entry 231 (class 1259 OID 30336)
+-- TOC entry 232 (class 1259 OID 30336)
 -- Name: information; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2052,8 +2062,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4090 (class 0 OID 0)
--- Dependencies: 231
+-- TOC entry 4108 (class 0 OID 0)
+-- Dependencies: 232
 -- Name: TABLE information; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2061,7 +2071,7 @@ COMMENT ON TABLE information IS 'inventory item list';
 
 
 --
--- TOC entry 269 (class 1259 OID 30934)
+-- TOC entry 270 (class 1259 OID 30934)
 -- Name: assembly; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2073,8 +2083,8 @@ INHERITS (information);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 4091 (class 0 OID 0)
--- Dependencies: 269
+-- TOC entry 4109 (class 0 OID 0)
+-- Dependencies: 270
 -- Name: TABLE assembly; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2082,7 +2092,7 @@ COMMENT ON TABLE assembly IS 'ebom assembly component';
 
 
 --
--- TOC entry 232 (class 1259 OID 30343)
+-- TOC entry 233 (class 1259 OID 30343)
 -- Name: buyable; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2094,8 +2104,8 @@ INHERITS (information);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 4092 (class 0 OID 0)
--- Dependencies: 232
+-- TOC entry 4110 (class 0 OID 0)
+-- Dependencies: 233
 -- Name: TABLE buyable; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2103,7 +2113,7 @@ COMMENT ON TABLE buyable IS 'ebom buyable component';
 
 
 --
--- TOC entry 233 (class 1259 OID 30357)
+-- TOC entry 234 (class 1259 OID 30357)
 -- Name: consumable; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2115,8 +2125,8 @@ INHERITS (information);
 ALTER TABLE consumable OWNER TO postgres;
 
 --
--- TOC entry 4093 (class 0 OID 0)
--- Dependencies: 233
+-- TOC entry 4111 (class 0 OID 0)
+-- Dependencies: 234
 -- Name: TABLE consumable; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2124,7 +2134,7 @@ COMMENT ON TABLE consumable IS 'mbom consumable component';
 
 
 --
--- TOC entry 234 (class 1259 OID 30364)
+-- TOC entry 235 (class 1259 OID 30364)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: inventory; Owner: postgres
 --
 
@@ -2139,8 +2149,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4094 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 4112 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: inventory; Owner: postgres
 --
 
@@ -2148,7 +2158,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 270 (class 1259 OID 30944)
+-- TOC entry 271 (class 1259 OID 30944)
 -- Name: part; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2160,8 +2170,8 @@ INHERITS (information);
 ALTER TABLE part OWNER TO postgres;
 
 --
--- TOC entry 4095 (class 0 OID 0)
--- Dependencies: 270
+-- TOC entry 4113 (class 0 OID 0)
+-- Dependencies: 271
 -- Name: TABLE part; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2169,7 +2179,7 @@ COMMENT ON TABLE part IS 'ebom part component';
 
 
 --
--- TOC entry 268 (class 1259 OID 30924)
+-- TOC entry 269 (class 1259 OID 30924)
 -- Name: primal; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2181,8 +2191,8 @@ INHERITS (information);
 ALTER TABLE primal OWNER TO postgres;
 
 --
--- TOC entry 4096 (class 0 OID 0)
--- Dependencies: 268
+-- TOC entry 4114 (class 0 OID 0)
+-- Dependencies: 269
 -- Name: TABLE primal; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2190,7 +2200,7 @@ COMMENT ON TABLE primal IS 'mbom primal material component';
 
 
 --
--- TOC entry 235 (class 1259 OID 30366)
+-- TOC entry 236 (class 1259 OID 30366)
 -- Name: producible; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2202,8 +2212,8 @@ INHERITS (information);
 ALTER TABLE producible OWNER TO postgres;
 
 --
--- TOC entry 4097 (class 0 OID 0)
--- Dependencies: 235
+-- TOC entry 4115 (class 0 OID 0)
+-- Dependencies: 236
 -- Name: TABLE producible; Type: COMMENT; Schema: inventory; Owner: postgres
 --
 
@@ -2211,7 +2221,7 @@ COMMENT ON TABLE producible IS 'mbom producible component';
 
 
 --
--- TOC entry 236 (class 1259 OID 30373)
+-- TOC entry 237 (class 1259 OID 30373)
 -- Name: salable; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2223,7 +2233,7 @@ INHERITS (information);
 ALTER TABLE salable OWNER TO postgres;
 
 --
--- TOC entry 237 (class 1259 OID 30380)
+-- TOC entry 238 (class 1259 OID 30380)
 -- Name: storable; Type: TABLE; Schema: inventory; Owner: postgres
 --
 
@@ -2237,7 +2247,7 @@ ALTER TABLE storable OWNER TO postgres;
 SET search_path = maintenance, pg_catalog;
 
 --
--- TOC entry 292 (class 1259 OID 31195)
+-- TOC entry 293 (class 1259 OID 31195)
 -- Name: demand; Type: TABLE; Schema: maintenance; Owner: postgres
 --
 
@@ -2249,8 +2259,8 @@ CREATE TABLE demand (
 ALTER TABLE demand OWNER TO postgres;
 
 --
--- TOC entry 4098 (class 0 OID 0)
--- Dependencies: 292
+-- TOC entry 4116 (class 0 OID 0)
+-- Dependencies: 293
 -- Name: TABLE demand; Type: COMMENT; Schema: maintenance; Owner: postgres
 --
 
@@ -2258,7 +2268,7 @@ COMMENT ON TABLE demand IS 'aka order';
 
 
 --
--- TOC entry 291 (class 1259 OID 31193)
+-- TOC entry 292 (class 1259 OID 31193)
 -- Name: demand_id_seq; Type: SEQUENCE; Schema: maintenance; Owner: postgres
 --
 
@@ -2273,8 +2283,8 @@ CREATE SEQUENCE demand_id_seq
 ALTER TABLE demand_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4099 (class 0 OID 0)
--- Dependencies: 291
+-- TOC entry 4117 (class 0 OID 0)
+-- Dependencies: 292
 -- Name: demand_id_seq; Type: SEQUENCE OWNED BY; Schema: maintenance; Owner: postgres
 --
 
@@ -2282,7 +2292,7 @@ ALTER SEQUENCE demand_id_seq OWNED BY demand.id;
 
 
 --
--- TOC entry 288 (class 1259 OID 31179)
+-- TOC entry 289 (class 1259 OID 31179)
 -- Name: request; Type: TABLE; Schema: maintenance; Owner: postgres
 --
 
@@ -2294,7 +2304,7 @@ CREATE TABLE request (
 ALTER TABLE request OWNER TO postgres;
 
 --
--- TOC entry 287 (class 1259 OID 31177)
+-- TOC entry 288 (class 1259 OID 31177)
 -- Name: request_id_seq; Type: SEQUENCE; Schema: maintenance; Owner: postgres
 --
 
@@ -2309,8 +2319,8 @@ CREATE SEQUENCE request_id_seq
 ALTER TABLE request_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4100 (class 0 OID 0)
--- Dependencies: 287
+-- TOC entry 4118 (class 0 OID 0)
+-- Dependencies: 288
 -- Name: request_id_seq; Type: SEQUENCE OWNED BY; Schema: maintenance; Owner: postgres
 --
 
@@ -2318,7 +2328,7 @@ ALTER SEQUENCE request_id_seq OWNED BY request.id;
 
 
 --
--- TOC entry 290 (class 1259 OID 31187)
+-- TOC entry 291 (class 1259 OID 31187)
 -- Name: response; Type: TABLE; Schema: maintenance; Owner: postgres
 --
 
@@ -2330,7 +2340,7 @@ CREATE TABLE response (
 ALTER TABLE response OWNER TO postgres;
 
 --
--- TOC entry 289 (class 1259 OID 31185)
+-- TOC entry 290 (class 1259 OID 31185)
 -- Name: response_id_seq; Type: SEQUENCE; Schema: maintenance; Owner: postgres
 --
 
@@ -2345,8 +2355,8 @@ CREATE SEQUENCE response_id_seq
 ALTER TABLE response_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4101 (class 0 OID 0)
--- Dependencies: 289
+-- TOC entry 4119 (class 0 OID 0)
+-- Dependencies: 290
 -- Name: response_id_seq; Type: SEQUENCE OWNED BY; Schema: maintenance; Owner: postgres
 --
 
@@ -2356,7 +2366,7 @@ ALTER SEQUENCE response_id_seq OWNED BY response.id;
 SET search_path = material, pg_catalog;
 
 --
--- TOC entry 238 (class 1259 OID 30387)
+-- TOC entry 239 (class 1259 OID 30387)
 -- Name: information; Type: TABLE; Schema: material; Owner: postgres
 --
 
@@ -2372,8 +2382,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4102 (class 0 OID 0)
--- Dependencies: 238
+-- TOC entry 4120 (class 0 OID 0)
+-- Dependencies: 239
 -- Name: TABLE information; Type: COMMENT; Schema: material; Owner: postgres
 --
 
@@ -2381,7 +2391,7 @@ COMMENT ON TABLE information IS 'mbom component list';
 
 
 --
--- TOC entry 239 (class 1259 OID 30395)
+-- TOC entry 240 (class 1259 OID 30395)
 -- Name: consumable; Type: TABLE; Schema: material; Owner: postgres
 --
 
@@ -2394,8 +2404,8 @@ INHERITS (information);
 ALTER TABLE consumable OWNER TO postgres;
 
 --
--- TOC entry 4103 (class 0 OID 0)
--- Dependencies: 239
+-- TOC entry 4121 (class 0 OID 0)
+-- Dependencies: 240
 -- Name: TABLE consumable; Type: COMMENT; Schema: material; Owner: postgres
 --
 
@@ -2403,7 +2413,7 @@ COMMENT ON TABLE consumable IS 'mbom consumable component';
 
 
 --
--- TOC entry 262 (class 1259 OID 30797)
+-- TOC entry 263 (class 1259 OID 30797)
 -- Name: primal; Type: TABLE; Schema: material; Owner: postgres
 --
 
@@ -2417,8 +2427,8 @@ INHERITS (information);
 ALTER TABLE primal OWNER TO postgres;
 
 --
--- TOC entry 4104 (class 0 OID 0)
--- Dependencies: 262
+-- TOC entry 4122 (class 0 OID 0)
+-- Dependencies: 263
 -- Name: TABLE primal; Type: COMMENT; Schema: material; Owner: postgres
 --
 
@@ -2426,7 +2436,7 @@ COMMENT ON TABLE primal IS 'mbom primal component';
 
 
 --
--- TOC entry 240 (class 1259 OID 30405)
+-- TOC entry 241 (class 1259 OID 30405)
 -- Name: producible; Type: TABLE; Schema: material; Owner: postgres
 --
 
@@ -2439,8 +2449,8 @@ INHERITS (information);
 ALTER TABLE producible OWNER TO postgres;
 
 --
--- TOC entry 4105 (class 0 OID 0)
--- Dependencies: 240
+-- TOC entry 4123 (class 0 OID 0)
+-- Dependencies: 241
 -- Name: TABLE producible; Type: COMMENT; Schema: material; Owner: postgres
 --
 
@@ -2450,7 +2460,7 @@ COMMENT ON TABLE producible IS 'mbom producible component';
 SET search_path = mbom, pg_catalog;
 
 --
--- TOC entry 265 (class 1259 OID 30829)
+-- TOC entry 266 (class 1259 OID 30829)
 -- Name: material; Type: TABLE; Schema: mbom; Owner: postgres
 --
 
@@ -2467,7 +2477,7 @@ CREATE TABLE material (
 ALTER TABLE material OWNER TO postgres;
 
 --
--- TOC entry 266 (class 1259 OID 30840)
+-- TOC entry 267 (class 1259 OID 30840)
 -- Name: consumable; Type: TABLE; Schema: mbom; Owner: postgres
 --
 
@@ -2480,7 +2490,7 @@ INHERITS (material);
 ALTER TABLE consumable OWNER TO postgres;
 
 --
--- TOC entry 264 (class 1259 OID 30815)
+-- TOC entry 265 (class 1259 OID 30815)
 -- Name: definition; Type: TABLE; Schema: mbom; Owner: postgres
 --
 
@@ -2496,7 +2506,7 @@ CREATE TABLE definition (
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 263 (class 1259 OID 30813)
+-- TOC entry 264 (class 1259 OID 30813)
 -- Name: definition_id_seq; Type: SEQUENCE; Schema: mbom; Owner: postgres
 --
 
@@ -2511,8 +2521,8 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4106 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 4124 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: mbom; Owner: postgres
 --
 
@@ -2520,7 +2530,7 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 
 --
--- TOC entry 321 (class 1259 OID 33651)
+-- TOC entry 322 (class 1259 OID 33651)
 -- Name: information; Type: TABLE; Schema: mbom; Owner: postgres
 --
 
@@ -2536,7 +2546,7 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 320 (class 1259 OID 33649)
+-- TOC entry 321 (class 1259 OID 33649)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: mbom; Owner: postgres
 --
 
@@ -2551,8 +2561,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4107 (class 0 OID 0)
--- Dependencies: 320
+-- TOC entry 4125 (class 0 OID 0)
+-- Dependencies: 321
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: mbom; Owner: postgres
 --
 
@@ -2560,7 +2570,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 267 (class 1259 OID 30900)
+-- TOC entry 268 (class 1259 OID 30900)
 -- Name: primal; Type: TABLE; Schema: mbom; Owner: postgres
 --
 
@@ -2575,7 +2585,7 @@ ALTER TABLE primal OWNER TO postgres;
 SET search_path = movement, pg_catalog;
 
 --
--- TOC entry 241 (class 1259 OID 30415)
+-- TOC entry 242 (class 1259 OID 30415)
 -- Name: equipment; Type: TABLE; Schema: movement; Owner: postgres
 --
 
@@ -2587,7 +2597,7 @@ INHERITS (process.equipment);
 ALTER TABLE equipment OWNER TO postgres;
 
 --
--- TOC entry 242 (class 1259 OID 30421)
+-- TOC entry 243 (class 1259 OID 30421)
 -- Name: personnel; Type: TABLE; Schema: movement; Owner: postgres
 --
 
@@ -2599,7 +2609,7 @@ INHERITS (process.personnel);
 ALTER TABLE personnel OWNER TO postgres;
 
 --
--- TOC entry 243 (class 1259 OID 30427)
+-- TOC entry 244 (class 1259 OID 30427)
 -- Name: segment; Type: TABLE; Schema: movement; Owner: postgres
 --
 
@@ -2614,12 +2624,12 @@ ALTER TABLE segment OWNER TO postgres;
 SET search_path = operation, pg_catalog;
 
 --
--- TOC entry 275 (class 1259 OID 31031)
+-- TOC entry 276 (class 1259 OID 31031)
 -- Name: material; Type: TABLE; Schema: operation; Owner: postgres
 --
 
 CREATE TABLE material (
-    definition_id bigint NOT NULL,
+    segment_id bigint NOT NULL,
     part_code character varying NOT NULL,
     version_num integer NOT NULL,
     consumed_qty numeric(10,4) DEFAULT 1 NOT NULL,
@@ -2633,7 +2643,7 @@ CREATE TABLE material (
 ALTER TABLE material OWNER TO postgres;
 
 --
--- TOC entry 277 (class 1259 OID 31067)
+-- TOC entry 278 (class 1259 OID 31067)
 -- Name: consumable; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2645,7 +2655,7 @@ INHERITS (material);
 ALTER TABLE consumable OWNER TO postgres;
 
 --
--- TOC entry 244 (class 1259 OID 30445)
+-- TOC entry 245 (class 1259 OID 30445)
 -- Name: definition; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2653,14 +2663,16 @@ CREATE TABLE definition (
     id bigint NOT NULL,
     gid uuid DEFAULT public.uuid_generate_v1() NOT NULL,
     descr character varying NOT NULL,
-    published_date date DEFAULT now() NOT NULL
+    published_date date DEFAULT now() NOT NULL,
+    version_num integer DEFAULT 1 NOT NULL,
+    information_id bigint
 );
 
 
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 245 (class 1259 OID 30453)
+-- TOC entry 246 (class 1259 OID 30453)
 -- Name: definition_id_seq; Type: SEQUENCE; Schema: operation; Owner: postgres
 --
 
@@ -2675,8 +2687,8 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4108 (class 0 OID 0)
--- Dependencies: 245
+-- TOC entry 4126 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: operation; Owner: postgres
 --
 
@@ -2684,7 +2696,7 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 
 --
--- TOC entry 246 (class 1259 OID 30455)
+-- TOC entry 247 (class 1259 OID 30455)
 -- Name: equipment; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2698,7 +2710,45 @@ CREATE TABLE equipment (
 ALTER TABLE equipment OWNER TO postgres;
 
 --
--- TOC entry 247 (class 1259 OID 30462)
+-- TOC entry 324 (class 1259 OID 33674)
+-- Name: information; Type: TABLE; Schema: operation; Owner: postgres
+--
+
+CREATE TABLE information (
+    id bigint NOT NULL,
+    display_name character varying,
+    published_date date DEFAULT now() NOT NULL
+);
+
+
+ALTER TABLE information OWNER TO postgres;
+
+--
+-- TOC entry 323 (class 1259 OID 33672)
+-- Name: information_id_seq; Type: SEQUENCE; Schema: operation; Owner: postgres
+--
+
+CREATE SEQUENCE information_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE information_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 4127 (class 0 OID 0)
+-- Dependencies: 323
+-- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: operation; Owner: postgres
+--
+
+ALTER SEQUENCE information_id_seq OWNED BY information.id;
+
+
+--
+-- TOC entry 248 (class 1259 OID 30462)
 -- Name: personnel; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2720,7 +2770,7 @@ CREATE TABLE personnel (
 ALTER TABLE personnel OWNER TO postgres;
 
 --
--- TOC entry 276 (class 1259 OID 31044)
+-- TOC entry 277 (class 1259 OID 31044)
 -- Name: primal; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2732,7 +2782,7 @@ INHERITS (material);
 ALTER TABLE primal OWNER TO postgres;
 
 --
--- TOC entry 248 (class 1259 OID 30477)
+-- TOC entry 249 (class 1259 OID 30477)
 -- Name: producible; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2749,7 +2799,7 @@ CREATE TABLE producible (
 ALTER TABLE producible OWNER TO postgres;
 
 --
--- TOC entry 249 (class 1259 OID 30486)
+-- TOC entry 250 (class 1259 OID 30486)
 -- Name: segment; Type: TABLE; Schema: operation; Owner: postgres
 --
 
@@ -2764,7 +2814,7 @@ CREATE TABLE segment (
 ALTER TABLE segment OWNER TO postgres;
 
 --
--- TOC entry 250 (class 1259 OID 30493)
+-- TOC entry 251 (class 1259 OID 30493)
 -- Name: segment_id_seq; Type: SEQUENCE; Schema: operation; Owner: postgres
 --
 
@@ -2779,8 +2829,8 @@ CREATE SEQUENCE segment_id_seq
 ALTER TABLE segment_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4109 (class 0 OID 0)
--- Dependencies: 250
+-- TOC entry 4128 (class 0 OID 0)
+-- Dependencies: 251
 -- Name: segment_id_seq; Type: SEQUENCE OWNED BY; Schema: operation; Owner: postgres
 --
 
@@ -2788,23 +2838,23 @@ ALTER SEQUENCE segment_id_seq OWNED BY segment.id;
 
 
 --
--- TOC entry 251 (class 1259 OID 30495)
--- Name: tool; Type: TABLE; Schema: operation; Owner: postgres
+-- TOC entry 252 (class 1259 OID 30495)
+-- Name: tooling; Type: TABLE; Schema: operation; Owner: postgres
 --
 
-CREATE TABLE tool (
+CREATE TABLE tooling (
     segment_id bigint NOT NULL,
     tool_code character varying NOT NULL,
     serial_num integer DEFAULT 1 NOT NULL
 );
 
 
-ALTER TABLE tool OWNER TO postgres;
+ALTER TABLE tooling OWNER TO postgres;
 
 SET search_path = performance, pg_catalog;
 
 --
--- TOC entry 302 (class 1259 OID 32291)
+-- TOC entry 303 (class 1259 OID 32291)
 -- Name: information; Type: TABLE; Schema: performance; Owner: postgres
 --
 
@@ -2820,8 +2870,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4110 (class 0 OID 0)
--- Dependencies: 302
+-- TOC entry 4129 (class 0 OID 0)
+-- Dependencies: 303
 -- Name: TABLE information; Type: COMMENT; Schema: performance; Owner: postgres
 --
 
@@ -2829,7 +2879,7 @@ COMMENT ON TABLE information IS 'performance information';
 
 
 --
--- TOC entry 301 (class 1259 OID 32289)
+-- TOC entry 302 (class 1259 OID 32289)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: performance; Owner: postgres
 --
 
@@ -2844,8 +2894,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4111 (class 0 OID 0)
--- Dependencies: 301
+-- TOC entry 4130 (class 0 OID 0)
+-- Dependencies: 302
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: performance; Owner: postgres
 --
 
@@ -2855,7 +2905,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = personnel, pg_catalog;
 
 --
--- TOC entry 274 (class 1259 OID 30990)
+-- TOC entry 275 (class 1259 OID 30990)
 -- Name: information; Type: TABLE; Schema: personnel; Owner: postgres
 --
 
@@ -2871,8 +2921,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4112 (class 0 OID 0)
--- Dependencies: 274
+-- TOC entry 4131 (class 0 OID 0)
+-- Dependencies: 275
 -- Name: TABLE information; Type: COMMENT; Schema: personnel; Owner: postgres
 --
 
@@ -2880,7 +2930,7 @@ COMMENT ON TABLE information IS 'personnel information';
 
 
 --
--- TOC entry 273 (class 1259 OID 30988)
+-- TOC entry 274 (class 1259 OID 30988)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: personnel; Owner: postgres
 --
 
@@ -2895,8 +2945,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4113 (class 0 OID 0)
--- Dependencies: 273
+-- TOC entry 4132 (class 0 OID 0)
+-- Dependencies: 274
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: personnel; Owner: postgres
 --
 
@@ -2906,7 +2956,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 252 (class 1259 OID 30502)
+-- TOC entry 253 (class 1259 OID 30502)
 -- Name: definition; Type: TABLE; Schema: process; Owner: postgres
 --
 
@@ -2919,8 +2969,8 @@ CREATE TABLE definition (
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 4114 (class 0 OID 0)
--- Dependencies: 252
+-- TOC entry 4133 (class 0 OID 0)
+-- Dependencies: 253
 -- Name: TABLE definition; Type: COMMENT; Schema: process; Owner: postgres
 --
 
@@ -2928,7 +2978,7 @@ COMMENT ON TABLE definition IS 'definition of specific process';
 
 
 --
--- TOC entry 253 (class 1259 OID 30508)
+-- TOC entry 254 (class 1259 OID 30508)
 -- Name: definition_id_seq; Type: SEQUENCE; Schema: process; Owner: postgres
 --
 
@@ -2943,8 +2993,8 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4115 (class 0 OID 0)
--- Dependencies: 253
+-- TOC entry 4134 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: process; Owner: postgres
 --
 
@@ -2952,7 +3002,7 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 
 --
--- TOC entry 254 (class 1259 OID 30510)
+-- TOC entry 255 (class 1259 OID 30510)
 -- Name: information; Type: TABLE; Schema: process; Owner: postgres
 --
 
@@ -2968,8 +3018,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4116 (class 0 OID 0)
--- Dependencies: 254
+-- TOC entry 4135 (class 0 OID 0)
+-- Dependencies: 255
 -- Name: TABLE information; Type: COMMENT; Schema: process; Owner: postgres
 --
 
@@ -2977,7 +3027,7 @@ COMMENT ON TABLE information IS 'list of process segments';
 
 
 --
--- TOC entry 255 (class 1259 OID 30516)
+-- TOC entry 256 (class 1259 OID 30516)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: process; Owner: postgres
 --
 
@@ -2992,8 +3042,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4117 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 4136 (class 0 OID 0)
+-- Dependencies: 256
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: process; Owner: postgres
 --
 
@@ -3001,7 +3051,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 256 (class 1259 OID 30518)
+-- TOC entry 257 (class 1259 OID 30518)
 -- Name: segment_id_seq; Type: SEQUENCE; Schema: process; Owner: postgres
 --
 
@@ -3016,8 +3066,8 @@ CREATE SEQUENCE segment_id_seq
 ALTER TABLE segment_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4118 (class 0 OID 0)
--- Dependencies: 256
+-- TOC entry 4137 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: segment_id_seq; Type: SEQUENCE OWNED BY; Schema: process; Owner: postgres
 --
 
@@ -3025,7 +3075,7 @@ ALTER SEQUENCE segment_id_seq OWNED BY segment.id;
 
 
 --
--- TOC entry 257 (class 1259 OID 30520)
+-- TOC entry 258 (class 1259 OID 30520)
 -- Name: specification; Type: TABLE; Schema: process; Owner: postgres
 --
 
@@ -3042,7 +3092,7 @@ ALTER TABLE specification OWNER TO postgres;
 SET search_path = product, pg_catalog;
 
 --
--- TOC entry 280 (class 1259 OID 31115)
+-- TOC entry 281 (class 1259 OID 31115)
 -- Name: definition; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3056,7 +3106,7 @@ CREATE TABLE definition (
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 285 (class 1259 OID 31156)
+-- TOC entry 286 (class 1259 OID 31156)
 -- Name: dependency; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3072,7 +3122,7 @@ CREATE TABLE dependency (
 ALTER TABLE dependency OWNER TO postgres;
 
 --
--- TOC entry 283 (class 1259 OID 31134)
+-- TOC entry 284 (class 1259 OID 31134)
 -- Name: equipment; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3088,7 +3138,7 @@ CREATE TABLE equipment (
 ALTER TABLE equipment OWNER TO postgres;
 
 --
--- TOC entry 279 (class 1259 OID 31100)
+-- TOC entry 280 (class 1259 OID 31100)
 -- Name: information; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3104,7 +3154,7 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 278 (class 1259 OID 31098)
+-- TOC entry 279 (class 1259 OID 31098)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: product; Owner: postgres
 --
 
@@ -3119,8 +3169,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4119 (class 0 OID 0)
--- Dependencies: 278
+-- TOC entry 4138 (class 0 OID 0)
+-- Dependencies: 279
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: product; Owner: postgres
 --
 
@@ -3128,7 +3178,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 286 (class 1259 OID 31168)
+-- TOC entry 287 (class 1259 OID 31168)
 -- Name: material; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3145,7 +3195,7 @@ CREATE TABLE material (
 ALTER TABLE material OWNER TO postgres;
 
 --
--- TOC entry 284 (class 1259 OID 31143)
+-- TOC entry 285 (class 1259 OID 31143)
 -- Name: personnel; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3161,7 +3211,7 @@ CREATE TABLE personnel (
 ALTER TABLE personnel OWNER TO postgres;
 
 --
--- TOC entry 282 (class 1259 OID 31125)
+-- TOC entry 283 (class 1259 OID 31125)
 -- Name: segment; Type: TABLE; Schema: product; Owner: postgres
 --
 
@@ -3178,8 +3228,8 @@ CREATE TABLE segment (
 ALTER TABLE segment OWNER TO postgres;
 
 --
--- TOC entry 4120 (class 0 OID 0)
--- Dependencies: 282
+-- TOC entry 4139 (class 0 OID 0)
+-- Dependencies: 283
 -- Name: TABLE segment; Type: COMMENT; Schema: product; Owner: postgres
 --
 
@@ -3187,7 +3237,7 @@ COMMENT ON TABLE segment IS 'segments to specify product';
 
 
 --
--- TOC entry 281 (class 1259 OID 31123)
+-- TOC entry 282 (class 1259 OID 31123)
 -- Name: segment_id_seq; Type: SEQUENCE; Schema: product; Owner: postgres
 --
 
@@ -3202,8 +3252,8 @@ CREATE SEQUENCE segment_id_seq
 ALTER TABLE segment_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4121 (class 0 OID 0)
--- Dependencies: 281
+-- TOC entry 4140 (class 0 OID 0)
+-- Dependencies: 282
 -- Name: segment_id_seq; Type: SEQUENCE OWNED BY; Schema: product; Owner: postgres
 --
 
@@ -3213,7 +3263,7 @@ ALTER SEQUENCE segment_id_seq OWNED BY segment.id;
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 258 (class 1259 OID 30525)
+-- TOC entry 259 (class 1259 OID 30525)
 -- Name: equipment; Type: TABLE; Schema: production; Owner: postgres
 --
 
@@ -3225,7 +3275,7 @@ INHERITS (process.equipment);
 ALTER TABLE equipment OWNER TO postgres;
 
 --
--- TOC entry 259 (class 1259 OID 30531)
+-- TOC entry 260 (class 1259 OID 30531)
 -- Name: personnel; Type: TABLE; Schema: production; Owner: postgres
 --
 
@@ -3237,7 +3287,7 @@ INHERITS (process.personnel);
 ALTER TABLE personnel OWNER TO postgres;
 
 --
--- TOC entry 260 (class 1259 OID 30537)
+-- TOC entry 261 (class 1259 OID 30537)
 -- Name: segment; Type: TABLE; Schema: production; Owner: postgres
 --
 
@@ -3251,7 +3301,7 @@ INHERITS (process.segment);
 ALTER TABLE segment OWNER TO postgres;
 
 --
--- TOC entry 261 (class 1259 OID 30544)
+-- TOC entry 262 (class 1259 OID 30544)
 -- Name: specification; Type: TABLE; Schema: production; Owner: postgres
 --
 
@@ -3266,7 +3316,7 @@ ALTER TABLE specification OWNER TO postgres;
 SET search_path = request, pg_catalog;
 
 --
--- TOC entry 294 (class 1259 OID 32247)
+-- TOC entry 295 (class 1259 OID 32247)
 -- Name: information; Type: TABLE; Schema: request; Owner: postgres
 --
 
@@ -3282,8 +3332,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4122 (class 0 OID 0)
--- Dependencies: 294
+-- TOC entry 4141 (class 0 OID 0)
+-- Dependencies: 295
 -- Name: TABLE information; Type: COMMENT; Schema: request; Owner: postgres
 --
 
@@ -3291,7 +3341,7 @@ COMMENT ON TABLE information IS 'request information';
 
 
 --
--- TOC entry 293 (class 1259 OID 32245)
+-- TOC entry 294 (class 1259 OID 32245)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: request; Owner: postgres
 --
 
@@ -3306,8 +3356,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4123 (class 0 OID 0)
--- Dependencies: 293
+-- TOC entry 4142 (class 0 OID 0)
+-- Dependencies: 294
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: request; Owner: postgres
 --
 
@@ -3317,7 +3367,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = response, pg_catalog;
 
 --
--- TOC entry 296 (class 1259 OID 32258)
+-- TOC entry 297 (class 1259 OID 32258)
 -- Name: information; Type: TABLE; Schema: response; Owner: postgres
 --
 
@@ -3333,8 +3383,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4124 (class 0 OID 0)
--- Dependencies: 296
+-- TOC entry 4143 (class 0 OID 0)
+-- Dependencies: 297
 -- Name: TABLE information; Type: COMMENT; Schema: response; Owner: postgres
 --
 
@@ -3342,7 +3392,7 @@ COMMENT ON TABLE information IS 'response information';
 
 
 --
--- TOC entry 295 (class 1259 OID 32256)
+-- TOC entry 296 (class 1259 OID 32256)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: response; Owner: postgres
 --
 
@@ -3357,8 +3407,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4125 (class 0 OID 0)
--- Dependencies: 295
+-- TOC entry 4144 (class 0 OID 0)
+-- Dependencies: 296
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: response; Owner: postgres
 --
 
@@ -3368,7 +3418,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = schedule, pg_catalog;
 
 --
--- TOC entry 298 (class 1259 OID 32269)
+-- TOC entry 299 (class 1259 OID 32269)
 -- Name: information; Type: TABLE; Schema: schedule; Owner: postgres
 --
 
@@ -3384,8 +3434,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4126 (class 0 OID 0)
--- Dependencies: 298
+-- TOC entry 4145 (class 0 OID 0)
+-- Dependencies: 299
 -- Name: TABLE information; Type: COMMENT; Schema: schedule; Owner: postgres
 --
 
@@ -3393,7 +3443,7 @@ COMMENT ON TABLE information IS 'schedule information';
 
 
 --
--- TOC entry 297 (class 1259 OID 32267)
+-- TOC entry 298 (class 1259 OID 32267)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: schedule; Owner: postgres
 --
 
@@ -3408,8 +3458,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4127 (class 0 OID 0)
--- Dependencies: 297
+-- TOC entry 4146 (class 0 OID 0)
+-- Dependencies: 298
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: schedule; Owner: postgres
 --
 
@@ -3419,7 +3469,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = tests, pg_catalog;
 
 --
--- TOC entry 315 (class 1259 OID 32432)
+-- TOC entry 316 (class 1259 OID 32432)
 -- Name: pgunit_covarage; Type: VIEW; Schema: tests; Owner: postgres
 --
 
@@ -3437,7 +3487,7 @@ EXCEPT
 ALTER TABLE pgunit_covarage OWNER TO postgres;
 
 --
--- TOC entry 316 (class 1259 OID 32437)
+-- TOC entry 317 (class 1259 OID 32437)
 -- Name: plpgsql_check_all; Type: VIEW; Schema: tests; Owner: postgres
 --
 
@@ -3470,7 +3520,7 @@ CREATE VIEW plpgsql_check_all AS
 ALTER TABLE plpgsql_check_all OWNER TO postgres;
 
 --
--- TOC entry 317 (class 1259 OID 32442)
+-- TOC entry 318 (class 1259 OID 32442)
 -- Name: plpgsql_check_nontriggered; Type: VIEW; Schema: tests; Owner: postgres
 --
 
@@ -3486,11 +3536,11 @@ CREATE VIEW plpgsql_check_nontriggered AS
 
 ALTER TABLE plpgsql_check_nontriggered OWNER TO postgres;
 
-SET search_path = tool, pg_catalog;
+SET search_path = tooling, pg_catalog;
 
 --
--- TOC entry 300 (class 1259 OID 32280)
--- Name: information; Type: TABLE; Schema: tool; Owner: postgres
+-- TOC entry 301 (class 1259 OID 32280)
+-- Name: information; Type: TABLE; Schema: tooling; Owner: postgres
 --
 
 CREATE TABLE information (
@@ -3505,17 +3555,17 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 4128 (class 0 OID 0)
--- Dependencies: 300
--- Name: TABLE information; Type: COMMENT; Schema: tool; Owner: postgres
+-- TOC entry 4147 (class 0 OID 0)
+-- Dependencies: 301
+-- Name: TABLE information; Type: COMMENT; Schema: tooling; Owner: postgres
 --
 
 COMMENT ON TABLE information IS 'tool information';
 
 
 --
--- TOC entry 299 (class 1259 OID 32278)
--- Name: information_id_seq; Type: SEQUENCE; Schema: tool; Owner: postgres
+-- TOC entry 300 (class 1259 OID 32278)
+-- Name: information_id_seq; Type: SEQUENCE; Schema: tooling; Owner: postgres
 --
 
 CREATE SEQUENCE information_id_seq
@@ -3529,9 +3579,9 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 4129 (class 0 OID 0)
--- Dependencies: 299
--- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: tool; Owner: postgres
+-- TOC entry 4148 (class 0 OID 0)
+-- Dependencies: 300
+-- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: tooling; Owner: postgres
 --
 
 ALTER SEQUENCE information_id_seq OWNED BY information.id;
@@ -3540,7 +3590,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3532 (class 2604 OID 30549)
+-- TOC entry 3540 (class 2604 OID 30549)
 -- Name: assembly version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -3548,7 +3598,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3533 (class 2604 OID 30550)
+-- TOC entry 3541 (class 2604 OID 30550)
 -- Name: assembly published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -3556,7 +3606,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3535 (class 2604 OID 30551)
+-- TOC entry 3543 (class 2604 OID 30551)
 -- Name: buyable version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -3564,7 +3614,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3536 (class 2604 OID 30552)
+-- TOC entry 3544 (class 2604 OID 30552)
 -- Name: buyable published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -3572,7 +3622,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3539 (class 2604 OID 30553)
+-- TOC entry 3547 (class 2604 OID 30553)
 -- Name: part version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -3580,7 +3630,7 @@ ALTER TABLE ONLY part ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3540 (class 2604 OID 30554)
+-- TOC entry 3548 (class 2604 OID 30554)
 -- Name: part published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -3590,7 +3640,7 @@ ALTER TABLE ONLY part ALTER COLUMN published_date SET DEFAULT now();
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3544 (class 2604 OID 30555)
+-- TOC entry 3552 (class 2604 OID 30555)
 -- Name: definition id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -3598,7 +3648,7 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3651 (class 2604 OID 33632)
+-- TOC entry 3660 (class 2604 OID 33632)
 -- Name: information id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -3608,7 +3658,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = equipment, pg_catalog;
 
 --
--- TOC entry 3618 (class 2604 OID 30981)
+-- TOC entry 3627 (class 2604 OID 30981)
 -- Name: information id; Type: DEFAULT; Schema: equipment; Owner: postgres
 --
 
@@ -3618,7 +3668,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = goal, pg_catalog;
 
 --
--- TOC entry 3648 (class 2604 OID 32305)
+-- TOC entry 3657 (class 2604 OID 32305)
 -- Name: information id; Type: DEFAULT; Schema: goal; Owner: postgres
 --
 
@@ -3628,7 +3678,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 3550 (class 2604 OID 30556)
+-- TOC entry 3558 (class 2604 OID 30556)
 -- Name: segment id; Type: DEFAULT; Schema: inspection; Owner: postgres
 --
 
@@ -3638,7 +3688,7 @@ ALTER TABLE ONLY segment ALTER COLUMN id SET DEFAULT nextval('process.segment_id
 SET search_path = inventory, pg_catalog;
 
 --
--- TOC entry 3614 (class 2604 OID 30937)
+-- TOC entry 3623 (class 2604 OID 30937)
 -- Name: assembly id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3646,7 +3696,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN id SET DEFAULT nextval('information_id_se
 
 
 --
--- TOC entry 3615 (class 2604 OID 30938)
+-- TOC entry 3624 (class 2604 OID 30938)
 -- Name: assembly gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3654,7 +3704,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1()
 
 
 --
--- TOC entry 3554 (class 2604 OID 30557)
+-- TOC entry 3562 (class 2604 OID 30557)
 -- Name: buyable id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3662,7 +3712,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN id SET DEFAULT nextval('information_id_seq
 
 
 --
--- TOC entry 3555 (class 2604 OID 30558)
+-- TOC entry 3563 (class 2604 OID 30558)
 -- Name: buyable gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3670,7 +3720,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1();
 
 
 --
--- TOC entry 3556 (class 2604 OID 30561)
+-- TOC entry 3564 (class 2604 OID 30561)
 -- Name: consumable id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3678,7 +3728,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN id SET DEFAULT nextval('information_id_
 
 
 --
--- TOC entry 3557 (class 2604 OID 30562)
+-- TOC entry 3565 (class 2604 OID 30562)
 -- Name: consumable gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3686,7 +3736,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1
 
 
 --
--- TOC entry 3553 (class 2604 OID 30563)
+-- TOC entry 3561 (class 2604 OID 30563)
 -- Name: information id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3694,7 +3744,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 
 
 --
--- TOC entry 3616 (class 2604 OID 30947)
+-- TOC entry 3625 (class 2604 OID 30947)
 -- Name: part id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3702,7 +3752,7 @@ ALTER TABLE ONLY part ALTER COLUMN id SET DEFAULT nextval('information_id_seq'::
 
 
 --
--- TOC entry 3617 (class 2604 OID 30948)
+-- TOC entry 3626 (class 2604 OID 30948)
 -- Name: part gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3710,7 +3760,7 @@ ALTER TABLE ONLY part ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1();
 
 
 --
--- TOC entry 3612 (class 2604 OID 30927)
+-- TOC entry 3621 (class 2604 OID 30927)
 -- Name: primal id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3718,7 +3768,7 @@ ALTER TABLE ONLY primal ALTER COLUMN id SET DEFAULT nextval('information_id_seq'
 
 
 --
--- TOC entry 3613 (class 2604 OID 30928)
+-- TOC entry 3622 (class 2604 OID 30928)
 -- Name: primal gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3726,7 +3776,7 @@ ALTER TABLE ONLY primal ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1();
 
 
 --
--- TOC entry 3558 (class 2604 OID 30564)
+-- TOC entry 3566 (class 2604 OID 30564)
 -- Name: producible id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3734,7 +3784,7 @@ ALTER TABLE ONLY producible ALTER COLUMN id SET DEFAULT nextval('information_id_
 
 
 --
--- TOC entry 3559 (class 2604 OID 30565)
+-- TOC entry 3567 (class 2604 OID 30565)
 -- Name: producible gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3742,7 +3792,7 @@ ALTER TABLE ONLY producible ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1
 
 
 --
--- TOC entry 3560 (class 2604 OID 30566)
+-- TOC entry 3568 (class 2604 OID 30566)
 -- Name: salable id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3750,7 +3800,7 @@ ALTER TABLE ONLY salable ALTER COLUMN id SET DEFAULT nextval('information_id_seq
 
 
 --
--- TOC entry 3561 (class 2604 OID 30567)
+-- TOC entry 3569 (class 2604 OID 30567)
 -- Name: salable gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3758,7 +3808,7 @@ ALTER TABLE ONLY salable ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1();
 
 
 --
--- TOC entry 3562 (class 2604 OID 30568)
+-- TOC entry 3570 (class 2604 OID 30568)
 -- Name: storable id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3766,7 +3816,7 @@ ALTER TABLE ONLY storable ALTER COLUMN id SET DEFAULT nextval('information_id_se
 
 
 --
--- TOC entry 3563 (class 2604 OID 30569)
+-- TOC entry 3571 (class 2604 OID 30569)
 -- Name: storable gid; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -3776,7 +3826,7 @@ ALTER TABLE ONLY storable ALTER COLUMN gid SET DEFAULT public.uuid_generate_v1()
 SET search_path = maintenance, pg_catalog;
 
 --
--- TOC entry 3642 (class 2604 OID 31198)
+-- TOC entry 3651 (class 2604 OID 31198)
 -- Name: demand id; Type: DEFAULT; Schema: maintenance; Owner: postgres
 --
 
@@ -3784,7 +3834,7 @@ ALTER TABLE ONLY demand ALTER COLUMN id SET DEFAULT nextval('demand_id_seq'::reg
 
 
 --
--- TOC entry 3640 (class 2604 OID 31182)
+-- TOC entry 3649 (class 2604 OID 31182)
 -- Name: request id; Type: DEFAULT; Schema: maintenance; Owner: postgres
 --
 
@@ -3792,7 +3842,7 @@ ALTER TABLE ONLY request ALTER COLUMN id SET DEFAULT nextval('request_id_seq'::r
 
 
 --
--- TOC entry 3641 (class 2604 OID 31190)
+-- TOC entry 3650 (class 2604 OID 31190)
 -- Name: response id; Type: DEFAULT; Schema: maintenance; Owner: postgres
 --
 
@@ -3802,7 +3852,7 @@ ALTER TABLE ONLY response ALTER COLUMN id SET DEFAULT nextval('response_id_seq':
 SET search_path = material, pg_catalog;
 
 --
--- TOC entry 3566 (class 2604 OID 30570)
+-- TOC entry 3574 (class 2604 OID 30570)
 -- Name: consumable version_num; Type: DEFAULT; Schema: material; Owner: postgres
 --
 
@@ -3810,7 +3860,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3567 (class 2604 OID 30571)
+-- TOC entry 3575 (class 2604 OID 30571)
 -- Name: consumable published_date; Type: DEFAULT; Schema: material; Owner: postgres
 --
 
@@ -3818,7 +3868,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3601 (class 2604 OID 30800)
+-- TOC entry 3610 (class 2604 OID 30800)
 -- Name: primal version_num; Type: DEFAULT; Schema: material; Owner: postgres
 --
 
@@ -3826,7 +3876,7 @@ ALTER TABLE ONLY primal ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3602 (class 2604 OID 30801)
+-- TOC entry 3611 (class 2604 OID 30801)
 -- Name: primal published_date; Type: DEFAULT; Schema: material; Owner: postgres
 --
 
@@ -3834,7 +3884,7 @@ ALTER TABLE ONLY primal ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3569 (class 2604 OID 30572)
+-- TOC entry 3577 (class 2604 OID 30572)
 -- Name: producible version_num; Type: DEFAULT; Schema: material; Owner: postgres
 --
 
@@ -3842,7 +3892,7 @@ ALTER TABLE ONLY producible ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3570 (class 2604 OID 30573)
+-- TOC entry 3578 (class 2604 OID 30573)
 -- Name: producible published_date; Type: DEFAULT; Schema: material; Owner: postgres
 --
 
@@ -3852,7 +3902,7 @@ ALTER TABLE ONLY producible ALTER COLUMN published_date SET DEFAULT now();
 SET search_path = mbom, pg_catalog;
 
 --
--- TOC entry 3608 (class 2604 OID 33604)
+-- TOC entry 3617 (class 2604 OID 33604)
 -- Name: consumable qty_uom; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -3860,7 +3910,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN qty_uom SET DEFAULT 'pcs'::character va
 
 
 --
--- TOC entry 3605 (class 2604 OID 30818)
+-- TOC entry 3614 (class 2604 OID 30818)
 -- Name: definition id; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -3868,7 +3918,7 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3653 (class 2604 OID 33654)
+-- TOC entry 3662 (class 2604 OID 33654)
 -- Name: information id; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -3876,7 +3926,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 
 
 --
--- TOC entry 3610 (class 2604 OID 33605)
+-- TOC entry 3619 (class 2604 OID 33605)
 -- Name: primal qty_uom; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -3886,7 +3936,7 @@ ALTER TABLE ONLY primal ALTER COLUMN qty_uom SET DEFAULT 'pcs'::character varyin
 SET search_path = movement, pg_catalog;
 
 --
--- TOC entry 3572 (class 2604 OID 30574)
+-- TOC entry 3580 (class 2604 OID 30574)
 -- Name: segment id; Type: DEFAULT; Schema: movement; Owner: postgres
 --
 
@@ -3896,7 +3946,7 @@ ALTER TABLE ONLY segment ALTER COLUMN id SET DEFAULT nextval('process.segment_id
 SET search_path = operation, pg_catalog;
 
 --
--- TOC entry 3630 (class 2604 OID 31070)
+-- TOC entry 3639 (class 2604 OID 31070)
 -- Name: consumable consumed_qty; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3904,7 +3954,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN consumed_qty SET DEFAULT 1;
 
 
 --
--- TOC entry 3631 (class 2604 OID 31071)
+-- TOC entry 3640 (class 2604 OID 31071)
 -- Name: consumable consumed_uom; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3912,7 +3962,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN consumed_uom SET DEFAULT 'pcs'::charact
 
 
 --
--- TOC entry 3632 (class 2604 OID 31072)
+-- TOC entry 3641 (class 2604 OID 31072)
 -- Name: consumable rationing_qty; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3920,7 +3970,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN rationing_qty SET DEFAULT 1;
 
 
 --
--- TOC entry 3633 (class 2604 OID 31073)
+-- TOC entry 3642 (class 2604 OID 31073)
 -- Name: consumable rationing_uom; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3928,7 +3978,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN rationing_uom SET DEFAULT 'pcs'::charac
 
 
 --
--- TOC entry 3634 (class 2604 OID 31074)
+-- TOC entry 3643 (class 2604 OID 31074)
 -- Name: consumable serial_num; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3936,7 +3986,7 @@ ALTER TABLE ONLY consumable ALTER COLUMN serial_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3576 (class 2604 OID 30575)
+-- TOC entry 3584 (class 2604 OID 30575)
 -- Name: definition id; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3944,7 +3994,15 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3625 (class 2604 OID 31047)
+-- TOC entry 3664 (class 2604 OID 33677)
+-- Name: information id; Type: DEFAULT; Schema: operation; Owner: postgres
+--
+
+ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id_seq'::regclass);
+
+
+--
+-- TOC entry 3634 (class 2604 OID 31047)
 -- Name: primal consumed_qty; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3952,7 +4010,7 @@ ALTER TABLE ONLY primal ALTER COLUMN consumed_qty SET DEFAULT 1;
 
 
 --
--- TOC entry 3626 (class 2604 OID 31048)
+-- TOC entry 3635 (class 2604 OID 31048)
 -- Name: primal consumed_uom; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3960,7 +4018,7 @@ ALTER TABLE ONLY primal ALTER COLUMN consumed_uom SET DEFAULT 'pcs'::character v
 
 
 --
--- TOC entry 3627 (class 2604 OID 31049)
+-- TOC entry 3636 (class 2604 OID 31049)
 -- Name: primal rationing_qty; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3968,7 +4026,7 @@ ALTER TABLE ONLY primal ALTER COLUMN rationing_qty SET DEFAULT 1;
 
 
 --
--- TOC entry 3628 (class 2604 OID 31050)
+-- TOC entry 3637 (class 2604 OID 31050)
 -- Name: primal rationing_uom; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3976,7 +4034,7 @@ ALTER TABLE ONLY primal ALTER COLUMN rationing_uom SET DEFAULT 'pcs'::character 
 
 
 --
--- TOC entry 3629 (class 2604 OID 31051)
+-- TOC entry 3638 (class 2604 OID 31051)
 -- Name: primal serial_num; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3984,7 +4042,7 @@ ALTER TABLE ONLY primal ALTER COLUMN serial_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3591 (class 2604 OID 30576)
+-- TOC entry 3600 (class 2604 OID 30576)
 -- Name: segment id; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -3994,7 +4052,7 @@ ALTER TABLE ONLY segment ALTER COLUMN id SET DEFAULT nextval('segment_id_seq'::r
 SET search_path = performance, pg_catalog;
 
 --
--- TOC entry 3647 (class 2604 OID 32294)
+-- TOC entry 3656 (class 2604 OID 32294)
 -- Name: information id; Type: DEFAULT; Schema: performance; Owner: postgres
 --
 
@@ -4004,7 +4062,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = personnel, pg_catalog;
 
 --
--- TOC entry 3619 (class 2604 OID 30993)
+-- TOC entry 3628 (class 2604 OID 30993)
 -- Name: information id; Type: DEFAULT; Schema: personnel; Owner: postgres
 --
 
@@ -4014,7 +4072,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 3593 (class 2604 OID 30577)
+-- TOC entry 3602 (class 2604 OID 30577)
 -- Name: definition id; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -4022,7 +4080,7 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3594 (class 2604 OID 30578)
+-- TOC entry 3603 (class 2604 OID 30578)
 -- Name: information id; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -4030,7 +4088,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 
 
 --
--- TOC entry 3549 (class 2604 OID 30579)
+-- TOC entry 3557 (class 2604 OID 30579)
 -- Name: segment id; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -4040,7 +4098,7 @@ ALTER TABLE ONLY segment ALTER COLUMN id SET DEFAULT nextval('segment_id_seq'::r
 SET search_path = product, pg_catalog;
 
 --
--- TOC entry 3635 (class 2604 OID 31103)
+-- TOC entry 3644 (class 2604 OID 31103)
 -- Name: information id; Type: DEFAULT; Schema: product; Owner: postgres
 --
 
@@ -4048,7 +4106,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 
 
 --
--- TOC entry 3637 (class 2604 OID 31128)
+-- TOC entry 3646 (class 2604 OID 31128)
 -- Name: segment id; Type: DEFAULT; Schema: product; Owner: postgres
 --
 
@@ -4058,7 +4116,7 @@ ALTER TABLE ONLY segment ALTER COLUMN id SET DEFAULT nextval('segment_id_seq'::r
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 3597 (class 2604 OID 30580)
+-- TOC entry 3606 (class 2604 OID 30580)
 -- Name: segment id; Type: DEFAULT; Schema: production; Owner: postgres
 --
 
@@ -4066,7 +4124,7 @@ ALTER TABLE ONLY segment ALTER COLUMN id SET DEFAULT nextval('process.segment_id
 
 
 --
--- TOC entry 3599 (class 2604 OID 30581)
+-- TOC entry 3608 (class 2604 OID 30581)
 -- Name: specification qty; Type: DEFAULT; Schema: production; Owner: postgres
 --
 
@@ -4076,7 +4134,7 @@ ALTER TABLE ONLY specification ALTER COLUMN qty SET DEFAULT 1;
 SET search_path = request, pg_catalog;
 
 --
--- TOC entry 3643 (class 2604 OID 32250)
+-- TOC entry 3652 (class 2604 OID 32250)
 -- Name: information id; Type: DEFAULT; Schema: request; Owner: postgres
 --
 
@@ -4086,7 +4144,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = response, pg_catalog;
 
 --
--- TOC entry 3644 (class 2604 OID 32261)
+-- TOC entry 3653 (class 2604 OID 32261)
 -- Name: information id; Type: DEFAULT; Schema: response; Owner: postgres
 --
 
@@ -4096,18 +4154,18 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = schedule, pg_catalog;
 
 --
--- TOC entry 3645 (class 2604 OID 32272)
+-- TOC entry 3654 (class 2604 OID 32272)
 -- Name: information id; Type: DEFAULT; Schema: schedule; Owner: postgres
 --
 
 ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id_seq'::regclass);
 
 
-SET search_path = tool, pg_catalog;
+SET search_path = tooling, pg_catalog;
 
 --
--- TOC entry 3646 (class 2604 OID 32283)
--- Name: information id; Type: DEFAULT; Schema: tool; Owner: postgres
+-- TOC entry 3655 (class 2604 OID 32283)
+-- Name: information id; Type: DEFAULT; Schema: tooling; Owner: postgres
 --
 
 ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id_seq'::regclass);
@@ -4116,8 +4174,8 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3962 (class 0 OID 30239)
--- Dependencies: 216
+-- TOC entry 3978 (class 0 OID 30239)
+-- Dependencies: 217
 -- Data for Name: assembly; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -4129,8 +4187,8 @@ INSERT INTO assembly VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-21',
 
 
 --
--- TOC entry 3963 (class 0 OID 30248)
--- Dependencies: 217
+-- TOC entry 3979 (class 0 OID 30248)
+-- Dependencies: 218
 -- Data for Name: buyable; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -4138,16 +4196,16 @@ INSERT INTO buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21
 
 
 --
--- TOC entry 3961 (class 0 OID 30231)
--- Dependencies: 215
+-- TOC entry 3977 (class 0 OID 30231)
+-- Dependencies: 216
 -- Data for Name: information; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3964 (class 0 OID 30258)
--- Dependencies: 218
+-- TOC entry 3980 (class 0 OID 30258)
+-- Dependencies: 219
 -- Data for Name: part; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -4176,8 +4234,8 @@ INSERT INTO part VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-21',
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3966 (class 0 OID 30273)
--- Dependencies: 220
+-- TOC entry 3982 (class 0 OID 30273)
+-- Dependencies: 221
 -- Data for Name: assembly; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -4190,8 +4248,8 @@ INSERT INTO assembly VALUES (3, '82.31.050-001', 1, 1.0000, 'ASSEMBLY');
 
 
 --
--- TOC entry 3967 (class 0 OID 30279)
--- Dependencies: 221
+-- TOC entry 3983 (class 0 OID 30279)
+-- Dependencies: 222
 -- Data for Name: buyable; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -4201,16 +4259,16 @@ INSERT INTO buyable VALUES (3, 'Гайка М12', 1, 1.0000, 'BUYABLE');
 
 
 --
--- TOC entry 3965 (class 0 OID 30267)
--- Dependencies: 219
+-- TOC entry 3981 (class 0 OID 30267)
+-- Dependencies: 220
 -- Data for Name: component; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3968 (class 0 OID 30285)
--- Dependencies: 222
+-- TOC entry 3984 (class 0 OID 30285)
+-- Dependencies: 223
 -- Data for Name: definition; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -4222,8 +4280,8 @@ INSERT INTO definition VALUES (5, 'Рчк-250х20: definition', '2017-10-21', NU
 
 
 --
--- TOC entry 4130 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 4149 (class 0 OID 0)
+-- Dependencies: 224
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
@@ -4231,8 +4289,8 @@ SELECT pg_catalog.setval('definition_id_seq', 5, true);
 
 
 --
--- TOC entry 4052 (class 0 OID 33629)
--- Dependencies: 319
+-- TOC entry 4068 (class 0 OID 33629)
+-- Dependencies: 320
 -- Data for Name: information; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -4244,8 +4302,8 @@ INSERT INTO information VALUES (5, '82.31.050-001', 1, 'Рчк-250х20: informat
 
 
 --
--- TOC entry 4131 (class 0 OID 0)
--- Dependencies: 318
+-- TOC entry 4150 (class 0 OID 0)
+-- Dependencies: 319
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
@@ -4253,8 +4311,8 @@ SELECT pg_catalog.setval('information_id_seq', 5, true);
 
 
 --
--- TOC entry 3970 (class 0 OID 30293)
--- Dependencies: 224
+-- TOC entry 3986 (class 0 OID 30293)
+-- Dependencies: 225
 -- Data for Name: part; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -4299,16 +4357,16 @@ INSERT INTO part VALUES (5, '42.02.022-001', 1, 1.0000, 'PART');
 SET search_path = equipment, pg_catalog;
 
 --
--- TOC entry 4018 (class 0 OID 30978)
--- Dependencies: 272
+-- TOC entry 4034 (class 0 OID 30978)
+-- Dependencies: 273
 -- Data for Name: information; Type: TABLE DATA; Schema: equipment; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4132 (class 0 OID 0)
--- Dependencies: 271
+-- TOC entry 4151 (class 0 OID 0)
+-- Dependencies: 272
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: equipment; Owner: postgres
 --
 
@@ -4318,16 +4376,16 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = goal, pg_catalog;
 
 --
--- TOC entry 4050 (class 0 OID 32302)
--- Dependencies: 304
+-- TOC entry 4066 (class 0 OID 32302)
+-- Dependencies: 305
 -- Data for Name: information; Type: TABLE DATA; Schema: goal; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4133 (class 0 OID 0)
--- Dependencies: 303
+-- TOC entry 4152 (class 0 OID 0)
+-- Dependencies: 304
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: goal; Owner: postgres
 --
 
@@ -4337,24 +4395,24 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 3972 (class 0 OID 30305)
--- Dependencies: 226
+-- TOC entry 3988 (class 0 OID 30305)
+-- Dependencies: 227
 -- Data for Name: equipment; Type: TABLE DATA; Schema: inspection; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3974 (class 0 OID 30317)
--- Dependencies: 228
+-- TOC entry 3990 (class 0 OID 30317)
+-- Dependencies: 229
 -- Data for Name: personnel; Type: TABLE DATA; Schema: inspection; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3976 (class 0 OID 30329)
--- Dependencies: 230
+-- TOC entry 3992 (class 0 OID 30329)
+-- Dependencies: 231
 -- Data for Name: segment; Type: TABLE DATA; Schema: inspection; Owner: postgres
 --
 
@@ -4363,40 +4421,40 @@ SET search_path = inspection, pg_catalog;
 SET search_path = inventory, pg_catalog;
 
 --
--- TOC entry 4015 (class 0 OID 30934)
--- Dependencies: 269
+-- TOC entry 4031 (class 0 OID 30934)
+-- Dependencies: 270
 -- Data for Name: assembly; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3978 (class 0 OID 30343)
--- Dependencies: 232
+-- TOC entry 3994 (class 0 OID 30343)
+-- Dependencies: 233
 -- Data for Name: buyable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3979 (class 0 OID 30357)
--- Dependencies: 233
+-- TOC entry 3995 (class 0 OID 30357)
+-- Dependencies: 234
 -- Data for Name: consumable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3977 (class 0 OID 30336)
--- Dependencies: 231
+-- TOC entry 3993 (class 0 OID 30336)
+-- Dependencies: 232
 -- Data for Name: information; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4134 (class 0 OID 0)
--- Dependencies: 234
+-- TOC entry 4153 (class 0 OID 0)
+-- Dependencies: 235
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: inventory; Owner: postgres
 --
 
@@ -4404,40 +4462,40 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 
 
 --
--- TOC entry 4016 (class 0 OID 30944)
--- Dependencies: 270
+-- TOC entry 4032 (class 0 OID 30944)
+-- Dependencies: 271
 -- Data for Name: part; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4014 (class 0 OID 30924)
--- Dependencies: 268
+-- TOC entry 4030 (class 0 OID 30924)
+-- Dependencies: 269
 -- Data for Name: primal; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3981 (class 0 OID 30366)
--- Dependencies: 235
+-- TOC entry 3997 (class 0 OID 30366)
+-- Dependencies: 236
 -- Data for Name: producible; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3982 (class 0 OID 30373)
--- Dependencies: 236
+-- TOC entry 3998 (class 0 OID 30373)
+-- Dependencies: 237
 -- Data for Name: salable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3983 (class 0 OID 30380)
--- Dependencies: 237
+-- TOC entry 3999 (class 0 OID 30380)
+-- Dependencies: 238
 -- Data for Name: storable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
@@ -4446,16 +4504,16 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = maintenance, pg_catalog;
 
 --
--- TOC entry 4038 (class 0 OID 31195)
--- Dependencies: 292
+-- TOC entry 4054 (class 0 OID 31195)
+-- Dependencies: 293
 -- Data for Name: demand; Type: TABLE DATA; Schema: maintenance; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4135 (class 0 OID 0)
--- Dependencies: 291
+-- TOC entry 4154 (class 0 OID 0)
+-- Dependencies: 292
 -- Name: demand_id_seq; Type: SEQUENCE SET; Schema: maintenance; Owner: postgres
 --
 
@@ -4463,16 +4521,16 @@ SELECT pg_catalog.setval('demand_id_seq', 1, false);
 
 
 --
--- TOC entry 4034 (class 0 OID 31179)
--- Dependencies: 288
+-- TOC entry 4050 (class 0 OID 31179)
+-- Dependencies: 289
 -- Data for Name: request; Type: TABLE DATA; Schema: maintenance; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4136 (class 0 OID 0)
--- Dependencies: 287
+-- TOC entry 4155 (class 0 OID 0)
+-- Dependencies: 288
 -- Name: request_id_seq; Type: SEQUENCE SET; Schema: maintenance; Owner: postgres
 --
 
@@ -4480,16 +4538,16 @@ SELECT pg_catalog.setval('request_id_seq', 1, false);
 
 
 --
--- TOC entry 4036 (class 0 OID 31187)
--- Dependencies: 290
+-- TOC entry 4052 (class 0 OID 31187)
+-- Dependencies: 291
 -- Data for Name: response; Type: TABLE DATA; Schema: maintenance; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4137 (class 0 OID 0)
--- Dependencies: 289
+-- TOC entry 4156 (class 0 OID 0)
+-- Dependencies: 290
 -- Name: response_id_seq; Type: SEQUENCE SET; Schema: maintenance; Owner: postgres
 --
 
@@ -4499,8 +4557,8 @@ SELECT pg_catalog.setval('response_id_seq', 1, false);
 SET search_path = material, pg_catalog;
 
 --
--- TOC entry 3985 (class 0 OID 30395)
--- Dependencies: 239
+-- TOC entry 4001 (class 0 OID 30395)
+-- Dependencies: 240
 -- Data for Name: consumable; Type: TABLE DATA; Schema: material; Owner: postgres
 --
 
@@ -4545,16 +4603,16 @@ INSERT INTO consumable VALUES ('Гайка М12', 1, 'Гайка М12', '2017-10
 
 
 --
--- TOC entry 3984 (class 0 OID 30387)
--- Dependencies: 238
+-- TOC entry 4000 (class 0 OID 30387)
+-- Dependencies: 239
 -- Data for Name: information; Type: TABLE DATA; Schema: material; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4008 (class 0 OID 30797)
--- Dependencies: 262
+-- TOC entry 4024 (class 0 OID 30797)
+-- Dependencies: 263
 -- Data for Name: primal; Type: TABLE DATA; Schema: material; Owner: postgres
 --
 
@@ -4578,8 +4636,8 @@ INSERT INTO primal VALUES ('Ф-4', 1, 'Ф-4', '2017-10-22', 'PRIMAL');
 
 
 --
--- TOC entry 3986 (class 0 OID 30405)
--- Dependencies: 240
+-- TOC entry 4002 (class 0 OID 30405)
+-- Dependencies: 241
 -- Data for Name: producible; Type: TABLE DATA; Schema: material; Owner: postgres
 --
 
@@ -4628,8 +4686,8 @@ INSERT INTO producible VALUES ('22.16.050-001.030', 1, 'КТ33-50х40', '2017-10
 SET search_path = mbom, pg_catalog;
 
 --
--- TOC entry 4012 (class 0 OID 30840)
--- Dependencies: 266
+-- TOC entry 4028 (class 0 OID 30840)
+-- Dependencies: 267
 -- Data for Name: consumable; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
 
@@ -4649,8 +4707,8 @@ INSERT INTO consumable VALUES (21, 'Гайка М12', 1, 1.0000, 'CONSUMABLE', '
 
 
 --
--- TOC entry 4010 (class 0 OID 30815)
--- Dependencies: 264
+-- TOC entry 4026 (class 0 OID 30815)
+-- Dependencies: 265
 -- Data for Name: definition; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
 
@@ -4700,8 +4758,8 @@ INSERT INTO definition VALUES (38, 1, 'Крпс-089,0х109,0: definition#1', '20
 
 
 --
--- TOC entry 4138 (class 0 OID 0)
--- Dependencies: 263
+-- TOC entry 4157 (class 0 OID 0)
+-- Dependencies: 264
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: mbom; Owner: postgres
 --
 
@@ -4709,8 +4767,8 @@ SELECT pg_catalog.setval('definition_id_seq', 44, true);
 
 
 --
--- TOC entry 4054 (class 0 OID 33651)
--- Dependencies: 321
+-- TOC entry 4070 (class 0 OID 33651)
+-- Dependencies: 322
 -- Data for Name: information; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
 
@@ -4757,8 +4815,8 @@ INSERT INTO information VALUES (40, '22.16.050-001.030', 1, 'КТ33-50х40: info
 
 
 --
--- TOC entry 4139 (class 0 OID 0)
--- Dependencies: 320
+-- TOC entry 4158 (class 0 OID 0)
+-- Dependencies: 321
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: mbom; Owner: postgres
 --
 
@@ -4766,16 +4824,16 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 
 
 --
--- TOC entry 4011 (class 0 OID 30829)
--- Dependencies: 265
+-- TOC entry 4027 (class 0 OID 30829)
+-- Dependencies: 266
 -- Data for Name: material; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4013 (class 0 OID 30900)
--- Dependencies: 267
+-- TOC entry 4029 (class 0 OID 30900)
+-- Dependencies: 268
 -- Data for Name: primal; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
 
@@ -4806,24 +4864,24 @@ INSERT INTO primal VALUES (44, 'Трб-089,0х03,5-ст20-Ш', 1, 115.0000, 'PRI
 SET search_path = movement, pg_catalog;
 
 --
--- TOC entry 3987 (class 0 OID 30415)
--- Dependencies: 241
+-- TOC entry 4003 (class 0 OID 30415)
+-- Dependencies: 242
 -- Data for Name: equipment; Type: TABLE DATA; Schema: movement; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3988 (class 0 OID 30421)
--- Dependencies: 242
+-- TOC entry 4004 (class 0 OID 30421)
+-- Dependencies: 243
 -- Data for Name: personnel; Type: TABLE DATA; Schema: movement; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3989 (class 0 OID 30427)
--- Dependencies: 243
+-- TOC entry 4005 (class 0 OID 30427)
+-- Dependencies: 244
 -- Data for Name: segment; Type: TABLE DATA; Schema: movement; Owner: postgres
 --
 
@@ -4832,28 +4890,28 @@ SET search_path = movement, pg_catalog;
 SET search_path = operation, pg_catalog;
 
 --
--- TOC entry 4023 (class 0 OID 31067)
--- Dependencies: 277
+-- TOC entry 4039 (class 0 OID 31067)
+-- Dependencies: 278
 -- Data for Name: consumable; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3990 (class 0 OID 30445)
--- Dependencies: 244
+-- TOC entry 4006 (class 0 OID 30445)
+-- Dependencies: 245
 -- Data for Name: definition; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
-INSERT INTO definition VALUES (1, '81ce5c76-b827-11e7-9511-d4bed939923a', 'operation #1', '2017-10-23');
-INSERT INTO definition VALUES (2, '868fe84c-b827-11e7-9512-d4bed939923a', 'operation #2', '2017-10-23');
-INSERT INTO definition VALUES (3, '8a177408-b827-11e7-9513-d4bed939923a', 'operation #3', '2017-10-23');
-INSERT INTO definition VALUES (4, '8dd62c1a-b827-11e7-9514-d4bed939923a', 'operation #4', '2017-10-23');
+INSERT INTO definition VALUES (1, '81ce5c76-b827-11e7-9511-d4bed939923a', 'operation #1', '2017-10-23', 1, 1);
+INSERT INTO definition VALUES (2, '868fe84c-b827-11e7-9512-d4bed939923a', 'operation #2', '2017-10-23', 1, 2);
+INSERT INTO definition VALUES (3, '8a177408-b827-11e7-9513-d4bed939923a', 'operation #3', '2017-10-23', 1, 3);
+INSERT INTO definition VALUES (4, '8dd62c1a-b827-11e7-9514-d4bed939923a', 'operation #4', '2017-10-23', 1, 4);
 
 
 --
--- TOC entry 4140 (class 0 OID 0)
--- Dependencies: 245
+-- TOC entry 4159 (class 0 OID 0)
+-- Dependencies: 246
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: operation; Owner: postgres
 --
 
@@ -4861,56 +4919,77 @@ SELECT pg_catalog.setval('definition_id_seq', 4, true);
 
 
 --
--- TOC entry 3992 (class 0 OID 30455)
--- Dependencies: 246
+-- TOC entry 4008 (class 0 OID 30455)
+-- Dependencies: 247
 -- Data for Name: equipment; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4021 (class 0 OID 31031)
--- Dependencies: 275
+-- TOC entry 4072 (class 0 OID 33674)
+-- Dependencies: 324
+-- Data for Name: information; Type: TABLE DATA; Schema: operation; Owner: postgres
+--
+
+INSERT INTO information VALUES (1, 'operation #1', '2017-10-27');
+INSERT INTO information VALUES (2, 'operation #2', '2017-10-27');
+INSERT INTO information VALUES (3, 'operation #3', '2017-10-27');
+INSERT INTO information VALUES (4, 'operation #4', '2017-10-27');
+
+
+--
+-- TOC entry 4160 (class 0 OID 0)
+-- Dependencies: 323
+-- Name: information_id_seq; Type: SEQUENCE SET; Schema: operation; Owner: postgres
+--
+
+SELECT pg_catalog.setval('information_id_seq', 4, true);
+
+
+--
+-- TOC entry 4037 (class 0 OID 31031)
+-- Dependencies: 276
 -- Data for Name: material; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3993 (class 0 OID 30462)
--- Dependencies: 247
+-- TOC entry 4009 (class 0 OID 30462)
+-- Dependencies: 248
 -- Data for Name: personnel; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4022 (class 0 OID 31044)
--- Dependencies: 276
+-- TOC entry 4038 (class 0 OID 31044)
+-- Dependencies: 277
 -- Data for Name: primal; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3994 (class 0 OID 30477)
--- Dependencies: 248
+-- TOC entry 4010 (class 0 OID 30477)
+-- Dependencies: 249
 -- Data for Name: producible; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3995 (class 0 OID 30486)
--- Dependencies: 249
+-- TOC entry 4011 (class 0 OID 30486)
+-- Dependencies: 250
 -- Data for Name: segment; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4141 (class 0 OID 0)
--- Dependencies: 250
+-- TOC entry 4161 (class 0 OID 0)
+-- Dependencies: 251
 -- Name: segment_id_seq; Type: SEQUENCE SET; Schema: operation; Owner: postgres
 --
 
@@ -4918,9 +4997,9 @@ SELECT pg_catalog.setval('segment_id_seq', 1, false);
 
 
 --
--- TOC entry 3997 (class 0 OID 30495)
--- Dependencies: 251
--- Data for Name: tool; Type: TABLE DATA; Schema: operation; Owner: postgres
+-- TOC entry 4013 (class 0 OID 30495)
+-- Dependencies: 252
+-- Data for Name: tooling; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
 
 
@@ -4928,16 +5007,16 @@ SELECT pg_catalog.setval('segment_id_seq', 1, false);
 SET search_path = performance, pg_catalog;
 
 --
--- TOC entry 4048 (class 0 OID 32291)
--- Dependencies: 302
+-- TOC entry 4064 (class 0 OID 32291)
+-- Dependencies: 303
 -- Data for Name: information; Type: TABLE DATA; Schema: performance; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4142 (class 0 OID 0)
--- Dependencies: 301
+-- TOC entry 4162 (class 0 OID 0)
+-- Dependencies: 302
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: performance; Owner: postgres
 --
 
@@ -4947,16 +5026,16 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = personnel, pg_catalog;
 
 --
--- TOC entry 4020 (class 0 OID 30990)
--- Dependencies: 274
+-- TOC entry 4036 (class 0 OID 30990)
+-- Dependencies: 275
 -- Data for Name: information; Type: TABLE DATA; Schema: personnel; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4143 (class 0 OID 0)
--- Dependencies: 273
+-- TOC entry 4163 (class 0 OID 0)
+-- Dependencies: 274
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: personnel; Owner: postgres
 --
 
@@ -4966,16 +5045,16 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 3998 (class 0 OID 30502)
--- Dependencies: 252
+-- TOC entry 4014 (class 0 OID 30502)
+-- Dependencies: 253
 -- Data for Name: definition; Type: TABLE DATA; Schema: process; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4144 (class 0 OID 0)
--- Dependencies: 253
+-- TOC entry 4164 (class 0 OID 0)
+-- Dependencies: 254
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: process; Owner: postgres
 --
 
@@ -4983,24 +5062,24 @@ SELECT pg_catalog.setval('definition_id_seq', 1, false);
 
 
 --
--- TOC entry 3971 (class 0 OID 30299)
--- Dependencies: 225
+-- TOC entry 3987 (class 0 OID 30299)
+-- Dependencies: 226
 -- Data for Name: equipment; Type: TABLE DATA; Schema: process; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4000 (class 0 OID 30510)
--- Dependencies: 254
+-- TOC entry 4016 (class 0 OID 30510)
+-- Dependencies: 255
 -- Data for Name: information; Type: TABLE DATA; Schema: process; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4145 (class 0 OID 0)
--- Dependencies: 255
+-- TOC entry 4165 (class 0 OID 0)
+-- Dependencies: 256
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: process; Owner: postgres
 --
 
@@ -5008,24 +5087,24 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 
 
 --
--- TOC entry 3973 (class 0 OID 30311)
--- Dependencies: 227
+-- TOC entry 3989 (class 0 OID 30311)
+-- Dependencies: 228
 -- Data for Name: personnel; Type: TABLE DATA; Schema: process; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3975 (class 0 OID 30323)
--- Dependencies: 229
+-- TOC entry 3991 (class 0 OID 30323)
+-- Dependencies: 230
 -- Data for Name: segment; Type: TABLE DATA; Schema: process; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4146 (class 0 OID 0)
--- Dependencies: 256
+-- TOC entry 4166 (class 0 OID 0)
+-- Dependencies: 257
 -- Name: segment_id_seq; Type: SEQUENCE SET; Schema: process; Owner: postgres
 --
 
@@ -5033,8 +5112,8 @@ SELECT pg_catalog.setval('segment_id_seq', 1, false);
 
 
 --
--- TOC entry 4003 (class 0 OID 30520)
--- Dependencies: 257
+-- TOC entry 4019 (class 0 OID 30520)
+-- Dependencies: 258
 -- Data for Name: specification; Type: TABLE DATA; Schema: process; Owner: postgres
 --
 
@@ -5043,40 +5122,40 @@ SELECT pg_catalog.setval('segment_id_seq', 1, false);
 SET search_path = product, pg_catalog;
 
 --
--- TOC entry 4026 (class 0 OID 31115)
--- Dependencies: 280
+-- TOC entry 4042 (class 0 OID 31115)
+-- Dependencies: 281
 -- Data for Name: definition; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4031 (class 0 OID 31156)
--- Dependencies: 285
+-- TOC entry 4047 (class 0 OID 31156)
+-- Dependencies: 286
 -- Data for Name: dependency; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4029 (class 0 OID 31134)
--- Dependencies: 283
+-- TOC entry 4045 (class 0 OID 31134)
+-- Dependencies: 284
 -- Data for Name: equipment; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4025 (class 0 OID 31100)
--- Dependencies: 279
+-- TOC entry 4041 (class 0 OID 31100)
+-- Dependencies: 280
 -- Data for Name: information; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4147 (class 0 OID 0)
--- Dependencies: 278
+-- TOC entry 4167 (class 0 OID 0)
+-- Dependencies: 279
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: product; Owner: postgres
 --
 
@@ -5084,32 +5163,32 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 
 
 --
--- TOC entry 4032 (class 0 OID 31168)
--- Dependencies: 286
+-- TOC entry 4048 (class 0 OID 31168)
+-- Dependencies: 287
 -- Data for Name: material; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4030 (class 0 OID 31143)
--- Dependencies: 284
+-- TOC entry 4046 (class 0 OID 31143)
+-- Dependencies: 285
 -- Data for Name: personnel; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4028 (class 0 OID 31125)
--- Dependencies: 282
+-- TOC entry 4044 (class 0 OID 31125)
+-- Dependencies: 283
 -- Data for Name: segment; Type: TABLE DATA; Schema: product; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4148 (class 0 OID 0)
--- Dependencies: 281
+-- TOC entry 4168 (class 0 OID 0)
+-- Dependencies: 282
 -- Name: segment_id_seq; Type: SEQUENCE SET; Schema: product; Owner: postgres
 --
 
@@ -5119,32 +5198,32 @@ SELECT pg_catalog.setval('segment_id_seq', 1, false);
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 4004 (class 0 OID 30525)
--- Dependencies: 258
+-- TOC entry 4020 (class 0 OID 30525)
+-- Dependencies: 259
 -- Data for Name: equipment; Type: TABLE DATA; Schema: production; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4005 (class 0 OID 30531)
--- Dependencies: 259
+-- TOC entry 4021 (class 0 OID 30531)
+-- Dependencies: 260
 -- Data for Name: personnel; Type: TABLE DATA; Schema: production; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4006 (class 0 OID 30537)
--- Dependencies: 260
+-- TOC entry 4022 (class 0 OID 30537)
+-- Dependencies: 261
 -- Data for Name: segment; Type: TABLE DATA; Schema: production; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4007 (class 0 OID 30544)
--- Dependencies: 261
+-- TOC entry 4023 (class 0 OID 30544)
+-- Dependencies: 262
 -- Data for Name: specification; Type: TABLE DATA; Schema: production; Owner: postgres
 --
 
@@ -5153,16 +5232,16 @@ SET search_path = production, pg_catalog;
 SET search_path = request, pg_catalog;
 
 --
--- TOC entry 4040 (class 0 OID 32247)
--- Dependencies: 294
+-- TOC entry 4056 (class 0 OID 32247)
+-- Dependencies: 295
 -- Data for Name: information; Type: TABLE DATA; Schema: request; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4149 (class 0 OID 0)
--- Dependencies: 293
+-- TOC entry 4169 (class 0 OID 0)
+-- Dependencies: 294
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: request; Owner: postgres
 --
 
@@ -5172,16 +5251,16 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = response, pg_catalog;
 
 --
--- TOC entry 4042 (class 0 OID 32258)
--- Dependencies: 296
+-- TOC entry 4058 (class 0 OID 32258)
+-- Dependencies: 297
 -- Data for Name: information; Type: TABLE DATA; Schema: response; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4150 (class 0 OID 0)
--- Dependencies: 295
+-- TOC entry 4170 (class 0 OID 0)
+-- Dependencies: 296
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: response; Owner: postgres
 --
 
@@ -5191,36 +5270,36 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = schedule, pg_catalog;
 
 --
--- TOC entry 4044 (class 0 OID 32269)
--- Dependencies: 298
+-- TOC entry 4060 (class 0 OID 32269)
+-- Dependencies: 299
 -- Data for Name: information; Type: TABLE DATA; Schema: schedule; Owner: postgres
 --
 
 
 
 --
--- TOC entry 4151 (class 0 OID 0)
--- Dependencies: 297
+-- TOC entry 4171 (class 0 OID 0)
+-- Dependencies: 298
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: schedule; Owner: postgres
 --
 
 SELECT pg_catalog.setval('information_id_seq', 1, false);
 
 
-SET search_path = tool, pg_catalog;
+SET search_path = tooling, pg_catalog;
 
 --
--- TOC entry 4046 (class 0 OID 32280)
+-- TOC entry 4062 (class 0 OID 32280)
+-- Dependencies: 301
+-- Data for Name: information; Type: TABLE DATA; Schema: tooling; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 4172 (class 0 OID 0)
 -- Dependencies: 300
--- Data for Name: information; Type: TABLE DATA; Schema: tool; Owner: postgres
---
-
-
-
---
--- TOC entry 4152 (class 0 OID 0)
--- Dependencies: 299
--- Name: information_id_seq; Type: SEQUENCE SET; Schema: tool; Owner: postgres
+-- Name: information_id_seq; Type: SEQUENCE SET; Schema: tooling; Owner: postgres
 --
 
 SELECT pg_catalog.setval('information_id_seq', 1, false);
@@ -5229,7 +5308,7 @@ SELECT pg_catalog.setval('information_id_seq', 1, false);
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3658 (class 2606 OID 30583)
+-- TOC entry 3669 (class 2606 OID 30583)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -5238,7 +5317,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3660 (class 2606 OID 30585)
+-- TOC entry 3671 (class 2606 OID 30585)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -5247,7 +5326,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3656 (class 2606 OID 30587)
+-- TOC entry 3667 (class 2606 OID 30587)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -5256,8 +5335,8 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 4153 (class 0 OID 0)
--- Dependencies: 3656
+-- TOC entry 4173 (class 0 OID 0)
+-- Dependencies: 3667
 -- Name: CONSTRAINT information_pkey ON information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -5265,7 +5344,7 @@ COMMENT ON CONSTRAINT information_pkey ON information IS 'may be part_code + ver
 
 
 --
--- TOC entry 3662 (class 2606 OID 30589)
+-- TOC entry 3673 (class 2606 OID 30589)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -5276,7 +5355,7 @@ ALTER TABLE ONLY part
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3666 (class 2606 OID 30591)
+-- TOC entry 3677 (class 2606 OID 30591)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5285,7 +5364,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3668 (class 2606 OID 30595)
+-- TOC entry 3679 (class 2606 OID 30595)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5294,7 +5373,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3664 (class 2606 OID 30593)
+-- TOC entry 3675 (class 2606 OID 30593)
 -- Name: component component_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5303,7 +5382,7 @@ ALTER TABLE ONLY component
 
 
 --
--- TOC entry 3670 (class 2606 OID 30597)
+-- TOC entry 3681 (class 2606 OID 30597)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5312,7 +5391,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3800 (class 2606 OID 33638)
+-- TOC entry 3813 (class 2606 OID 33638)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5321,7 +5400,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3672 (class 2606 OID 30599)
+-- TOC entry 3683 (class 2606 OID 30599)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5332,7 +5411,7 @@ ALTER TABLE ONLY part
 SET search_path = equipment, pg_catalog;
 
 --
--- TOC entry 3758 (class 2606 OID 30986)
+-- TOC entry 3771 (class 2606 OID 30986)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: equipment; Owner: postgres
 --
 
@@ -5343,7 +5422,7 @@ ALTER TABLE ONLY information
 SET search_path = goal, pg_catalog;
 
 --
--- TOC entry 3798 (class 2606 OID 32310)
+-- TOC entry 3811 (class 2606 OID 32310)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: goal; Owner: postgres
 --
 
@@ -5354,7 +5433,7 @@ ALTER TABLE ONLY information
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 3676 (class 2606 OID 30601)
+-- TOC entry 3687 (class 2606 OID 30601)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: inspection; Owner: postgres
 --
 
@@ -5363,7 +5442,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3680 (class 2606 OID 30603)
+-- TOC entry 3691 (class 2606 OID 30603)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: inspection; Owner: postgres
 --
 
@@ -5372,7 +5451,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3684 (class 2606 OID 30605)
+-- TOC entry 3695 (class 2606 OID 30605)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: inspection; Owner: postgres
 --
 
@@ -5383,7 +5462,7 @@ ALTER TABLE ONLY segment
 SET search_path = inventory, pg_catalog;
 
 --
--- TOC entry 3754 (class 2606 OID 30943)
+-- TOC entry 3767 (class 2606 OID 30943)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5392,7 +5471,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3688 (class 2606 OID 30607)
+-- TOC entry 3699 (class 2606 OID 30607)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5401,7 +5480,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3690 (class 2606 OID 30611)
+-- TOC entry 3701 (class 2606 OID 30611)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5410,7 +5489,7 @@ ALTER TABLE ONLY consumable
 
 
 --
--- TOC entry 3686 (class 2606 OID 30613)
+-- TOC entry 3697 (class 2606 OID 30613)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5419,7 +5498,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3756 (class 2606 OID 30953)
+-- TOC entry 3769 (class 2606 OID 30953)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5428,7 +5507,7 @@ ALTER TABLE ONLY part
 
 
 --
--- TOC entry 3752 (class 2606 OID 30933)
+-- TOC entry 3765 (class 2606 OID 30933)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5437,7 +5516,7 @@ ALTER TABLE ONLY primal
 
 
 --
--- TOC entry 3692 (class 2606 OID 30615)
+-- TOC entry 3703 (class 2606 OID 30615)
 -- Name: producible producible_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5446,7 +5525,7 @@ ALTER TABLE ONLY producible
 
 
 --
--- TOC entry 3694 (class 2606 OID 30617)
+-- TOC entry 3705 (class 2606 OID 30617)
 -- Name: salable salable_gid_key; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5455,7 +5534,7 @@ ALTER TABLE ONLY salable
 
 
 --
--- TOC entry 3696 (class 2606 OID 30619)
+-- TOC entry 3707 (class 2606 OID 30619)
 -- Name: salable salable_good_code_key; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5464,7 +5543,7 @@ ALTER TABLE ONLY salable
 
 
 --
--- TOC entry 3698 (class 2606 OID 30621)
+-- TOC entry 3709 (class 2606 OID 30621)
 -- Name: salable salable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5473,7 +5552,7 @@ ALTER TABLE ONLY salable
 
 
 --
--- TOC entry 3700 (class 2606 OID 30623)
+-- TOC entry 3711 (class 2606 OID 30623)
 -- Name: storable storable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -5484,7 +5563,7 @@ ALTER TABLE ONLY storable
 SET search_path = maintenance, pg_catalog;
 
 --
--- TOC entry 3786 (class 2606 OID 31200)
+-- TOC entry 3799 (class 2606 OID 31200)
 -- Name: demand demand_pkey; Type: CONSTRAINT; Schema: maintenance; Owner: postgres
 --
 
@@ -5493,7 +5572,7 @@ ALTER TABLE ONLY demand
 
 
 --
--- TOC entry 3782 (class 2606 OID 31184)
+-- TOC entry 3795 (class 2606 OID 31184)
 -- Name: request request_pkey; Type: CONSTRAINT; Schema: maintenance; Owner: postgres
 --
 
@@ -5502,7 +5581,7 @@ ALTER TABLE ONLY request
 
 
 --
--- TOC entry 3784 (class 2606 OID 31192)
+-- TOC entry 3797 (class 2606 OID 31192)
 -- Name: response response_pkey; Type: CONSTRAINT; Schema: maintenance; Owner: postgres
 --
 
@@ -5513,7 +5592,7 @@ ALTER TABLE ONLY response
 SET search_path = material, pg_catalog;
 
 --
--- TOC entry 3704 (class 2606 OID 30625)
+-- TOC entry 3715 (class 2606 OID 30625)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
 --
 
@@ -5522,7 +5601,7 @@ ALTER TABLE ONLY consumable
 
 
 --
--- TOC entry 3702 (class 2606 OID 30627)
+-- TOC entry 3713 (class 2606 OID 30627)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
 --
 
@@ -5531,7 +5610,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3742 (class 2606 OID 30808)
+-- TOC entry 3755 (class 2606 OID 30808)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
 --
 
@@ -5540,7 +5619,7 @@ ALTER TABLE ONLY primal
 
 
 --
--- TOC entry 3706 (class 2606 OID 30629)
+-- TOC entry 3717 (class 2606 OID 30629)
 -- Name: producible producible_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
 --
 
@@ -5551,7 +5630,7 @@ ALTER TABLE ONLY producible
 SET search_path = mbom, pg_catalog;
 
 --
--- TOC entry 3748 (class 2606 OID 30848)
+-- TOC entry 3761 (class 2606 OID 30848)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -5560,7 +5639,7 @@ ALTER TABLE ONLY consumable
 
 
 --
--- TOC entry 3744 (class 2606 OID 30823)
+-- TOC entry 3757 (class 2606 OID 30823)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -5569,7 +5648,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3802 (class 2606 OID 33660)
+-- TOC entry 3815 (class 2606 OID 33660)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -5578,7 +5657,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3746 (class 2606 OID 30836)
+-- TOC entry 3759 (class 2606 OID 30836)
 -- Name: material material_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -5587,7 +5666,7 @@ ALTER TABLE ONLY material
 
 
 --
--- TOC entry 3750 (class 2606 OID 30908)
+-- TOC entry 3763 (class 2606 OID 30908)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -5598,7 +5677,7 @@ ALTER TABLE ONLY primal
 SET search_path = movement, pg_catalog;
 
 --
--- TOC entry 3708 (class 2606 OID 30631)
+-- TOC entry 3719 (class 2606 OID 30631)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: movement; Owner: postgres
 --
 
@@ -5607,7 +5686,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3710 (class 2606 OID 30633)
+-- TOC entry 3721 (class 2606 OID 30633)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: movement; Owner: postgres
 --
 
@@ -5616,7 +5695,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3712 (class 2606 OID 30635)
+-- TOC entry 3723 (class 2606 OID 30635)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: movement; Owner: postgres
 --
 
@@ -5627,16 +5706,16 @@ ALTER TABLE ONLY segment
 SET search_path = operation, pg_catalog;
 
 --
--- TOC entry 3766 (class 2606 OID 31079)
+-- TOC entry 3779 (class 2606 OID 31079)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
 ALTER TABLE ONLY consumable
-    ADD CONSTRAINT consumable_pkey PRIMARY KEY (definition_id, part_code);
+    ADD CONSTRAINT consumable_pkey PRIMARY KEY (segment_id, part_code);
 
 
 --
--- TOC entry 3714 (class 2606 OID 30639)
+-- TOC entry 3725 (class 2606 OID 30639)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -5645,7 +5724,16 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3716 (class 2606 OID 30641)
+-- TOC entry 3727 (class 2606 OID 33698)
+-- Name: definition definition_version_num_information_id_key; Type: CONSTRAINT; Schema: operation; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_version_num_information_id_key UNIQUE (version_num, information_id);
+
+
+--
+-- TOC entry 3729 (class 2606 OID 30641)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -5654,16 +5742,25 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3762 (class 2606 OID 31043)
+-- TOC entry 3817 (class 2606 OID 33683)
+-- Name: information information_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
+--
+
+ALTER TABLE ONLY information
+    ADD CONSTRAINT information_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3775 (class 2606 OID 31043)
 -- Name: material material_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
 ALTER TABLE ONLY material
-    ADD CONSTRAINT material_pkey PRIMARY KEY (definition_id, part_code);
+    ADD CONSTRAINT material_pkey PRIMARY KEY (segment_id, part_code);
 
 
 --
--- TOC entry 3718 (class 2606 OID 30643)
+-- TOC entry 3731 (class 2606 OID 30643)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -5672,16 +5769,16 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3764 (class 2606 OID 31056)
+-- TOC entry 3777 (class 2606 OID 31056)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
 ALTER TABLE ONLY primal
-    ADD CONSTRAINT primal_pkey PRIMARY KEY (definition_id, part_code);
+    ADD CONSTRAINT primal_pkey PRIMARY KEY (segment_id, part_code);
 
 
 --
--- TOC entry 3720 (class 2606 OID 30645)
+-- TOC entry 3733 (class 2606 OID 30645)
 -- Name: producible producible_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -5690,7 +5787,7 @@ ALTER TABLE ONLY producible
 
 
 --
--- TOC entry 3722 (class 2606 OID 31092)
+-- TOC entry 3735 (class 2606 OID 31092)
 -- Name: segment segment_definition_id_operation_code_key; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -5699,7 +5796,7 @@ ALTER TABLE ONLY segment
 
 
 --
--- TOC entry 3724 (class 2606 OID 30647)
+-- TOC entry 3737 (class 2606 OID 30647)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -5708,18 +5805,18 @@ ALTER TABLE ONLY segment
 
 
 --
--- TOC entry 3726 (class 2606 OID 30649)
--- Name: tool tool_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
+-- TOC entry 3739 (class 2606 OID 30649)
+-- Name: tooling tooling_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
-ALTER TABLE ONLY tool
-    ADD CONSTRAINT tool_pkey PRIMARY KEY (segment_id, tool_code);
+ALTER TABLE ONLY tooling
+    ADD CONSTRAINT tooling_pkey PRIMARY KEY (segment_id, tool_code);
 
 
 SET search_path = performance, pg_catalog;
 
 --
--- TOC entry 3796 (class 2606 OID 32299)
+-- TOC entry 3809 (class 2606 OID 32299)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: performance; Owner: postgres
 --
 
@@ -5730,7 +5827,7 @@ ALTER TABLE ONLY information
 SET search_path = personnel, pg_catalog;
 
 --
--- TOC entry 3760 (class 2606 OID 30998)
+-- TOC entry 3773 (class 2606 OID 30998)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: personnel; Owner: postgres
 --
 
@@ -5741,7 +5838,7 @@ ALTER TABLE ONLY information
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 3728 (class 2606 OID 30651)
+-- TOC entry 3741 (class 2606 OID 30651)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -5750,7 +5847,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3674 (class 2606 OID 30653)
+-- TOC entry 3685 (class 2606 OID 30653)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -5759,7 +5856,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3730 (class 2606 OID 30655)
+-- TOC entry 3743 (class 2606 OID 30655)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -5768,7 +5865,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3678 (class 2606 OID 30657)
+-- TOC entry 3689 (class 2606 OID 30657)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -5777,7 +5874,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3682 (class 2606 OID 30659)
+-- TOC entry 3693 (class 2606 OID 30659)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -5786,7 +5883,7 @@ ALTER TABLE ONLY segment
 
 
 --
--- TOC entry 3732 (class 2606 OID 30661)
+-- TOC entry 3745 (class 2606 OID 30661)
 -- Name: specification specification_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -5797,7 +5894,7 @@ ALTER TABLE ONLY specification
 SET search_path = product, pg_catalog;
 
 --
--- TOC entry 3770 (class 2606 OID 31122)
+-- TOC entry 3783 (class 2606 OID 31122)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5806,7 +5903,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3778 (class 2606 OID 31162)
+-- TOC entry 3791 (class 2606 OID 31162)
 -- Name: dependency dependency_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5815,7 +5912,7 @@ ALTER TABLE ONLY dependency
 
 
 --
--- TOC entry 3774 (class 2606 OID 31141)
+-- TOC entry 3787 (class 2606 OID 31141)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5824,7 +5921,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3768 (class 2606 OID 31109)
+-- TOC entry 3781 (class 2606 OID 31109)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5833,7 +5930,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3780 (class 2606 OID 31175)
+-- TOC entry 3793 (class 2606 OID 31175)
 -- Name: material material_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5842,7 +5939,7 @@ ALTER TABLE ONLY material
 
 
 --
--- TOC entry 3776 (class 2606 OID 31150)
+-- TOC entry 3789 (class 2606 OID 31150)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5851,7 +5948,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3772 (class 2606 OID 31133)
+-- TOC entry 3785 (class 2606 OID 31133)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -5862,7 +5959,7 @@ ALTER TABLE ONLY segment
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 3734 (class 2606 OID 30663)
+-- TOC entry 3747 (class 2606 OID 30663)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -5871,7 +5968,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3736 (class 2606 OID 30665)
+-- TOC entry 3749 (class 2606 OID 30665)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -5880,7 +5977,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3738 (class 2606 OID 30667)
+-- TOC entry 3751 (class 2606 OID 30667)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -5889,7 +5986,7 @@ ALTER TABLE ONLY segment
 
 
 --
--- TOC entry 3740 (class 2606 OID 30669)
+-- TOC entry 3753 (class 2606 OID 30669)
 -- Name: specification specification_pkey; Type: CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -5900,7 +5997,7 @@ ALTER TABLE ONLY specification
 SET search_path = request, pg_catalog;
 
 --
--- TOC entry 3788 (class 2606 OID 32255)
+-- TOC entry 3801 (class 2606 OID 32255)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: request; Owner: postgres
 --
 
@@ -5911,7 +6008,7 @@ ALTER TABLE ONLY information
 SET search_path = response, pg_catalog;
 
 --
--- TOC entry 3790 (class 2606 OID 32266)
+-- TOC entry 3803 (class 2606 OID 32266)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: response; Owner: postgres
 --
 
@@ -5922,7 +6019,7 @@ ALTER TABLE ONLY information
 SET search_path = schedule, pg_catalog;
 
 --
--- TOC entry 3792 (class 2606 OID 32277)
+-- TOC entry 3805 (class 2606 OID 32277)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: schedule; Owner: postgres
 --
 
@@ -5930,11 +6027,11 @@ ALTER TABLE ONLY information
     ADD CONSTRAINT information_pkey PRIMARY KEY (id);
 
 
-SET search_path = tool, pg_catalog;
+SET search_path = tooling, pg_catalog;
 
 --
--- TOC entry 3794 (class 2606 OID 32288)
--- Name: information information_pkey; Type: CONSTRAINT; Schema: tool; Owner: postgres
+-- TOC entry 3807 (class 2606 OID 32288)
+-- Name: information information_pkey; Type: CONSTRAINT; Schema: tooling; Owner: postgres
 --
 
 ALTER TABLE ONLY information
@@ -5944,7 +6041,7 @@ ALTER TABLE ONLY information
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3838 (class 2620 OID 32482)
+-- TOC entry 3854 (class 2620 OID 32482)
 -- Name: definition set_prev_doc_fsmt; Type: TRIGGER; Schema: ebom; Owner: postgres
 --
 
@@ -5954,7 +6051,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON definition FOR EACH ROW EXECUT
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 3839 (class 2620 OID 30671)
+-- TOC entry 3855 (class 2620 OID 30671)
 -- Name: specification child_segment_ref_fkey_trigger; Type: TRIGGER; Schema: process; Owner: postgres
 --
 
@@ -5964,7 +6061,7 @@ CREATE CONSTRAINT TRIGGER child_segment_ref_fkey_trigger AFTER INSERT OR UPDATE 
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 3840 (class 2620 OID 30673)
+-- TOC entry 3856 (class 2620 OID 30673)
 -- Name: specification child_segment_ref_fkey_trigger; Type: TRIGGER; Schema: production; Owner: postgres
 --
 
@@ -5974,7 +6071,7 @@ CREATE CONSTRAINT TRIGGER child_segment_ref_fkey_trigger AFTER INSERT OR UPDATE 
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3804 (class 2606 OID 30674)
+-- TOC entry 3819 (class 2606 OID 30674)
 -- Name: assembly assembly_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5983,7 +6080,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3803 (class 2606 OID 30679)
+-- TOC entry 3818 (class 2606 OID 30679)
 -- Name: assembly assembly_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -5992,7 +6089,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3806 (class 2606 OID 30684)
+-- TOC entry 3821 (class 2606 OID 30684)
 -- Name: buyable buyable_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -6001,7 +6098,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3805 (class 2606 OID 30689)
+-- TOC entry 3820 (class 2606 OID 30689)
 -- Name: buyable buyable_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -6010,7 +6107,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3807 (class 2606 OID 33644)
+-- TOC entry 3822 (class 2606 OID 33644)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -6019,7 +6116,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3836 (class 2606 OID 33639)
+-- TOC entry 3852 (class 2606 OID 33639)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -6028,7 +6125,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3809 (class 2606 OID 30699)
+-- TOC entry 3824 (class 2606 OID 30699)
 -- Name: part part_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -6037,7 +6134,7 @@ ALTER TABLE ONLY part
 
 
 --
--- TOC entry 3808 (class 2606 OID 30704)
+-- TOC entry 3823 (class 2606 OID 30704)
 -- Name: part part_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -6048,7 +6145,7 @@ ALTER TABLE ONLY part
 SET search_path = inspection, pg_catalog;
 
 --
--- TOC entry 3810 (class 2606 OID 30709)
+-- TOC entry 3825 (class 2606 OID 30709)
 -- Name: equipment equipment_segment_id_fkey; Type: FK CONSTRAINT; Schema: inspection; Owner: postgres
 --
 
@@ -6057,7 +6154,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3812 (class 2606 OID 30714)
+-- TOC entry 3827 (class 2606 OID 30714)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: inspection; Owner: postgres
 --
 
@@ -6068,7 +6165,7 @@ ALTER TABLE ONLY personnel
 SET search_path = mbom, pg_catalog;
 
 --
--- TOC entry 3827 (class 2606 OID 30849)
+-- TOC entry 3843 (class 2606 OID 30849)
 -- Name: consumable consumable_definition_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -6077,7 +6174,7 @@ ALTER TABLE ONLY consumable
 
 
 --
--- TOC entry 3826 (class 2606 OID 30854)
+-- TOC entry 3842 (class 2606 OID 30854)
 -- Name: consumable consumable_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -6086,7 +6183,7 @@ ALTER TABLE ONLY consumable
 
 
 --
--- TOC entry 3825 (class 2606 OID 33666)
+-- TOC entry 3841 (class 2606 OID 33666)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -6095,7 +6192,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3837 (class 2606 OID 33661)
+-- TOC entry 3853 (class 2606 OID 33661)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -6104,7 +6201,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3829 (class 2606 OID 30909)
+-- TOC entry 3845 (class 2606 OID 30909)
 -- Name: primal primal_definition_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -6113,7 +6210,7 @@ ALTER TABLE ONLY primal
 
 
 --
--- TOC entry 3828 (class 2606 OID 30914)
+-- TOC entry 3844 (class 2606 OID 30914)
 -- Name: primal primal_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -6124,7 +6221,7 @@ ALTER TABLE ONLY primal
 SET search_path = movement, pg_catalog;
 
 --
--- TOC entry 3813 (class 2606 OID 30719)
+-- TOC entry 3828 (class 2606 OID 30719)
 -- Name: equipment equipment_segment_id_fkey; Type: FK CONSTRAINT; Schema: movement; Owner: postgres
 --
 
@@ -6133,7 +6230,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3814 (class 2606 OID 30724)
+-- TOC entry 3829 (class 2606 OID 30724)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: movement; Owner: postgres
 --
 
@@ -6144,16 +6241,7 @@ ALTER TABLE ONLY personnel
 SET search_path = operation, pg_catalog;
 
 --
--- TOC entry 3832 (class 2606 OID 31080)
--- Name: consumable consumable_definition_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
---
-
-ALTER TABLE ONLY consumable
-    ADD CONSTRAINT consumable_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id) ON UPDATE CASCADE ON DELETE CASCADE;
-
-
---
--- TOC entry 3833 (class 2606 OID 31085)
+-- TOC entry 3848 (class 2606 OID 31085)
 -- Name: consumable consumable_part_code_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6162,7 +6250,25 @@ ALTER TABLE ONLY consumable
 
 
 --
--- TOC entry 3815 (class 2606 OID 30739)
+-- TOC entry 3849 (class 2606 OID 33699)
+-- Name: consumable consumable_segment_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable
+    ADD CONSTRAINT consumable_segment_id_fkey FOREIGN KEY (segment_id) REFERENCES segment(id);
+
+
+--
+-- TOC entry 3830 (class 2606 OID 33692)
+-- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_information_id_fkey FOREIGN KEY (information_id) REFERENCES information(id);
+
+
+--
+-- TOC entry 3831 (class 2606 OID 30739)
 -- Name: equipment equipment_segment_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6171,7 +6277,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3816 (class 2606 OID 30744)
+-- TOC entry 3832 (class 2606 OID 30744)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6180,16 +6286,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3830 (class 2606 OID 31057)
--- Name: primal primal_definition_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
---
-
-ALTER TABLE ONLY primal
-    ADD CONSTRAINT primal_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id) ON UPDATE CASCADE ON DELETE CASCADE;
-
-
---
--- TOC entry 3831 (class 2606 OID 31062)
+-- TOC entry 3846 (class 2606 OID 31062)
 -- Name: primal primal_part_code_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6198,7 +6295,16 @@ ALTER TABLE ONLY primal
 
 
 --
--- TOC entry 3817 (class 2606 OID 30749)
+-- TOC entry 3847 (class 2606 OID 33704)
+-- Name: primal primal_segment_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
+--
+
+ALTER TABLE ONLY primal
+    ADD CONSTRAINT primal_segment_id_fkey FOREIGN KEY (segment_id) REFERENCES movement.segment(id);
+
+
+--
+-- TOC entry 3833 (class 2606 OID 30749)
 -- Name: producible producible_definition_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6207,7 +6313,7 @@ ALTER TABLE ONLY producible
 
 
 --
--- TOC entry 3818 (class 2606 OID 30754)
+-- TOC entry 3834 (class 2606 OID 30754)
 -- Name: producible producible_part_code_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6216,7 +6322,7 @@ ALTER TABLE ONLY producible
 
 
 --
--- TOC entry 3819 (class 2606 OID 30759)
+-- TOC entry 3835 (class 2606 OID 30759)
 -- Name: segment segment_definition_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -6225,18 +6331,18 @@ ALTER TABLE ONLY segment
 
 
 --
--- TOC entry 3820 (class 2606 OID 30764)
--- Name: tool tool_segment_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
+-- TOC entry 3836 (class 2606 OID 30764)
+-- Name: tooling tooling_segment_id_fkey; Type: FK CONSTRAINT; Schema: operation; Owner: postgres
 --
 
-ALTER TABLE ONLY tool
-    ADD CONSTRAINT tool_segment_id_fkey FOREIGN KEY (segment_id) REFERENCES segment(id) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE ONLY tooling
+    ADD CONSTRAINT tooling_segment_id_fkey FOREIGN KEY (segment_id) REFERENCES segment(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 SET search_path = process, pg_catalog;
 
 --
--- TOC entry 3811 (class 2606 OID 30769)
+-- TOC entry 3826 (class 2606 OID 30769)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -6245,7 +6351,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3821 (class 2606 OID 30774)
+-- TOC entry 3837 (class 2606 OID 30774)
 -- Name: specification specification_parent_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -6256,7 +6362,7 @@ ALTER TABLE ONLY specification
 SET search_path = product, pg_catalog;
 
 --
--- TOC entry 3835 (class 2606 OID 31163)
+-- TOC entry 3851 (class 2606 OID 31163)
 -- Name: dependency dependency_parent_segment_id_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -6265,7 +6371,7 @@ ALTER TABLE ONLY dependency
 
 
 --
--- TOC entry 3834 (class 2606 OID 31151)
+-- TOC entry 3850 (class 2606 OID 31151)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -6276,7 +6382,7 @@ ALTER TABLE ONLY personnel
 SET search_path = production, pg_catalog;
 
 --
--- TOC entry 3822 (class 2606 OID 30779)
+-- TOC entry 3838 (class 2606 OID 30779)
 -- Name: equipment equipment_segment_id_fkey; Type: FK CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -6285,7 +6391,7 @@ ALTER TABLE ONLY equipment
 
 
 --
--- TOC entry 3823 (class 2606 OID 30784)
+-- TOC entry 3839 (class 2606 OID 30784)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -6294,7 +6400,7 @@ ALTER TABLE ONLY personnel
 
 
 --
--- TOC entry 3824 (class 2606 OID 30789)
+-- TOC entry 3840 (class 2606 OID 30789)
 -- Name: specification specification_parent_segment_id_fkey; Type: FK CONSTRAINT; Schema: production; Owner: postgres
 --
 
@@ -6302,7 +6408,7 @@ ALTER TABLE ONLY specification
     ADD CONSTRAINT specification_parent_segment_id_fkey FOREIGN KEY (parent_segment_id) REFERENCES segment(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
--- Completed on 2017-10-24 02:33:12 EEST
+-- Completed on 2017-10-27 01:39:38 EEST
 
 --
 -- PostgreSQL database dump complete
