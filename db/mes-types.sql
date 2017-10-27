@@ -15,7 +15,6 @@ CREATE TYPE document_fsmt AS ENUM (
     'COMMITTED',
     'DECOMMITTED'
 );
-ALTER TYPE document_fsmt OWNER TO postgres;
 
 
 CREATE TYPE common.component_kind AS ENUM
@@ -43,7 +42,6 @@ CREATE TYPE common.document_kind AS ENUM (
     'REQUEST',
     'RESPONSE'
 );
-ALTER TYPE common.document_kind OWNER TO postgres;
 
 
 /*CREATE TYPE common.document_body AS (
@@ -95,10 +93,9 @@ CREATE TYPE common.ebom_head AS (
   _part_code character varying NOT NULL,
   _version_num integer NOT NULL,
 );
-ALTER TYPE common.ebom_head OWNER TO postgres;
 
 
-CREATE TYPE common.mbom_head AS (
+CREATE TYPE common.ebom_head AS (
   document_id bigint,
   gid uuid,
   display_name character varying,
@@ -109,11 +106,21 @@ CREATE TYPE common.mbom_head AS (
   _part_code character varying NOT NULL,
   _version_num integer NOT NULL,
 );
-ALTER TYPE common.mbom_head OWNER TO postgres;
 
 
+CREATE TYPE common.ebom_type AS (
+  head common.ebom_head,
+  body common.ebom_body[]
+);
 
-CREATE TYPE document_type AS (
+
+CREATE TYPE common.mbom_type AS (
+  head common.mbom_head,
+  body common.mbom_body[]
+);
+
+
+CREATE TYPE common.document_type AS (
 	head document_head,
 	body document_body[]
 );
