@@ -186,51 +186,113 @@ CREATE TYPE common.operation_document AS (
 
 
 /*
-create function buyable_to_consumable();
-create function part_to_producible();
-create function part_to_consumable();
-create function assemly_to_producible();
-create function assemly_to_consumable();
-create function consumable_to_assembly();
-create function consumable_to_part();
-create function consumable_to_buyable();
-create function producible_to_assembly();
+create function ();
 create function producible_to_part();
 */
 
-CREATE OR REPLACE FUNCTION common.buyable_to_primal(__buyable_component common.component_specification)
-  RETURNS common.material_specification AS
-$BODY$
-BEGIN
 
-  RETURN (
-    __buyable_component.part_code,
-    __buyable_component.version_num,
-    __buyable_component.quantity,
-    __buyable_component.uom_code,
-    'PRIMAL'::common.material_kind
-  )::common.material_specification;
-
-END;
-$BODY$
-  LANGUAGE plpgsql VOLATILE
-  COST 100;
-ALTER FUNCTION common.buyable_to_primal(__buyable_component common.component_specification)
-  OWNER TO postgres;
-
-SELECT common.buyable_to_primal(__buyable_component := ('part_code#1', 1, 1.0, 'pcs', 'BUYABLE')::common.component_specification);
-
-
-CREATE OR REPLACE FUNCTION common.primal_to_buyable(__primal_component common.material_specification)
+CREATE OR REPLACE FUNCTION common.producible_to_part(__material common.material_specification)
   RETURNS common.component_specification AS
 $BODY$
 BEGIN
 
   RETURN (
-    __primal_component.part_code,
-    __primal_component.version_num,
-    __primal_component.quantity,
-    __primal_component.uom_code,
+    __material.part_code,
+    __material.version_num,
+    __material.quantity,
+    __material.uom_code,
+    'PART'::common.component_kind
+  )::common.component_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.producible_to_part(__material common.material_specification)
+  OWNER TO postgres;
+
+SELECT common.producible_to_part(__material := ('part_code#1', 1, 1.0, 'pcs', 'PRODUCIBLE')::common.material_specification);
+
+
+CREATE OR REPLACE FUNCTION common.producible_to_assembly(__material common.material_specification)
+  RETURNS common.component_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __material.part_code,
+    __material.version_num,
+    __material.quantity,
+    __material.uom_code,
+    'ASSEMBLY'::common.component_kind
+  )::common.component_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.producible_to_assembly(__material common.material_specification)
+  OWNER TO postgres;
+
+SELECT common.producible_to_assembly(__material := ('part_code#1', 1, 1.0, 'pcs', 'PRODUCIBLE')::common.material_specification);
+
+
+CREATE OR REPLACE FUNCTION common.consumable_to_part(__material common.material_specification)
+  RETURNS common.component_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __material.part_code,
+    __material.version_num,
+    __material.quantity,
+    __material.uom_code,
+    'PART'::common.component_kind
+  )::common.component_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.consumable_to_part(__material common.material_specification)
+  OWNER TO postgres;
+
+SELECT common.consumable_to_part(__material := ('part_code#1', 1, 1.0, 'pcs', 'CONSUMABLE')::common.material_specification);
+
+
+CREATE OR REPLACE FUNCTION common.consumable_to_assembly(__material common.material_specification)
+  RETURNS common.component_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __material.part_code,
+    __material.version_num,
+    __material.quantity,
+    __material.uom_code,
+    'ASSEMBLY'::common.component_kind
+  )::common.component_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.consumable_to_assembly(__material common.material_specification)
+  OWNER TO postgres;
+
+SELECT common.consumable_to_assembly(__material := ('part_code#1', 1, 1.0, 'pcs', 'CONSUMABLE')::common.material_specification);
+
+
+CREATE OR REPLACE FUNCTION common.consumable_to_buyable(__material common.material_specification)
+  RETURNS common.component_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __material.part_code,
+    __material.version_num,
+    __material.quantity,
+    __material.uom_code,
     'BUYABLE'::common.component_kind
   )::common.component_specification;
 
@@ -238,10 +300,171 @@ END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION common.primal_to_buyable(__primal_component common.material_specification)
+ALTER FUNCTION common.consumable_to_buyable(__material common.material_specification)
   OWNER TO postgres;
 
-SELECT common.primal_to_buyable(__primal_component := ('part_code#1', 1, 1.0, 'pcs', 'PRIMAL')::common.material_specification);
+SELECT common.consumable_to_buyable(__material := ('part_code#1', 1, 1.0, 'pcs', 'CONSUMABLE')::common.material_specification);
+
+
+CREATE OR REPLACE FUNCTION common.primal_to_buyable(__material common.material_specification)
+  RETURNS common.component_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __material.part_code,
+    __material.version_num,
+    __material.quantity,
+    __material.uom_code,
+    'BUYABLE'::common.component_kind
+  )::common.component_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.primal_to_buyable(__material common.material_specification)
+  OWNER TO postgres;
+
+SELECT common.primal_to_buyable(__material := ('part_code#1', 1, 1.0, 'pcs', 'PRIMAL')::common.material_specification);
+
+
+CREATE OR REPLACE FUNCTION common.assemly_to_producible(__component common.component_specification)
+  RETURNS common.material_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __component.part_code,
+    __component.version_num,
+    __component.quantity,
+    __component.uom_code,
+    'PRODUCIBLE'::common.material_kind
+  )::common.material_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.assemly_to_producible(__component common.component_specification)
+  OWNER TO postgres;
+
+SELECT common.assemly_to_producible(__component := ('part_code#1', 1, 1.0, 'pcs', 'ASSEMBLY')::common.component_specification);
+
+
+CREATE OR REPLACE FUNCTION common.part_to_producible(__component common.component_specification)
+  RETURNS common.material_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __component.part_code,
+    __component.version_num,
+    __component.quantity,
+    __component.uom_code,
+    'PRODUCIBLE'::common.material_kind
+  )::common.material_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.part_to_producible(__component common.component_specification)
+  OWNER TO postgres;
+
+SELECT common.part_to_producible(__component := ('part_code#1', 1, 1.0, 'pcs', 'PART')::common.component_specification);
+
+
+CREATE OR REPLACE FUNCTION common.buyable_to_primal(__component common.component_specification)
+  RETURNS common.material_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __component.part_code,
+    __component.version_num,
+    __component.quantity,
+    __component.uom_code,
+    'PRIMAL'::common.material_kind
+  )::common.material_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.buyable_to_primal(__component common.component_specification)
+  OWNER TO postgres;
+
+SELECT common.buyable_to_primal(__component := ('part_code#1', 1, 1.0, 'pcs', 'BUYABLE')::common.component_specification);
+
+
+CREATE OR REPLACE FUNCTION common.part_to_consumable(__component common.component_specification)
+  RETURNS common.material_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __component.part_code,
+    __component.version_num,
+    __component.quantity,
+    __component.uom_code,
+    'CONSUMABLE'::common.material_kind
+  )::common.material_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.part_to_consumable(__component common.component_specification)
+  OWNER TO postgres;
+
+SELECT common.part_to_consumable(__component := ('part_code#1', 1, 1.0, 'pcs', 'PART')::common.component_specification);
+
+
+CREATE OR REPLACE FUNCTION common.assemly_to_consumable(__component common.component_specification)
+  RETURNS common.material_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __component.part_code,
+    __component.version_num,
+    __component.quantity,
+    __component.uom_code,
+    'CONSUMABLE'::common.material_kind
+  )::common.material_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.assemly_to_consumable(__component common.component_specification)
+  OWNER TO postgres;
+
+SELECT common.assemly_to_consumable(__component := ('part_code#1', 1, 1.0, 'pcs', 'ASSEMBLY')::common.component_specification);
+
+
+CREATE OR REPLACE FUNCTION common.buyable_to_consumable(__component common.component_specification)
+  RETURNS common.material_specification AS
+$BODY$
+BEGIN
+
+  RETURN (
+    __component.part_code,
+    __component.version_num,
+    __component.quantity,
+    __component.uom_code,
+    'CONSUMABLE'::common.material_kind
+  )::common.material_specification;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION common.buyable_to_consumable(__component common.component_specification)
+  OWNER TO postgres;
+
+SELECT common.buyable_to_consumable(__component := ('part_code#1', 1, 1.0, 'pcs', 'BUYABLE')::common.component_specification);
 
 
 /*CREATE TYPE common.dependency_kind AS ENUM
