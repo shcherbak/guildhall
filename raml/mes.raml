@@ -1,7 +1,7 @@
 #%RAML 0.8
 title: Holonic MES API
 version: v1
-#baseUri: http://mes.io/wms/api/{version}
+#baseUri: http://mes.io/mes/api/{version}
 baseUri: http://127.0.0.1:5000
 mediaType: application/json
 documentation:
@@ -35,3 +35,149 @@ documentation:
       Material Produced Actual
       Consumable Actual
 
+schemas:
+  - Product: !include json/manuacturing-fsmt-schema.json
+  - Products: !include json/manuacturing-fsmt-schema.json
+  - Material: !include json/manuacturing-fsmt-schema.json
+  - MaterialItem: !include json/manuacturing-fsmt-schema.json
+  - Component: !include json/manuacturing-fsmt-schema.json
+  - ComponentItem: !include json/manuacturing-fsmt-schema.json
+  - Inventory: !include json/manuacturing-fsmt-schema.json
+  - InventoryItem: !include json/manuacturing-fsmt-schema.json
+  - Equipment: !include json/manuacturing-fsmt-schema.json
+  - EquipmentItem: !include json/manuacturing-fsmt-schema.json
+  - Tooling: !include json/manuacturing-fsmt-schema.json
+  - ToolingItem: !include json/manuacturing-fsmt-schema.json
+  - Personnel: !include json/manuacturing-fsmt-schema.json
+  - Person: !include json/manuacturing-fsmt-schema.json
+  - Process: !include json/manuacturing-fsmt-schema.json
+  - Processes: !include json/manuacturing-fsmt-schema.json
+  - FSMT: !include json/manuacturing-fsmt-schema.json
+  - EBOM: !include json/manuacturing-fsmt-schema.json
+  - EBOMs: !include json/manuacturing-fsmt-schema.json
+  - MBOM: !include json/manuacturing-fsmt-schema.json
+  - MBOMs: !include json/manuacturing-fsmt-schema.json
+  - Error: !include json/commons-error-schema.json
+  - Message: !include json/commons-message-schema.json
+
+
+/material:
+/component:
+/inventory:
+/equipment:
+/tooling:
+/personnel:
+/mbom:
+/operation:
+/product:
+/production:
+
+
+/ebom:
+  description: |
+    An engeneering bill of material
+  get:
+    description: Get a list of EBOMs
+    queryParameters:
+      sdate:
+        displayName: Start Date
+        type: date
+        description: Start date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-01
+      edate:
+        displayName: End Date
+        type: date
+        description: End date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-10
+      facility:
+        displayName: Facility
+        type: string
+        description: Facility code
+        example: A1
+        required: false
+        default: A1
+    responses:
+      200:
+        body:
+          application/json:
+            schema: EBOMs
+            example: !include ./json/manuacturing-ebom-documents-example.json
+  post:
+    description: Add new EBOM
+    body:
+      application/json:
+        schema: EBOM
+        example: !include ./json/manuacturing-ebom-document-example.json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Message
+            example: !include ./json/commons-message-example.json
+      400:
+        body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+  /{resourceId}:
+    get:
+      description: Get a EBOM by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: EBOM
+              example: !include ./json/manuacturing-ebom-document-example.json
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    delete:
+      description: Delete a Demand by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    /body:
+      patch:
+        description: Reinit body
+        body:
+          application/json:
+            schema: EBOM
+            example: !include ./json/manuacturing-ebom-document-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          400:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+    /fsmt:
+      put:
+        body:
+          application/json:
+            schema: FSMT
+            example: !include ./json/manuacturing-fsmt-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          404:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
