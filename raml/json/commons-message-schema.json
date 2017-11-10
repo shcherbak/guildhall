@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Message",
+  "description": "Message Type definition",
+  "type": "object",
+  "properties": {
+    "code": {
+      "description": "The Message's unique identifier",
+      "type": "string"
+    },
+    "message": {
+      "description": "A human readable message",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "message"
+  ]
+}
