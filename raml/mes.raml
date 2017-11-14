@@ -36,27 +36,27 @@ documentation:
       Consumable Actual
 
 schemas:
-  - Product: !include json/manuacturing-fsmt-schema.json
-  - Products: !include json/manuacturing-fsmt-schema.json
-  - Material: !include json/manuacturing-fsmt-schema.json
-  - MaterialItem: !include json/manuacturing-fsmt-schema.json
-  - Component: !include json/manuacturing-fsmt-schema.json
-  - ComponentItem: !include json/manuacturing-fsmt-schema.json
-  - Inventory: !include json/manuacturing-fsmt-schema.json
-  - InventoryItem: !include json/manuacturing-fsmt-schema.json
-  - Equipment: !include json/manuacturing-fsmt-schema.json
-  - EquipmentItem: !include json/manuacturing-fsmt-schema.json
-  - Tooling: !include json/manuacturing-fsmt-schema.json
-  - ToolingItem: !include json/manuacturing-fsmt-schema.json
-  - Personnel: !include json/manuacturing-fsmt-schema.json
-  - Person: !include json/manuacturing-fsmt-schema.json
-  - Process: !include json/manuacturing-fsmt-schema.json
-  - Processes: !include json/manuacturing-fsmt-schema.json
-  - FSMT: !include json/manuacturing-fsmt-schema.json
-  - EBOM: !include json/manuacturing-fsmt-schema.json
-  - EBOMs: !include json/manuacturing-fsmt-schema.json
-  - MBOM: !include json/manuacturing-fsmt-schema.json
-  - MBOMs: !include json/manuacturing-fsmt-schema.json
+  - Product: !include json/manufacturing-fsmt-schema.json
+  - Products: !include json/manufacturing-fsmt-schema.json
+  - Material: !include json/manufacturing-fsmt-schema.json
+  - MaterialItem: !include json/manufacturing-fsmt-schema.json
+  - Component: !include json/manufacturing-fsmt-schema.json
+  - ComponentItem: !include json/manufacturing-fsmt-schema.json
+  - Inventory: !include json/manufacturing-fsmt-schema.json
+  - InventoryItem: !include json/manufacturing-fsmt-schema.json
+  - Equipment: !include json/manufacturing-fsmt-schema.json
+  - EquipmentItem: !include json/manufacturing-fsmt-schema.json
+  - Tooling: !include json/manufacturing-fsmt-schema.json
+  - ToolingItem: !include json/manufacturing-fsmt-schema.json
+  - Personnel: !include json/manufacturing-fsmt-schema.json
+  - Person: !include json/manufacturing-fsmt-schema.json
+  - Process: !include json/manufacturing-fsmt-schema.json
+  - Processes: !include json/manufacturing-fsmt-schema.json
+  - FSMT: !include json/manufacturing-fsmt-schema.json
+  - EBOM: !include json/manufacturing-bom-document-schema.json
+  - EBOMs: !include json/manufacturing-bom-documents-schema.json
+  - MBOM: !include json/manufacturing-bom-document-schema.json
+  - MBOMs: !include json/manufacturing-bom-documents-schema.json
   - Error: !include json/commons-error-schema.json
   - Message: !include json/commons-message-schema.json
 
@@ -105,13 +105,13 @@ schemas:
         body:
           application/json:
             schema: EBOMs
-            example: !include ./json/manuacturing-ebom-documents-example.json
+            example: !include ./json/manufacturing-bom-documents-example.json
   post:
     description: Add new EBOM
     body:
       application/json:
         schema: EBOM
-        example: !include ./json/manuacturing-ebom-document-example.json
+        example: !include ./json/manufacturing-bom-document-example.json
     responses:
       201:
         body:
@@ -131,7 +131,7 @@ schemas:
           body:
             application/json:
               schema: EBOM
-              example: !include ./json/manuacturing-ebom-document-example.json
+              example: !include ./json/manufacturing-bom-document-example.json
         404:
           body:
             application/json:
@@ -152,7 +152,7 @@ schemas:
         body:
           application/json:
             schema: EBOM
-            example: !include ./json/manuacturing-ebom-document-example.json
+            example: !include ./json/manufacturing-bom-document-example.json
         responses:
           200:
             body:

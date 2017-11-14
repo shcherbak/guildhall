@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Manufacturing Document Kind",
+    "description": "Document Kind",
+    "type": "object",
+    "properties": {
+        "doctype": {
+            "type": "string",
+            "enum": [
+              "EBOM",
+              "MBOM",
+              "OPERATION",
+              "PRODUCT",
+              "PROCESS",
+              "REQUEST",
+              "RESPONSE"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "doctype"
+    ]
+}

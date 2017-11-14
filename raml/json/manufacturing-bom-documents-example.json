@@ -1,0 +1,22 @@
+[
+  {
+    "document_id": 1,
+    "gid": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
+    "display_name": "STK-A1-AB1AA0",
+    "version_num": 1,
+    "document_date": "2017-02-01",
+    "hierarhy_scope": "SITE",
+    "curr_fsmt": "PROPOSED",
+    "doctype": "STOCKTAKE"
+  },
+  {
+    "document_id": 2,
+    "gid": "160fd11a-4011-11e7-9b12-d4bed939923a",
+    "display_name": "STK-A1-AB1AA1",
+    "document_date": "2017-02-02",
+    "version_num": 1,
+    "hierarhy_scope": "SITE",
+    "curr_fsmt": "PROPOSED",
+    "doctype": "STOCKTAKE"
+  }
+]
