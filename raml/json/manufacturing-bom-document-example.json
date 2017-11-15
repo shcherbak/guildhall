@@ -1,0 +1,29 @@
+{
+  "informaion": {
+    "document_id": 1,
+    "gid": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
+    "display_name": "GDD-A10-AB1AA0",
+    "document_date": "2017-02-01",
+    "version_num": 1,
+    "hierarhy_scope": "SITE",
+    "curr_fsmt": "PROPOSED",
+    "doctype": "EBOM"
+  },
+  "definition": [
+    {
+      "part_code": "10.01.001-001", 
+      "quantity": 10.0001, 
+      "uom_code": "kg"
+    }, 
+    {
+      "part_code": "20.02.002-002", 
+      "quantity": 20.0, 
+      "uom_code": "pcs"
+    },
+    {
+      "part_code": "30.03.003-003", 
+      "quantity": 300.0, 
+      "uom_code": "mm"
+    }
+  ]
+}
