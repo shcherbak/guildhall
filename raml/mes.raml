@@ -67,11 +67,62 @@ schemas:
 /equipment:
 /tooling:
 /personnel:
-/mbom:
-/operation:
 /product:
-/production:
 
+/production:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
+
+/process:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
+
+/request:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
+
+/response:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
+
+/operation:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
 
 /ebom:
   description: |
@@ -93,13 +144,13 @@ schemas:
         example: 2017-01-01
         required: false
         default: 2017-01-10
-      facility:
-        displayName: Facility
+      hierarhy:
+        displayName: Hierarhy
         type: string
-        description: Facility code
-        example: A1
+        description: Hierarhy scope
+        example: SITE
         required: false
-        default: A1
+        default: SITE
     responses:
       200:
         body:
@@ -138,7 +189,7 @@ schemas:
               schema: Error
               example: !include ./json/commons-error-example.json
     delete:
-      description: Delete a Demand by ID
+      description: Delete a EBOM by ID
       responses:
         204:
         404:
@@ -146,12 +197,121 @@ schemas:
             application/json:
               schema: Error
               example: !include ./json/commons-error-example.json
-    /body:
+    /definition:
       patch:
-        description: Reinit body
+        description: Reinit definition
         body:
           application/json:
             schema: EBOM
+            example: !include ./json/manufacturing-bom-document-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          400:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+    /fsmt:
+      put:
+        body:
+          application/json:
+            schema: FSMT
+            example: !include ./json/manufacturing-fsmt-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          404:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+
+/mbom:
+  description: |
+    A manufacturing bill of material
+  get:
+    description: Get a list of MBOMs
+    queryParameters:
+      sdate:
+        displayName: Start Date
+        type: date
+        description: Start date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-01
+      edate:
+        displayName: End Date
+        type: date
+        description: End date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-10
+      hierarhy:
+        displayName: Hierarhy
+        type: string
+        description: Hierarhy scope
+        example: SITE
+        required: false
+        default: SITE
+    responses:
+      200:
+        body:
+          application/json:
+            schema: MBOMs
+            example: !include ./json/manufacturing-bom-documents-example.json
+  post:
+    description: Add new MBOM
+    body:
+      application/json:
+        schema: MBOM
+        example: !include ./json/manufacturing-bom-document-example.json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Message
+            example: !include ./json/commons-message-example.json
+      400:
+        body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+  /{resourceId}:
+    get:
+      description: Get a MBOM by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: MBOM
+              example: !include ./json/manufacturing-bom-document-example.json
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    delete:
+      description: Delete a MBOM by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    /definition:
+      patch:
+        description: Reinit definition
+        body:
+          application/json:
+            schema: MBOM
             example: !include ./json/manufacturing-bom-document-example.json
         responses:
           200:
