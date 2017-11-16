@@ -1,21 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "FSMT",
-  "description": "FSMT",
-  "type": "object",
-  "properties": {
-    "curr_fsmt": {
-      "description": "Current transition",
-      "type": "string",
-      "enum": [
-        "PROPOSED",
-        "COMMITTED",
-        "DECOMMITTED"
-      ]
-    }
+  "title": "Manufacturing Internal Documents Collection",
+  "description": "Manufacturing Internal Documents Collection Type definition",
+  "type": "array",
+  "items": {
+    "$ref": "manufacturing-operation-information-schema.json"
   },
-  "additionalProperties": false,
-  "required": [
-    "curr_fsmt"
-  ]
+  "uniqueItems": true
 }
