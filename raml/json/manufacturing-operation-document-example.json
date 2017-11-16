@@ -2,28 +2,130 @@
   "informaion": {
     "document_id": 1,
     "gid": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
-    "display_name": "GDD-A10-AB1AA0",
+    "display_name": "OPR-A10-AB1AA0",
     "document_date": "2017-02-01",
     "version_num": 1,
     "hierarhy_scope": "SITE",
     "curr_fsmt": "PROPOSED",
-    "doctype": "EBOM"
-  },
-  "definition": [
-    {
+    "doctype": "OPERATION",
+    "producible": {
       "part_code": "10.01.001-001",
-      "quantity": 10.0001,
-      "uom_code": "kg"
-    },
-    {
-      "part_code": "20.02.002-002",
-      "quantity": 20.0,
+      "quantity": 1,
       "uom_code": "pcs"
+    }
+  },
+  "segment": [
+    {
+      "gid": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
+      "operation_code": "OP-0001-01",
+      "material_spec": [
+        {
+          "part_code": "10.01.001-001",
+          "quantity": 10.0001,
+          "uom_code": "kg"
+        },
+        {
+          "part_code": "20.02.002-002",
+          "quantity": 20.0,
+          "uom_code": "pcs"
+        }
+      ],
+      "personnel_spec": [
+        {
+          "personnel_code": "10.01.001-001",
+          "quantity": 1.0
+        },
+        {
+          "personnel_code": "20.02.002-002",
+          "quantity": 2.0
+        }
+      ],
+      "equipmet_spec": [
+        {
+          "equipment_code": "10.01.001-001",
+          "quantity": 1.0,
+          "uom_code": "pcs"
+        },
+        {
+          "equipment_code": "20.02.002-002",
+          "quantity": 2.0,
+          "uom_code": "pcs"
+        }
+      ],
+      "tooling_spec": [
+        {
+          "tooling_code": "10.01.001-001",
+          "quantity": 1.0,
+          "uom_code": "pcs"
+        },
+        {
+          "tooling_code": "20.02.002-002",
+          "quantity": 2.0,
+          "uom_code": "pcs"
+        }
+      ]
     },
     {
-      "part_code": "30.03.003-003",
-      "quantity": 300.0,
-      "uom_code": "mm"
+      "gid": "b3dbaf2c-3f1c-11e7-a691-d4bed939923a",
+      "operation_code": "OP-0002-01",
+      "material_spec": [
+        {
+          "part_code": "10.01.001-001",
+          "quantity": 10.0001,
+          "uom_code": "kg"
+        },
+        {
+          "part_code": "20.02.002-002",
+          "quantity": 20.0,
+          "uom_code": "pcs"
+        }
+      ],
+      "personnel_spec": [
+        {
+          "personnel_code": "10.01.001-001",
+          "quantity": 1.0
+        },
+        {
+          "personnel_code": "20.02.002-002",
+          "quantity": 2.0
+        }
+      ],
+      "equipmet_spec": [
+        {
+          "equipment_code": "10.01.001-001",
+          "quantity": 1.0,
+          "uom_code": "pcs"
+        },
+        {
+          "equipment_code": "20.02.002-002",
+          "quantity": 2.0,
+          "uom_code": "pcs"
+        }
+      ],
+      "tooling_spec": [
+        {
+          "tooling_code": "10.01.001-001",
+          "quantity": 1.0,
+          "uom_code": "pcs"
+        },
+        {
+          "tooling_code": "20.02.002-002",
+          "quantity": 2.0,
+          "uom_code": "pcs"
+        }
+      ]
+    }
+  ],
+  "dependency": [
+    {
+      "ancestor": "b3dbaf2c-3f1c-11e7-a691-d4bed939923a",
+      "descendant": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
+      "depth": 1
+    },
+    {
+      "ancestor": "b3dbaf2c-3f1c-11e7-a691-d4bed939923a",
+      "descendant": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
+      "depth": 2
     }
   ]
 }

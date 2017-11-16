@@ -7,7 +7,12 @@
     "document_date": "2017-02-01",
     "hierarhy_scope": "SITE",
     "curr_fsmt": "PROPOSED",
-    "doctype": "EBOM"
+    "doctype": "OPERATION",
+    "producible": {
+      "part_code": "10.01.001-001",
+      "quantity": 1,
+      "uom_code": "pcs"
+    }
   },
   {
     "document_id": 2,
@@ -17,6 +22,11 @@
     "version_num": 1,
     "hierarhy_scope": "SITE",
     "curr_fsmt": "PROPOSED",
-    "doctype": "EBOM"
+    "doctype": "OPERATION",
+    "producible": {
+      "part_code": "10.01.001-001",
+      "quantity": 1,
+      "uom_code": "pcs"
+    }
   }
 ]
