@@ -327,9 +327,111 @@ schemas:
               schema: Error
 
 /personnel:
+  get:
+    description: Get a list of Persons
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Persons
+  post:
+    description: Add new Person
+    body:
+      application/json:
+        schema: Person
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Person
+  /{resourceId}:
+    get:
+      description: Get a Person by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Person
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Person by ID
+      body:
+        application/json:
+          schema: Person
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Person
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Person by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+
 
 /products:
-
+  get:
+    description: Get a list of Products
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Products
+  post:
+    description: Add new Product
+    body:
+      application/json:
+        schema: Product
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Product
+  /{resourceId}:
+    get:
+      description: Get a Product by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Product
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Product by ID
+      body:
+        application/json:
+          schema: Product
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Product
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Product by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
 
 /production:
   get:
@@ -375,16 +477,123 @@ schemas:
     /fsmt:
       put:
 
-/operation:
+/operations:
+  description: |
+    An operation card (KTP)
   get:
+    description: Get a list of Operation cards
+    queryParameters:
+      sdate:
+        displayName: Start Date
+        type: date
+        description: Start date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-01
+      edate:
+        displayName: End Date
+        type: date
+        description: End date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-10
+      hierarhy:
+        displayName: Hierarhy
+        type: string
+        description: Hierarhy scope
+        example: SITE
+        required: false
+        default: SITE
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Operations
+            example: !include ./json/manufacturing-operation-documents-example.json
   post:
+    description: Add new Operation card
+    body:
+      application/json:
+        schema: Operation
+        example: !include ./json/manufacturing-operation-document-example.json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Message
+            example: !include ./json/commons-message-example.json
+      400:
+        body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
   /{resourceId}:
     get:
+      description: Get a Operation Card by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Operation
+              example: !include ./json/manufacturing-operation-document-example.json
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
     delete:
+      description: Delete a Operation Card by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
     /definition:
       patch:
+        description: Reinit definition
+        body:
+          application/json:
+            schema: Operation
+            example: !include ./json/manufacturing-operation-document-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          400:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+      /personnel:
+        patch:
+          description: Reinit personnel definition
+      /toolings:
+        patch:
+          description: Reinit toolings definition
+      /materials:
+        patch:
+          description: Reinit material definition
     /fsmt:
       put:
+        body:
+          application/json:
+            schema: FSMT
+            example: !include ./json/manufacturing-fsmt-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          404:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
 
 /ebom:
   description: |
