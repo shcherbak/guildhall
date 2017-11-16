@@ -1,0 +1,14 @@
+[
+  {
+    "id": 123,
+    "part_code": "12.34.567-890.123",
+    "name": "Warehouse Item 1",
+    "unit": "PCS"
+  },
+  {
+    "id": 456,
+    "part_code": "23.45.678-901.234",
+    "name": "Warehouse Item 2",
+    "unit": "PCS"
+  }
+]

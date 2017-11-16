@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Manufacturing Materials Collection",
+  "description": "Manufacturing Materials Collection Type definition",
+  "type": "array",
+  "items": {
+    "$ref": "commons-material-schema.json"
+  },
+  "uniqueItems": true
+}

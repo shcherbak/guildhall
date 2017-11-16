@@ -36,18 +36,18 @@ documentation:
       Consumable Actual
 
 schemas:
-  - Product: !include json/manufacturing-fsmt-schema.json
-  - Products: !include json/manufacturing-fsmt-schema.json
-  - Material: !include json/manufacturing-fsmt-schema.json
-  - MaterialItem: !include json/manufacturing-fsmt-schema.json
-  - Component: !include json/manufacturing-fsmt-schema.json
-  - ComponentItem: !include json/manufacturing-fsmt-schema.json
-  - Inventory: !include json/manufacturing-fsmt-schema.json
-  - InventoryItem: !include json/manufacturing-fsmt-schema.json
-  - Equipment: !include json/manufacturing-fsmt-schema.json
-  - EquipmentItem: !include json/manufacturing-fsmt-schema.json
-  - Tooling: !include json/manufacturing-fsmt-schema.json
-  - ToolingItem: !include json/manufacturing-fsmt-schema.json
+  - Product: !include json/commons-material-schema.json
+  - Products: !include json/commons-materials-schema.json
+  - Material: !include json/commons-material-schema.json
+  - Materials: !include json/commons-materials-schema.json
+  - Component: !include json/commons-material-schema.json
+  - Components: !include json/commons-materials-schema.json
+  - Inventory: !include json/commons-material-schema.json
+  - Inventories: !include json/commons-materials-schema.json
+  - Equipment: !include json/commons-material-schema.json
+  - Equipments: !include json/commons-materials-schema.json
+  - Tooling: !include json/commons-material-schema.json
+  - Toolings: !include json/commons-materials-schema.json
   - Personnel: !include json/manufacturing-fsmt-schema.json
   - Person: !include json/manufacturing-fsmt-schema.json
   - Process: !include json/manufacturing-fsmt-schema.json
@@ -61,13 +61,275 @@ schemas:
   - Message: !include json/commons-message-schema.json
 
 
-/material:
-/component:
-/inventory:
-/equipment:
-/tooling:
+/materials:
+  get:
+    description: Get a list of Materials
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Materials
+  post:
+    description: Add new Material
+    body:
+      application/json:
+        schema: Material
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Material
+  /{resourceId}:
+    get:
+      description: Get a Material by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Material
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Material by ID
+      body:
+        application/json:
+          schema: Material
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Material
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Material by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+
+/components:
+  get:
+    description: Get a list of Components
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Components
+  post:
+    description: Add new Component
+    body:
+      application/json:
+        schema: Component
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Component
+  /{resourceId}:
+    get:
+      description: Get a Component by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Component
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Component by ID
+      body:
+        application/json:
+          schema: Component
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Component
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Component by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+
+/inventories:
+  get:
+    description: Get a list of Inventories
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Inventories
+  post:
+    description: Add new Inventory
+    body:
+      application/json:
+        schema: Inventory
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Inventory
+  /{resourceId}:
+    get:
+      description: Get a Inventory by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Inventory
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Inventory by ID
+      body:
+        application/json:
+          schema: Inventory
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Inventory
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Inventory by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+
+/equipments:
+  get:
+    description: Get a list of Equipments
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Equipments
+  post:
+    description: Add new Equipment
+    body:
+      application/json:
+        schema: Equipment
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Equipment
+  /{resourceId}:
+    get:
+      description: Get a Equipment by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Equipment
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Equipment by ID
+      body:
+        application/json:
+          schema: Equipment
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Equipment
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Equipment by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+
+/toolings:
+  get:
+    description: Get a list of Toolings
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Toolings
+  post:
+    description: Add new Tooling
+    body:
+      application/json:
+        schema: Tooling
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Tooling
+  /{resourceId}:
+    get:
+      description: Get a Tooling by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Tooling
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Tooling by ID
+      body:
+        application/json:
+          schema: Tooling
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Tooling
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Tooling by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+
 /personnel:
-/product:
+
+/products:
+
 
 /production:
   get:
