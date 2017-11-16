@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.0-beta" last-position="1059,1405" last-zoom="0.8"
+	 default-schema="public" default-owner="postgres">
+<database name="mes" encoding="UTF8" lc-collate="uk_UA.UTF-8" lc-ctype="uk_UA.UTF-8">
+	<role name="postgres"/>
+	<tablespace name="pg_default"/>
+</database>
+
+<schema name="public" rect-visible="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<schema name="common" rect-visible="true" fill-color="#7933c5">
+	<role name="postgres"/>
+</schema>
+
+<schema name="component" rect-visible="true" fill-color="#6cfaba">
+	<role name="postgres"/>
+	<comment><![CDATA[components of bom]]></comment>
+</schema>
+
+<schema name="ebom" rect-visible="true" fill-color="#6dd20b">
+	<role name="postgres"/>
+	<comment><![CDATA[engenering bill of materials]]></comment>
+</schema>
+
+<schema name="inspection" rect-visible="true" fill-color="#d11eca">
+	<role name="postgres"/>
+	<comment><![CDATA[inspection segments]]></comment>
+</schema>
+
+<schema name="inventory" rect-visible="true" fill-color="#cd1566">
+	<role name="postgres"/>
+	<comment><![CDATA[inventory items definition]]></comment>
+</schema>
+
+<schema name="material" rect-visible="true" fill-color="#d0a24a">
+	<role name="postgres"/>
+	<comment><![CDATA[materials]]></comment>
+</schema>
+
+<schema name="movement" rect-visible="true" fill-color="#ca220b">
+	<role name="postgres"/>
+	<comment><![CDATA[movement segments]]></comment>
+</schema>
+
+<schema name="operation" rect-visible="true" fill-color="#4912e1">
+	<role name="postgres"/>
+	<comment><![CDATA[operation segments]]></comment>
+</schema>
+
+<schema name="process" rect-visible="true" fill-color="#ae14d6">
+	<role name="postgres"/>
+	<comment><![CDATA[process segments]]></comment>
+</schema>
+
+<schema name="product" rect-visible="true" fill-color="#c9f5ef">
+	<role name="postgres"/>
+	<comment><![CDATA[product segments]]></comment>
+</schema>
+
+<schema name="production" rect-visible="true" fill-color="#61f23d">
+	<role name="postgres"/>
+	<comment><![CDATA[production segments]]></comment>
+</schema>
+
+<usertype name="component_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="ASSEMBLY,PART,BUYABLE"/>
+</usertype>
+
+<usertype name="dependency_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="NotFollow,PossibleParallel,NotInParallel,AtStart,AfterStart,AfterEnd,NoLaterAfterStart,NoEarlierAfterStart,NoLaterAfterEnd,NoEarlierAfterEnd"/>
+</usertype>
+
+<usertype name="inventory_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="BUYABLE,COMPOSITE,CONSUMABLE,PRODUCIBLE,SALABLE,STORABLE"/>
+</usertype>
+
+<usertype name="job_order_command_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="Start,Stop,Hold,Restart,Abort,Reset,Pause,Resume"/>
+</usertype>
+
+<usertype name="material_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="CONSUMABLE,PRODUCIBLE"/>
+</usertype>
+
+<usertype name="operations_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="Production,Maintenance,Quality,Inventory,Mixed,Other"/>
+</usertype>
+
+<usertype name="process_segment_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="PROCESS,PRODUCTION,MOVEMENT,INSPECTION,OPERATION"/>
+</usertype>
+
+<usertype name="response_state_kind" configuration="enumeration">
+	<schema name="common"/>
+	<role name="postgres"/>
+	<enumeration values="Ready,Running,Completed,Aborted,Holding,Paused"/>
+</usertype>
+
+<function name="child_segment_ref_trigger"
+		window-func="false"
+		returns-setof="false"
+		behavior-type="CALLED ON NULL INPUT"
+		function-type="VOLATILE"
+		security-type="SECURITY INVOKER"
+		execution-cost="100"
+		row-amount="0">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<language name="plpgsql" sql-disabled="true"/>
+	<return-type>
+	<type name="trigger" length="1"/>
+	</return-type>
+	<definition><![CDATA[
+DECLARE
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM process.segment WHERE id = NEW.child_segment_id
+        ) THEN
+        RAISE foreign_key_violation USING MESSAGE = FORMAT('Referenced segment id not found, segment_id:%s', NEW.child_segment_id);
+    END IF;
+    RETURN NEW;
+END;
+]]></definition>
+</function>
+
+<function name="child_segment_ref_trigger"
+		window-func="false"
+		returns-setof="false"
+		behavior-type="CALLED ON NULL INPUT"
+		function-type="VOLATILE"
+		security-type="SECURITY INVOKER"
+		execution-cost="100"
+		row-amount="0">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<language name="plpgsql" sql-disabled="true"/>
+	<return-type>
+	<type name="trigger" length="1"/>
+	</return-type>
+	<definition><![CDATA[
+DECLARE
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM production.segment WHERE id = NEW.child_segment_id
+        ) THEN
+        RAISE foreign_key_violation USING MESSAGE = FORMAT('Referenced segment id not found, segment_id:%s', NEW.child_segment_id);
+    END IF;
+    RETURN NEW;
+END;
+]]></definition>
+</function>
+
+<table name="information">
+	<schema name="component"/>
+	<role name="postgres"/>
+	<position x="620" y="80"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="display_name" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="published_date" not-null="true" default-value="now()">
+		<type name="date" length="0"/>
+	</column>
+	<column name="component_type">
+		<type name="common.component_kind" length="0"/>
+	</column>
+	<constraint name="information_pkey" type="pk-constr" table="component.information">
+		<columns names="part_code,version_num" ref-type="src-columns"/>
+		<comment><![CDATA[may be part_code + version_num + component_type]]></comment>
+	</constraint>
+</table>
+
+<table name="assembly">
+	<schema name="component"/>
+	<role name="postgres"/>
+	<position x="580" y="300"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="assembly_component_type_check" type="ck-constr" table="component.assembly">
+			<expression><![CDATA[(component_type = 'ASSEMBLY'::common.component_kind)]]></expression>
+	</constraint>
+	<constraint name="assembly_pkey" type="pk-constr" table="component.assembly">
+		<columns names="part_code,version_num" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="buyable">
+	<schema name="component"/>
+	<role name="postgres"/>
+	<position x="100" y="300"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="buyable_component_type_check" type="ck-constr" table="component.buyable">
+			<expression><![CDATA[(component_type = 'BUYABLE'::common.component_kind)]]></expression>
+	</constraint>
+	<constraint name="buyable_version_num_check" type="ck-constr" table="component.buyable">
+			<expression><![CDATA[(version_num = 1)]]></expression>
+	</constraint>
+	<constraint name="buyable_pkey" type="pk-constr" table="component.buyable">
+		<columns names="part_code,version_num" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="part">
+	<schema name="component"/>
+	<role name="postgres"/>
+	<position x="1020" y="300"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="part_component_type_check" type="ck-constr" table="component.part">
+			<expression><![CDATA[(component_type = 'PART'::common.component_kind)]]></expression>
+	</constraint>
+	<constraint name="part_pkey" type="pk-constr" table="component.part">
+		<columns names="part_code,version_num" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="body">
+	<schema name="ebom"/>
+	<role name="postgres"/>
+	<position x="380" y="883"/>
+	<column name="head_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="qty">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="component_type">
+		<type name="common.component_kind" length="0"/>
+	</column>
+	<constraint name="body_pkey" type="pk-constr" table="ebom.body">
+		<columns names="head_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="assembly">
+	<schema name="ebom"/>
+	<role name="postgres"/>
+	<position x="780" y="580"/>
+	<column name="head_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="assembly_pkey" type="pk-constr" table="ebom.assembly">
+		<columns names="head_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="buyable">
+	<schema name="ebom"/>
+	<role name="postgres"/>
+	<position x="320" y="663"/>
+	<column name="head_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="buyable_pkey" type="pk-constr" table="ebom.buyable">
+		<columns names="head_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="head_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="ebom"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="head">
+	<schema name="ebom"/>
+	<role name="postgres"/>
+	<position x="1440" y="820"/>
+	<column name="id" not-null="true" sequence="ebom.head_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="descr">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="head_pkey" type="pk-constr" table="ebom.head">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="part">
+	<schema name="ebom"/>
+	<role name="postgres"/>
+	<position x="1360" y="603"/>
+	<column name="head_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="part_pkey" type="pk-constr" table="ebom.part">
+		<columns names="head_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="equipment">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<position x="2880" y="440"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="descr">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="qty">
+		<type name="numeric" length="10" precision="2"/>
+	</column>
+	<column name="qty_uom">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="equipment_pkey" type="pk-constr" table="process.equipment">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="equipment">
+	<schema name="inspection"/>
+	<role name="postgres"/>
+	<position x="3820" y="1183"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="equipment_pkey" type="pk-constr" table="inspection.equipment">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="personnel">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<position x="3260" y="440"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="descr">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="qty">
+		<type name="numeric" length="10" precision="2"/>
+	</column>
+	<column name="qty_uom">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="personnel_pkey" type="pk-constr" table="process.personnel">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="personnel">
+	<schema name="inspection"/>
+	<role name="postgres"/>
+	<position x="4160" y="1183"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="personnel_pkey" type="pk-constr" table="inspection.personnel">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="segment_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="process"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="segment">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<comment><![CDATA[segments to specify process]]></comment>
+	<position x="2680" y="180"/>
+	<column name="id" not-null="true" sequence="process.segment_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="descr">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="segment_kind">
+		<type name="common.process_segment_kind" length="0"/>
+	</column>
+	<column name="location_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="hierarhy_scope">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="published_date">
+		<type name="date" length="0"/>
+	</column>
+	<column name="duration">
+		<type name="interval" length="0"/>
+	</column>
+	<constraint name="segment_pkey" type="pk-constr" table="process.segment">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="information_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="information">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="6340" y="1043"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="gid" not-null="true" default-value="public.uuid_generate_v1()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="good_code">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="inventory_type">
+		<type name="common.inventory_kind" length="0"/>
+	</column>
+	<constraint name="information_pkey" type="pk-constr" table="inventory.information">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="composite">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="7080" y="1043"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="composite_pkey" type="pk-constr" table="inventory.composite">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="consumable">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="7440" y="1043"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="consumable_pkey" type="pk-constr" table="inventory.consumable">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="buyable">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="6700" y="1043"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="buyable_pkey" type="pk-constr" table="inventory.buyable">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="producible">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="7820" y="1043"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="producible_pkey" type="pk-constr" table="inventory.producible">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="salable">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="6340" y="1183"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="gid" not-null="true" default-value="public.uuid_generate_v1()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="good_code">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="salable_gid_key" type="uq-constr" table="inventory.salable">
+		<columns names="gid" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="salable_good_code_key" type="uq-constr" table="inventory.salable">
+		<columns names="good_code" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="salable_pkey" type="pk-constr" table="inventory.salable">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="storable">
+	<schema name="inventory"/>
+	<role name="postgres"/>
+	<position x="6720" y="1183"/>
+	<column name="id" not-null="true" sequence="inventory.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="storable_pkey" type="pk-constr" table="inventory.storable">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="information">
+	<schema name="material"/>
+	<role name="postgres"/>
+	<position x="1560" y="1803"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="display_name" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="published_date" not-null="true" default-value="now()">
+		<type name="date" length="0"/>
+	</column>
+	<column name="material_type" not-null="true">
+		<type name="common.material_kind" length="0"/>
+	</column>
+	<constraint name="information_pkey" type="pk-constr" table="material.information">
+		<columns names="part_code,version_num,material_type" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="consumable">
+	<schema name="material"/>
+	<role name="postgres"/>
+	<position x="1440" y="2063"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="consumable_material_type_check" type="ck-constr" table="material.consumable">
+			<expression><![CDATA[(material_type = 'CONSUMABLE'::common.material_kind)]]></expression>
+	</constraint>
+	<constraint name="consumable_version_num_check" type="ck-constr" table="material.consumable">
+			<expression><![CDATA[(version_num = 1)]]></expression>
+	</constraint>
+	<constraint name="consumable_pkey" type="pk-constr" table="material.consumable">
+		<columns names="part_code,version_num" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="producible">
+	<schema name="material"/>
+	<role name="postgres"/>
+	<position x="1680" y="2203"/>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="producible_material_type_check" type="ck-constr" table="material.producible">
+			<expression><![CDATA[(material_type = 'PRODUCIBLE'::common.material_kind)]]></expression>
+	</constraint>
+	<constraint name="producible_version_num_check" type="ck-constr" table="material.producible">
+			<expression><![CDATA[(version_num = 1)]]></expression>
+	</constraint>
+	<constraint name="producible_pkey" type="pk-constr" table="material.producible">
+		<columns names="part_code,version_num" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="equipment">
+	<schema name="movement"/>
+	<role name="postgres"/>
+	<position x="4360" y="863"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="equipment_pkey" type="pk-constr" table="movement.equipment">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="personnel">
+	<schema name="movement"/>
+	<role name="postgres"/>
+	<position x="4680" y="863"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="personnel_pkey" type="pk-constr" table="movement.personnel">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="segment">
+	<schema name="movement"/>
+	<role name="postgres"/>
+	<position x="5020" y="863"/>
+	<column name="id" not-null="true" sequence="process.segment_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="segment_segment_kind_check" type="ck-constr" table="movement.segment">
+			<expression><![CDATA[(segment_kind = 'MOVEMENT'::common.process_segment_kind)]]></expression>
+	</constraint>
+	<constraint name="segment_pkey" type="pk-constr" table="movement.segment">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="consumable">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="920" y="1623"/>
+	<column name="definition_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="consumed_qty" not-null="true" default-value="1">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="consumed_uom" not-null="true" default-value="'pcs'">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="rationing_qty" not-null="true" default-value="1">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="rationing_uom" not-null="true" default-value="'pcs'">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="consumable_pkey" type="pk-constr" table="operation.consumable">
+		<columns names="definition_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="definition_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="operation"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="definition">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="180" y="1623"/>
+	<column name="id" not-null="true" sequence="operation.definition_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="gid" not-null="true" default-value="public.uuid_generate_v1()">
+		<type name="uuid" length="0"/>
+	</column>
+	<column name="descr" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="published_date" not-null="true" default-value="now()">
+		<type name="date" length="0"/>
+	</column>
+	<constraint name="definition_pkey" type="pk-constr" table="operation.definition">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="equipment">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="220" y="2083"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="equipment_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="equipment_pkey" type="pk-constr" table="operation.equipment">
+		<columns names="segment_id,equipment_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="personnel">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="220" y="1863"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="personnel_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="simultaneously_qty" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="batch_qty" not-null="true" default-value="1">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="time_per_piece_ratio" not-null="true" default-value="1">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="standard_setup_time" not-null="true" default-value="'00:01:00'">
+		<type name="interval" length="0"/>
+	</column>
+	<column name="standard_piece_time" not-null="true" default-value="'00:01:00'">
+		<type name="interval" length="0"/>
+	</column>
+	<column name="workers_qty" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="rationing_qty" not-null="true" default-value="1">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="rationing_uom" not-null="true" default-value="'pcs'">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="personnel_pkey" type="pk-constr" table="operation.personnel">
+		<columns names="segment_id,personnel_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="producible">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="900" y="1923"/>
+	<column name="definition_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="produced_qty" not-null="true" default-value="1">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="produced_uom" not-null="true" default-value="'pcs'">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="producible_pkey" type="pk-constr" table="operation.producible">
+		<columns names="definition_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="segment_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="operation"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="segment">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="180" y="1743"/>
+	<column name="id" not-null="true" sequence="operation.segment_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="definition_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="operation_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="segment_pkey" type="pk-constr" table="operation.segment">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="tool">
+	<schema name="operation"/>
+	<role name="postgres"/>
+	<position x="220" y="2183"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="tool_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="tool_pkey" type="pk-constr" table="operation.tool">
+		<columns names="segment_id,tool_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="definition_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="process"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="definition">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<comment><![CDATA[definition of specific process]]></comment>
+	<position x="3320" y="83"/>
+	<column name="id" not-null="true" sequence="process.definition_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="descr">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="definition_pkey" type="pk-constr" table="process.definition">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="information_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="process"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="information">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<comment><![CDATA[list of process segments]]></comment>
+	<position x="3020" y="63"/>
+	<column name="id" not-null="true" sequence="process.information_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="descr">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="location_id">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="hierarhy_scope">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="published_date">
+		<type name="date" length="0"/>
+	</column>
+	<constraint name="information_pkey" type="pk-constr" table="process.information">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="segment">
+	<schema name="inspection"/>
+	<role name="postgres"/>
+	<position x="4480" y="1183"/>
+	<column name="id" not-null="true" sequence="process.segment_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="segment_segment_kind_check" type="ck-constr" table="inspection.segment">
+			<expression><![CDATA[(segment_kind = 'INSPECTION'::common.process_segment_kind)]]></expression>
+	</constraint>
+	<constraint name="segment_pkey" type="pk-constr" table="inspection.segment">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="specification">
+	<schema name="process"/>
+	<role name="postgres"/>
+	<position x="2280" y="340"/>
+	<column name="parent_segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="child_segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="qty" not-null="true" default-value="1">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="specification_check" type="ck-constr" table="process.specification">
+			<expression><![CDATA[(parent_segment_id <> child_segment_id)]]></expression>
+	</constraint>
+	<constraint name="specification_pkey" type="pk-constr" table="process.specification">
+		<columns names="parent_segment_id,child_segment_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="equipment">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<position x="2980" y="1863"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="equipment_pkey" type="pk-constr" table="production.equipment">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="personnel">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<position x="3280" y="1803"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="class_id" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="personnel_pkey" type="pk-constr" table="production.personnel">
+		<columns names="segment_id,class_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="segment">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<position x="2520" y="1683"/>
+	<column name="id" not-null="true" sequence="process.segment_id_seq">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="segment_class">
+		<type name="character varying" length="0"/>
+	</column>
+	<constraint name="segment_segment_kind_check" type="ck-constr" table="production.segment">
+			<expression><![CDATA[(segment_kind = 'PRODUCTION'::common.process_segment_kind)]]></expression>
+	</constraint>
+	<constraint name="segment_pkey" type="pk-constr" table="production.segment">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="specification">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<position x="2340" y="1540"/>
+	<column name="parent_segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="child_segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<constraint name="specification_pkey" type="pk-constr" table="production.specification">
+		<columns names="parent_segment_id,child_segment_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<trigger name="child_segment_ref_fkey_trigger" firing-type="AFTER" per-line="true" constraint="true"
+	 ins-event="true" del-event="false" upd-event="true" trunc-event="false"
+		 deferrable="true" defer-type="INITIALLY IMMEDIATE"
+	 table="process.specification">
+		<function signature="process.child_segment_ref_trigger()"/>
+</trigger>
+
+<trigger name="child_segment_ref_fkey_trigger" firing-type="AFTER" per-line="true" constraint="true"
+	 ins-event="true" del-event="false" upd-event="true" trunc-event="false"
+		 deferrable="true" defer-type="INITIALLY IMMEDIATE"
+	 table="production.specification">
+		<function signature="production.child_segment_ref_trigger()"/>
+</trigger>
+
+<table name="producible">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<position x="2520" y="2023"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="produced_qty">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="produced_uom">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="producible_pkey" type="pk-constr" table="production.producible">
+		<columns names="segment_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="assembly_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#c6109d"
+	 src-table="component.assembly"
+	 dst-table="component.information"/>
+
+<relationship name="buyable_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#4776f9"
+	 src-table="component.buyable"
+	 dst-table="component.information"/>
+
+<relationship name="part_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#4bcd77"
+	 src-table="component.part"
+	 dst-table="component.information"/>
+
+<relationship name="assembly_inherits_body" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#0d8c8d"
+	 src-table="ebom.assembly"
+	 dst-table="ebom.body"/>
+
+<relationship name="buyable_inherits_body" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#edcf3c"
+	 src-table="ebom.buyable"
+	 dst-table="ebom.body"/>
+
+<relationship name="part_inherits_body" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#7d88d4"
+	 src-table="ebom.part"
+	 dst-table="ebom.body"/>
+
+<relationship name="equipment_inherits_equipment" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#dd919e"
+	 src-table="inspection.equipment"
+	 dst-table="process.equipment"/>
+
+<relationship name="personnel_inherits_personnel" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#05f11c"
+	 src-table="inspection.personnel"
+	 dst-table="process.personnel"/>
+
+<relationship name="segment_inherits_segment" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#4c0dca"
+	 src-table="inspection.segment"
+	 dst-table="process.segment"/>
+
+<relationship name="buyable_inherits_information1" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#3bee3f"
+	 src-table="inventory.buyable"
+	 dst-table="inventory.information"/>
+
+<relationship name="composite_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#442720"
+	 src-table="inventory.composite"
+	 dst-table="inventory.information"/>
+
+<relationship name="consumable_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#e68642"
+	 src-table="inventory.consumable"
+	 dst-table="inventory.information"/>
+
+<relationship name="producible_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#6f7b15"
+	 src-table="inventory.producible"
+	 dst-table="inventory.information"/>
+
+<relationship name="salable_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#62c9e8"
+	 src-table="inventory.salable"
+	 dst-table="inventory.information"/>
+
+<relationship name="storable_inherits_information" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#3e8212"
+	 src-table="inventory.storable"
+	 dst-table="inventory.information"/>
+
+<relationship name="consumable_inherits_information1" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#bb1303"
+	 src-table="material.consumable"
+	 dst-table="material.information"/>
+
+<relationship name="producible_inherits_information1" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#2f8b83"
+	 src-table="material.producible"
+	 dst-table="material.information"/>
+
+<relationship name="equipment_inherits_equipment1" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#6dcada"
+	 src-table="movement.equipment"
+	 dst-table="process.equipment"/>
+
+<relationship name="personnel_inherits_personnel1" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#9a3656"
+	 src-table="movement.personnel"
+	 dst-table="process.personnel"/>
+
+<relationship name="segment_inherits_segment1" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#2389f8"
+	 src-table="movement.segment"
+	 dst-table="process.segment"/>
+
+<relationship name="equipment_inherits_equipment2" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#38307d"
+	 src-table="production.equipment"
+	 dst-table="process.equipment"/>
+
+<relationship name="personnel_inherits_personnel2" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#4d849b"
+	 src-table="production.personnel"
+	 dst-table="process.personnel"/>
+
+<relationship name="segment_inherits_segment2" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#6a6661"
+	 src-table="production.segment"
+	 dst-table="process.segment"/>
+
+<relationship name="specification_inherits_specification" type="relgen"
+	 pk-pattern="{dt}_pk"
+	 custom-color="#281d29"
+	 src-table="production.specification"
+	 dst-table="process.specification"/>
+
+<table name="consumable">
+	<schema name="production"/>
+	<role name="postgres"/>
+	<position x="2520" y="1863"/>
+	<column name="segment_id" not-null="true">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="part_code" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version_num">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="consumed_qty">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="consumed_uom">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="rationing_qty">
+		<type name="numeric" length="10" precision="4"/>
+	</column>
+	<column name="rationing_uom">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="serial_num">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="consumable_pkey" type="pk-constr" table="production.consumable">
+		<columns names="segment_id,part_code" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<schema name="binding" rect-visible="true" fill-color="#e1e1e1">
+	<role name="postgres"/>
+</schema>
+
+<table name="production_operation">
+	<schema name="binding"/>
+	<role name="postgres"/>
+	<position x="2160" y="1843"/>
+	<column name="production_id">
+		<type name="bigint" length="0"/>
+	</column>
+	<column name="operation_id">
+		<type name="smallint" length="0"/>
+	</column>
+	<column name="qty">
+		<type name="smallint" length="0"/>
+	</column>
+</table>
+
+<constraint name="assembly_head_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="ebom.head" table="ebom.assembly">
+	<columns names="head_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="assembly_part_code_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="component.assembly" table="ebom.assembly">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="buyable_head_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="ebom.head" table="ebom.buyable">
+	<columns names="head_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="buyable_part_code_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="component.buyable" table="ebom.buyable">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="head_part_code_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="component.assembly" table="ebom.head">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="part_head_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="ebom.head" table="ebom.part">
+	<columns names="head_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="part_part_code_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="component.part" table="ebom.part">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="equipment_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="inspection.segment" table="inspection.equipment">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="personnel_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="process.segment" table="process.personnel">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="personnel_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="inspection.segment" table="inspection.personnel">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="equipment_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="movement.segment" table="movement.equipment">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="personnel_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="movement.segment" table="movement.personnel">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="consumable_definition_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="operation.definition" table="operation.consumable">
+	<columns names="definition_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="consumable_part_code_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="material.consumable" table="operation.consumable">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="equipment_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="operation.segment" table="operation.equipment">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="personnel_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="operation.segment" table="operation.personnel">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="producible_definition_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="operation.definition" table="operation.producible">
+	<columns names="definition_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="producible_part_code_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="material.producible" table="operation.producible">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="segment_definition_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="operation.definition" table="operation.segment">
+	<columns names="definition_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="tool_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="operation.segment" table="operation.tool">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="specification_parent_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="process.segment" table="process.specification">
+	<columns names="parent_segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="equipment_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="production.segment" table="production.equipment">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="personnel_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="production.segment" table="production.personnel">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="specification_parent_segment_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="production.segment" table="production.specification">
+	<columns names="parent_segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="producible_segment_fkey" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="production.segment" table="production.producible">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="producible_part_code_fkey" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="material.producible" table="production.producible">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="consumable_segment_id_fkey" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="CASCADE" del-action="CASCADE" ref-table="production.segment" table="production.consumable">
+	<columns names="segment_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="consumable_part_code_fkey" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="material.consumable" table="production.consumable">
+	<columns names="part_code,version_num" ref-type="src-columns"/>
+	<columns names="part_code,version_num" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_assembly_head" type="relfk"
+	 custom-color="#b58372"
+	 src-table="ebom.assembly"
+	 dst-table="ebom.head"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_assembly_assembly" type="relfk"
+	 custom-color="#f0d518"
+	 src-table="ebom.assembly"
+	 dst-table="component.assembly"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_buyable_head" type="relfk"
+	 custom-color="#a00199"
+	 src-table="ebom.buyable"
+	 dst-table="ebom.head"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_buyable_buyable" type="relfk"
+	 custom-color="#78474c"
+	 src-table="ebom.buyable"
+	 dst-table="component.buyable"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_head_assembly" type="relfk"
+	 custom-color="#dea3af"
+	 src-table="ebom.head"
+	 dst-table="component.assembly"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_part_head" type="relfk"
+	 custom-color="#783676"
+	 src-table="ebom.part"
+	 dst-table="ebom.head"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_part_part" type="relfk"
+	 custom-color="#53131a"
+	 src-table="ebom.part"
+	 dst-table="component.part"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_equipment_segment" type="relfk"
+	 custom-color="#011911"
+	 src-table="inspection.equipment"
+	 dst-table="inspection.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_personnel_segment" type="relfk"
+	 custom-color="#b4cf09"
+	 src-table="process.personnel"
+	 dst-table="process.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_personnel_segment1" type="relfk"
+	 custom-color="#bae8a5"
+	 src-table="inspection.personnel"
+	 dst-table="inspection.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_equipment_segment1" type="relfk"
+	 custom-color="#cc68eb"
+	 src-table="movement.equipment"
+	 dst-table="movement.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_personnel_segment2" type="relfk"
+	 custom-color="#be2246"
+	 src-table="movement.personnel"
+	 dst-table="movement.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_consumable_definition" type="relfk"
+	 custom-color="#28a9f5"
+	 src-table="operation.consumable"
+	 dst-table="operation.definition"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_consumable_consumable" type="relfk"
+	 custom-color="#53dbb5"
+	 src-table="operation.consumable"
+	 dst-table="material.consumable"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_equipment_segment2" type="relfk"
+	 custom-color="#b637bc"
+	 src-table="operation.equipment"
+	 dst-table="operation.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_personnel_segment3" type="relfk"
+	 custom-color="#339572"
+	 src-table="operation.personnel"
+	 dst-table="operation.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_producible_definition" type="relfk"
+	 custom-color="#859c04"
+	 src-table="operation.producible"
+	 dst-table="operation.definition"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_producible_producible" type="relfk"
+	 custom-color="#9e89df"
+	 src-table="operation.producible"
+	 dst-table="material.producible"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_segment_definition" type="relfk"
+	 custom-color="#f7eb7a"
+	 src-table="operation.segment"
+	 dst-table="operation.definition"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_tool_segment" type="relfk"
+	 custom-color="#4d907c"
+	 src-table="operation.tool"
+	 dst-table="operation.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_specification_segment" type="relfk"
+	 custom-color="#c36066"
+	 src-table="process.specification"
+	 dst-table="process.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_equipment_segment3" type="relfk"
+	 custom-color="#b35b58"
+	 src-table="production.equipment"
+	 dst-table="production.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_personnel_segment4" type="relfk"
+	 custom-color="#c8ec62"
+	 src-table="production.personnel"
+	 dst-table="production.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_specification_segment1" type="relfk"
+	 custom-color="#b1ee64"
+	 src-table="production.specification"
+	 dst-table="production.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_consumable_segment" type="relfk"
+	 src-table="production.consumable"
+	 dst-table="production.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_producible_segment" type="relfk"
+	 src-table="production.producible"
+	 dst-table="production.segment"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_producible_producible1" type="relfk"
+	 src-table="production.producible"
+	 dst-table="material.producible"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_consumable_consumable1" type="relfk"
+	 src-table="production.consumable"
+	 dst-table="material.consumable"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>

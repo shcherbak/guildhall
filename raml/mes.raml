@@ -52,6 +52,8 @@ schemas:
   - Person: !include json/manufacturing-fsmt-schema.json
   - Process: !include json/manufacturing-fsmt-schema.json
   - Processes: !include json/manufacturing-fsmt-schema.json
+  - Operation: !include json/manufacturing-operation-document-schema.json
+  - Operations: !include json/manufacturing-operation-documents-schema.json
   - FSMT: !include json/manufacturing-fsmt-schema.json
   - EBOM: !include json/manufacturing-bom-document-schema.json
   - EBOMs: !include json/manufacturing-bom-documents-schema.json
@@ -333,7 +335,7 @@ schemas:
       200:
         body:
           application/json:
-            schema: Persons
+            schema: Personnel
   post:
     description: Add new Person
     body:
