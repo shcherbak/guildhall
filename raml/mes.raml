@@ -435,6 +435,28 @@ schemas:
             application/json:
               schema: Error
 
+/requests:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
+
+/responses:
+  get:
+  post:
+  /{resourceId}:
+    get:
+    delete:
+    /definition:
+      patch:
+    /fsmt:
+      put:
+
 /production:
   get:
   post:
@@ -446,29 +468,7 @@ schemas:
     /fsmt:
       put:
 
-/process:
-  get:
-  post:
-  /{resourceId}:
-    get:
-    delete:
-    /definition:
-      patch:
-    /fsmt:
-      put:
-
-/request:
-  get:
-  post:
-  /{resourceId}:
-    get:
-    delete:
-    /definition:
-      patch:
-    /fsmt:
-      put:
-
-/response:
+/processes:
   get:
   post:
   /{resourceId}:
@@ -603,7 +603,7 @@ schemas:
                 schema: Error
                 example: !include ./json/commons-error-example.json
 
-/ebom:
+/eboms:
   description: |
     An engeneering bill of material
   get:
@@ -712,7 +712,7 @@ schemas:
                 schema: Error
                 example: !include ./json/commons-error-example.json
 
-/mbom:
+/mboms:
   description: |
     A manufacturing bill of material
   get:
