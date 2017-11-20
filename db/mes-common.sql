@@ -105,6 +105,7 @@ CREATE TYPE common.tooling_specification AS (
 );
 
 
+-- fix field order
 CREATE TYPE common.ebom_information AS (
   document_id bigint,
   gid uuid,
@@ -513,3 +514,79 @@ CREATE INDEX path_gist_idx ON test USING GIST (path);
 CREATE INDEX path_idx ON test USING BTREE (path);*/
 
 
+CREATE OR REPLACE FUNCTION ebom.get_gid_by_id(__document_id bigint)
+  RETURNS uuid AS
+$BODY$
+BEGIN
+  RETURN gid
+    FROM 
+      ebom.information
+    WHERE 
+      id = __document_id;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION ebom.get_gid_by_id(bigint)
+  OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION ebom.get_id_by_gid(__document_gid uuid)
+  RETURNS bigint AS
+$BODY$
+BEGIN
+  RETURN id
+    FROM 
+      ebom.information
+    WHERE 
+      gid = __document_gid;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION ebom.get_id_by_gid(uuid)
+  OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION ebom.destroy(__document_id bigint)
+  RETURNS void AS
+$BODY$
+BEGIN
+  DELETE FROM ebom.information WHERE id = __document_id;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION ebom.destroy(bigint)
+  OWNER TO postgres;
+
+
+-- Function: demand.get_head(bigint)
+
+-- DROP FUNCTION demand.get_head(bigint);
+
+CREATE OR REPLACE FUNCTION ebom.get_information(__document_id bigint)
+  RETURNS common.outbound_head AS
+$BODY$
+DECLARE
+BEGIN
+  RETURN 
+    (id, 
+    gid, 
+    display_name,
+    document_date,
+    version_num,
+    curr_fsmt,
+    'EBOM'::common.document_kind,
+    ship_to,
+    (part_code, version_num)::common.component_specification)::common.ebom_information
+  FROM 
+    ebom.information
+  WHERE 
+    id = __document_id;
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION ebom.get_information(bigint)
+  OWNER TO postgres;
