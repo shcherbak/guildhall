@@ -4,51 +4,10 @@
   "description": "Manufacturing Generic Document Type definition",
   "additionalProperties": true,
   "definitions": {},
+  "type": "object",
   "properties": {
-    "definition": {
-      "additionalItems": false,
-      "items": {
-        "additionalProperties": true,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "The unique identifier of the good"
-          },
-          "part_code": {
-            "type": "string",
-            "description": "Stock Keeping Unit",
-            "pattern": "^[0-9]{2}.[0-9]{2}.[0-9]{3}-[0-9]{3}($|.[0-9]{3}$)"
-          },
-          "name": {
-            "type": "string"
-          },
-          "quantity": {
-            "default": 0,
-            "description": "An explanation about the purpose of this instance.",
-            "title": "The Quantity Schema",
-            "type": "number",
-            "minimum": 0,
-            "maximum": 9999999999999999.9999,
-            "multipleOf": 0.0001
-          },
-          "uom_code": {
-            "default": "kg",
-            "description": "An explanation about the purpose of this instance.",
-            "title": "The Uom_code Schema",
-            "type": "string"
-          }
-        },
-        "type": "object",
-        "required": [
-          "part_code",
-          "quantity",
-          "uom_code"
-        ]
-      },
-      "type": "array",
-      "uniqueItems": true
-    },
-    "information": {
+    "informaion": {
+      "type": "object",
       "properties": {
         "document_id": {
           "description": "Document ID",
@@ -114,7 +73,7 @@
               "title": "The Quantity Schema",
               "type": "number",
               "minimum": 0,
-              "maximum": 9999999999999999.9999,
+              "maximum": 10000000000000000,
               "multipleOf": 0.0001
             },
             "uom_code": {
@@ -125,14 +84,169 @@
             }
           }
         }
-      },
-      "additionalProperties": false,
-      "required": [
-        "document_date",
-        "hierarhy_scope",
-        "producible"
-      ]
+      }
+    },
+    "segment": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "gid": {
+            "type": "string",
+            "title": "The Gid Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "operation_code": {
+            "type": "string",
+            "title": "The Operation_code Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "material_spec": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "part_code": {
+                  "type": "string",
+                  "title": "The Part_code Schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": ""
+                },
+                "quantity": {
+                  "default": 0,
+                  "description": "An explanation about the purpose of this instance.",
+                  "title": "The Quantity Schema",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 9999999999999999.9999,
+                  "multipleOf": 0.0001
+                },
+								"uom_code": {
+			            "default": "kg",
+			            "description": "An explanation about the purpose of this instance.",
+			            "title": "The Uom_code Schema",
+			            "type": "string"
+			          }
+              }
+            }
+          },
+          "personnel_spec": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "personnel_code": {
+                  "type": "string",
+                  "title": "The Personnel_code Schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": ""
+                },
+                "quantity": {
+                  "default": 0,
+                  "description": "An explanation about the purpose of this instance.",
+                  "title": "The Quantity Schema",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 9999999999999999.9999,
+                  "multipleOf": 0.0001
+                }
+              }
+            }
+          },
+          "equipmet_spec": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "equipment_code": {
+                  "type": "string",
+                  "title": "The Equipment_code Schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": ""
+                },
+                "quantity": {
+                  "default": 0,
+                  "description": "An explanation about the purpose of this instance.",
+                  "title": "The Quantity Schema",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 9999999999999999.9999,
+                  "multipleOf": 0.0001
+                },
+								"uom_code": {
+			            "default": "kg",
+			            "description": "An explanation about the purpose of this instance.",
+			            "title": "The Uom_code Schema",
+			            "type": "string"
+			          }
+              }
+            }
+          },
+          "tooling_spec": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "tooling_code": {
+                  "type": "string",
+                  "title": "The Tooling_code Schema.",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": ""
+                },
+                "quantity": {
+                  "default": 0,
+                  "description": "An explanation about the purpose of this instance.",
+                  "title": "The Quantity Schema",
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 9999999999999999.9999,
+                  "multipleOf": 0.0001
+                },
+								"uom_code": {
+			            "default": "kg",
+			            "description": "An explanation about the purpose of this instance.",
+			            "title": "The Uom_code Schema",
+			            "type": "string"
+			          }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dependency": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "ancestor": {
+            "type": "string",
+            "title": "The Ancestor Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "descendant": {
+            "type": "string",
+            "title": "The Descendant Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "depth": {
+            "type": "integer",
+            "title": "The Depth Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0
+          }
+        }
+      }
     }
-  },
-  "type": "object"
+  }
 }

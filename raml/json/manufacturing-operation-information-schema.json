@@ -83,6 +83,7 @@
   "additionalProperties": false,
   "required": [
     "document_date",
-    "hierarhy_scope"
+    "hierarhy_scope",
+    "producible"
   ]
 }
