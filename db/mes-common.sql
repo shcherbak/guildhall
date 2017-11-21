@@ -690,7 +690,7 @@ END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION demand.init(common.outbound_head, common.document_body[])
+ALTER FUNCTION ebom.init(common.outbound_head, common.document_body[])
   OWNER TO postgres;
 
 
@@ -698,7 +698,7 @@ ALTER FUNCTION demand.init(common.outbound_head, common.document_body[])
 
 -- DROP FUNCTION demand.reinit(bigint, common.document_body[]);
 
-CREATE OR REPLACE FUNCTION demand.reinit(
+CREATE OR REPLACE FUNCTION ebom.reinit(
     __document_id bigint,
     __body common.document_body[])
   RETURNS void AS
@@ -732,5 +732,5 @@ END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION demand.reinit(bigint, common.document_body[])
+ALTER FUNCTION ebom.reinit(bigint, common.document_body[])
   OWNER TO postgres;
