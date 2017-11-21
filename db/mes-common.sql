@@ -520,7 +520,7 @@ $BODY$
 BEGIN
   RETURN gid
     FROM 
-      ebom.information
+      ebom.definition
     WHERE 
       id = __document_id;
 END;
@@ -537,7 +537,7 @@ $BODY$
 BEGIN
   RETURN id
     FROM 
-      ebom.information
+      ebom.definition
     WHERE 
       gid = __document_gid;
 END;
@@ -552,7 +552,7 @@ CREATE OR REPLACE FUNCTION ebom.destroy(__document_id bigint)
   RETURNS void AS
 $BODY$
 BEGIN
-  DELETE FROM ebom.information WHERE id = __document_id;
+  DELETE FROM ebom.definition WHERE id = __document_id;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
@@ -565,28 +565,172 @@ ALTER FUNCTION ebom.destroy(bigint)
 
 -- DROP FUNCTION demand.get_head(bigint);
 
-CREATE OR REPLACE FUNCTION ebom.get_information(__document_id bigint)
-  RETURNS common.outbound_head AS
+CREATE OR REPLACE FUNCTION ebom.get_head(__document_id bigint)
+  RETURNS common.ebom_head AS
 $BODY$
 DECLARE
 BEGIN
   RETURN 
-    (id, 
-    gid, 
-    display_name,
-    document_date,
-    version_num,
-    curr_fsmt,
+    (definition.id, 
+    definition.gid, 
+    definition.display_name, 
+    definition.version_num,  
+    definition.published_date, 
+    definition.curr_fsmt, 
     'EBOM'::common.document_kind,
-    ship_to,
-    (part_code, version_num)::common.component_specification)::common.ebom_information
+    (information.part_code, information.version_num, 1, 'pcs', 'ASSEMBLY')::common.component_specification
+    )::common.ebom_information
   FROM 
+    ebom.definition, 
     ebom.information
   WHERE 
-    id = __document_id;
+    information.id = definition.information_id AND
+    definition.id = __document_id;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
 ALTER FUNCTION ebom.get_information(bigint)
+  OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION ebom.get_body(__document_id bigint)
+  RETURNS common.ebom_body[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY(
+      SELECT 
+        (component.part_code, 
+        component.version_num, 
+        component.qty,
+        'pcs',
+        component.component_type)::common.component_specification
+      FROM 
+        ebom.component
+      WHERE 
+        component.information_id = __document_id
+    );
+END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION demand.get_body(bigint)
+  OWNER TO postgres;
+
+
+-- Function: demand.init(common.outbound_head, common.document_body[])
+
+-- DROP FUNCTION demand.init(common.outbound_head, common.document_body[]);
+
+CREATE OR REPLACE FUNCTION ebom.init(
+    __head common.ebom_head,
+    __body common.ebom_body[])
+  RETURNS bigint AS
+$BODY$
+DECLARE
+  _item common.ebom_body;
+  _document_id bigint;
+BEGIN
+
+  IF (__head.facility_code IS NULL) THEN
+    RAISE EXCEPTION 'field facility_code is not defined';
+  END IF;
+
+  IF (__head.document_date IS NULL) THEN
+    __head.document_date := now()::date;
+  END IF;
+
+  IF (__head.due_date IS NULL) THEN
+    __head.due_date := __head.document_date + 1;
+  END IF;
+
+  IF (__head.display_name IS NULL) THEN
+    __head.display_name := demand.generate_display_name(
+        __document_date := __head.document_date,
+        __facility_code := __head.facility_code);
+  END IF;
+
+  INSERT INTO
+    demand.head (
+      id, 
+      display_name,
+      document_date, 
+      due_date, 
+      ship_from, 
+      ship_to)
+  VALUES (
+    DEFAULT, 
+    __head.display_name,
+    __head.document_date, 
+    __head.due_date, 
+    __head.facility_code, 
+    __head.addressee) 
+  RETURNING id INTO _document_id;
+
+  FOREACH _item IN
+    ARRAY __body
+  LOOP
+    INSERT INTO
+      demand.body (
+        head_id, 
+        good_code, 
+        quantity, 
+        uom_code)
+    VALUES (
+      _document_id, 
+      _item.good_code, 
+      _item.quantity, 
+      _item.uom_code);
+  END LOOP;
+
+  RETURN _document_id;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION demand.init(common.outbound_head, common.document_body[])
+  OWNER TO postgres;
+
+
+-- Function: demand.reinit(bigint, common.document_body[])
+
+-- DROP FUNCTION demand.reinit(bigint, common.document_body[]);
+
+CREATE OR REPLACE FUNCTION demand.reinit(
+    __document_id bigint,
+    __body common.document_body[])
+  RETURNS void AS
+$BODY$
+DECLARE
+  _item common.document_body;
+BEGIN
+
+  DELETE FROM
+    demand.body
+  WHERE 
+    head_id = __document_id;
+
+  FOREACH _item IN
+    ARRAY __body
+  LOOP
+    INSERT INTO 
+      demand.body (
+        head_id,
+        good_code,
+        quantity,
+        uom_code)
+    VALUES (
+      __document_id, 
+      _item.good_code, 
+      _item.quantity, 
+      _item.uom_code);
+  END LOOP;
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION demand.reinit(bigint, common.document_body[])
   OWNER TO postgres;
