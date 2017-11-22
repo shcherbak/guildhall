@@ -670,9 +670,9 @@ ALTER FUNCTION ebom.get_body(bigint)
   OWNER TO postgres;
 
 
--- Function: demand.init(common.outbound_head, common.document_body[])
+-- Function: ebom.init(common.ebom_head, common.component_specification[])
 
--- DROP FUNCTION demand.init(common.outbound_head, common.document_body[]);
+-- DROP FUNCTION ebom.init(common.ebom_head, common.component_specification[]);
 
 CREATE OR REPLACE FUNCTION ebom.init(
     __head common.ebom_head,
@@ -681,85 +681,145 @@ CREATE OR REPLACE FUNCTION ebom.init(
 $BODY$
 DECLARE
   _item common.component_specification;
-  _document_id bigint;
+  _definition_id bigint;
+  _information_id bigint;
+  _max_version_num integer;
 BEGIN
-
-  IF (__head.facility_code IS NULL) THEN
-    RAISE EXCEPTION 'field facility_code is not defined';
-  END IF;
 
   IF (__head.document_date IS NULL) THEN
     __head.document_date := now()::date;
   END IF;
 
-  IF (__head.due_date IS NULL) THEN
-    __head.due_date := __head.document_date + 1;
+  IF (__head.version_num IS NULL) THEN
+    __head.version_num := 1;
   END IF;
 
   IF (__head.display_name IS NULL) THEN
-    __head.display_name := demand.generate_display_name(
-        __document_date := __head.document_date,
-        __facility_code := __head.facility_code);
+    __head.display_name := 'NO-NAME';
   END IF;
 
-  /*
-  1) определить изделие, для которого создается версия
-  2) выбрать версию
-    ebom.get_information(part_code, version_num)
-    найдена информация
-      создаем новую версию
-    не найдена информация по версии
-      записываем информацию, получаем ИД
-      создаем версию
+  SELECT
+    max(definition.version_num)
+  FROM 
+    ebom.information, 
+    ebom.definition
+  WHERE 
+    information.id = definition.information_id AND
+    information.part_code = (__head.component_spec).part_code AND 
+    information.version_num = (__head.component_spec).version_num
+  INTO
+    _max_version_num;
 
-  */
-  -- INSERT INTO ebom.information
-  -- INSERT INTO ebom.definition
-  -- INSERT INTO ebom.assembly
-  -- INSERT INTO ebom.part
-  -- INSERT INTO ebom.buyable
+  IF NOT FOUND THEN
+    _max_version_num := 0;
+
+    INSERT INTO
+      ebom.information (
+        id,
+        display_name,
+        published_date,
+        part_code,
+        version_num)
+    VALUES (
+      DEFAULT,
+      __head.display_name,
+      __head.document_date,
+      (__head.component_spec).part_code,
+      (__head.component_spec).version_num)
+    RETURNING id INTO _information_id;
+  ELSE
+    SELECT
+      id
+    FROM
+      ebom.information
+    WHERE
+      information.part_code = (__head.component_spec).part_code AND 
+      information.version_num = (__head.component_spec).version_num
+    INTO
+      _information_id;
+
+  END IF;
 
   INSERT INTO
-    demand.head (
+    ebom.definition (
       id,
       display_name,
-      document_date,
-      due_date,
-      ship_from,
-      ship_to)
+      version_num,
+      published_date,
+      information_id)
   VALUES (
     DEFAULT,
     __head.display_name,
+    _max_version_num + 1,
     __head.document_date,
-    __head.due_date,
-    __head.facility_code,
-    __head.addressee)
-  RETURNING id INTO _document_id;
+    _information_id)
+  RETURNING id INTO _definition_id;
 
   FOREACH _item IN
     ARRAY __body
   LOOP
-    INSERT INTO
-      demand.body (
-        head_id,
-        good_code,
-        quantity,
-        uom_code)
-    VALUES (
-      _document_id,
-      _item.good_code,
-      _item.quantity,
-      _item.uom_code);
+    IF (_item.component_type = 'ASSEMBLY') THEN
+      INSERT INTO
+        ebom.assembly (
+          definition_id,
+          part_code,
+          version_num,
+          qty,
+          uom_code,
+          component_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'PART') THEN
+      INSERT INTO
+        ebom.part (
+          definition_id,
+          part_code,
+          version_num,
+          qty,
+          uom_code,
+          component_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'BUYABLE') THEN
+      INSERT INTO
+        ebom.buyable (
+          definition_id,
+          part_code,
+          version_num,
+          qty,
+          uom_code,
+          component_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSE
+      RAISE '% unknown component_type', _item;
+    END IF;
   END LOOP;
 
-  RETURN _document_id;
+  RETURN _definition_id;
 
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION ebom.init(common.outbound_head, common.document_body[])
+ALTER FUNCTION ebom.init(common.ebom_head, common.component_specification[])
   OWNER TO postgres;
+
 
 
 -- Function: demand.reinit(bigint, common.document_body[])
@@ -768,37 +828,95 @@ ALTER FUNCTION ebom.init(common.outbound_head, common.document_body[])
 
 CREATE OR REPLACE FUNCTION ebom.reinit(
     __document_id bigint,
-    __body common.document_body[])
+    __body common.component_specification[])
   RETURNS void AS
 $BODY$
 DECLARE
-  _item common.document_body;
+  _item common.component_specification;
 BEGIN
 
   DELETE FROM
-    demand.body
+    ebom.component
   WHERE
-    head_id = __document_id;
+    definition_id = __document_id;
 
   FOREACH _item IN
     ARRAY __body
   LOOP
-    INSERT INTO
-      demand.body (
-        head_id,
-        good_code,
-        quantity,
-        uom_code)
-    VALUES (
-      __document_id,
-      _item.good_code,
-      _item.quantity,
-      _item.uom_code);
+    IF (_item.component_type = 'ASSEMBLY') THEN
+      INSERT INTO
+        ebom.assembly (
+          definition_id,
+          part_code,
+          version_num,
+          qty,
+          uom_code,
+          component_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'PART') THEN
+      INSERT INTO
+        ebom.part (
+          definition_id,
+          part_code,
+          version_num,
+          qty,
+          uom_code,
+          component_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'BUYABLE') THEN
+      INSERT INTO
+        ebom.buyable (
+          definition_id,
+          part_code,
+          version_num,
+          qty,
+          uom_code,
+          component_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSE
+      RAISE '% unknown component_type', _item;
+    END IF;
   END LOOP;
 
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION ebom.reinit(bigint, common.document_body[])
+ALTER FUNCTION ebom.reinit(bigint, common.component_specification[])
   OWNER TO postgres;
+
+
+SET search_path = ebom, pg_catalog;
+INSERT INTO information VALUES (1, DEFAULT, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
+INSERT INTO definition VALUES (1, DEFAULT, '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
+INSERT INTO assembly VALUES (1, '80.31.050-001', 1, 1.0000, 'ASSEMBLY');
+INSERT INTO assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'ASSEMBLY');
+INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'BUYABLE');
+INSERT INTO part VALUES (1, '40.31.050-001', 1, 2.0000, 'PART');
+INSERT INTO part VALUES (1, '50.01.050-001', 1, 2.0000, 'PART');
+INSERT INTO part VALUES (1, '51.01.050-001', 1, 2.0000, 'PART');
+INSERT INTO part VALUES (1, '52.01.050-001', 1, 2.0000, 'PART');
+INSERT INTO part VALUES (1, '53.01.004-001', 1, 1.0000, 'PART');
+INSERT INTO part VALUES (1, '60.01.050-001', 1, 1.0000, 'PART');
+INSERT INTO part VALUES (1, '61.01.050-001', 1, 1.0000, 'PART');
+INSERT INTO part VALUES (1, '70.01.050-001', 1, 2.0000, 'PART');
+INSERT INTO part VALUES (1, '70.04.020-001', 1, 1.0000, 'PART');
+INSERT INTO part VALUES (1, '72.01.009-001', 1, 2.0000, 'PART');

@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.6
 -- Dumped by pg_dump version 9.6.6
 
--- Started on 2017-11-22 14:06:22 EET
+-- Started on 2017-11-23 01:07:24 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,8 +16,16 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
+CREATE EXTENSION "uuid-ossp"
+  SCHEMA public
+  VERSION "1.1";
+
+CREATE EXTENSION ltree
+  SCHEMA public
+  VERSION "1.1";
+
 --
--- TOC entry 11 (class 2615 OID 34125)
+-- TOC entry 9 (class 2615 OID 41048)
 -- Name: common; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -27,7 +35,7 @@ CREATE SCHEMA common;
 ALTER SCHEMA common OWNER TO postgres;
 
 --
--- TOC entry 8 (class 2615 OID 34239)
+-- TOC entry 12 (class 2615 OID 41049)
 -- Name: component; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -37,8 +45,8 @@ CREATE SCHEMA component;
 ALTER SCHEMA component OWNER TO postgres;
 
 --
--- TOC entry 3439 (class 0 OID 0)
--- Dependencies: 8
+-- TOC entry 3480 (class 0 OID 0)
+-- Dependencies: 12
 -- Name: SCHEMA component; Type: COMMENT; Schema: -; Owner: postgres
 --
 
@@ -46,7 +54,7 @@ COMMENT ON SCHEMA component IS 'components of ebom';
 
 
 --
--- TOC entry 6 (class 2615 OID 34631)
+-- TOC entry 11 (class 2615 OID 41050)
 -- Name: ebom; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -56,69 +64,18 @@ CREATE SCHEMA ebom;
 ALTER SCHEMA ebom OWNER TO postgres;
 
 --
--- TOC entry 3440 (class 0 OID 0)
--- Dependencies: 6
+-- TOC entry 3481 (class 0 OID 0)
+-- Dependencies: 11
 -- Name: SCHEMA ebom; Type: COMMENT; Schema: -; Owner: postgres
 --
 
 COMMENT ON SCHEMA ebom IS 'engenering bill of materials';
 
 
---
--- TOC entry 1 (class 3079 OID 13350)
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- TOC entry 3442 (class 0 OID 0)
--- Dependencies: 1
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
---
--- TOC entry 2 (class 3079 OID 33950)
--- Name: ltree; Type: EXTENSION; Schema: -; Owner: 
---
-
-CREATE EXTENSION IF NOT EXISTS ltree WITH SCHEMA public;
-
-
---
--- TOC entry 3443 (class 0 OID 0)
--- Dependencies: 2
--- Name: EXTENSION ltree; Type: COMMENT; Schema: -; Owner: 
---
-
-COMMENT ON EXTENSION ltree IS 'data type for hierarchical tree-like structures';
-
-
---
--- TOC entry 3 (class 3079 OID 33939)
--- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: 
---
-
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
-
-
---
--- TOC entry 3444 (class 0 OID 0)
--- Dependencies: 3
--- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
---
-
-COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
-
-
 SET search_path = common, pg_catalog;
 
 --
--- TOC entry 712 (class 1247 OID 34170)
+-- TOC entry 723 (class 1247 OID 41238)
 -- Name: component_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -132,7 +89,7 @@ CREATE TYPE component_kind AS ENUM (
 ALTER TYPE component_kind OWNER TO postgres;
 
 --
--- TOC entry 701 (class 1247 OID 34126)
+-- TOC entry 726 (class 1247 OID 41245)
 -- Name: quantity; Type: DOMAIN; Schema: common; Owner: postgres
 --
 
@@ -143,8 +100,8 @@ CREATE DOMAIN quantity AS numeric(20,4) DEFAULT 0
 ALTER DOMAIN quantity OWNER TO postgres;
 
 --
--- TOC entry 3445 (class 0 OID 0)
--- Dependencies: 701
+-- TOC entry 3482 (class 0 OID 0)
+-- Dependencies: 726
 -- Name: DOMAIN quantity; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -152,7 +109,7 @@ COMMENT ON DOMAIN quantity IS 'quantity domain';
 
 
 --
--- TOC entry 721 (class 1247 OID 34190)
+-- TOC entry 728 (class 1247 OID 41249)
 -- Name: component_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -168,7 +125,7 @@ CREATE TYPE component_specification AS (
 ALTER TYPE component_specification OWNER TO postgres;
 
 --
--- TOC entry 756 (class 1247 OID 34223)
+-- TOC entry 731 (class 1247 OID 41252)
 -- Name: dependency_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -182,7 +139,7 @@ CREATE TYPE dependency_specification AS (
 ALTER TYPE dependency_specification OWNER TO postgres;
 
 --
--- TOC entry 753 (class 1247 OID 34220)
+-- TOC entry 734 (class 1247 OID 41255)
 -- Name: dependency_specification_ltree; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -197,7 +154,7 @@ CREATE TYPE dependency_specification_ltree AS (
 ALTER TYPE dependency_specification_ltree OWNER TO postgres;
 
 --
--- TOC entry 703 (class 1247 OID 34129)
+-- TOC entry 737 (class 1247 OID 41257)
 -- Name: document_fsmt; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -211,7 +168,7 @@ CREATE TYPE document_fsmt AS ENUM (
 ALTER TYPE document_fsmt OWNER TO postgres;
 
 --
--- TOC entry 706 (class 1247 OID 34136)
+-- TOC entry 740 (class 1247 OID 41264)
 -- Name: document_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -229,7 +186,7 @@ CREATE TYPE document_kind AS ENUM (
 ALTER TYPE document_kind OWNER TO postgres;
 
 --
--- TOC entry 733 (class 1247 OID 34202)
+-- TOC entry 743 (class 1247 OID 41281)
 -- Name: ebom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -248,7 +205,7 @@ CREATE TYPE ebom_head AS (
 ALTER TYPE ebom_head OWNER TO postgres;
 
 --
--- TOC entry 739 (class 1247 OID 34208)
+-- TOC entry 746 (class 1247 OID 41284)
 -- Name: ebom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -261,7 +218,7 @@ CREATE TYPE ebom_document AS (
 ALTER TYPE ebom_document OWNER TO postgres;
 
 --
--- TOC entry 724 (class 1247 OID 34193)
+-- TOC entry 749 (class 1247 OID 41287)
 -- Name: equipment_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -276,7 +233,7 @@ CREATE TYPE equipment_specification AS (
 ALTER TYPE equipment_specification OWNER TO postgres;
 
 --
--- TOC entry 709 (class 1247 OID 34152)
+-- TOC entry 752 (class 1247 OID 41289)
 -- Name: inventory_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -295,7 +252,7 @@ CREATE TYPE inventory_kind AS ENUM (
 ALTER TYPE inventory_kind OWNER TO postgres;
 
 --
--- TOC entry 715 (class 1247 OID 34178)
+-- TOC entry 755 (class 1247 OID 41306)
 -- Name: material_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -309,7 +266,7 @@ CREATE TYPE material_kind AS ENUM (
 ALTER TYPE material_kind OWNER TO postgres;
 
 --
--- TOC entry 718 (class 1247 OID 34187)
+-- TOC entry 758 (class 1247 OID 41315)
 -- Name: material_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -325,7 +282,7 @@ CREATE TYPE material_specification AS (
 ALTER TYPE material_specification OWNER TO postgres;
 
 --
--- TOC entry 736 (class 1247 OID 34205)
+-- TOC entry 761 (class 1247 OID 41318)
 -- Name: mbom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -344,7 +301,7 @@ CREATE TYPE mbom_head AS (
 ALTER TYPE mbom_head OWNER TO postgres;
 
 --
--- TOC entry 742 (class 1247 OID 34211)
+-- TOC entry 764 (class 1247 OID 41321)
 -- Name: mbom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -357,7 +314,7 @@ CREATE TYPE mbom_document AS (
 ALTER TYPE mbom_document OWNER TO postgres;
 
 --
--- TOC entry 750 (class 1247 OID 34217)
+-- TOC entry 767 (class 1247 OID 41324)
 -- Name: operation_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -376,7 +333,7 @@ CREATE TYPE operation_head AS (
 ALTER TYPE operation_head OWNER TO postgres;
 
 --
--- TOC entry 727 (class 1247 OID 34196)
+-- TOC entry 770 (class 1247 OID 41327)
 -- Name: personnel_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -391,7 +348,7 @@ CREATE TYPE personnel_specification AS (
 ALTER TYPE personnel_specification OWNER TO postgres;
 
 --
--- TOC entry 730 (class 1247 OID 34199)
+-- TOC entry 773 (class 1247 OID 41330)
 -- Name: tooling_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -406,7 +363,7 @@ CREATE TYPE tooling_specification AS (
 ALTER TYPE tooling_specification OWNER TO postgres;
 
 --
--- TOC entry 747 (class 1247 OID 34214)
+-- TOC entry 776 (class 1247 OID 41333)
 -- Name: operation_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -423,7 +380,7 @@ CREATE TYPE operation_segment AS (
 ALTER TYPE operation_segment OWNER TO postgres;
 
 --
--- TOC entry 759 (class 1247 OID 34226)
+-- TOC entry 779 (class 1247 OID 41336)
 -- Name: operation_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -437,7 +394,7 @@ CREATE TYPE operation_document AS (
 ALTER TYPE operation_document OWNER TO postgres;
 
 --
--- TOC entry 318 (class 1255 OID 34237)
+-- TOC entry 314 (class 1255 OID 41337)
 -- Name: assemly_to_consumable(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -461,7 +418,7 @@ $$;
 ALTER FUNCTION common.assemly_to_consumable(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 314 (class 1255 OID 34233)
+-- TOC entry 315 (class 1255 OID 41338)
 -- Name: assemly_to_producible(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -485,7 +442,7 @@ $$;
 ALTER FUNCTION common.assemly_to_producible(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 319 (class 1255 OID 34238)
+-- TOC entry 316 (class 1255 OID 41339)
 -- Name: buyable_to_consumable(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -509,7 +466,7 @@ $$;
 ALTER FUNCTION common.buyable_to_consumable(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 316 (class 1255 OID 34235)
+-- TOC entry 317 (class 1255 OID 41340)
 -- Name: buyable_to_primal(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -533,7 +490,7 @@ $$;
 ALTER FUNCTION common.buyable_to_primal(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 311 (class 1255 OID 34230)
+-- TOC entry 318 (class 1255 OID 41341)
 -- Name: consumable_to_assembly(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -557,7 +514,7 @@ $$;
 ALTER FUNCTION common.consumable_to_assembly(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 312 (class 1255 OID 34231)
+-- TOC entry 319 (class 1255 OID 41342)
 -- Name: consumable_to_buyable(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -581,7 +538,7 @@ $$;
 ALTER FUNCTION common.consumable_to_buyable(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 310 (class 1255 OID 34229)
+-- TOC entry 320 (class 1255 OID 41343)
 -- Name: consumable_to_part(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -605,7 +562,7 @@ $$;
 ALTER FUNCTION common.consumable_to_part(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 320 (class 1255 OID 34554)
+-- TOC entry 321 (class 1255 OID 41344)
 -- Name: disallow_editing_of_committed_document_head(); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -637,7 +594,7 @@ CREATE FUNCTION disallow_editing_of_committed_document_head() RETURNS trigger
 ALTER FUNCTION common.disallow_editing_of_committed_document_head() OWNER TO postgres;
 
 --
--- TOC entry 317 (class 1255 OID 34236)
+-- TOC entry 322 (class 1255 OID 41345)
 -- Name: part_to_consumable(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -661,7 +618,7 @@ $$;
 ALTER FUNCTION common.part_to_consumable(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 315 (class 1255 OID 34234)
+-- TOC entry 323 (class 1255 OID 41346)
 -- Name: part_to_producible(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -685,7 +642,7 @@ $$;
 ALTER FUNCTION common.part_to_producible(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 313 (class 1255 OID 34232)
+-- TOC entry 324 (class 1255 OID 41347)
 -- Name: primal_to_buyable(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -709,7 +666,7 @@ $$;
 ALTER FUNCTION common.primal_to_buyable(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 309 (class 1255 OID 34228)
+-- TOC entry 325 (class 1255 OID 41348)
 -- Name: producible_to_assembly(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -733,7 +690,7 @@ $$;
 ALTER FUNCTION common.producible_to_assembly(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 308 (class 1255 OID 34227)
+-- TOC entry 326 (class 1255 OID 41349)
 -- Name: producible_to_part(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -757,7 +714,7 @@ $$;
 ALTER FUNCTION common.producible_to_part(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 321 (class 1255 OID 34555)
+-- TOC entry 327 (class 1255 OID 41350)
 -- Name: set_prev_doc_fsmt(); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -780,7 +737,7 @@ ALTER FUNCTION common.set_prev_doc_fsmt() OWNER TO postgres;
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 324 (class 1255 OID 34738)
+-- TOC entry 328 (class 1255 OID 41351)
 -- Name: destroy(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -796,7 +753,7 @@ $$;
 ALTER FUNCTION ebom.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 326 (class 1255 OID 34740)
+-- TOC entry 332 (class 1255 OID 41352)
 -- Name: get_body(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -809,13 +766,13 @@ BEGIN
       SELECT
         (component.part_code,
         component.version_num,
-        component.qty,
+        component.quantity,
         'pcs',
         component.component_type)::common.component_specification
       FROM
         ebom.component
       WHERE
-        component.information_id = __document_id
+        component.definition_id = __document_id
     );
 END
 $$;
@@ -824,7 +781,7 @@ $$;
 ALTER FUNCTION ebom.get_body(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 322 (class 1255 OID 34736)
+-- TOC entry 329 (class 1255 OID 41353)
 -- Name: get_gid_by_id(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -844,7 +801,7 @@ $$;
 ALTER FUNCTION ebom.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 325 (class 1255 OID 34739)
+-- TOC entry 330 (class 1255 OID 41354)
 -- Name: get_head(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -876,7 +833,7 @@ $$;
 ALTER FUNCTION ebom.get_head(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 323 (class 1255 OID 34737)
+-- TOC entry 331 (class 1255 OID 41355)
 -- Name: get_id_by_gid(uuid); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -895,6 +852,233 @@ $$;
 
 ALTER FUNCTION ebom.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
+--
+-- TOC entry 333 (class 1255 OID 41547)
+-- Name: init(common.ebom_head, common.component_specification[]); Type: FUNCTION; Schema: ebom; Owner: postgres
+--
+
+CREATE FUNCTION init(__head common.ebom_head, __body common.component_specification[]) RETURNS bigint
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _item common.component_specification;
+  _definition_id bigint;
+  _information_id bigint;
+  _max_version_num integer;
+BEGIN
+
+  IF (__head.document_date IS NULL) THEN
+    __head.document_date := now()::date;
+  END IF;
+
+  IF (__head.version_num IS NULL) THEN
+    __head.version_num := 1;
+  END IF;
+
+  IF (__head.display_name IS NULL) THEN
+    __head.display_name := 'NO-NAME';
+  END IF;
+
+  SELECT
+    max(definition.version_num)
+  FROM 
+    ebom.information, 
+    ebom.definition
+  WHERE 
+    information.id = definition.information_id AND
+    information.part_code = (__head.component_spec).part_code AND 
+    information.version_num = (__head.component_spec).version_num
+  INTO
+    _max_version_num;
+
+  IF NOT FOUND THEN
+    _max_version_num := 0;
+
+    INSERT INTO
+      ebom.information (
+        id,
+        display_name,
+        published_date,
+        part_code,
+        version_num)
+    VALUES (
+      DEFAULT,
+      __head.display_name,
+      __head.document_date,
+      (__head.component_spec).part_code,
+      (__head.component_spec).version_num)
+    RETURNING id INTO _information_id;
+  ELSE
+    SELECT
+      id
+    FROM
+      ebom.information
+    WHERE
+      information.part_code = (__head.component_spec).part_code AND 
+      information.version_num = (__head.component_spec).version_num
+    INTO
+      _information_id;
+
+  END IF;
+
+  INSERT INTO
+    ebom.definition (
+      id,
+      display_name,
+      version_num,
+      published_date,
+      information_id)
+  VALUES (
+    DEFAULT,
+    __head.display_name,
+    _max_version_num + 1,
+    __head.document_date,
+    _information_id)
+  RETURNING id INTO _definition_id;
+
+  FOREACH _item IN
+    ARRAY __body
+  LOOP
+    IF (_item.component_type = 'ASSEMBLY') THEN
+      INSERT INTO
+        ebom.assembly (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          component_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'PART') THEN
+      INSERT INTO
+        ebom.part (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          component_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'BUYABLE') THEN
+      INSERT INTO
+        ebom.buyable (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          component_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSE
+      RAISE '% unknown component_type', _item;
+    END IF;
+  END LOOP;
+
+  RETURN _definition_id;
+
+END;
+$$;
+
+
+ALTER FUNCTION ebom.init(__head common.ebom_head, __body common.component_specification[]) OWNER TO postgres;
+
+--
+-- TOC entry 355 (class 1255 OID 41548)
+-- Name: reinit(bigint, common.component_specification[]); Type: FUNCTION; Schema: ebom; Owner: postgres
+--
+
+CREATE FUNCTION reinit(__document_id bigint, __body common.component_specification[]) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _item common.component_specification;
+BEGIN
+
+  DELETE FROM
+    ebom.component
+  WHERE
+    definition_id = __document_id;
+
+  FOREACH _item IN
+    ARRAY __body
+  LOOP
+    IF (_item.component_type = 'ASSEMBLY') THEN
+      INSERT INTO
+        ebom.assembly (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          component_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'PART') THEN
+      INSERT INTO
+        ebom.part (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          component_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSIF (_item.component_type = 'BUYABLE') THEN
+      INSERT INTO
+        ebom.buyable (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          component_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.component_type);
+    ELSE
+      RAISE '% unknown component_type', _item;
+    END IF;
+  END LOOP;
+
+END;
+$$;
+
+
+ALTER FUNCTION ebom.reinit(__document_id bigint, __body common.component_specification[]) OWNER TO postgres;
+
 SET search_path = component, pg_catalog;
 
 SET default_tablespace = '';
@@ -902,7 +1086,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 204 (class 1259 OID 34240)
+-- TOC entry 205 (class 1259 OID 41356)
 -- Name: information; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -918,8 +1102,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 3446 (class 0 OID 0)
--- Dependencies: 204
+-- TOC entry 3483 (class 0 OID 0)
+-- Dependencies: 205
 -- Name: TABLE information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -927,7 +1111,7 @@ COMMENT ON TABLE information IS 'ebom component list';
 
 
 --
--- TOC entry 205 (class 1259 OID 34248)
+-- TOC entry 206 (class 1259 OID 41364)
 -- Name: assembly; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -940,8 +1124,8 @@ INHERITS (information);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 3447 (class 0 OID 0)
--- Dependencies: 205
+-- TOC entry 3484 (class 0 OID 0)
+-- Dependencies: 206
 -- Name: TABLE assembly; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -949,7 +1133,7 @@ COMMENT ON TABLE assembly IS 'ebom assembly component';
 
 
 --
--- TOC entry 206 (class 1259 OID 34257)
+-- TOC entry 207 (class 1259 OID 41373)
 -- Name: buyable; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -963,8 +1147,8 @@ INHERITS (information);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 3448 (class 0 OID 0)
--- Dependencies: 206
+-- TOC entry 3485 (class 0 OID 0)
+-- Dependencies: 207
 -- Name: TABLE buyable; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -972,7 +1156,7 @@ COMMENT ON TABLE buyable IS 'ebom buyable component';
 
 
 --
--- TOC entry 207 (class 1259 OID 34267)
+-- TOC entry 208 (class 1259 OID 41383)
 -- Name: part; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -985,8 +1169,8 @@ INHERITS (information);
 ALTER TABLE part OWNER TO postgres;
 
 --
--- TOC entry 3449 (class 0 OID 0)
--- Dependencies: 207
+-- TOC entry 3486 (class 0 OID 0)
+-- Dependencies: 208
 -- Name: TABLE part; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -996,15 +1180,16 @@ COMMENT ON TABLE part IS 'ebom part component';
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 208 (class 1259 OID 34632)
+-- TOC entry 209 (class 1259 OID 41392)
 -- Name: component; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
 CREATE TABLE component (
-    information_id bigint NOT NULL,
+    definition_id bigint NOT NULL,
     part_code character varying NOT NULL,
     version_num integer NOT NULL,
-    qty numeric(10,4) NOT NULL,
+    quantity common.quantity NOT NULL,
+    uom_code character varying DEFAULT 'pcs'::character varying NOT NULL,
     component_type common.component_kind NOT NULL
 );
 
@@ -1012,7 +1197,7 @@ CREATE TABLE component (
 ALTER TABLE component OWNER TO postgres;
 
 --
--- TOC entry 209 (class 1259 OID 34638)
+-- TOC entry 210 (class 1259 OID 41398)
 -- Name: assembly; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1025,7 +1210,7 @@ INHERITS (component);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 210 (class 1259 OID 34645)
+-- TOC entry 211 (class 1259 OID 41405)
 -- Name: buyable; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1038,13 +1223,13 @@ INHERITS (component);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 211 (class 1259 OID 34652)
+-- TOC entry 212 (class 1259 OID 41412)
 -- Name: definition; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
 CREATE TABLE definition (
     id bigint NOT NULL,
-    gid uuid,
+    gid uuid DEFAULT public.uuid_generate_v1() NOT NULL,
     display_name character varying NOT NULL,
     version_num integer DEFAULT 1 NOT NULL,
     published_date date DEFAULT now() NOT NULL,
@@ -1059,7 +1244,7 @@ CREATE TABLE definition (
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 212 (class 1259 OID 34662)
+-- TOC entry 213 (class 1259 OID 41422)
 -- Name: definition_id_seq; Type: SEQUENCE; Schema: ebom; Owner: postgres
 --
 
@@ -1074,8 +1259,8 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3450 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3487 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
 
@@ -1083,13 +1268,13 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 
 --
--- TOC entry 213 (class 1259 OID 34664)
+-- TOC entry 214 (class 1259 OID 41424)
 -- Name: information; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
 CREATE TABLE information (
     id bigint NOT NULL,
-    gid uuid,
+    gid uuid DEFAULT public.uuid_generate_v1() NOT NULL,
     part_code character varying NOT NULL,
     version_num integer NOT NULL,
     display_name character varying NOT NULL,
@@ -1100,7 +1285,7 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 214 (class 1259 OID 34671)
+-- TOC entry 215 (class 1259 OID 41431)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: ebom; Owner: postgres
 --
 
@@ -1115,8 +1300,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3451 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3488 (class 0 OID 0)
+-- Dependencies: 215
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
 
@@ -1124,7 +1309,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 215 (class 1259 OID 34673)
+-- TOC entry 216 (class 1259 OID 41433)
 -- Name: part; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -1139,7 +1324,7 @@ ALTER TABLE part OWNER TO postgres;
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3256 (class 2604 OID 34276)
+-- TOC entry 3284 (class 2604 OID 41440)
 -- Name: assembly version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -1147,7 +1332,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3257 (class 2604 OID 34277)
+-- TOC entry 3285 (class 2604 OID 41441)
 -- Name: assembly published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -1155,7 +1340,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3259 (class 2604 OID 34278)
+-- TOC entry 3287 (class 2604 OID 41442)
 -- Name: buyable version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -1163,7 +1348,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3260 (class 2604 OID 34279)
+-- TOC entry 3288 (class 2604 OID 41443)
 -- Name: buyable published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -1171,7 +1356,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3263 (class 2604 OID 34280)
+-- TOC entry 3291 (class 2604 OID 41444)
 -- Name: part version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -1179,7 +1364,7 @@ ALTER TABLE ONLY part ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3264 (class 2604 OID 34281)
+-- TOC entry 3292 (class 2604 OID 41445)
 -- Name: part published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -1189,7 +1374,23 @@ ALTER TABLE ONLY part ALTER COLUMN published_date SET DEFAULT now();
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3272 (class 2604 OID 34680)
+-- TOC entry 3295 (class 2604 OID 41511)
+-- Name: assembly uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY assembly ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying;
+
+
+--
+-- TOC entry 3297 (class 2604 OID 41512)
+-- Name: buyable uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY buyable ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying;
+
+
+--
+-- TOC entry 3303 (class 2604 OID 41446)
 -- Name: definition id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -1197,18 +1398,26 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3274 (class 2604 OID 34681)
+-- TOC entry 3306 (class 2604 OID 41447)
 -- Name: information id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id_seq'::regclass);
 
 
+--
+-- TOC entry 3308 (class 2604 OID 41513)
+-- Name: part uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY part ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying;
+
+
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3423 (class 0 OID 34248)
--- Dependencies: 205
+-- TOC entry 3465 (class 0 OID 41364)
+-- Dependencies: 206
 -- Data for Name: assembly; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -1220,8 +1429,8 @@ INSERT INTO assembly VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-21',
 
 
 --
--- TOC entry 3424 (class 0 OID 34257)
--- Dependencies: 206
+-- TOC entry 3466 (class 0 OID 41373)
+-- Dependencies: 207
 -- Data for Name: buyable; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -1229,16 +1438,16 @@ INSERT INTO buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21
 
 
 --
--- TOC entry 3422 (class 0 OID 34240)
--- Dependencies: 204
+-- TOC entry 3464 (class 0 OID 41356)
+-- Dependencies: 205
 -- Data for Name: information; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3425 (class 0 OID 34267)
--- Dependencies: 207
+-- TOC entry 3467 (class 0 OID 41383)
+-- Dependencies: 208
 -- Data for Name: part; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -1267,130 +1476,75 @@ INSERT INTO part VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-21',
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3427 (class 0 OID 34638)
--- Dependencies: 209
+-- TOC entry 3469 (class 0 OID 41398)
+-- Dependencies: 210
 -- Data for Name: assembly; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO assembly VALUES (1, '80.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO assembly VALUES (2, '80.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO assembly VALUES (2, '82.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO assembly VALUES (3, '80.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO assembly VALUES (3, '82.31.050-001', 1, 1.0000, 'ASSEMBLY');
 
 
 --
--- TOC entry 3428 (class 0 OID 34645)
--- Dependencies: 210
+-- TOC entry 3470 (class 0 OID 41405)
+-- Dependencies: 211
 -- Data for Name: buyable; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'BUYABLE');
-INSERT INTO buyable VALUES (2, 'Гайка М12', 1, 1.0000, 'BUYABLE');
-INSERT INTO buyable VALUES (3, 'Гайка М12', 1, 1.0000, 'BUYABLE');
 
 
 --
--- TOC entry 3426 (class 0 OID 34632)
--- Dependencies: 208
+-- TOC entry 3468 (class 0 OID 41392)
+-- Dependencies: 209
 -- Data for Name: component; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3429 (class 0 OID 34652)
--- Dependencies: 211
+-- TOC entry 3471 (class 0 OID 41412)
+-- Dependencies: 212
 -- Data for Name: definition; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO definition VALUES (1, NULL, '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
-INSERT INTO definition VALUES (2, NULL, '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 2);
-INSERT INTO definition VALUES (3, NULL, '11с33п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 3);
-INSERT INTO definition VALUES (4, NULL, 'Крпс-089,0х109,0: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 4);
-INSERT INTO definition VALUES (5, NULL, 'Рчк-250х20: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 5);
 
 
 --
--- TOC entry 3452 (class 0 OID 0)
--- Dependencies: 212
+-- TOC entry 3489 (class 0 OID 0)
+-- Dependencies: 213
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
-SELECT pg_catalog.setval('definition_id_seq', 5, true);
+SELECT pg_catalog.setval('definition_id_seq', 13, true);
 
 
 --
--- TOC entry 3431 (class 0 OID 34664)
--- Dependencies: 213
+-- TOC entry 3473 (class 0 OID 41424)
+-- Dependencies: 214
 -- Data for Name: information; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO information VALUES (1, NULL, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
-INSERT INTO information VALUES (2, NULL, '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
-INSERT INTO information VALUES (3, NULL, '11.33.050-001', 1, '11с33п-50х40: information', '2017-10-23');
-INSERT INTO information VALUES (4, NULL, '80.31.050-001', 1, 'Крпс-089,0х109,0: information', '2017-10-23');
-INSERT INTO information VALUES (5, NULL, '82.31.050-001', 1, 'Рчк-250х20: information', '2017-10-23');
 
 
 --
--- TOC entry 3453 (class 0 OID 0)
--- Dependencies: 214
+-- TOC entry 3490 (class 0 OID 0)
+-- Dependencies: 215
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
-SELECT pg_catalog.setval('information_id_seq', 5, true);
+SELECT pg_catalog.setval('information_id_seq', 25, true);
 
 
 --
--- TOC entry 3433 (class 0 OID 34673)
--- Dependencies: 215
+-- TOC entry 3475 (class 0 OID 41433)
+-- Dependencies: 216
 -- Data for Name: part; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO part VALUES (1, '40.31.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '50.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '51.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '52.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '53.01.004-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '60.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '61.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '70.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '70.04.020-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '72.01.009-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '22.25.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '40.32.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '50.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '51.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '52.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '53.01.004-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (2, '60.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (2, '61.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (2, '70.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (2, '70.04.020-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (2, '72.01.009-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '22.16.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '40.33.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '50.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '51.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '52.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '53.01.004-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (3, '60.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (3, '61.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (3, '70.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (3, '70.04.020-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (3, '72.01.009-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (4, '41.31.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (4, '42.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (5, '55.31.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (5, '42.02.022-001', 1, 1.0000, 'PART');
 
 
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3279 (class 2606 OID 34283)
+-- TOC entry 3313 (class 2606 OID 41449)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -1399,7 +1553,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3281 (class 2606 OID 34285)
+-- TOC entry 3315 (class 2606 OID 41451)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -1408,7 +1562,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3277 (class 2606 OID 34287)
+-- TOC entry 3311 (class 2606 OID 41453)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -1417,8 +1571,8 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3454 (class 0 OID 0)
--- Dependencies: 3277
+-- TOC entry 3491 (class 0 OID 0)
+-- Dependencies: 3311
 -- Name: CONSTRAINT information_pkey ON information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -1426,7 +1580,7 @@ COMMENT ON CONSTRAINT information_pkey ON information IS 'may be part_code + ver
 
 
 --
--- TOC entry 3283 (class 2606 OID 34289)
+-- TOC entry 3317 (class 2606 OID 41455)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -1437,34 +1591,52 @@ ALTER TABLE ONLY part
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3287 (class 2606 OID 34683)
+-- TOC entry 3321 (class 2606 OID 41457)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY assembly
-    ADD CONSTRAINT assembly_pkey PRIMARY KEY (information_id, part_code);
+    ADD CONSTRAINT assembly_pkey PRIMARY KEY (definition_id, part_code);
 
 
 --
--- TOC entry 3289 (class 2606 OID 34685)
+-- TOC entry 3323 (class 2606 OID 41459)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY buyable
-    ADD CONSTRAINT buyable_pkey PRIMARY KEY (information_id, part_code);
+    ADD CONSTRAINT buyable_pkey PRIMARY KEY (definition_id, part_code);
 
 
 --
--- TOC entry 3285 (class 2606 OID 34687)
+-- TOC entry 3319 (class 2606 OID 41461)
 -- Name: component component_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY component
-    ADD CONSTRAINT component_pkey PRIMARY KEY (information_id, part_code);
+    ADD CONSTRAINT component_pkey PRIMARY KEY (definition_id, part_code);
 
 
 --
--- TOC entry 3291 (class 2606 OID 34689)
+-- TOC entry 3325 (class 2606 OID 41591)
+-- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_gid_key UNIQUE (gid);
+
+
+--
+-- TOC entry 3327 (class 2606 OID 41593)
+-- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_information_id_version_num_key UNIQUE (information_id, version_num);
+
+
+--
+-- TOC entry 3329 (class 2606 OID 41463)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1473,7 +1645,25 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3293 (class 2606 OID 34691)
+-- TOC entry 3331 (class 2606 OID 41587)
+-- Name: information information_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY information
+    ADD CONSTRAINT information_gid_key UNIQUE (gid);
+
+
+--
+-- TOC entry 3333 (class 2606 OID 41589)
+-- Name: information information_part_code_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
+--
+
+ALTER TABLE ONLY information
+    ADD CONSTRAINT information_part_code_version_num_key UNIQUE (part_code, version_num);
+
+
+--
+-- TOC entry 3335 (class 2606 OID 41465)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1482,16 +1672,16 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3295 (class 2606 OID 34693)
+-- TOC entry 3337 (class 2606 OID 41467)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY part
-    ADD CONSTRAINT part_pkey PRIMARY KEY (information_id, part_code);
+    ADD CONSTRAINT part_pkey PRIMARY KEY (definition_id, part_code);
 
 
 --
--- TOC entry 3304 (class 2620 OID 34694)
+-- TOC entry 3346 (class 2620 OID 41468)
 -- Name: definition set_prev_doc_fsmt; Type: TRIGGER; Schema: ebom; Owner: postgres
 --
 
@@ -1499,16 +1689,16 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON definition FOR EACH ROW EXECUT
 
 
 --
--- TOC entry 3297 (class 2606 OID 34695)
--- Name: assembly assembly_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
+-- TOC entry 3339 (class 2606 OID 41469)
+-- Name: assembly assembly_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY assembly
-    ADD CONSTRAINT assembly_information_id_fkey FOREIGN KEY (information_id) REFERENCES definition(id);
+    ADD CONSTRAINT assembly_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id);
 
 
 --
--- TOC entry 3296 (class 2606 OID 34700)
+-- TOC entry 3338 (class 2606 OID 41474)
 -- Name: assembly assembly_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1517,16 +1707,16 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3299 (class 2606 OID 34705)
--- Name: buyable buyable_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
+-- TOC entry 3341 (class 2606 OID 41479)
+-- Name: buyable buyable_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY buyable
-    ADD CONSTRAINT buyable_information_id_fkey FOREIGN KEY (information_id) REFERENCES definition(id);
+    ADD CONSTRAINT buyable_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id);
 
 
 --
--- TOC entry 3298 (class 2606 OID 34710)
+-- TOC entry 3340 (class 2606 OID 41484)
 -- Name: buyable buyable_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1535,7 +1725,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3300 (class 2606 OID 34715)
+-- TOC entry 3342 (class 2606 OID 41489)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1544,7 +1734,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3301 (class 2606 OID 34720)
+-- TOC entry 3343 (class 2606 OID 41494)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1553,16 +1743,16 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3303 (class 2606 OID 34725)
--- Name: part part_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
+-- TOC entry 3345 (class 2606 OID 41499)
+-- Name: part part_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY part
-    ADD CONSTRAINT part_information_id_fkey FOREIGN KEY (information_id) REFERENCES definition(id);
+    ADD CONSTRAINT part_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id);
 
 
 --
--- TOC entry 3302 (class 2606 OID 34730)
+-- TOC entry 3344 (class 2606 OID 41504)
 -- Name: part part_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -1570,7 +1760,7 @@ ALTER TABLE ONLY part
     ADD CONSTRAINT part_part_code_fkey FOREIGN KEY (part_code, version_num) REFERENCES component.part(part_code, version_num);
 
 
--- Completed on 2017-11-22 14:06:22 EET
+-- Completed on 2017-11-23 01:07:25 EET
 
 --
 -- PostgreSQL database dump complete
