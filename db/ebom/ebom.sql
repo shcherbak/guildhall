@@ -90,7 +90,7 @@ ALTER TABLE buyable OWNER TO postgres;
 
 CREATE TABLE definition (
     id bigint NOT NULL,
-    gid uuid NOT NULL DEFAULT uuid_generate_v1(),
+    gid uuid,
     display_name character varying NOT NULL,
     version_num integer NOT NULL DEFAULT 1,
     published_date date DEFAULT now() NOT NULL,
@@ -135,7 +135,7 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 CREATE TABLE information (
     id bigint NOT NULL,
-    gid uuid NOT NULL DEFAULT uuid_generate_v1(),
+    gid uuid,
     part_code character varying NOT NULL,
     version_num integer NOT NULL,
     display_name character varying NOT NULL,
@@ -237,11 +237,11 @@ INSERT INTO buyable VALUES (3, 'Гайка М12', 1, 1.0000, 'BUYABLE');
 -- Data for Name: definition; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO definition VALUES (1, '11с31п-50х40: definition', '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
-INSERT INTO definition VALUES (2, '11с32п-50х40: definition', '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 2);
-INSERT INTO definition VALUES (3, '11с33п-50х40: definition', '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 3);
-INSERT INTO definition VALUES (4, 'Крпс-089,0х109,0: definition', '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 4);
-INSERT INTO definition VALUES (5, 'Рчк-250х20: definition', '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 5);
+INSERT INTO definition VALUES (1, NULL, '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
+INSERT INTO definition VALUES (2, NULL,  '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 2);
+INSERT INTO definition VALUES (3, NULL,  '11с33п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 3);
+INSERT INTO definition VALUES (4, NULL,  'Крпс-089,0х109,0: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 4);
+INSERT INTO definition VALUES (5, NULL,  'Рчк-250х20: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 5);
 
 
 --
@@ -259,12 +259,11 @@ SELECT pg_catalog.setval('definition_id_seq', 5, true);
 -- Data for Name: information; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO information VALUES (1, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
-INSERT INTO information VALUES (2, '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
-INSERT INTO information VALUES (3, '11.33.050-001', 1, '11с33п-50х40: information', '2017-10-23');
-INSERT INTO information VALUES (4, '80.31.050-001', 1, 'Крпс-089,0х109,0: information', '2017-10-23');
-INSERT INTO information VALUES (5, '82.31.050-001', 1, 'Рчк-250х20: information', '2017-10-23');
-
+INSERT INTO information VALUES (1, NULL, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
+INSERT INTO information VALUES (2, NULL, '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+INSERT INTO information VALUES (3, NULL, '11.33.050-001', 1, '11с33п-50х40: information', '2017-10-23');
+INSERT INTO information VALUES (4, NULL, '80.31.050-001', 1, 'Крпс-089,0х109,0: information', '2017-10-23');
+INSERT INTO information VALUES (5, NULL, '82.31.050-001', 1, 'Рчк-250х20: information', '2017-10-23');
 
 --
 -- TOC entry 3807 (class 0 OID 0)
@@ -458,4 +457,3 @@ ALTER TABLE ONLY part
 --
 -- PostgreSQL database dump complete
 --
-

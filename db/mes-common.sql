@@ -12,8 +12,8 @@ CREATE SCHEMA common
   AUTHORIZATION postgres;
 
 
-CREATE DOMAIN common.quantity AS 
-  numeric(20,4) DEFAULT 0 
+CREATE DOMAIN common.quantity AS
+  numeric(20,4) DEFAULT 0
     CONSTRAINT quantity_is_positive CHECK ((VALUE >= (0)::numeric));
 COMMENT ON DOMAIN common.quantity IS 'quantity domain';
 
@@ -106,7 +106,7 @@ CREATE TYPE common.tooling_specification AS (
 
 
 -- fix field order
-CREATE TYPE common.ebom_information AS (
+CREATE TYPE common.ebom_head AS (
   document_id bigint,
   gid uuid,
   display_name character varying,
@@ -118,7 +118,7 @@ CREATE TYPE common.ebom_information AS (
 );
 
 
-CREATE TYPE common.mbom_information AS (
+CREATE TYPE common.mbom_head AS (
   document_id bigint,
   gid uuid,
   display_name character varying,
@@ -131,13 +131,13 @@ CREATE TYPE common.mbom_information AS (
 
 
 CREATE TYPE common.ebom_document AS (
-  head common.ebom_information,
+  head common.ebom_head,
   body common.component_specification[]
 );
 
 
 CREATE TYPE common.mbom_document AS (
-  head common.mbom_information,
+  head common.mbom_head,
   body common.material_specification[]
 );
 
@@ -152,7 +152,7 @@ CREATE TYPE common.operation_segment AS (
 );
 
 
-CREATE TYPE common.operation_information AS (
+CREATE TYPE common.operation_head AS (
   document_id bigint,
   gid uuid,
   display_name character varying,
@@ -180,7 +180,7 @@ CREATE TYPE common.dependency_specification AS (
 
 
 CREATE TYPE common.operation_document AS (
-  head common.operation_information,
+  head common.operation_head,
   body common.operation_segment[],
   deps common.dependency_specification[]
 );
@@ -465,6 +465,56 @@ $BODY$
 ALTER FUNCTION common.buyable_to_consumable(__component common.component_specification)
   OWNER TO postgres;
 
+
+  CREATE OR REPLACE FUNCTION common.disallow_editing_of_committed_document_head()
+    RETURNS trigger AS
+  $BODY$
+  BEGIN
+    IF (TG_OP = 'UPDATE') THEN
+
+      IF (OLD.curr_fsmt = 'COMMITTED'::common.document_fsmt AND NEW.curr_fsmt <> 'DECOMMITTED'::common.document_fsmt) THEN
+        RAISE EXCEPTION 'not allowed to edit document %, %, %', OLD.id, OLD.gid, OLD.curr_fsmt;
+      END IF;
+
+      RETURN NEW;
+
+    ELSIF (TG_OP = 'DELETE') THEN
+
+      IF (OLD.curr_fsmt = 'COMMITTED'::common.document_fsmt) THEN
+        RAISE EXCEPTION 'not allowed to delete document %, %', OLD.id, OLD.curr_fsmt;
+      END IF;
+
+      RETURN OLD;
+    END IF;
+    RETURN NULL;
+  END;
+  $BODY$
+    LANGUAGE plpgsql VOLATILE
+    COST 100;
+  ALTER FUNCTION common.disallow_editing_of_committed_document_head()
+    OWNER TO postgres;
+
+
+    CREATE OR REPLACE FUNCTION common.set_prev_doc_fsmt()
+      RETURNS trigger AS
+    $BODY$
+    BEGIN
+      IF (TG_OP = 'UPDATE' AND NEW.curr_fsmt != OLD.curr_fsmt) THEN
+        NEW.prev_fsmt := OLD.curr_fsmt;
+        NEW.prev_fsmt_date := OLD.curr_fsmt_date;
+        NEW.curr_fsmt_date := now();
+      END IF;
+      RETURN NEW;
+    END;
+    $BODY$
+      LANGUAGE plpgsql VOLATILE
+      COST 100;
+    ALTER FUNCTION common.set_prev_doc_fsmt()
+      OWNER TO postgres;
+
+
+
+
 SELECT common.buyable_to_consumable(__component := ('part_code#1', 1, 1.0, 'pcs', 'BUYABLE')::common.component_specification);
 
 
@@ -519,9 +569,9 @@ CREATE OR REPLACE FUNCTION ebom.get_gid_by_id(__document_id bigint)
 $BODY$
 BEGIN
   RETURN gid
-    FROM 
+    FROM
       ebom.definition
-    WHERE 
+    WHERE
       id = __document_id;
 END;
 $BODY$
@@ -536,9 +586,9 @@ CREATE OR REPLACE FUNCTION ebom.get_id_by_gid(__document_gid uuid)
 $BODY$
 BEGIN
   RETURN id
-    FROM 
+    FROM
       ebom.definition
-    WHERE 
+    WHERE
       gid = __document_gid;
 END;
 $BODY$
@@ -548,6 +598,7 @@ ALTER FUNCTION ebom.get_id_by_gid(uuid)
   OWNER TO postgres;
 
 
+-- TODO: deal with information table
 CREATE OR REPLACE FUNCTION ebom.destroy(__document_id bigint)
   RETURNS void AS
 $BODY$
@@ -570,52 +621,52 @@ CREATE OR REPLACE FUNCTION ebom.get_head(__document_id bigint)
 $BODY$
 DECLARE
 BEGIN
-  RETURN 
-    (definition.id, 
-    definition.gid, 
-    definition.display_name, 
-    definition.version_num,  
-    definition.published_date, 
-    definition.curr_fsmt, 
+  RETURN
+    (definition.id,
+    definition.gid,
+    definition.display_name,
+    definition.version_num,
+    definition.published_date,
+    definition.curr_fsmt,
     'EBOM'::common.document_kind,
     (information.part_code, information.version_num, 1, 'pcs', 'ASSEMBLY')::common.component_specification
-    )::common.ebom_information
-  FROM 
-    ebom.definition, 
+    )::common.ebom_head
+  FROM
+    ebom.definition,
     ebom.information
-  WHERE 
+  WHERE
     information.id = definition.information_id AND
     definition.id = __document_id;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION ebom.get_information(bigint)
+ALTER FUNCTION ebom.get_head(bigint)
   OWNER TO postgres;
 
 
 CREATE OR REPLACE FUNCTION ebom.get_body(__document_id bigint)
-  RETURNS common.ebom_body[] AS
+  RETURNS common.component_specification[] AS
 $BODY$
 BEGIN
   RETURN
     ARRAY(
-      SELECT 
-        (component.part_code, 
-        component.version_num, 
+      SELECT
+        (component.part_code,
+        component.version_num,
         component.qty,
         'pcs',
         component.component_type)::common.component_specification
-      FROM 
+      FROM
         ebom.component
-      WHERE 
+      WHERE
         component.information_id = __document_id
     );
 END
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION demand.get_body(bigint)
+ALTER FUNCTION ebom.get_body(bigint)
   OWNER TO postgres;
 
 
@@ -625,11 +676,11 @@ ALTER FUNCTION demand.get_body(bigint)
 
 CREATE OR REPLACE FUNCTION ebom.init(
     __head common.ebom_head,
-    __body common.ebom_body[])
+    __body common.component_specification[])
   RETURNS bigint AS
 $BODY$
 DECLARE
-  _item common.ebom_body;
+  _item common.component_specification;
   _document_id bigint;
 BEGIN
 
@@ -651,21 +702,38 @@ BEGIN
         __facility_code := __head.facility_code);
   END IF;
 
+  /*
+  1) определить изделие, для которого создается версия
+  2) выбрать версию
+    ebom.get_information(part_code, version_num)
+    найдена информация
+      создаем новую версию
+    не найдена информация по версии
+      записываем информацию, получаем ИД
+      создаем версию
+
+  */
+  -- INSERT INTO ebom.information
+  -- INSERT INTO ebom.definition
+  -- INSERT INTO ebom.assembly
+  -- INSERT INTO ebom.part
+  -- INSERT INTO ebom.buyable
+
   INSERT INTO
     demand.head (
-      id, 
+      id,
       display_name,
-      document_date, 
-      due_date, 
-      ship_from, 
+      document_date,
+      due_date,
+      ship_from,
       ship_to)
   VALUES (
-    DEFAULT, 
+    DEFAULT,
     __head.display_name,
-    __head.document_date, 
-    __head.due_date, 
-    __head.facility_code, 
-    __head.addressee) 
+    __head.document_date,
+    __head.due_date,
+    __head.facility_code,
+    __head.addressee)
   RETURNING id INTO _document_id;
 
   FOREACH _item IN
@@ -673,14 +741,14 @@ BEGIN
   LOOP
     INSERT INTO
       demand.body (
-        head_id, 
-        good_code, 
-        quantity, 
+        head_id,
+        good_code,
+        quantity,
         uom_code)
     VALUES (
-      _document_id, 
-      _item.good_code, 
-      _item.quantity, 
+      _document_id,
+      _item.good_code,
+      _item.quantity,
       _item.uom_code);
   END LOOP;
 
@@ -709,22 +777,22 @@ BEGIN
 
   DELETE FROM
     demand.body
-  WHERE 
+  WHERE
     head_id = __document_id;
 
   FOREACH _item IN
     ARRAY __body
   LOOP
-    INSERT INTO 
+    INSERT INTO
       demand.body (
         head_id,
         good_code,
         quantity,
         uom_code)
     VALUES (
-      __document_id, 
-      _item.good_code, 
-      _item.quantity, 
+      __document_id,
+      _item.good_code,
+      _item.quantity,
       _item.uom_code);
   END LOOP;
 
