@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "FSMT",
+  "description": "FSMT",
+  "type": "object",
+  "properties": {
+    "curr_fsmt": {
+      "description": "Current transition",
+      "type": "string",
+      "enum": [
+        "PROPOSED",
+        "COMMITTED",
+        "DECOMMITTED"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "curr_fsmt"
+  ]
+}
