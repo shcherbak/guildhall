@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.6
 -- Dumped by pg_dump version 9.6.6
 
--- Started on 2017-11-23 18:12:00 EET
+-- Started on 2017-11-23 22:31:18 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -17,7 +17,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- TOC entry 11 (class 2615 OID 34928)
+-- TOC entry 9 (class 2615 OID 42334)
 -- Name: common; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -27,7 +27,7 @@ CREATE SCHEMA common;
 ALTER SCHEMA common OWNER TO postgres;
 
 --
--- TOC entry 7 (class 2615 OID 34929)
+-- TOC entry 17 (class 2615 OID 42335)
 -- Name: component; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -37,8 +37,8 @@ CREATE SCHEMA component;
 ALTER SCHEMA component OWNER TO postgres;
 
 --
--- TOC entry 3504 (class 0 OID 0)
--- Dependencies: 7
+-- TOC entry 3627 (class 0 OID 0)
+-- Dependencies: 17
 -- Name: SCHEMA component; Type: COMMENT; Schema: -; Owner: postgres
 --
 
@@ -46,7 +46,7 @@ COMMENT ON SCHEMA component IS 'components of ebom';
 
 
 --
--- TOC entry 8 (class 2615 OID 34930)
+-- TOC entry 15 (class 2615 OID 42336)
 -- Name: ebom; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -56,8 +56,8 @@ CREATE SCHEMA ebom;
 ALTER SCHEMA ebom OWNER TO postgres;
 
 --
--- TOC entry 3505 (class 0 OID 0)
--- Dependencies: 8
+-- TOC entry 3628 (class 0 OID 0)
+-- Dependencies: 15
 -- Name: SCHEMA ebom; Type: COMMENT; Schema: -; Owner: postgres
 --
 
@@ -65,7 +65,45 @@ COMMENT ON SCHEMA ebom IS 'engenering bill of materials';
 
 
 --
--- TOC entry 12 (class 2615 OID 35223)
+-- TOC entry 14 (class 2615 OID 42864)
+-- Name: material; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA material;
+
+
+ALTER SCHEMA material OWNER TO postgres;
+
+--
+-- TOC entry 3629 (class 0 OID 0)
+-- Dependencies: 14
+-- Name: SCHEMA material; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA material IS 'materials of mbom';
+
+
+--
+-- TOC entry 7 (class 2615 OID 42863)
+-- Name: mbom; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA mbom;
+
+
+ALTER SCHEMA mbom OWNER TO postgres;
+
+--
+-- TOC entry 3630 (class 0 OID 0)
+-- Dependencies: 7
+-- Name: SCHEMA mbom; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA mbom IS 'manufacturing bill of materials';
+
+
+--
+-- TOC entry 10 (class 2615 OID 42337)
 -- Name: pgunit; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -75,7 +113,7 @@ CREATE SCHEMA pgunit;
 ALTER SCHEMA pgunit OWNER TO postgres;
 
 --
--- TOC entry 10 (class 2615 OID 35245)
+-- TOC entry 11 (class 2615 OID 42338)
 -- Name: tests; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -85,7 +123,7 @@ CREATE SCHEMA tests;
 ALTER SCHEMA tests OWNER TO postgres;
 
 --
--- TOC entry 1 (class 3079 OID 13350)
+-- TOC entry 1 (class 3079 OID 13343)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -93,7 +131,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 3507 (class 0 OID 0)
+-- TOC entry 3632 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -102,7 +140,7 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 --
--- TOC entry 3 (class 3079 OID 34753)
+-- TOC entry 4 (class 3079 OID 42339)
 -- Name: ltree; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -110,8 +148,8 @@ CREATE EXTENSION IF NOT EXISTS ltree WITH SCHEMA public;
 
 
 --
--- TOC entry 3508 (class 0 OID 0)
--- Dependencies: 3
+-- TOC entry 3633 (class 0 OID 0)
+-- Dependencies: 4
 -- Name: EXTENSION ltree; Type: COMMENT; Schema: -; Owner: 
 --
 
@@ -119,7 +157,7 @@ COMMENT ON EXTENSION ltree IS 'data type for hierarchical tree-like structures';
 
 
 --
--- TOC entry 2 (class 3079 OID 35240)
+-- TOC entry 3 (class 3079 OID 42514)
 -- Name: plpgsql_check; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -127,8 +165,8 @@ CREATE EXTENSION IF NOT EXISTS plpgsql_check WITH SCHEMA public;
 
 
 --
--- TOC entry 3509 (class 0 OID 0)
--- Dependencies: 2
+-- TOC entry 3634 (class 0 OID 0)
+-- Dependencies: 3
 -- Name: EXTENSION plpgsql_check; Type: COMMENT; Schema: -; Owner: 
 --
 
@@ -136,7 +174,7 @@ COMMENT ON EXTENSION plpgsql_check IS 'extended check for plpgsql functions';
 
 
 --
--- TOC entry 4 (class 3079 OID 34742)
+-- TOC entry 2 (class 3079 OID 42519)
 -- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -144,8 +182,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 3510 (class 0 OID 0)
--- Dependencies: 4
+-- TOC entry 3635 (class 0 OID 0)
+-- Dependencies: 2
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
 --
 
@@ -155,7 +193,7 @@ COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UU
 SET search_path = common, pg_catalog;
 
 --
--- TOC entry 737 (class 1247 OID 34932)
+-- TOC entry 764 (class 1247 OID 42531)
 -- Name: component_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -169,7 +207,7 @@ CREATE TYPE component_kind AS ENUM (
 ALTER TYPE component_kind OWNER TO postgres;
 
 --
--- TOC entry 740 (class 1247 OID 34939)
+-- TOC entry 767 (class 1247 OID 42537)
 -- Name: quantity; Type: DOMAIN; Schema: common; Owner: postgres
 --
 
@@ -180,8 +218,8 @@ CREATE DOMAIN quantity AS numeric(20,4) DEFAULT 0
 ALTER DOMAIN quantity OWNER TO postgres;
 
 --
--- TOC entry 3511 (class 0 OID 0)
--- Dependencies: 740
+-- TOC entry 3636 (class 0 OID 0)
+-- Dependencies: 767
 -- Name: DOMAIN quantity; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -189,7 +227,7 @@ COMMENT ON DOMAIN quantity IS 'quantity domain';
 
 
 --
--- TOC entry 742 (class 1247 OID 34943)
+-- TOC entry 769 (class 1247 OID 42541)
 -- Name: component_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -205,7 +243,7 @@ CREATE TYPE component_specification AS (
 ALTER TYPE component_specification OWNER TO postgres;
 
 --
--- TOC entry 745 (class 1247 OID 34946)
+-- TOC entry 772 (class 1247 OID 42544)
 -- Name: dependency_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -219,7 +257,7 @@ CREATE TYPE dependency_specification AS (
 ALTER TYPE dependency_specification OWNER TO postgres;
 
 --
--- TOC entry 748 (class 1247 OID 34949)
+-- TOC entry 775 (class 1247 OID 42547)
 -- Name: dependency_specification_ltree; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -234,7 +272,7 @@ CREATE TYPE dependency_specification_ltree AS (
 ALTER TYPE dependency_specification_ltree OWNER TO postgres;
 
 --
--- TOC entry 751 (class 1247 OID 34951)
+-- TOC entry 778 (class 1247 OID 42549)
 -- Name: document_fsmt; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -248,7 +286,7 @@ CREATE TYPE document_fsmt AS ENUM (
 ALTER TYPE document_fsmt OWNER TO postgres;
 
 --
--- TOC entry 754 (class 1247 OID 34958)
+-- TOC entry 781 (class 1247 OID 42556)
 -- Name: document_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -266,7 +304,7 @@ CREATE TYPE document_kind AS ENUM (
 ALTER TYPE document_kind OWNER TO postgres;
 
 --
--- TOC entry 757 (class 1247 OID 34975)
+-- TOC entry 784 (class 1247 OID 42573)
 -- Name: ebom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -285,7 +323,7 @@ CREATE TYPE ebom_head AS (
 ALTER TYPE ebom_head OWNER TO postgres;
 
 --
--- TOC entry 760 (class 1247 OID 34978)
+-- TOC entry 787 (class 1247 OID 42576)
 -- Name: ebom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -298,7 +336,7 @@ CREATE TYPE ebom_document AS (
 ALTER TYPE ebom_document OWNER TO postgres;
 
 --
--- TOC entry 763 (class 1247 OID 34981)
+-- TOC entry 790 (class 1247 OID 42579)
 -- Name: equipment_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -313,7 +351,7 @@ CREATE TYPE equipment_specification AS (
 ALTER TYPE equipment_specification OWNER TO postgres;
 
 --
--- TOC entry 766 (class 1247 OID 34983)
+-- TOC entry 793 (class 1247 OID 42581)
 -- Name: inventory_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -332,7 +370,7 @@ CREATE TYPE inventory_kind AS ENUM (
 ALTER TYPE inventory_kind OWNER TO postgres;
 
 --
--- TOC entry 769 (class 1247 OID 35000)
+-- TOC entry 796 (class 1247 OID 42598)
 -- Name: material_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -346,7 +384,7 @@ CREATE TYPE material_kind AS ENUM (
 ALTER TYPE material_kind OWNER TO postgres;
 
 --
--- TOC entry 772 (class 1247 OID 35009)
+-- TOC entry 799 (class 1247 OID 42607)
 -- Name: material_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -362,7 +400,7 @@ CREATE TYPE material_specification AS (
 ALTER TYPE material_specification OWNER TO postgres;
 
 --
--- TOC entry 775 (class 1247 OID 35012)
+-- TOC entry 802 (class 1247 OID 42610)
 -- Name: mbom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -381,7 +419,7 @@ CREATE TYPE mbom_head AS (
 ALTER TYPE mbom_head OWNER TO postgres;
 
 --
--- TOC entry 778 (class 1247 OID 35015)
+-- TOC entry 805 (class 1247 OID 42613)
 -- Name: mbom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -394,7 +432,7 @@ CREATE TYPE mbom_document AS (
 ALTER TYPE mbom_document OWNER TO postgres;
 
 --
--- TOC entry 781 (class 1247 OID 35018)
+-- TOC entry 808 (class 1247 OID 42616)
 -- Name: operation_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -413,7 +451,7 @@ CREATE TYPE operation_head AS (
 ALTER TYPE operation_head OWNER TO postgres;
 
 --
--- TOC entry 784 (class 1247 OID 35021)
+-- TOC entry 811 (class 1247 OID 42619)
 -- Name: personnel_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -428,7 +466,7 @@ CREATE TYPE personnel_specification AS (
 ALTER TYPE personnel_specification OWNER TO postgres;
 
 --
--- TOC entry 787 (class 1247 OID 35024)
+-- TOC entry 814 (class 1247 OID 42622)
 -- Name: tooling_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -443,7 +481,7 @@ CREATE TYPE tooling_specification AS (
 ALTER TYPE tooling_specification OWNER TO postgres;
 
 --
--- TOC entry 790 (class 1247 OID 35027)
+-- TOC entry 817 (class 1247 OID 42625)
 -- Name: operation_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -460,7 +498,7 @@ CREATE TYPE operation_segment AS (
 ALTER TYPE operation_segment OWNER TO postgres;
 
 --
--- TOC entry 793 (class 1247 OID 35030)
+-- TOC entry 820 (class 1247 OID 42628)
 -- Name: operation_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -474,7 +512,7 @@ CREATE TYPE operation_document AS (
 ALTER TYPE operation_document OWNER TO postgres;
 
 --
--- TOC entry 314 (class 1255 OID 35031)
+-- TOC entry 331 (class 1255 OID 42629)
 -- Name: assemly_to_consumable(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -498,7 +536,7 @@ $$;
 ALTER FUNCTION common.assemly_to_consumable(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 315 (class 1255 OID 35032)
+-- TOC entry 332 (class 1255 OID 42630)
 -- Name: assemly_to_producible(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -522,7 +560,7 @@ $$;
 ALTER FUNCTION common.assemly_to_producible(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 316 (class 1255 OID 35033)
+-- TOC entry 333 (class 1255 OID 42631)
 -- Name: buyable_to_consumable(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -546,7 +584,7 @@ $$;
 ALTER FUNCTION common.buyable_to_consumable(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 317 (class 1255 OID 35034)
+-- TOC entry 334 (class 1255 OID 42632)
 -- Name: buyable_to_primal(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -570,7 +608,7 @@ $$;
 ALTER FUNCTION common.buyable_to_primal(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 318 (class 1255 OID 35035)
+-- TOC entry 335 (class 1255 OID 42633)
 -- Name: consumable_to_assembly(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -594,7 +632,7 @@ $$;
 ALTER FUNCTION common.consumable_to_assembly(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 319 (class 1255 OID 35036)
+-- TOC entry 336 (class 1255 OID 42634)
 -- Name: consumable_to_buyable(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -618,7 +656,7 @@ $$;
 ALTER FUNCTION common.consumable_to_buyable(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 320 (class 1255 OID 35037)
+-- TOC entry 337 (class 1255 OID 42635)
 -- Name: consumable_to_part(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -642,7 +680,7 @@ $$;
 ALTER FUNCTION common.consumable_to_part(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 321 (class 1255 OID 35038)
+-- TOC entry 338 (class 1255 OID 42636)
 -- Name: disallow_editing_of_committed_document_head(); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -674,7 +712,7 @@ CREATE FUNCTION disallow_editing_of_committed_document_head() RETURNS trigger
 ALTER FUNCTION common.disallow_editing_of_committed_document_head() OWNER TO postgres;
 
 --
--- TOC entry 322 (class 1255 OID 35039)
+-- TOC entry 339 (class 1255 OID 42637)
 -- Name: part_to_consumable(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -698,7 +736,7 @@ $$;
 ALTER FUNCTION common.part_to_consumable(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 323 (class 1255 OID 35040)
+-- TOC entry 340 (class 1255 OID 42638)
 -- Name: part_to_producible(component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -722,7 +760,7 @@ $$;
 ALTER FUNCTION common.part_to_producible(__component component_specification) OWNER TO postgres;
 
 --
--- TOC entry 324 (class 1255 OID 35041)
+-- TOC entry 341 (class 1255 OID 42639)
 -- Name: primal_to_buyable(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -746,7 +784,7 @@ $$;
 ALTER FUNCTION common.primal_to_buyable(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 325 (class 1255 OID 35042)
+-- TOC entry 342 (class 1255 OID 42640)
 -- Name: producible_to_assembly(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -770,7 +808,7 @@ $$;
 ALTER FUNCTION common.producible_to_assembly(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 326 (class 1255 OID 35043)
+-- TOC entry 343 (class 1255 OID 42641)
 -- Name: producible_to_part(material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -794,7 +832,7 @@ $$;
 ALTER FUNCTION common.producible_to_part(__material material_specification) OWNER TO postgres;
 
 --
--- TOC entry 327 (class 1255 OID 35044)
+-- TOC entry 344 (class 1255 OID 42642)
 -- Name: set_prev_doc_fsmt(); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -817,7 +855,7 @@ ALTER FUNCTION common.set_prev_doc_fsmt() OWNER TO postgres;
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 328 (class 1255 OID 35045)
+-- TOC entry 345 (class 1255 OID 42643)
 -- Name: destroy(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -833,7 +871,7 @@ $$;
 ALTER FUNCTION ebom.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 329 (class 1255 OID 35046)
+-- TOC entry 346 (class 1255 OID 42644)
 -- Name: get_body(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -861,7 +899,7 @@ $$;
 ALTER FUNCTION ebom.get_body(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 330 (class 1255 OID 35047)
+-- TOC entry 347 (class 1255 OID 42645)
 -- Name: get_gid_by_id(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -881,7 +919,7 @@ $$;
 ALTER FUNCTION ebom.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 331 (class 1255 OID 35048)
+-- TOC entry 348 (class 1255 OID 42646)
 -- Name: get_head(bigint); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -913,7 +951,7 @@ $$;
 ALTER FUNCTION ebom.get_head(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 332 (class 1255 OID 35049)
+-- TOC entry 349 (class 1255 OID 42647)
 -- Name: get_id_by_gid(uuid); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -933,7 +971,7 @@ $$;
 ALTER FUNCTION ebom.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
 --
--- TOC entry 364 (class 1255 OID 35050)
+-- TOC entry 350 (class 1255 OID 42648)
 -- Name: init(common.ebom_head, common.component_specification[]); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -1081,7 +1119,7 @@ $$;
 ALTER FUNCTION ebom.init(__head common.ebom_head, __body common.component_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 333 (class 1255 OID 35051)
+-- TOC entry 352 (class 1255 OID 42649)
 -- Name: reinit(bigint, common.component_specification[]); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -1159,10 +1197,323 @@ $$;
 
 ALTER FUNCTION ebom.reinit(__document_id bigint, __body common.component_specification[]) OWNER TO postgres;
 
+SET search_path = mbom, pg_catalog;
+
+--
+-- TOC entry 381 (class 1255 OID 43003)
+-- Name: destroy(bigint); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION destroy(__document_id bigint) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+  DELETE FROM mbom.definition WHERE id = __document_id;
+END;
+$$;
+
+
+ALTER FUNCTION mbom.destroy(__document_id bigint) OWNER TO postgres;
+
+--
+-- TOC entry 382 (class 1255 OID 43004)
+-- Name: get_body(bigint); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION get_body(__document_id bigint) RETURNS common.material_specification[]
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+  RETURN
+    ARRAY(
+      SELECT
+        (material.part_code,
+        material.version_num,
+        material.quantity,
+        'pcs',
+        material.material_type)::common.material_specification
+      FROM
+        mbom.material
+      WHERE
+        material.definition_id = __document_id
+    );
+END
+$$;
+
+
+ALTER FUNCTION mbom.get_body(__document_id bigint) OWNER TO postgres;
+
+--
+-- TOC entry 379 (class 1255 OID 43001)
+-- Name: get_gid_by_id(bigint); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION get_gid_by_id(__document_id bigint) RETURNS uuid
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+  RETURN gid
+    FROM
+      mbom.definition
+    WHERE
+      id = __document_id;
+END;
+$$;
+
+
+ALTER FUNCTION mbom.get_gid_by_id(__document_id bigint) OWNER TO postgres;
+
+--
+-- TOC entry 384 (class 1255 OID 43005)
+-- Name: get_head(bigint); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION get_head(__document_id bigint) RETURNS common.mbom_head
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+BEGIN
+  RETURN
+    (definition.id,
+    definition.gid,
+    definition.display_name,
+    definition.version_num,
+    definition.published_date,
+    definition.curr_fsmt,
+    'MBOM'::common.document_kind,
+    (information.part_code, information.version_num, 1, 'pcs', 'PRODUCIBLE')::common.material_specification
+    )::common.mbom_head
+  FROM
+    mbom.definition,
+    mbom.information
+  WHERE
+    information.id = definition.information_id AND
+    definition.id = __document_id;
+END;
+$$;
+
+
+ALTER FUNCTION mbom.get_head(__document_id bigint) OWNER TO postgres;
+
+--
+-- TOC entry 380 (class 1255 OID 43002)
+-- Name: get_id_by_gid(uuid); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION get_id_by_gid(__document_gid uuid) RETURNS bigint
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+  RETURN id
+    FROM
+      mbom.definition
+    WHERE
+      gid = __document_gid;
+END;
+$$;
+
+
+ALTER FUNCTION mbom.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
+
+--
+-- TOC entry 385 (class 1255 OID 43007)
+-- Name: init(common.mbom_head, common.material_specification[]); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION init(__head common.mbom_head, __body common.material_specification[]) RETURNS bigint
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _item common.material_specification;
+  _definition_id bigint;
+  _information_id bigint;
+  _max_version_num integer;
+BEGIN
+
+  IF (__head.document_date IS NULL) THEN
+    __head.document_date := now()::date;
+  END IF;
+
+  IF (__head.version_num IS NULL) THEN
+    __head.version_num := 1;
+  END IF;
+
+  IF (__head.display_name IS NULL) THEN
+    __head.display_name := 'NO-NAME';
+  END IF;
+
+  SELECT
+    max(definition.version_num)
+  FROM 
+    mbom.information, 
+    mbom.definition
+  WHERE 
+    information.id = definition.information_id AND
+    information.part_code = (__head.material_spec).part_code AND 
+    information.version_num = (__head.material_spec).version_num
+  INTO
+    _max_version_num;
+
+  IF (_max_version_num IS NULL) THEN
+    _max_version_num := 0;
+
+    INSERT INTO
+      mbom.information (
+        id,
+        display_name,
+        published_date,
+        part_code,
+        version_num)
+    VALUES (
+      DEFAULT,
+      __head.display_name,
+      __head.document_date,
+      (__head.material_spec).part_code,
+      (__head.material_spec).version_num)
+    RETURNING id INTO _information_id;
+  ELSE
+    SELECT
+      id
+    FROM
+      mbom.information
+    WHERE
+      information.part_code = (__head.material_spec).part_code AND 
+      information.version_num = (__head.material_spec).version_num
+    INTO
+      _information_id;
+
+  END IF;
+
+  INSERT INTO
+    mbom.definition (
+      id,
+      display_name,
+      version_num,
+      published_date,
+      information_id)
+  VALUES (
+    DEFAULT,
+    __head.display_name,
+    _max_version_num + 1,
+    __head.document_date,
+    _information_id)
+  RETURNING id INTO _definition_id;
+
+  FOREACH _item IN
+    ARRAY __body
+  LOOP
+    IF (_item.material_type = 'CONSUMABLE') THEN
+      INSERT INTO
+        mbom.consumable (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          material_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.material_type);
+    ELSIF (_item.material_type = 'PRIMAL') THEN
+      INSERT INTO
+        mbom.primal (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          material_type)
+      VALUES (
+        _definition_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.material_type);
+    ELSE
+      RAISE '% unknown material_type', _item;
+    END IF;
+  END LOOP;
+
+  RETURN _definition_id;
+
+END;
+$$;
+
+
+ALTER FUNCTION mbom.init(__head common.mbom_head, __body common.material_specification[]) OWNER TO postgres;
+
+--
+-- TOC entry 383 (class 1255 OID 43006)
+-- Name: reinit(bigint, common.material_specification[]); Type: FUNCTION; Schema: mbom; Owner: postgres
+--
+
+CREATE FUNCTION reinit(__document_id bigint, __body common.material_specification[]) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _item common.material_specification;
+BEGIN
+
+  DELETE FROM
+    mbom.material
+  WHERE
+    definition_id = __document_id;
+
+  FOREACH _item IN
+    ARRAY __body
+  LOOP
+    IF (_item.material_type = 'CONSUMABLE') THEN
+      INSERT INTO
+        mbom.consumable (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          material_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.material_type);
+    ELSIF (_item.material_type = 'PRIMAL') THEN
+      INSERT INTO
+        mbom.primal (
+          definition_id,
+          part_code,
+          version_num,
+          quantity,
+          uom_code,
+          material_type)
+      VALUES (
+        __document_id,
+        _item.part_code,
+        _item.version_num,
+        _item.quantity,
+        _item.uom_code,
+        _item.material_type);
+    ELSE
+      RAISE '% unknown material_type', _item;
+    END IF;
+  END LOOP;
+
+END;
+$$;
+
+
+ALTER FUNCTION mbom.reinit(__document_id bigint, __body common.material_specification[]) OWNER TO postgres;
+
 SET search_path = pgunit, pg_catalog;
 
 --
--- TOC entry 334 (class 1255 OID 35224)
+-- TOC entry 353 (class 1255 OID 42650)
 -- Name: assert_array_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1186,7 +1537,7 @@ $$;
 ALTER FUNCTION pgunit.assert_array_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 335 (class 1255 OID 35225)
+-- TOC entry 354 (class 1255 OID 42651)
 -- Name: assert_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1207,7 +1558,7 @@ $$;
 ALTER FUNCTION pgunit.assert_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 336 (class 1255 OID 35226)
+-- TOC entry 355 (class 1255 OID 42652)
 -- Name: assert_false(boolean, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1225,7 +1576,7 @@ $$;
 ALTER FUNCTION pgunit.assert_false(_value boolean, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 337 (class 1255 OID 35227)
+-- TOC entry 356 (class 1255 OID 42653)
 -- Name: assert_not_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1246,7 +1597,7 @@ $$;
 ALTER FUNCTION pgunit.assert_not_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 338 (class 1255 OID 35228)
+-- TOC entry 357 (class 1255 OID 42654)
 -- Name: assert_not_null(anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1264,7 +1615,7 @@ $$;
 ALTER FUNCTION pgunit.assert_not_null(_value anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 339 (class 1255 OID 35229)
+-- TOC entry 358 (class 1255 OID 42655)
 -- Name: assert_null(anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1282,7 +1633,7 @@ $$;
 ALTER FUNCTION pgunit.assert_null(_value anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 340 (class 1255 OID 35230)
+-- TOC entry 359 (class 1255 OID 42656)
 -- Name: assert_true(boolean, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1300,7 +1651,7 @@ $$;
 ALTER FUNCTION pgunit.assert_true(_value boolean, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 341 (class 1255 OID 35231)
+-- TOC entry 360 (class 1255 OID 42657)
 -- Name: fail(character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1316,7 +1667,7 @@ $$;
 ALTER FUNCTION pgunit.fail(_message character varying) OWNER TO postgres;
 
 --
--- TOC entry 342 (class 1255 OID 35232)
+-- TOC entry 361 (class 1255 OID 42658)
 -- Name: run_test(character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1336,7 +1687,7 @@ $$;
 ALTER FUNCTION pgunit.run_test(_sp character varying) OWNER TO postgres;
 
 --
--- TOC entry 343 (class 1255 OID 35233)
+-- TOC entry 362 (class 1255 OID 42659)
 -- Name: test_assert_array_equals(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1460,7 +1811,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_array_equals() OWNER TO postgres;
 
 --
--- TOC entry 344 (class 1255 OID 35234)
+-- TOC entry 363 (class 1255 OID 42660)
 -- Name: test_assert_equals(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1559,7 +1910,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_equals() OWNER TO postgres;
 
 --
--- TOC entry 345 (class 1255 OID 35235)
+-- TOC entry 364 (class 1255 OID 42661)
 -- Name: test_assert_false(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1601,7 +1952,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_false() OWNER TO postgres;
 
 --
--- TOC entry 346 (class 1255 OID 35236)
+-- TOC entry 365 (class 1255 OID 42662)
 -- Name: test_assert_not_null(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1690,7 +2041,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_not_null() OWNER TO postgres;
 
 --
--- TOC entry 347 (class 1255 OID 35237)
+-- TOC entry 366 (class 1255 OID 42663)
 -- Name: test_assert_null(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1780,7 +2131,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_null() OWNER TO postgres;
 
 --
--- TOC entry 348 (class 1255 OID 35238)
+-- TOC entry 367 (class 1255 OID 42664)
 -- Name: test_assert_true(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1820,7 +2171,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_true() OWNER TO postgres;
 
 --
--- TOC entry 349 (class 1255 OID 35239)
+-- TOC entry 368 (class 1255 OID 42665)
 -- Name: test_fail(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1849,7 +2200,7 @@ ALTER FUNCTION pgunit.test_fail() OWNER TO postgres;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 355 (class 1255 OID 35263)
+-- TOC entry 369 (class 1255 OID 42666)
 -- Name: _reset_data(); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -1891,7 +2242,7 @@ ALTER FUNCTION public._reset_data() OWNER TO postgres;
 SET search_path = tests, pg_catalog;
 
 --
--- TOC entry 360 (class 1255 OID 35309)
+-- TOC entry 370 (class 1255 OID 42667)
 -- Name: __ebom__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1924,7 +2275,7 @@ $$;
 ALTER FUNCTION tests.__ebom__destroy() OWNER TO postgres;
 
 --
--- TOC entry 358 (class 1255 OID 35355)
+-- TOC entry 371 (class 1255 OID 42668)
 -- Name: __ebom__get_body(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1961,7 +2312,7 @@ $$;
 ALTER FUNCTION tests.__ebom__get_body() OWNER TO postgres;
 
 --
--- TOC entry 359 (class 1255 OID 35356)
+-- TOC entry 372 (class 1255 OID 42669)
 -- Name: __ebom__get_gid_by_id(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1991,7 +2342,7 @@ $$;
 ALTER FUNCTION tests.__ebom__get_gid_by_id() OWNER TO postgres;
 
 --
--- TOC entry 362 (class 1255 OID 35358)
+-- TOC entry 373 (class 1255 OID 42670)
 -- Name: __ebom__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2038,7 +2389,7 @@ $$;
 ALTER FUNCTION tests.__ebom__get_head() OWNER TO postgres;
 
 --
--- TOC entry 361 (class 1255 OID 35357)
+-- TOC entry 374 (class 1255 OID 42671)
 -- Name: __ebom__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2068,7 +2419,7 @@ $$;
 ALTER FUNCTION tests.__ebom__get_id_by_gid() OWNER TO postgres;
 
 --
--- TOC entry 363 (class 1255 OID 35359)
+-- TOC entry 375 (class 1255 OID 42672)
 -- Name: __ebom__init(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2099,7 +2450,7 @@ $$;
 ALTER FUNCTION tests.__ebom__init() OWNER TO postgres;
 
 --
--- TOC entry 365 (class 1255 OID 35492)
+-- TOC entry 376 (class 1255 OID 42673)
 -- Name: __ebom__reinit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2132,7 +2483,247 @@ $$;
 ALTER FUNCTION tests.__ebom__reinit() OWNER TO postgres;
 
 --
--- TOC entry 357 (class 1255 OID 35264)
+-- TOC entry 386 (class 1255 OID 43008)
+-- Name: __mbom__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__destroy() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _head common.mbom_head;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__destroy()';
+
+  INSERT INTO mbom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO mbom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  PERFORM mbom.destroy(201); -- + add not allowed delete test
+  
+  _head := mbom.get_head(201);
+  PERFORM pgunit.assert_null(_head, 'Incorrect _head value');
+
+  _head := mbom.get_head(203);
+  PERFORM pgunit.assert_not_null(_head, 'Incorrect _head value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__destroy() OWNER TO postgres;
+
+--
+-- TOC entry 387 (class 1255 OID 43009)
+-- Name: __mbom__get_body(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__get_body() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _body common.material_specification[];
+  _test_body CONSTANT common.material_specification[] := ARRAY[('72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE'), ('80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE')]::common.material_specification[];
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__get_body()';
+
+  INSERT INTO mbom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO mbom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  INSERT INTO mbom.consumable VALUES (201, '72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE');
+  INSERT INTO mbom.consumable VALUES (201, '80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE');
+
+  INSERT INTO mbom.consumable VALUES (203, '72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE');
+  INSERT INTO mbom.consumable VALUES (203, '80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE');
+
+
+  _body := mbom.get_body(203);
+  PERFORM pgunit.assert_array_equals(_test_body, _body, 'Incorrect _body value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__get_body() OWNER TO postgres;
+
+--
+-- TOC entry 388 (class 1255 OID 43010)
+-- Name: __mbom__get_gid_by_id(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__get_gid_by_id() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_id CONSTANT bigint := 202;
+  _test_gid CONSTANT uuid := '9b2952fa-01d1-11e7-b440-d4bed939923a';
+  _gid uuid;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__get_gid_by_id()';
+
+  INSERT INTO mbom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO mbom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  _gid := mbom.get_gid_by_id(_test_id);
+  PERFORM pgunit.assert_equals(_test_gid, _gid, 'Incorrect _gid value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__get_gid_by_id() OWNER TO postgres;
+
+--
+-- TOC entry 389 (class 1255 OID 43011)
+-- Name: __mbom__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__get_head() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _head common.mbom_head;
+  _test_gid CONSTANT uuid := '9b2952fa-01d1-11e7-b440-d4bed939923a';
+  _test_display_name CONSTANT character varying := '11с32п-50х40: definition';
+  _test_document_date CONSTANT date := '2017-10-21'::date;
+  _test_curr_fsmt CONSTANT common.document_fsmt := 'COMMITTED'::common.document_fsmt;
+  _test_document_type CONSTANT common.document_kind := 'MBOM'::common.document_kind;
+  _test_material_part_code CONSTANT character varying := '11.32.050-001';
+  _test_material_version_num CONSTANT integer := 1;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__get_head()';
+
+  INSERT INTO mbom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO mbom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-20', NULL, NULL, 'PROPOSED', '2017-10-20',101);
+  INSERT INTO mbom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'COMMITTED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-22', NULL, NULL, 'PROPOSED', '2017-10-22',101);
+
+  _head := mbom.get_head(202);
+  PERFORM pgunit.assert_equals(_test_gid, _head.gid, 'Incorrect gid value');
+  PERFORM pgunit.assert_equals(_test_display_name, _head.display_name, 'Incorrect display_name value');
+  PERFORM pgunit.assert_equals(_test_document_date, _head.document_date, 'Incorrect document_date value');
+  PERFORM pgunit.assert_equals(_test_curr_fsmt, _head.curr_fsmt, 'Incorrect curr_fsmt value');
+  PERFORM pgunit.assert_equals(_test_document_type, _head.document_type, 'Incorrect document_type value');
+  PERFORM pgunit.assert_equals(_test_material_part_code, (_head.material_spec).part_code, 'Incorrect material_CONSUMABLE_code value');
+  PERFORM pgunit.assert_equals(_test_material_version_num, (_head.material_spec).version_num, 'Incorrect material_version_num value');
+
+  _head := mbom.get_head(203);
+  PERFORM pgunit.assert_not_equals(_test_gid, _head.gid, 'Incorrect gid value');
+  
+  _head := mbom.get_head(204);
+  PERFORM pgunit.assert_null(_head, 'Incorrect _head value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__get_head() OWNER TO postgres;
+
+--
+-- TOC entry 390 (class 1255 OID 43012)
+-- Name: __mbom__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__get_id_by_gid() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_id CONSTANT bigint := 202;
+  _test_gid CONSTANT uuid := '9b2952fa-01d1-11e7-b440-d4bed939923a';
+  _id bigint;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__get_id_by_gid()';
+
+  INSERT INTO mbom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO mbom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO mbom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  _id := mbom.get_id_by_gid(_test_gid);
+  PERFORM pgunit.assert_equals(_test_id, _id, 'Incorrect _id value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__get_id_by_gid() OWNER TO postgres;
+
+--
+-- TOC entry 391 (class 1255 OID 43013)
+-- Name: __mbom__init(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__init() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_head CONSTANT common.mbom_head[] := ARRAY[(203,'9b2952fa-01d1-11e7-b440-d4bed939923a','11с32п-50х40: definition',3,'2017-10-21','PROPOSED','MBOM',('11.32.050-001',1,1.0000,'pcs','CONSUMABLE'))]::common.mbom_head[];
+  _test_body CONSTANT common.material_specification[] := ARRAY[('80.31.050-001',1,1.0000,'pcs','CONSUMABLE'), ('72.01.009-001',1,2.0000,'pcs','CONSUMABLE')]::common.material_specification[];
+  _head common.mbom_head;
+  _body common.material_specification[];
+  _document_id bigint;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__init()';
+  
+  _document_id := mbom.init(_test_head[1], _test_body);
+  _head := mbom.get_head(_document_id);
+  _body := mbom.get_body(_document_id);
+  --PERFORM pgunit.assert_equals(_test_head[1], _head, 'Incorrect _head value');
+  PERFORM pgunit.assert_array_equals(_test_body, _body, 'Incorrect _body value');
+
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__init() OWNER TO postgres;
+
+--
+-- TOC entry 392 (class 1255 OID 43014)
+-- Name: __mbom__reinit(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __mbom__reinit() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_head CONSTANT common.mbom_head[] := ARRAY[(203,'9b2952fa-01d1-11e7-b440-d4bed939923a','11с32п-50х40: definition',3,'2017-10-21','PROPOSED','MBOM',('11.32.050-001',1,1.0000,'pcs','CONSUMABLE'))]::common.mbom_head[];
+  _test_body_init CONSTANT common.material_specification[] := ARRAY[('80.31.050-001',1,1.0000,'pcs','CONSUMABLE'), ('72.01.009-001',1,2.0000,'pcs','CONSUMABLE')]::common.material_specification[];
+  _test_body_reinit CONSTANT common.material_specification[] := ARRAY[('80.31.050-001',1,2.0000,'pcs','CONSUMABLE'), ('72.01.009-001',1,4.0000,'pcs','CONSUMABLE')]::common.material_specification[];
+  _head common.mbom_head;
+  _body common.material_specification[];
+  _document_id bigint;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __mbom__reinit()';
+  
+  _document_id := mbom.init(_test_head[1], _test_body_init);
+  PERFORM mbom.reinit(_document_id, _test_body_reinit);
+  _head := mbom.get_head(_document_id);
+  _body := mbom.get_body(_document_id);
+  --PERFORM pgunit.assert_equals(_test_head[1], _head, 'Incorrect _head value');
+  PERFORM pgunit.assert_array_equals(_test_body_reinit, _body, 'Incorrect _body value');
+
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__mbom__reinit() OWNER TO postgres;
+
+--
+-- TOC entry 351 (class 1255 OID 42674)
 -- Name: _load_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2141,52 +2732,151 @@ CREATE FUNCTION _load_data() RETURNS void
     AS $$
 BEGIN
 
-  SET search_path = component, pg_catalog;
-  INSERT INTO assembly VALUES ('11.31.050-001', 1, '11с31п-50х40', '2017-10-21', 'ASSEMBLY');
-  INSERT INTO assembly VALUES ('11.32.050-001', 1, '11с32п-50х40', '2017-10-21', 'ASSEMBLY');
-  INSERT INTO assembly VALUES ('11.33.050-001', 1, '11с33п-50х40', '2017-10-21', 'ASSEMBLY');
-  INSERT INTO assembly VALUES ('80.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-21', 'ASSEMBLY');
-  INSERT INTO assembly VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-21', 'ASSEMBLY');
+  --SET search_path = component, pg_catalog;
+  INSERT INTO component.assembly VALUES ('11.31.050-001', 1, '11с31п-50х40', '2017-10-21', 'ASSEMBLY');
+  INSERT INTO component.assembly VALUES ('11.32.050-001', 1, '11с32п-50х40', '2017-10-21', 'ASSEMBLY');
+  INSERT INTO component.assembly VALUES ('11.33.050-001', 1, '11с33п-50х40', '2017-10-21', 'ASSEMBLY');
+  INSERT INTO component.assembly VALUES ('80.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-21', 'ASSEMBLY');
+  INSERT INTO component.assembly VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-21', 'ASSEMBLY');
 
-  INSERT INTO buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21', 'BUYABLE');
+  INSERT INTO component.buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21', 'BUYABLE');
 
-  INSERT INTO part VALUES ('22.16.050-001', 1, 'КТ33-50х40', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('22.25.050-001', 1, 'КТ32-50х40', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('40.31.050-001', 1, 'Птрб-057,0х126,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('40.32.050-001', 1, 'Птрб-057,0х074,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('40.33.050-001', 1, 'Птрб-057,0х054,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('41.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('42.01.050-001', 1, 'Ббшк-022,0х044,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('50.01.050-001', 1, 'Втлк-050,0х039,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('60.01.050-001', 1, 'ШП-068,0х052,5', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('51.01.050-001', 1, 'Пржн-050,6х042,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('61.01.050-001', 1, 'Штк-013,3х075,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('52.01.050-001', 1, 'Шйб-051,0х042,6', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('70.01.050-001', 1, 'Ф4-051,5х041,7х11,0', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('71.02.050-001', 1, 'Кршк-ПП-50', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('71.03.050-001', 1, 'Зглш-ПП-50', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('55.31.050-001', 1, 'Рчк-250х20', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('53.01.004-001', 1, 'Штфт-4', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('70.04.020-001', 1, 'Клц-20', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('72.01.009-001', 1, 'Клц-009', '2017-10-21', 'PART');
-  INSERT INTO part VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('22.16.050-001', 1, 'КТ33-50х40', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('22.25.050-001', 1, 'КТ32-50х40', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('40.31.050-001', 1, 'Птрб-057,0х126,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('40.32.050-001', 1, 'Птрб-057,0х074,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('40.33.050-001', 1, 'Птрб-057,0х054,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('41.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('42.01.050-001', 1, 'Ббшк-022,0х044,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('50.01.050-001', 1, 'Втлк-050,0х039,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('60.01.050-001', 1, 'ШП-068,0х052,5', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('51.01.050-001', 1, 'Пржн-050,6х042,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('61.01.050-001', 1, 'Штк-013,3х075,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('52.01.050-001', 1, 'Шйб-051,0х042,6', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('70.01.050-001', 1, 'Ф4-051,5х041,7х11,0', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('71.02.050-001', 1, 'Кршк-ПП-50', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('71.03.050-001', 1, 'Зглш-ПП-50', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('55.31.050-001', 1, 'Рчк-250х20', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('53.01.004-001', 1, 'Штфт-4', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('70.04.020-001', 1, 'Клц-20', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('72.01.009-001', 1, 'Клц-009', '2017-10-21', 'PART');
+  INSERT INTO component.part VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-21', 'PART');
 
-  SET search_path = ebom, pg_catalog;
-  INSERT INTO information VALUES (1, DEFAULT, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
-  INSERT INTO definition VALUES (1, DEFAULT, '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
-  INSERT INTO assembly VALUES (1, '80.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
-  INSERT INTO assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
-  INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'pcs', 'BUYABLE');
-  INSERT INTO part VALUES (1, '40.31.050-001', 1, 2.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '50.01.050-001', 1, 2.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '51.01.050-001', 1, 2.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '52.01.050-001', 1, 2.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '53.01.004-001', 1, 1.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '60.01.050-001', 1, 1.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '61.01.050-001', 1, 1.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '70.01.050-001', 1, 2.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '70.04.020-001', 1, 1.0000, 'pcs', 'PART');
-  INSERT INTO part VALUES (1, '72.01.009-001', 1, 2.0000, 'pcs', 'PART');
+  --SET search_path = ebom, pg_catalog;
+  INSERT INTO ebom.information VALUES (1, DEFAULT, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
+  INSERT INTO ebom.definition VALUES (1, DEFAULT, '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
+  INSERT INTO ebom.assembly VALUES (1, '80.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
+  INSERT INTO ebom.assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
+  INSERT INTO ebom.buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'pcs', 'BUYABLE');
+  INSERT INTO ebom.part VALUES (1, '40.31.050-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '50.01.050-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '51.01.050-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '52.01.050-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '53.01.004-001', 1, 1.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '60.01.050-001', 1, 1.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '61.01.050-001', 1, 1.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '70.01.050-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '70.04.020-001', 1, 1.0000, 'pcs', 'PART');
+  INSERT INTO ebom.part VALUES (1, '72.01.009-001', 1, 2.0000, 'pcs', 'PART');
+
+  --SET search_path = material, pg_catalog;
+  INSERT INTO material.consumable VALUES ('22.16.050-001', 1, 'КТ33-50х40', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('22.25.050-001', 1, 'КТ32-50х40', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('40.31.050-001', 1, 'Птрб-057,0х126,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('40.32.050-001', 1, 'Птрб-057,0х074,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('40.33.050-001', 1, 'Птрб-057,0х054,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('41.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('42.01.050-001', 1, 'Ббшк-022,0х044,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('50.01.050-001', 1, 'Втлк-050,0х039,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('60.01.050-001', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('51.01.050-001', 1, 'Пржн-050,6х042,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('61.01.050-001', 1, 'Штк-013,3х075,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('52.01.050-001', 1, 'Шйб-051,0х042,6', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('70.01.050-001', 1, 'Ф4-051,5х041,7х11,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('71.02.050-001', 1, 'Кршк-ПП-50', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('71.03.050-001', 1, 'Зглш-ПП-50', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('55.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('53.01.004-001', 1, 'Штфт-4', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('70.04.020-001', 1, 'Клц-20', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('72.01.009-001', 1, 'Клц-009', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('80.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('53.01.004-001.010', 1, 'Штфт-004,0х012,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('40.31.050-001.010', 1, 'Птрб-057,0х126,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('82.31.050-001.010', 1, 'Рчк-250х20', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('40.32.050-001.010', 1, 'Птрб-057,0х074,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('80.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('60.01.050-001.020', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('22.25.050-001.030', 1, 'КТ32-50х40', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('40.33.050-001.010', 1, 'Птрб-057,0х054,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('51.01.050-001.010', 1, 'Пржн-050,6х042,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('60.01.050-001.010', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('60.01.050-001.030', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('41.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('41.31.050-001.020', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('60.01.050-001.011', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('22.16.050-001.030', 1, 'КТ33-50х40', '2017-10-22', 'CONSUMABLE');
+  INSERT INTO material.consumable VALUES ('Гайка М12', 1, 'Гайка М12', '2017-10-24', 'CONSUMABLE');
+
+  INSERT INTO material.primal VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-ст3ПС-080х080', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Крг-004,0-ст45', 1, 'Крг-ст45-004,0', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Крг-016-ст20Х13', 1, 'Крг-ст20Х13-016', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Крг-022-ст20', 1, 'Крг-ст20-022', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Лст-000,8-ст08Х17', 1, 'Лст-ст08Х17-000,8', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Лст-001,0-ст08Х17', 1, 'Лст-ст08Х17-001,0', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Лст-001,2-ст65Г', 1, 'Лст-ст65Г-001,2', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Лст-003,0-ст3', 1, 'Лст-ст3-003,0', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Лст-004,4-ст08Х17', 1, 'Лст-ст08Х17-004,4', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('ПЕ 15803-020', 1, 'ПЕ 15803-020', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Плс-020х4-ст3', 1, 'Плс-ст3-020х4', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Трб-057,0х03,5-ст20-Ш', 1, 'Трб-ст20-057,0х03,5-Ш', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Трб-068,0х03,5-ст20Х13', 1, 'Трб-ст20Х13-068,0х03,5', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Трб-068,0х04,0-ст20Х13', 1, 'Трб-ст20Х13-068,0х04,0', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Трб-089,0х03,0-ст20-Ш', 1, 'Трб-ст20-089,0х03,0-Ш', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Трб-089,0х03,5-ст20-Ш', 1, 'Трб-ст20-089,0х03,5-Ш', '2017-10-22', 'PRIMAL');
+  INSERT INTO material.primal VALUES ('Ф-4', 1, 'Ф-4', '2017-10-22', 'PRIMAL');
+
+  INSERT INTO material.producible VALUES ('22.16.050-001', 1, 'КТ33-50х40', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('22.25.050-001', 1, 'КТ32-50х40', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('40.31.050-001', 1, 'Птрб-057,0х126,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('40.32.050-001', 1, 'Птрб-057,0х074,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('40.33.050-001', 1, 'Птрб-057,0х054,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('41.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('42.01.050-001', 1, 'Ббшк-022,0х044,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('50.01.050-001', 1, 'Втлк-050,0х039,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('60.01.050-001', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('51.01.050-001', 1, 'Пржн-050,6х042,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('61.01.050-001', 1, 'Штк-013,3х075,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('52.01.050-001', 1, 'Шйб-051,0х042,6', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('70.01.050-001', 1, 'Ф4-051,5х041,7х11,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('71.02.050-001', 1, 'Кршк-ПП-50', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('71.03.050-001', 1, 'Зглш-ПП-50', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('55.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('53.01.004-001', 1, 'Штфт-4', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('70.04.020-001', 1, 'Клц-20', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('72.01.009-001', 1, 'Клц-009', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('11.31.050-001', 1, '11с31п-50х40', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('11.32.050-001', 1, '11с32п-50х40', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('11.33.050-001', 1, '11с33п-50х40', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('80.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('53.01.004-001.010', 1, 'Штфт-004,0х012,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('40.31.050-001.010', 1, 'Птрб-057,0х126,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('82.31.050-001.010', 1, 'Рчк-250х20', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('40.32.050-001.010', 1, 'Птрб-057,0х074,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('80.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('60.01.050-001.020', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('22.25.050-001.030', 1, 'КТ32-50х40', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('40.33.050-001.010', 1, 'Птрб-057,0х054,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('51.01.050-001.010', 1, 'Пржн-050,6х042,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('60.01.050-001.010', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('60.01.050-001.030', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('41.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('41.31.050-001.020', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('60.01.050-001.011', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+  INSERT INTO material.producible VALUES ('22.16.050-001.030', 1, 'КТ33-50х40', '2017-10-22', 'PRODUCIBLE');
 
 END;
 $$;
@@ -2195,7 +2885,7 @@ $$;
 ALTER FUNCTION tests._load_data() OWNER TO postgres;
 
 --
--- TOC entry 356 (class 1255 OID 35246)
+-- TOC entry 377 (class 1255 OID 42675)
 -- Name: _reset_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2235,7 +2925,7 @@ $$;
 ALTER FUNCTION tests._reset_data() OWNER TO postgres;
 
 --
--- TOC entry 354 (class 1255 OID 35247)
+-- TOC entry 378 (class 1255 OID 42676)
 -- Name: _run_all(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2288,7 +2978,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 207 (class 1259 OID 35052)
+-- TOC entry 209 (class 1259 OID 42677)
 -- Name: information; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -2304,8 +2994,8 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 3512 (class 0 OID 0)
--- Dependencies: 207
+-- TOC entry 3637 (class 0 OID 0)
+-- Dependencies: 209
 -- Name: TABLE information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -2313,7 +3003,7 @@ COMMENT ON TABLE information IS 'ebom component list';
 
 
 --
--- TOC entry 208 (class 1259 OID 35060)
+-- TOC entry 210 (class 1259 OID 42685)
 -- Name: assembly; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -2326,8 +3016,8 @@ INHERITS (information);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 3513 (class 0 OID 0)
--- Dependencies: 208
+-- TOC entry 3638 (class 0 OID 0)
+-- Dependencies: 210
 -- Name: TABLE assembly; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -2335,7 +3025,7 @@ COMMENT ON TABLE assembly IS 'ebom assembly component';
 
 
 --
--- TOC entry 209 (class 1259 OID 35069)
+-- TOC entry 211 (class 1259 OID 42694)
 -- Name: buyable; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -2349,8 +3039,8 @@ INHERITS (information);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 3514 (class 0 OID 0)
--- Dependencies: 209
+-- TOC entry 3639 (class 0 OID 0)
+-- Dependencies: 211
 -- Name: TABLE buyable; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -2358,7 +3048,7 @@ COMMENT ON TABLE buyable IS 'ebom buyable component';
 
 
 --
--- TOC entry 210 (class 1259 OID 35079)
+-- TOC entry 212 (class 1259 OID 42704)
 -- Name: part; Type: TABLE; Schema: component; Owner: postgres
 --
 
@@ -2371,8 +3061,8 @@ INHERITS (information);
 ALTER TABLE part OWNER TO postgres;
 
 --
--- TOC entry 3515 (class 0 OID 0)
--- Dependencies: 210
+-- TOC entry 3640 (class 0 OID 0)
+-- Dependencies: 212
 -- Name: TABLE part; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -2382,7 +3072,7 @@ COMMENT ON TABLE part IS 'ebom part component';
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 211 (class 1259 OID 35088)
+-- TOC entry 213 (class 1259 OID 42713)
 -- Name: component; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -2399,7 +3089,7 @@ CREATE TABLE component (
 ALTER TABLE component OWNER TO postgres;
 
 --
--- TOC entry 212 (class 1259 OID 35095)
+-- TOC entry 214 (class 1259 OID 42720)
 -- Name: assembly; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -2412,7 +3102,7 @@ INHERITS (component);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 213 (class 1259 OID 35103)
+-- TOC entry 215 (class 1259 OID 42728)
 -- Name: buyable; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -2425,7 +3115,7 @@ INHERITS (component);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 214 (class 1259 OID 35111)
+-- TOC entry 216 (class 1259 OID 42736)
 -- Name: definition; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -2446,7 +3136,7 @@ CREATE TABLE definition (
 ALTER TABLE definition OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 35122)
+-- TOC entry 217 (class 1259 OID 42747)
 -- Name: definition_id_seq; Type: SEQUENCE; Schema: ebom; Owner: postgres
 --
 
@@ -2461,8 +3151,8 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3516 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3641 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
 
@@ -2470,7 +3160,7 @@ ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
 
 
 --
--- TOC entry 216 (class 1259 OID 35124)
+-- TOC entry 218 (class 1259 OID 42749)
 -- Name: information; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -2487,7 +3177,7 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 35132)
+-- TOC entry 219 (class 1259 OID 42757)
 -- Name: information_id_seq; Type: SEQUENCE; Schema: ebom; Owner: postgres
 --
 
@@ -2502,8 +3192,8 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3517 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3642 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
 
@@ -2511,7 +3201,7 @@ ALTER SEQUENCE information_id_seq OWNED BY information.id;
 
 
 --
--- TOC entry 218 (class 1259 OID 35134)
+-- TOC entry 220 (class 1259 OID 42759)
 -- Name: part; Type: TABLE; Schema: ebom; Owner: postgres
 --
 
@@ -2523,10 +3213,235 @@ INHERITS (component);
 
 ALTER TABLE part OWNER TO postgres;
 
+SET search_path = material, pg_catalog;
+
+--
+-- TOC entry 224 (class 1259 OID 42865)
+-- Name: information; Type: TABLE; Schema: material; Owner: postgres
+--
+
+CREATE TABLE information (
+    part_code character varying NOT NULL,
+    version_num integer DEFAULT 1 NOT NULL,
+    display_name character varying NOT NULL,
+    published_date date DEFAULT now() NOT NULL,
+    material_type common.material_kind NOT NULL
+);
+
+
+ALTER TABLE information OWNER TO postgres;
+
+--
+-- TOC entry 3643 (class 0 OID 0)
+-- Dependencies: 224
+-- Name: TABLE information; Type: COMMENT; Schema: material; Owner: postgres
+--
+
+COMMENT ON TABLE information IS 'mbom component list';
+
+
+--
+-- TOC entry 225 (class 1259 OID 42875)
+-- Name: consumable; Type: TABLE; Schema: material; Owner: postgres
+--
+
+CREATE TABLE consumable (
+    CONSTRAINT consumable_material_type_check CHECK ((material_type = 'CONSUMABLE'::common.material_kind))
+)
+INHERITS (information);
+
+
+ALTER TABLE consumable OWNER TO postgres;
+
+--
+-- TOC entry 3644 (class 0 OID 0)
+-- Dependencies: 225
+-- Name: TABLE consumable; Type: COMMENT; Schema: material; Owner: postgres
+--
+
+COMMENT ON TABLE consumable IS 'mbom consumable component';
+
+
+--
+-- TOC entry 226 (class 1259 OID 42886)
+-- Name: primal; Type: TABLE; Schema: material; Owner: postgres
+--
+
+CREATE TABLE primal (
+    CONSTRAINT primal_material_type_check CHECK ((material_type = 'PRIMAL'::common.material_kind)),
+    CONSTRAINT primal_version_num_check CHECK ((version_num = 1))
+)
+INHERITS (information);
+
+
+ALTER TABLE primal OWNER TO postgres;
+
+--
+-- TOC entry 3645 (class 0 OID 0)
+-- Dependencies: 226
+-- Name: TABLE primal; Type: COMMENT; Schema: material; Owner: postgres
+--
+
+COMMENT ON TABLE primal IS 'mbom primal component';
+
+
+--
+-- TOC entry 227 (class 1259 OID 42898)
+-- Name: producible; Type: TABLE; Schema: material; Owner: postgres
+--
+
+CREATE TABLE producible (
+    CONSTRAINT producible_material_type_check CHECK ((material_type = 'PRODUCIBLE'::common.material_kind))
+)
+INHERITS (information);
+
+
+ALTER TABLE producible OWNER TO postgres;
+
+--
+-- TOC entry 3646 (class 0 OID 0)
+-- Dependencies: 227
+-- Name: TABLE producible; Type: COMMENT; Schema: material; Owner: postgres
+--
+
+COMMENT ON TABLE producible IS 'mbom producible component';
+
+
+SET search_path = mbom, pg_catalog;
+
+--
+-- TOC entry 232 (class 1259 OID 42952)
+-- Name: material; Type: TABLE; Schema: mbom; Owner: postgres
+--
+
+CREATE TABLE material (
+    definition_id bigint NOT NULL,
+    part_code character varying NOT NULL,
+    version_num integer NOT NULL,
+    quantity common.quantity NOT NULL,
+    uom_code character varying DEFAULT 'pcs'::character varying NOT NULL,
+    material_type common.material_kind NOT NULL
+);
+
+
+ALTER TABLE material OWNER TO postgres;
+
+--
+-- TOC entry 233 (class 1259 OID 42961)
+-- Name: consumable; Type: TABLE; Schema: mbom; Owner: postgres
+--
+
+CREATE TABLE consumable (
+    CONSTRAINT consumable_component_type_check CHECK ((material_type = 'CONSUMABLE'::common.material_kind))
+)
+INHERITS (material);
+
+
+ALTER TABLE consumable OWNER TO postgres;
+
+--
+-- TOC entry 231 (class 1259 OID 42929)
+-- Name: definition; Type: TABLE; Schema: mbom; Owner: postgres
+--
+
+CREATE TABLE definition (
+    id bigint NOT NULL,
+    gid uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    display_name character varying,
+    version_num integer DEFAULT 1 NOT NULL,
+    published_date date DEFAULT now() NOT NULL,
+    prev_fsmt common.document_fsmt,
+    prev_fsmt_date timestamp with time zone,
+    curr_fsmt common.document_fsmt DEFAULT 'PROPOSED'::common.document_fsmt NOT NULL,
+    curr_fsmt_date timestamp with time zone DEFAULT now() NOT NULL,
+    information_id bigint
+);
+
+
+ALTER TABLE definition OWNER TO postgres;
+
+--
+-- TOC entry 230 (class 1259 OID 42927)
+-- Name: definition_id_seq; Type: SEQUENCE; Schema: mbom; Owner: postgres
+--
+
+CREATE SEQUENCE definition_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE definition_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 3647 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: mbom; Owner: postgres
+--
+
+ALTER SEQUENCE definition_id_seq OWNED BY definition.id;
+
+
+--
+-- TOC entry 229 (class 1259 OID 42911)
+-- Name: information; Type: TABLE; Schema: mbom; Owner: postgres
+--
+
+CREATE TABLE information (
+    id bigint NOT NULL,
+    gid uuid DEFAULT public.uuid_generate_v1() NOT NULL,
+    part_code character varying NOT NULL,
+    version_num integer NOT NULL,
+    display_name character varying,
+    published_date date DEFAULT now() NOT NULL
+);
+
+
+ALTER TABLE information OWNER TO postgres;
+
+--
+-- TOC entry 228 (class 1259 OID 42909)
+-- Name: information_id_seq; Type: SEQUENCE; Schema: mbom; Owner: postgres
+--
+
+CREATE SEQUENCE information_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE information_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 3648 (class 0 OID 0)
+-- Dependencies: 228
+-- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: mbom; Owner: postgres
+--
+
+ALTER SEQUENCE information_id_seq OWNED BY information.id;
+
+
+--
+-- TOC entry 234 (class 1259 OID 42981)
+-- Name: primal; Type: TABLE; Schema: mbom; Owner: postgres
+--
+
+CREATE TABLE primal (
+    CONSTRAINT primal_component_type_check CHECK ((material_type = 'PRIMAL'::common.material_kind))
+)
+INHERITS (material);
+
+
+ALTER TABLE primal OWNER TO postgres;
+
 SET search_path = tests, pg_catalog;
 
 --
--- TOC entry 219 (class 1259 OID 35248)
+-- TOC entry 221 (class 1259 OID 42767)
 -- Name: pgunit_covarage; Type: VIEW; Schema: tests; Owner: postgres
 --
 
@@ -2544,7 +3459,7 @@ EXCEPT
 ALTER TABLE pgunit_covarage OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 35253)
+-- TOC entry 222 (class 1259 OID 42772)
 -- Name: plpgsql_check_all; Type: VIEW; Schema: tests; Owner: postgres
 --
 
@@ -2577,7 +3492,7 @@ CREATE VIEW plpgsql_check_all AS
 ALTER TABLE plpgsql_check_all OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 35258)
+-- TOC entry 223 (class 1259 OID 42777)
 -- Name: plpgsql_check_nontriggered; Type: VIEW; Schema: tests; Owner: postgres
 --
 
@@ -2596,7 +3511,7 @@ ALTER TABLE plpgsql_check_nontriggered OWNER TO postgres;
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3304 (class 2604 OID 35142)
+-- TOC entry 3362 (class 2604 OID 42782)
 -- Name: assembly version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2604,7 +3519,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3305 (class 2604 OID 35143)
+-- TOC entry 3363 (class 2604 OID 42783)
 -- Name: assembly published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2612,7 +3527,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3307 (class 2604 OID 35144)
+-- TOC entry 3365 (class 2604 OID 42784)
 -- Name: buyable version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2620,7 +3535,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3308 (class 2604 OID 35145)
+-- TOC entry 3366 (class 2604 OID 42785)
 -- Name: buyable published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2628,7 +3543,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3311 (class 2604 OID 35146)
+-- TOC entry 3369 (class 2604 OID 42786)
 -- Name: part version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2636,7 +3551,7 @@ ALTER TABLE ONLY part ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3312 (class 2604 OID 35147)
+-- TOC entry 3370 (class 2604 OID 42787)
 -- Name: part published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2646,7 +3561,7 @@ ALTER TABLE ONLY part ALTER COLUMN published_date SET DEFAULT now();
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3315 (class 2604 OID 35148)
+-- TOC entry 3373 (class 2604 OID 42788)
 -- Name: assembly uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2654,7 +3569,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN uom_code SET DEFAULT 'pcs'::character var
 
 
 --
--- TOC entry 3317 (class 2604 OID 35149)
+-- TOC entry 3375 (class 2604 OID 42789)
 -- Name: buyable uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2662,7 +3577,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN uom_code SET DEFAULT 'pcs'::character vary
 
 
 --
--- TOC entry 3324 (class 2604 OID 35150)
+-- TOC entry 3382 (class 2604 OID 42790)
 -- Name: definition id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2670,7 +3585,7 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3327 (class 2604 OID 35151)
+-- TOC entry 3385 (class 2604 OID 42791)
 -- Name: information id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2678,18 +3593,102 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 
 
 --
--- TOC entry 3328 (class 2604 OID 35152)
+-- TOC entry 3386 (class 2604 OID 42792)
 -- Name: part uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
 ALTER TABLE ONLY part ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying;
 
 
+SET search_path = material, pg_catalog;
+
+--
+-- TOC entry 3390 (class 2604 OID 42878)
+-- Name: consumable version_num; Type: DEFAULT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable ALTER COLUMN version_num SET DEFAULT 1;
+
+
+--
+-- TOC entry 3391 (class 2604 OID 42879)
+-- Name: consumable published_date; Type: DEFAULT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable ALTER COLUMN published_date SET DEFAULT now();
+
+
+--
+-- TOC entry 3393 (class 2604 OID 42889)
+-- Name: primal version_num; Type: DEFAULT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY primal ALTER COLUMN version_num SET DEFAULT 1;
+
+
+--
+-- TOC entry 3394 (class 2604 OID 42890)
+-- Name: primal published_date; Type: DEFAULT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY primal ALTER COLUMN published_date SET DEFAULT now();
+
+
+--
+-- TOC entry 3397 (class 2604 OID 42901)
+-- Name: producible version_num; Type: DEFAULT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY producible ALTER COLUMN version_num SET DEFAULT 1;
+
+
+--
+-- TOC entry 3398 (class 2604 OID 42902)
+-- Name: producible published_date; Type: DEFAULT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY producible ALTER COLUMN published_date SET DEFAULT now();
+
+
+SET search_path = mbom, pg_catalog;
+
+--
+-- TOC entry 3410 (class 2604 OID 42964)
+-- Name: consumable uom_code; Type: DEFAULT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying;
+
+
+--
+-- TOC entry 3403 (class 2604 OID 42932)
+-- Name: definition id; Type: DEFAULT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_seq'::regclass);
+
+
+--
+-- TOC entry 3400 (class 2604 OID 42914)
+-- Name: information id; Type: DEFAULT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id_seq'::regclass);
+
+
+--
+-- TOC entry 3412 (class 2604 OID 42984)
+-- Name: primal uom_code; Type: DEFAULT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY primal ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying;
+
+
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3488 (class 0 OID 35060)
--- Dependencies: 208
+-- TOC entry 3600 (class 0 OID 42685)
+-- Dependencies: 210
 -- Data for Name: assembly; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -2701,8 +3700,8 @@ INSERT INTO assembly VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-21',
 
 
 --
--- TOC entry 3489 (class 0 OID 35069)
--- Dependencies: 209
+-- TOC entry 3601 (class 0 OID 42694)
+-- Dependencies: 211
 -- Data for Name: buyable; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -2710,16 +3709,16 @@ INSERT INTO buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21
 
 
 --
--- TOC entry 3487 (class 0 OID 35052)
--- Dependencies: 207
+-- TOC entry 3599 (class 0 OID 42677)
+-- Dependencies: 209
 -- Data for Name: information; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3490 (class 0 OID 35079)
--- Dependencies: 210
+-- TOC entry 3602 (class 0 OID 42704)
+-- Dependencies: 212
 -- Data for Name: part; Type: TABLE DATA; Schema: component; Owner: postgres
 --
 
@@ -2748,8 +3747,8 @@ INSERT INTO part VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-21',
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3492 (class 0 OID 35095)
--- Dependencies: 212
+-- TOC entry 3604 (class 0 OID 42720)
+-- Dependencies: 214
 -- Data for Name: assembly; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -2758,8 +3757,8 @@ INSERT INTO assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
 
 
 --
--- TOC entry 3493 (class 0 OID 35103)
--- Dependencies: 213
+-- TOC entry 3605 (class 0 OID 42728)
+-- Dependencies: 215
 -- Data for Name: buyable; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -2767,52 +3766,52 @@ INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'pcs', 'BUYABLE');
 
 
 --
--- TOC entry 3491 (class 0 OID 35088)
--- Dependencies: 211
+-- TOC entry 3603 (class 0 OID 42713)
+-- Dependencies: 213
 -- Data for Name: component; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
 
 
 --
--- TOC entry 3494 (class 0 OID 35111)
--- Dependencies: 214
+-- TOC entry 3606 (class 0 OID 42736)
+-- Dependencies: 216
 -- Data for Name: definition; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO definition VALUES (1, '08a365e6-d049-11e7-a404-54ab3aa56755', '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
+INSERT INTO definition VALUES (1, '93152072-d07e-11e7-9ea1-d4bed939923a', '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
 
 
 --
--- TOC entry 3518 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 3649 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
-SELECT pg_catalog.setval('definition_id_seq', 14, true);
+SELECT pg_catalog.setval('definition_id_seq', 13, true);
 
 
 --
--- TOC entry 3496 (class 0 OID 35124)
--- Dependencies: 216
+-- TOC entry 3608 (class 0 OID 42749)
+-- Dependencies: 218
 -- Data for Name: information; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO information VALUES (1, '08a34c46-d049-11e7-a403-54ab3aa56755', '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
+INSERT INTO information VALUES (1, '9314e846-d07e-11e7-9ea0-d4bed939923a', '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
 
 
 --
--- TOC entry 3519 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 3650 (class 0 OID 0)
+-- Dependencies: 219
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
-SELECT pg_catalog.setval('information_id_seq', 15, true);
+SELECT pg_catalog.setval('information_id_seq', 14, true);
 
 
 --
--- TOC entry 3498 (class 0 OID 35134)
--- Dependencies: 218
+-- TOC entry 3610 (class 0 OID 42759)
+-- Dependencies: 220
 -- Data for Name: part; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
@@ -2828,10 +3827,199 @@ INSERT INTO part VALUES (1, '70.04.020-001', 1, 1.0000, 'pcs', 'PART');
 INSERT INTO part VALUES (1, '72.01.009-001', 1, 2.0000, 'pcs', 'PART');
 
 
+SET search_path = material, pg_catalog;
+
+--
+-- TOC entry 3612 (class 0 OID 42875)
+-- Dependencies: 225
+-- Data for Name: consumable; Type: TABLE DATA; Schema: material; Owner: postgres
+--
+
+INSERT INTO consumable VALUES ('22.16.050-001', 1, 'КТ33-50х40', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('22.25.050-001', 1, 'КТ32-50х40', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('40.31.050-001', 1, 'Птрб-057,0х126,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('40.32.050-001', 1, 'Птрб-057,0х074,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('40.33.050-001', 1, 'Птрб-057,0х054,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('41.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('42.01.050-001', 1, 'Ббшк-022,0х044,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('50.01.050-001', 1, 'Втлк-050,0х039,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('60.01.050-001', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('51.01.050-001', 1, 'Пржн-050,6х042,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('61.01.050-001', 1, 'Штк-013,3х075,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('52.01.050-001', 1, 'Шйб-051,0х042,6', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('70.01.050-001', 1, 'Ф4-051,5х041,7х11,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('71.02.050-001', 1, 'Кршк-ПП-50', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('71.03.050-001', 1, 'Зглш-ПП-50', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('55.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('53.01.004-001', 1, 'Штфт-4', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('70.04.020-001', 1, 'Клц-20', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('72.01.009-001', 1, 'Клц-009', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('80.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('53.01.004-001.010', 1, 'Штфт-004,0х012,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('40.31.050-001.010', 1, 'Птрб-057,0х126,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('82.31.050-001.010', 1, 'Рчк-250х20', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('40.32.050-001.010', 1, 'Птрб-057,0х074,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('80.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('60.01.050-001.020', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('22.25.050-001.030', 1, 'КТ32-50х40', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('40.33.050-001.010', 1, 'Птрб-057,0х054,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('51.01.050-001.010', 1, 'Пржн-050,6х042,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('60.01.050-001.010', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('60.01.050-001.030', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('41.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('41.31.050-001.020', 1, 'Крпс-089,0х109,0', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('60.01.050-001.011', 1, 'ШП-068,0х052,5', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('22.16.050-001.030', 1, 'КТ33-50х40', '2017-10-22', 'CONSUMABLE');
+INSERT INTO consumable VALUES ('Гайка М12', 1, 'Гайка М12', '2017-10-24', 'CONSUMABLE');
+
+
+--
+-- TOC entry 3611 (class 0 OID 42865)
+-- Dependencies: 224
+-- Data for Name: information; Type: TABLE DATA; Schema: material; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3613 (class 0 OID 42886)
+-- Dependencies: 226
+-- Data for Name: primal; Type: TABLE DATA; Schema: material; Owner: postgres
+--
+
+INSERT INTO primal VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-ст3ПС-080х080', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Крг-004,0-ст45', 1, 'Крг-ст45-004,0', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Крг-016-ст20Х13', 1, 'Крг-ст20Х13-016', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Крг-022-ст20', 1, 'Крг-ст20-022', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Лст-000,8-ст08Х17', 1, 'Лст-ст08Х17-000,8', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Лст-001,0-ст08Х17', 1, 'Лст-ст08Х17-001,0', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Лст-001,2-ст65Г', 1, 'Лст-ст65Г-001,2', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Лст-003,0-ст3', 1, 'Лст-ст3-003,0', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Лст-004,4-ст08Х17', 1, 'Лст-ст08Х17-004,4', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('ПЕ 15803-020', 1, 'ПЕ 15803-020', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Плс-020х4-ст3', 1, 'Плс-ст3-020х4', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Трб-057,0х03,5-ст20-Ш', 1, 'Трб-ст20-057,0х03,5-Ш', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Трб-068,0х03,5-ст20Х13', 1, 'Трб-ст20Х13-068,0х03,5', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Трб-068,0х04,0-ст20Х13', 1, 'Трб-ст20Х13-068,0х04,0', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Трб-089,0х03,0-ст20-Ш', 1, 'Трб-ст20-089,0х03,0-Ш', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Трб-089,0х03,5-ст20-Ш', 1, 'Трб-ст20-089,0х03,5-Ш', '2017-10-22', 'PRIMAL');
+INSERT INTO primal VALUES ('Ф-4', 1, 'Ф-4', '2017-10-22', 'PRIMAL');
+
+
+--
+-- TOC entry 3614 (class 0 OID 42898)
+-- Dependencies: 227
+-- Data for Name: producible; Type: TABLE DATA; Schema: material; Owner: postgres
+--
+
+INSERT INTO producible VALUES ('22.16.050-001', 1, 'КТ33-50х40', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('22.25.050-001', 1, 'КТ32-50х40', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('40.31.050-001', 1, 'Птрб-057,0х126,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('40.32.050-001', 1, 'Птрб-057,0х074,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('40.33.050-001', 1, 'Птрб-057,0х054,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('41.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('42.01.050-001', 1, 'Ббшк-022,0х044,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('50.01.050-001', 1, 'Втлк-050,0х039,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('60.01.050-001', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('51.01.050-001', 1, 'Пржн-050,6х042,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('61.01.050-001', 1, 'Штк-013,3х075,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('52.01.050-001', 1, 'Шйб-051,0х042,6', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('70.01.050-001', 1, 'Ф4-051,5х041,7х11,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('71.02.050-001', 1, 'Кршк-ПП-50', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('71.03.050-001', 1, 'Зглш-ПП-50', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('55.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('53.01.004-001', 1, 'Штфт-4', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('70.04.020-001', 1, 'Клц-20', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('72.01.009-001', 1, 'Клц-009', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('11.31.050-001', 1, '11с31п-50х40', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('11.32.050-001', 1, '11с32п-50х40', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('11.33.050-001', 1, '11с33п-50х40', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('80.31.050-001', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('53.01.004-001.010', 1, 'Штфт-004,0х012,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('40.31.050-001.010', 1, 'Птрб-057,0х126,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('82.31.050-001.010', 1, 'Рчк-250х20', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('40.32.050-001.010', 1, 'Птрб-057,0х074,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('80.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('60.01.050-001.020', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('22.25.050-001.030', 1, 'КТ32-50х40', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('40.33.050-001.010', 1, 'Птрб-057,0х054,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('51.01.050-001.010', 1, 'Пржн-050,6х042,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('60.01.050-001.010', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('60.01.050-001.030', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('41.31.050-001.010', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('41.31.050-001.020', 1, 'Крпс-089,0х109,0', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('60.01.050-001.011', 1, 'ШП-068,0х052,5', '2017-10-22', 'PRODUCIBLE');
+INSERT INTO producible VALUES ('22.16.050-001.030', 1, 'КТ33-50х40', '2017-10-22', 'PRODUCIBLE');
+
+
+SET search_path = mbom, pg_catalog;
+
+--
+-- TOC entry 3620 (class 0 OID 42961)
+-- Dependencies: 233
+-- Data for Name: consumable; Type: TABLE DATA; Schema: mbom; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3618 (class 0 OID 42929)
+-- Dependencies: 231
+-- Data for Name: definition; Type: TABLE DATA; Schema: mbom; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3651 (class 0 OID 0)
+-- Dependencies: 230
+-- Name: definition_id_seq; Type: SEQUENCE SET; Schema: mbom; Owner: postgres
+--
+
+SELECT pg_catalog.setval('definition_id_seq', 14, true);
+
+
+--
+-- TOC entry 3616 (class 0 OID 42911)
+-- Dependencies: 229
+-- Data for Name: information; Type: TABLE DATA; Schema: mbom; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3652 (class 0 OID 0)
+-- Dependencies: 228
+-- Name: information_id_seq; Type: SEQUENCE SET; Schema: mbom; Owner: postgres
+--
+
+SELECT pg_catalog.setval('information_id_seq', 16, true);
+
+
+--
+-- TOC entry 3619 (class 0 OID 42952)
+-- Dependencies: 232
+-- Data for Name: material; Type: TABLE DATA; Schema: mbom; Owner: postgres
+--
+
+
+
+--
+-- TOC entry 3621 (class 0 OID 42981)
+-- Dependencies: 234
+-- Data for Name: primal; Type: TABLE DATA; Schema: mbom; Owner: postgres
+--
+
+
+
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3333 (class 2606 OID 35154)
+-- TOC entry 3417 (class 2606 OID 42794)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2840,7 +4028,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3335 (class 2606 OID 35156)
+-- TOC entry 3419 (class 2606 OID 42796)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2849,7 +4037,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3331 (class 2606 OID 35158)
+-- TOC entry 3415 (class 2606 OID 42798)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2858,8 +4046,8 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3520 (class 0 OID 0)
--- Dependencies: 3331
+-- TOC entry 3653 (class 0 OID 0)
+-- Dependencies: 3415
 -- Name: CONSTRAINT information_pkey ON information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -2867,7 +4055,7 @@ COMMENT ON CONSTRAINT information_pkey ON information IS 'may be part_code + ver
 
 
 --
--- TOC entry 3337 (class 2606 OID 35160)
+-- TOC entry 3421 (class 2606 OID 42800)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2878,7 +4066,7 @@ ALTER TABLE ONLY part
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3341 (class 2606 OID 35162)
+-- TOC entry 3425 (class 2606 OID 42802)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2887,7 +4075,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3343 (class 2606 OID 35164)
+-- TOC entry 3427 (class 2606 OID 42804)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2896,7 +4084,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3339 (class 2606 OID 35166)
+-- TOC entry 3423 (class 2606 OID 42806)
 -- Name: component component_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2905,7 +4093,7 @@ ALTER TABLE ONLY component
 
 
 --
--- TOC entry 3345 (class 2606 OID 35168)
+-- TOC entry 3429 (class 2606 OID 42808)
 -- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2914,7 +4102,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3347 (class 2606 OID 35170)
+-- TOC entry 3431 (class 2606 OID 42810)
 -- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2923,7 +4111,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3349 (class 2606 OID 35172)
+-- TOC entry 3433 (class 2606 OID 42812)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2932,7 +4120,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3351 (class 2606 OID 35174)
+-- TOC entry 3435 (class 2606 OID 42814)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2941,7 +4129,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3353 (class 2606 OID 35176)
+-- TOC entry 3437 (class 2606 OID 42816)
 -- Name: information information_part_code_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2950,7 +4138,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3355 (class 2606 OID 35178)
+-- TOC entry 3439 (class 2606 OID 42818)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2959,7 +4147,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3357 (class 2606 OID 35180)
+-- TOC entry 3441 (class 2606 OID 42820)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2967,8 +4155,113 @@ ALTER TABLE ONLY part
     ADD CONSTRAINT part_pkey PRIMARY KEY (definition_id, part_code);
 
 
+SET search_path = material, pg_catalog;
+
 --
--- TOC entry 3366 (class 2620 OID 35181)
+-- TOC entry 3445 (class 2606 OID 42885)
+-- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable
+    ADD CONSTRAINT consumable_pkey PRIMARY KEY (part_code, version_num);
+
+
+--
+-- TOC entry 3443 (class 2606 OID 42874)
+-- Name: information information_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY information
+    ADD CONSTRAINT information_pkey PRIMARY KEY (part_code, version_num, material_type);
+
+
+--
+-- TOC entry 3447 (class 2606 OID 42897)
+-- Name: primal primal_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY primal
+    ADD CONSTRAINT primal_pkey PRIMARY KEY (part_code, version_num);
+
+
+--
+-- TOC entry 3449 (class 2606 OID 42908)
+-- Name: producible producible_pkey; Type: CONSTRAINT; Schema: material; Owner: postgres
+--
+
+ALTER TABLE ONLY producible
+    ADD CONSTRAINT producible_pkey PRIMARY KEY (part_code, version_num);
+
+
+SET search_path = mbom, pg_catalog;
+
+--
+-- TOC entry 3461 (class 2606 OID 42970)
+-- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable
+    ADD CONSTRAINT consumable_pkey PRIMARY KEY (definition_id, part_code);
+
+
+--
+-- TOC entry 3453 (class 2606 OID 42944)
+-- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_gid_key UNIQUE (gid);
+
+
+--
+-- TOC entry 3455 (class 2606 OID 42946)
+-- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_information_id_version_num_key UNIQUE (information_id, version_num);
+
+
+--
+-- TOC entry 3457 (class 2606 OID 42942)
+-- Name: definition definition_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3451 (class 2606 OID 42921)
+-- Name: information information_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY information
+    ADD CONSTRAINT information_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3459 (class 2606 OID 42960)
+-- Name: material material_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY material
+    ADD CONSTRAINT material_pkey PRIMARY KEY (definition_id, part_code);
+
+
+--
+-- TOC entry 3463 (class 2606 OID 42990)
+-- Name: primal primal_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY primal
+    ADD CONSTRAINT primal_pkey PRIMARY KEY (definition_id, part_code);
+
+
+SET search_path = ebom, pg_catalog;
+
+--
+-- TOC entry 3478 (class 2620 OID 42821)
 -- Name: definition set_prev_doc_fsmt; Type: TRIGGER; Schema: ebom; Owner: postgres
 --
 
@@ -2976,7 +4269,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON definition FOR EACH ROW EXECUT
 
 
 --
--- TOC entry 3358 (class 2606 OID 35182)
+-- TOC entry 3464 (class 2606 OID 42822)
 -- Name: assembly assembly_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2985,7 +4278,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3359 (class 2606 OID 35187)
+-- TOC entry 3465 (class 2606 OID 42827)
 -- Name: assembly assembly_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2994,7 +4287,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3360 (class 2606 OID 35192)
+-- TOC entry 3466 (class 2606 OID 42832)
 -- Name: buyable buyable_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -3003,7 +4296,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3361 (class 2606 OID 35197)
+-- TOC entry 3467 (class 2606 OID 42837)
 -- Name: buyable buyable_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -3012,7 +4305,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3362 (class 2606 OID 35202)
+-- TOC entry 3468 (class 2606 OID 42842)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -3021,7 +4314,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3363 (class 2606 OID 35207)
+-- TOC entry 3469 (class 2606 OID 42847)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -3030,7 +4323,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3364 (class 2606 OID 35212)
+-- TOC entry 3470 (class 2606 OID 42852)
 -- Name: part part_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -3039,7 +4332,7 @@ ALTER TABLE ONLY part
 
 
 --
--- TOC entry 3365 (class 2606 OID 35217)
+-- TOC entry 3471 (class 2606 OID 42857)
 -- Name: part part_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -3047,7 +4340,63 @@ ALTER TABLE ONLY part
     ADD CONSTRAINT part_part_code_fkey FOREIGN KEY (part_code, version_num) REFERENCES component.part(part_code, version_num);
 
 
--- Completed on 2017-11-23 18:12:00 EET
+SET search_path = mbom, pg_catalog;
+
+--
+-- TOC entry 3474 (class 2606 OID 42971)
+-- Name: consumable consumable_definition_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable
+    ADD CONSTRAINT consumable_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id);
+
+
+--
+-- TOC entry 3475 (class 2606 OID 42976)
+-- Name: consumable consumable_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY consumable
+    ADD CONSTRAINT consumable_part_code_fkey FOREIGN KEY (part_code, version_num) REFERENCES material.consumable(part_code, version_num);
+
+
+--
+-- TOC entry 3473 (class 2606 OID 42947)
+-- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY definition
+    ADD CONSTRAINT definition_information_id_fkey FOREIGN KEY (information_id) REFERENCES information(id) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 3472 (class 2606 OID 42922)
+-- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY information
+    ADD CONSTRAINT information_part_code_fkey FOREIGN KEY (part_code, version_num) REFERENCES material.producible(part_code, version_num) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- TOC entry 3476 (class 2606 OID 42991)
+-- Name: primal primal_definition_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY primal
+    ADD CONSTRAINT primal_definition_id_fkey FOREIGN KEY (definition_id) REFERENCES definition(id);
+
+
+--
+-- TOC entry 3477 (class 2606 OID 42996)
+-- Name: primal primal_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
+--
+
+ALTER TABLE ONLY primal
+    ADD CONSTRAINT primal_part_code_fkey FOREIGN KEY (part_code, version_num) REFERENCES material.primal(part_code, version_num);
+
+
+-- Completed on 2017-11-23 22:31:18 EET
 
 --
 -- PostgreSQL database dump complete
