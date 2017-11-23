@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.6
 -- Dumped by pg_dump version 9.6.6
 
--- Started on 2017-11-23 11:33:09 EET
+-- Started on 2017-11-23 18:12:00 EET
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -37,7 +37,7 @@ CREATE SCHEMA component;
 ALTER SCHEMA component OWNER TO postgres;
 
 --
--- TOC entry 3497 (class 0 OID 0)
+-- TOC entry 3504 (class 0 OID 0)
 -- Dependencies: 7
 -- Name: SCHEMA component; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -56,7 +56,7 @@ CREATE SCHEMA ebom;
 ALTER SCHEMA ebom OWNER TO postgres;
 
 --
--- TOC entry 3498 (class 0 OID 0)
+-- TOC entry 3505 (class 0 OID 0)
 -- Dependencies: 8
 -- Name: SCHEMA ebom; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -93,7 +93,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 3500 (class 0 OID 0)
+-- TOC entry 3507 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -110,7 +110,7 @@ CREATE EXTENSION IF NOT EXISTS ltree WITH SCHEMA public;
 
 
 --
--- TOC entry 3501 (class 0 OID 0)
+-- TOC entry 3508 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION ltree; Type: COMMENT; Schema: -; Owner: 
 --
@@ -127,7 +127,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql_check WITH SCHEMA public;
 
 
 --
--- TOC entry 3502 (class 0 OID 0)
+-- TOC entry 3509 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION plpgsql_check; Type: COMMENT; Schema: -; Owner: 
 --
@@ -144,7 +144,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 3503 (class 0 OID 0)
+-- TOC entry 3510 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
 --
@@ -155,7 +155,7 @@ COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UU
 SET search_path = common, pg_catalog;
 
 --
--- TOC entry 730 (class 1247 OID 34932)
+-- TOC entry 737 (class 1247 OID 34932)
 -- Name: component_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -169,7 +169,7 @@ CREATE TYPE component_kind AS ENUM (
 ALTER TYPE component_kind OWNER TO postgres;
 
 --
--- TOC entry 733 (class 1247 OID 34939)
+-- TOC entry 740 (class 1247 OID 34939)
 -- Name: quantity; Type: DOMAIN; Schema: common; Owner: postgres
 --
 
@@ -180,8 +180,8 @@ CREATE DOMAIN quantity AS numeric(20,4) DEFAULT 0
 ALTER DOMAIN quantity OWNER TO postgres;
 
 --
--- TOC entry 3504 (class 0 OID 0)
--- Dependencies: 733
+-- TOC entry 3511 (class 0 OID 0)
+-- Dependencies: 740
 -- Name: DOMAIN quantity; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -189,7 +189,7 @@ COMMENT ON DOMAIN quantity IS 'quantity domain';
 
 
 --
--- TOC entry 735 (class 1247 OID 34943)
+-- TOC entry 742 (class 1247 OID 34943)
 -- Name: component_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -205,7 +205,7 @@ CREATE TYPE component_specification AS (
 ALTER TYPE component_specification OWNER TO postgres;
 
 --
--- TOC entry 738 (class 1247 OID 34946)
+-- TOC entry 745 (class 1247 OID 34946)
 -- Name: dependency_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -219,7 +219,7 @@ CREATE TYPE dependency_specification AS (
 ALTER TYPE dependency_specification OWNER TO postgres;
 
 --
--- TOC entry 741 (class 1247 OID 34949)
+-- TOC entry 748 (class 1247 OID 34949)
 -- Name: dependency_specification_ltree; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -234,7 +234,7 @@ CREATE TYPE dependency_specification_ltree AS (
 ALTER TYPE dependency_specification_ltree OWNER TO postgres;
 
 --
--- TOC entry 744 (class 1247 OID 34951)
+-- TOC entry 751 (class 1247 OID 34951)
 -- Name: document_fsmt; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -248,7 +248,7 @@ CREATE TYPE document_fsmt AS ENUM (
 ALTER TYPE document_fsmt OWNER TO postgres;
 
 --
--- TOC entry 747 (class 1247 OID 34958)
+-- TOC entry 754 (class 1247 OID 34958)
 -- Name: document_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -266,7 +266,7 @@ CREATE TYPE document_kind AS ENUM (
 ALTER TYPE document_kind OWNER TO postgres;
 
 --
--- TOC entry 750 (class 1247 OID 34975)
+-- TOC entry 757 (class 1247 OID 34975)
 -- Name: ebom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -285,7 +285,7 @@ CREATE TYPE ebom_head AS (
 ALTER TYPE ebom_head OWNER TO postgres;
 
 --
--- TOC entry 753 (class 1247 OID 34978)
+-- TOC entry 760 (class 1247 OID 34978)
 -- Name: ebom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -298,7 +298,7 @@ CREATE TYPE ebom_document AS (
 ALTER TYPE ebom_document OWNER TO postgres;
 
 --
--- TOC entry 756 (class 1247 OID 34981)
+-- TOC entry 763 (class 1247 OID 34981)
 -- Name: equipment_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -313,7 +313,7 @@ CREATE TYPE equipment_specification AS (
 ALTER TYPE equipment_specification OWNER TO postgres;
 
 --
--- TOC entry 759 (class 1247 OID 34983)
+-- TOC entry 766 (class 1247 OID 34983)
 -- Name: inventory_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -332,7 +332,7 @@ CREATE TYPE inventory_kind AS ENUM (
 ALTER TYPE inventory_kind OWNER TO postgres;
 
 --
--- TOC entry 762 (class 1247 OID 35000)
+-- TOC entry 769 (class 1247 OID 35000)
 -- Name: material_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -346,7 +346,7 @@ CREATE TYPE material_kind AS ENUM (
 ALTER TYPE material_kind OWNER TO postgres;
 
 --
--- TOC entry 765 (class 1247 OID 35009)
+-- TOC entry 772 (class 1247 OID 35009)
 -- Name: material_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -362,7 +362,7 @@ CREATE TYPE material_specification AS (
 ALTER TYPE material_specification OWNER TO postgres;
 
 --
--- TOC entry 768 (class 1247 OID 35012)
+-- TOC entry 775 (class 1247 OID 35012)
 -- Name: mbom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -381,7 +381,7 @@ CREATE TYPE mbom_head AS (
 ALTER TYPE mbom_head OWNER TO postgres;
 
 --
--- TOC entry 771 (class 1247 OID 35015)
+-- TOC entry 778 (class 1247 OID 35015)
 -- Name: mbom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -394,7 +394,7 @@ CREATE TYPE mbom_document AS (
 ALTER TYPE mbom_document OWNER TO postgres;
 
 --
--- TOC entry 774 (class 1247 OID 35018)
+-- TOC entry 781 (class 1247 OID 35018)
 -- Name: operation_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -413,7 +413,7 @@ CREATE TYPE operation_head AS (
 ALTER TYPE operation_head OWNER TO postgres;
 
 --
--- TOC entry 777 (class 1247 OID 35021)
+-- TOC entry 784 (class 1247 OID 35021)
 -- Name: personnel_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -428,7 +428,7 @@ CREATE TYPE personnel_specification AS (
 ALTER TYPE personnel_specification OWNER TO postgres;
 
 --
--- TOC entry 780 (class 1247 OID 35024)
+-- TOC entry 787 (class 1247 OID 35024)
 -- Name: tooling_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -443,7 +443,7 @@ CREATE TYPE tooling_specification AS (
 ALTER TYPE tooling_specification OWNER TO postgres;
 
 --
--- TOC entry 783 (class 1247 OID 35027)
+-- TOC entry 790 (class 1247 OID 35027)
 -- Name: operation_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -460,7 +460,7 @@ CREATE TYPE operation_segment AS (
 ALTER TYPE operation_segment OWNER TO postgres;
 
 --
--- TOC entry 786 (class 1247 OID 35030)
+-- TOC entry 793 (class 1247 OID 35030)
 -- Name: operation_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -933,7 +933,7 @@ $$;
 ALTER FUNCTION ebom.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
 --
--- TOC entry 333 (class 1255 OID 35050)
+-- TOC entry 364 (class 1255 OID 35050)
 -- Name: init(common.ebom_head, common.component_specification[]); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -971,7 +971,7 @@ BEGIN
   INTO
     _max_version_num;
 
-  IF NOT FOUND THEN
+  IF (_max_version_num IS NULL) THEN
     _max_version_num := 0;
 
     INSERT INTO
@@ -1081,7 +1081,7 @@ $$;
 ALTER FUNCTION ebom.init(__head common.ebom_head, __body common.component_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 334 (class 1255 OID 35051)
+-- TOC entry 333 (class 1255 OID 35051)
 -- Name: reinit(bigint, common.component_specification[]); Type: FUNCTION; Schema: ebom; Owner: postgres
 --
 
@@ -1162,7 +1162,7 @@ ALTER FUNCTION ebom.reinit(__document_id bigint, __body common.component_specifi
 SET search_path = pgunit, pg_catalog;
 
 --
--- TOC entry 335 (class 1255 OID 35224)
+-- TOC entry 334 (class 1255 OID 35224)
 -- Name: assert_array_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1186,7 +1186,7 @@ $$;
 ALTER FUNCTION pgunit.assert_array_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 336 (class 1255 OID 35225)
+-- TOC entry 335 (class 1255 OID 35225)
 -- Name: assert_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1207,7 +1207,7 @@ $$;
 ALTER FUNCTION pgunit.assert_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 337 (class 1255 OID 35226)
+-- TOC entry 336 (class 1255 OID 35226)
 -- Name: assert_false(boolean, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1225,7 +1225,7 @@ $$;
 ALTER FUNCTION pgunit.assert_false(_value boolean, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 338 (class 1255 OID 35227)
+-- TOC entry 337 (class 1255 OID 35227)
 -- Name: assert_not_equals(anyelement, anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1246,7 +1246,7 @@ $$;
 ALTER FUNCTION pgunit.assert_not_equals(_expected anyelement, _actual anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 339 (class 1255 OID 35228)
+-- TOC entry 338 (class 1255 OID 35228)
 -- Name: assert_not_null(anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1264,7 +1264,7 @@ $$;
 ALTER FUNCTION pgunit.assert_not_null(_value anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 340 (class 1255 OID 35229)
+-- TOC entry 339 (class 1255 OID 35229)
 -- Name: assert_null(anyelement, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1282,7 +1282,7 @@ $$;
 ALTER FUNCTION pgunit.assert_null(_value anyelement, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 341 (class 1255 OID 35230)
+-- TOC entry 340 (class 1255 OID 35230)
 -- Name: assert_true(boolean, character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1300,7 +1300,7 @@ $$;
 ALTER FUNCTION pgunit.assert_true(_value boolean, _message character varying) OWNER TO postgres;
 
 --
--- TOC entry 342 (class 1255 OID 35231)
+-- TOC entry 341 (class 1255 OID 35231)
 -- Name: fail(character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1316,7 +1316,7 @@ $$;
 ALTER FUNCTION pgunit.fail(_message character varying) OWNER TO postgres;
 
 --
--- TOC entry 343 (class 1255 OID 35232)
+-- TOC entry 342 (class 1255 OID 35232)
 -- Name: run_test(character varying); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1336,7 +1336,7 @@ $$;
 ALTER FUNCTION pgunit.run_test(_sp character varying) OWNER TO postgres;
 
 --
--- TOC entry 344 (class 1255 OID 35233)
+-- TOC entry 343 (class 1255 OID 35233)
 -- Name: test_assert_array_equals(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1460,7 +1460,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_array_equals() OWNER TO postgres;
 
 --
--- TOC entry 345 (class 1255 OID 35234)
+-- TOC entry 344 (class 1255 OID 35234)
 -- Name: test_assert_equals(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1559,7 +1559,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_equals() OWNER TO postgres;
 
 --
--- TOC entry 346 (class 1255 OID 35235)
+-- TOC entry 345 (class 1255 OID 35235)
 -- Name: test_assert_false(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1601,7 +1601,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_false() OWNER TO postgres;
 
 --
--- TOC entry 347 (class 1255 OID 35236)
+-- TOC entry 346 (class 1255 OID 35236)
 -- Name: test_assert_not_null(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1690,7 +1690,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_not_null() OWNER TO postgres;
 
 --
--- TOC entry 348 (class 1255 OID 35237)
+-- TOC entry 347 (class 1255 OID 35237)
 -- Name: test_assert_null(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1780,7 +1780,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_null() OWNER TO postgres;
 
 --
--- TOC entry 349 (class 1255 OID 35238)
+-- TOC entry 348 (class 1255 OID 35238)
 -- Name: test_assert_true(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1820,7 +1820,7 @@ $$;
 ALTER FUNCTION pgunit.test_assert_true() OWNER TO postgres;
 
 --
--- TOC entry 350 (class 1255 OID 35239)
+-- TOC entry 349 (class 1255 OID 35239)
 -- Name: test_fail(); Type: FUNCTION; Schema: pgunit; Owner: postgres
 --
 
@@ -1849,7 +1849,7 @@ ALTER FUNCTION pgunit.test_fail() OWNER TO postgres;
 SET search_path = public, pg_catalog;
 
 --
--- TOC entry 356 (class 1255 OID 35263)
+-- TOC entry 355 (class 1255 OID 35263)
 -- Name: _reset_data(); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -1891,7 +1891,248 @@ ALTER FUNCTION public._reset_data() OWNER TO postgres;
 SET search_path = tests, pg_catalog;
 
 --
--- TOC entry 358 (class 1255 OID 35264)
+-- TOC entry 360 (class 1255 OID 35309)
+-- Name: __ebom__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__destroy() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _head common.ebom_head;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__destroy()';
+
+  INSERT INTO ebom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO ebom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  PERFORM ebom.destroy(201); -- + add not allowed delete test
+  
+  _head := ebom.get_head(201);
+  PERFORM pgunit.assert_null(_head, 'Incorrect _head value');
+
+  _head := ebom.get_head(203);
+  PERFORM pgunit.assert_not_null(_head, 'Incorrect _head value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__destroy() OWNER TO postgres;
+
+--
+-- TOC entry 358 (class 1255 OID 35355)
+-- Name: __ebom__get_body(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__get_body() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _body common.component_specification[];
+  _test_body CONSTANT common.component_specification[] := ARRAY[('72.01.009-001', 1, 2.0000, 'pcs', 'PART'), ('80.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY')]::common.component_specification[];
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__get_body()';
+
+  INSERT INTO ebom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO ebom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  INSERT INTO ebom.part VALUES (201, '72.01.009-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.assembly VALUES (201, '80.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
+  INSERT INTO ebom.buyable VALUES (201, 'Гайка М12', 1, 1.0000, 'pcs', 'BUYABLE');
+
+  INSERT INTO ebom.part VALUES (203, '72.01.009-001', 1, 2.0000, 'pcs', 'PART');
+  INSERT INTO ebom.assembly VALUES (203, '80.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
+
+
+  _body := ebom.get_body(203);
+  PERFORM pgunit.assert_array_equals(_test_body, _body, 'Incorrect _body value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__get_body() OWNER TO postgres;
+
+--
+-- TOC entry 359 (class 1255 OID 35356)
+-- Name: __ebom__get_gid_by_id(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__get_gid_by_id() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_id CONSTANT bigint := 202;
+  _test_gid CONSTANT uuid := '9b2952fa-01d1-11e7-b440-d4bed939923a';
+  _gid uuid;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__get_gid_by_id()';
+
+  INSERT INTO ebom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO ebom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  _gid := ebom.get_gid_by_id(_test_id);
+  PERFORM pgunit.assert_equals(_test_gid, _gid, 'Incorrect _gid value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__get_gid_by_id() OWNER TO postgres;
+
+--
+-- TOC entry 362 (class 1255 OID 35358)
+-- Name: __ebom__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__get_head() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _head common.ebom_head;
+  _test_gid CONSTANT uuid := '9b2952fa-01d1-11e7-b440-d4bed939923a';
+  _test_display_name CONSTANT character varying := '11с32п-50х40: definition';
+  _test_document_date CONSTANT date := '2017-10-21'::date;
+  _test_curr_fsmt CONSTANT common.document_fsmt := 'COMMITTED'::common.document_fsmt;
+  _test_document_type CONSTANT common.document_kind := 'EBOM'::common.document_kind;
+  _test_component_part_code CONSTANT character varying := '11.32.050-001';
+  _test_component_version_num CONSTANT integer := 1;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__get_head()';
+
+  INSERT INTO ebom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO ebom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-20', NULL, NULL, 'PROPOSED', '2017-10-20',101);
+  INSERT INTO ebom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'COMMITTED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-22', NULL, NULL, 'PROPOSED', '2017-10-22',101);
+
+  _head := ebom.get_head(202);
+  PERFORM pgunit.assert_equals(_test_gid, _head.gid, 'Incorrect gid value');
+  PERFORM pgunit.assert_equals(_test_display_name, _head.display_name, 'Incorrect display_name value');
+  PERFORM pgunit.assert_equals(_test_document_date, _head.document_date, 'Incorrect document_date value');
+  PERFORM pgunit.assert_equals(_test_curr_fsmt, _head.curr_fsmt, 'Incorrect curr_fsmt value');
+  PERFORM pgunit.assert_equals(_test_document_type, _head.document_type, 'Incorrect document_type value');
+  PERFORM pgunit.assert_equals(_test_component_part_code, (_head.component_spec).part_code, 'Incorrect component_part_code value');
+  PERFORM pgunit.assert_equals(_test_component_version_num, (_head.component_spec).version_num, 'Incorrect component_version_num value');
+
+  _head := ebom.get_head(203);
+  PERFORM pgunit.assert_not_equals(_test_gid, _head.gid, 'Incorrect gid value');
+  
+  _head := ebom.get_head(204);
+  PERFORM pgunit.assert_null(_head, 'Incorrect _head value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__get_head() OWNER TO postgres;
+
+--
+-- TOC entry 361 (class 1255 OID 35357)
+-- Name: __ebom__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__get_id_by_gid() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_id CONSTANT bigint := 202;
+  _test_gid CONSTANT uuid := '9b2952fa-01d1-11e7-b440-d4bed939923a';
+  _id bigint;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__get_id_by_gid()';
+
+  INSERT INTO ebom.information VALUES (101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23');
+  INSERT INTO ebom.definition VALUES (201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+  INSERT INTO ebom.definition VALUES (203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21',101);
+
+  _id := ebom.get_id_by_gid(_test_gid);
+  PERFORM pgunit.assert_equals(_test_id, _id, 'Incorrect _id value');
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__get_id_by_gid() OWNER TO postgres;
+
+--
+-- TOC entry 363 (class 1255 OID 35359)
+-- Name: __ebom__init(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__init() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_head CONSTANT common.ebom_head[] := ARRAY[(203,'9b2952fa-01d1-11e7-b440-d4bed939923a','11с32п-50х40: definition',3,'2017-10-21','PROPOSED','EBOM',('11.32.050-001',1,1.0000,'pcs','ASSEMBLY'))]::common.ebom_head[];
+  _test_body CONSTANT common.component_specification[] := ARRAY[('80.31.050-001',1,1.0000,'pcs','ASSEMBLY'), ('72.01.009-001',1,2.0000,'pcs','PART')]::common.component_specification[];
+  _head common.ebom_head;
+  _body common.component_specification[];
+  _document_id bigint;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__init()';
+  
+  _document_id := ebom.init(_test_head[1], _test_body);
+  _head := ebom.get_head(_document_id);
+  _body := ebom.get_body(_document_id);
+  --PERFORM pgunit.assert_equals(_test_head[1], _head, 'Incorrect _head value');
+  PERFORM pgunit.assert_array_equals(_test_body, _body, 'Incorrect _body value');
+
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__init() OWNER TO postgres;
+
+--
+-- TOC entry 365 (class 1255 OID 35492)
+-- Name: __ebom__reinit(); Type: FUNCTION; Schema: tests; Owner: postgres
+--
+
+CREATE FUNCTION __ebom__reinit() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+  _test_head CONSTANT common.ebom_head[] := ARRAY[(203,'9b2952fa-01d1-11e7-b440-d4bed939923a','11с32п-50х40: definition',3,'2017-10-21','PROPOSED','EBOM',('11.32.050-001',1,1.0000,'pcs','ASSEMBLY'))]::common.ebom_head[];
+  _test_body_init CONSTANT common.component_specification[] := ARRAY[('80.31.050-001',1,1.0000,'pcs','ASSEMBLY'), ('72.01.009-001',1,2.0000,'pcs','PART')]::common.component_specification[];
+  _test_body_reinit CONSTANT common.component_specification[] := ARRAY[('80.31.050-001',1,2.0000,'pcs','ASSEMBLY'), ('72.01.009-001',1,4.0000,'pcs','PART')]::common.component_specification[];
+  _head common.ebom_head;
+  _body common.component_specification[];
+  _document_id bigint;
+BEGIN
+  
+  RAISE DEBUG '#trace Check __ebom__reinit()';
+  
+  _document_id := ebom.init(_test_head[1], _test_body_init);
+  PERFORM ebom.reinit(_document_id, _test_body_reinit);
+  _head := ebom.get_head(_document_id);
+  _body := ebom.get_body(_document_id);
+  --PERFORM pgunit.assert_equals(_test_head[1], _head, 'Incorrect _head value');
+  PERFORM pgunit.assert_array_equals(_test_body_reinit, _body, 'Incorrect _body value');
+
+
+END;
+$$;
+
+
+ALTER FUNCTION tests.__ebom__reinit() OWNER TO postgres;
+
+--
+-- TOC entry 357 (class 1255 OID 35264)
 -- Name: _load_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1954,7 +2195,7 @@ $$;
 ALTER FUNCTION tests._load_data() OWNER TO postgres;
 
 --
--- TOC entry 357 (class 1255 OID 35246)
+-- TOC entry 356 (class 1255 OID 35246)
 -- Name: _reset_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -1994,7 +2235,7 @@ $$;
 ALTER FUNCTION tests._reset_data() OWNER TO postgres;
 
 --
--- TOC entry 355 (class 1255 OID 35247)
+-- TOC entry 354 (class 1255 OID 35247)
 -- Name: _run_all(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -2063,7 +2304,7 @@ CREATE TABLE information (
 ALTER TABLE information OWNER TO postgres;
 
 --
--- TOC entry 3505 (class 0 OID 0)
+-- TOC entry 3512 (class 0 OID 0)
 -- Dependencies: 207
 -- Name: TABLE information; Type: COMMENT; Schema: component; Owner: postgres
 --
@@ -2085,7 +2326,7 @@ INHERITS (information);
 ALTER TABLE assembly OWNER TO postgres;
 
 --
--- TOC entry 3506 (class 0 OID 0)
+-- TOC entry 3513 (class 0 OID 0)
 -- Dependencies: 208
 -- Name: TABLE assembly; Type: COMMENT; Schema: component; Owner: postgres
 --
@@ -2108,7 +2349,7 @@ INHERITS (information);
 ALTER TABLE buyable OWNER TO postgres;
 
 --
--- TOC entry 3507 (class 0 OID 0)
+-- TOC entry 3514 (class 0 OID 0)
 -- Dependencies: 209
 -- Name: TABLE buyable; Type: COMMENT; Schema: component; Owner: postgres
 --
@@ -2130,7 +2371,7 @@ INHERITS (information);
 ALTER TABLE part OWNER TO postgres;
 
 --
--- TOC entry 3508 (class 0 OID 0)
+-- TOC entry 3515 (class 0 OID 0)
 -- Dependencies: 210
 -- Name: TABLE part; Type: COMMENT; Schema: component; Owner: postgres
 --
@@ -2220,7 +2461,7 @@ CREATE SEQUENCE definition_id_seq
 ALTER TABLE definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3509 (class 0 OID 0)
+-- TOC entry 3516 (class 0 OID 0)
 -- Dependencies: 215
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
@@ -2261,7 +2502,7 @@ CREATE SEQUENCE information_id_seq
 ALTER TABLE information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3510 (class 0 OID 0)
+-- TOC entry 3517 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
@@ -2355,7 +2596,7 @@ ALTER TABLE plpgsql_check_nontriggered OWNER TO postgres;
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3297 (class 2604 OID 35142)
+-- TOC entry 3304 (class 2604 OID 35142)
 -- Name: assembly version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2363,7 +2604,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3298 (class 2604 OID 35143)
+-- TOC entry 3305 (class 2604 OID 35143)
 -- Name: assembly published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2371,7 +2612,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3300 (class 2604 OID 35144)
+-- TOC entry 3307 (class 2604 OID 35144)
 -- Name: buyable version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2379,7 +2620,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3301 (class 2604 OID 35145)
+-- TOC entry 3308 (class 2604 OID 35145)
 -- Name: buyable published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2387,7 +2628,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 3304 (class 2604 OID 35146)
+-- TOC entry 3311 (class 2604 OID 35146)
 -- Name: part version_num; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2395,7 +2636,7 @@ ALTER TABLE ONLY part ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 3305 (class 2604 OID 35147)
+-- TOC entry 3312 (class 2604 OID 35147)
 -- Name: part published_date; Type: DEFAULT; Schema: component; Owner: postgres
 --
 
@@ -2405,7 +2646,7 @@ ALTER TABLE ONLY part ALTER COLUMN published_date SET DEFAULT now();
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3308 (class 2604 OID 35148)
+-- TOC entry 3315 (class 2604 OID 35148)
 -- Name: assembly uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2413,7 +2654,7 @@ ALTER TABLE ONLY assembly ALTER COLUMN uom_code SET DEFAULT 'pcs'::character var
 
 
 --
--- TOC entry 3310 (class 2604 OID 35149)
+-- TOC entry 3317 (class 2604 OID 35149)
 -- Name: buyable uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2421,7 +2662,7 @@ ALTER TABLE ONLY buyable ALTER COLUMN uom_code SET DEFAULT 'pcs'::character vary
 
 
 --
--- TOC entry 3317 (class 2604 OID 35150)
+-- TOC entry 3324 (class 2604 OID 35150)
 -- Name: definition id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2429,7 +2670,7 @@ ALTER TABLE ONLY definition ALTER COLUMN id SET DEFAULT nextval('definition_id_s
 
 
 --
--- TOC entry 3320 (class 2604 OID 35151)
+-- TOC entry 3327 (class 2604 OID 35151)
 -- Name: information id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2437,7 +2678,7 @@ ALTER TABLE ONLY information ALTER COLUMN id SET DEFAULT nextval('information_id
 
 
 --
--- TOC entry 3321 (class 2604 OID 35152)
+-- TOC entry 3328 (class 2604 OID 35152)
 -- Name: part uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -2447,7 +2688,7 @@ ALTER TABLE ONLY part ALTER COLUMN uom_code SET DEFAULT 'pcs'::character varying
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3481 (class 0 OID 35060)
+-- TOC entry 3488 (class 0 OID 35060)
 -- Dependencies: 208
 -- Data for Name: assembly; Type: TABLE DATA; Schema: component; Owner: postgres
 --
@@ -2460,7 +2701,7 @@ INSERT INTO assembly VALUES ('82.31.050-001', 1, 'Рчк-250х20', '2017-10-21',
 
 
 --
--- TOC entry 3482 (class 0 OID 35069)
+-- TOC entry 3489 (class 0 OID 35069)
 -- Dependencies: 209
 -- Data for Name: buyable; Type: TABLE DATA; Schema: component; Owner: postgres
 --
@@ -2469,7 +2710,7 @@ INSERT INTO buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21
 
 
 --
--- TOC entry 3480 (class 0 OID 35052)
+-- TOC entry 3487 (class 0 OID 35052)
 -- Dependencies: 207
 -- Data for Name: information; Type: TABLE DATA; Schema: component; Owner: postgres
 --
@@ -2477,7 +2718,7 @@ INSERT INTO buyable VALUES ('Гайка М12', 1, 'Гайка-М12', '2017-10-21
 
 
 --
--- TOC entry 3483 (class 0 OID 35079)
+-- TOC entry 3490 (class 0 OID 35079)
 -- Dependencies: 210
 -- Data for Name: part; Type: TABLE DATA; Schema: component; Owner: postgres
 --
@@ -2507,7 +2748,7 @@ INSERT INTO part VALUES ('42.02.022-001', 1, 'Втлк-Р-50х18', '2017-10-21',
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3485 (class 0 OID 35095)
+-- TOC entry 3492 (class 0 OID 35095)
 -- Dependencies: 212
 -- Data for Name: assembly; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -2517,7 +2758,7 @@ INSERT INTO assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'pcs', 'ASSEMBLY');
 
 
 --
--- TOC entry 3486 (class 0 OID 35103)
+-- TOC entry 3493 (class 0 OID 35103)
 -- Dependencies: 213
 -- Data for Name: buyable; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -2526,7 +2767,7 @@ INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'pcs', 'BUYABLE');
 
 
 --
--- TOC entry 3484 (class 0 OID 35088)
+-- TOC entry 3491 (class 0 OID 35088)
 -- Dependencies: 211
 -- Data for Name: component; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -2534,43 +2775,43 @@ INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'pcs', 'BUYABLE');
 
 
 --
--- TOC entry 3487 (class 0 OID 35111)
+-- TOC entry 3494 (class 0 OID 35111)
 -- Dependencies: 214
 -- Data for Name: definition; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO definition VALUES (1, 'ef4c5bd8-d030-11e7-9307-54ab3aa56755', '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
+INSERT INTO definition VALUES (1, '08a365e6-d049-11e7-a404-54ab3aa56755', '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
 
 
 --
--- TOC entry 3511 (class 0 OID 0)
+-- TOC entry 3518 (class 0 OID 0)
 -- Dependencies: 215
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
-SELECT pg_catalog.setval('definition_id_seq', 1, false);
+SELECT pg_catalog.setval('definition_id_seq', 14, true);
 
 
 --
--- TOC entry 3489 (class 0 OID 35124)
+-- TOC entry 3496 (class 0 OID 35124)
 -- Dependencies: 216
 -- Data for Name: information; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
 
-INSERT INTO information VALUES (1, 'ef47bcd6-d030-11e7-9306-54ab3aa56755', '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
+INSERT INTO information VALUES (1, '08a34c46-d049-11e7-a403-54ab3aa56755', '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
 
 
 --
--- TOC entry 3512 (class 0 OID 0)
+-- TOC entry 3519 (class 0 OID 0)
 -- Dependencies: 217
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
 
-SELECT pg_catalog.setval('information_id_seq', 1, false);
+SELECT pg_catalog.setval('information_id_seq', 15, true);
 
 
 --
--- TOC entry 3491 (class 0 OID 35134)
+-- TOC entry 3498 (class 0 OID 35134)
 -- Dependencies: 218
 -- Data for Name: part; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -2590,7 +2831,7 @@ INSERT INTO part VALUES (1, '72.01.009-001', 1, 2.0000, 'pcs', 'PART');
 SET search_path = component, pg_catalog;
 
 --
--- TOC entry 3326 (class 2606 OID 35154)
+-- TOC entry 3333 (class 2606 OID 35154)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2599,7 +2840,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3328 (class 2606 OID 35156)
+-- TOC entry 3335 (class 2606 OID 35156)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2608,7 +2849,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3324 (class 2606 OID 35158)
+-- TOC entry 3331 (class 2606 OID 35158)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2617,8 +2858,8 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3513 (class 0 OID 0)
--- Dependencies: 3324
+-- TOC entry 3520 (class 0 OID 0)
+-- Dependencies: 3331
 -- Name: CONSTRAINT information_pkey ON information; Type: COMMENT; Schema: component; Owner: postgres
 --
 
@@ -2626,7 +2867,7 @@ COMMENT ON CONSTRAINT information_pkey ON information IS 'may be part_code + ver
 
 
 --
--- TOC entry 3330 (class 2606 OID 35160)
+-- TOC entry 3337 (class 2606 OID 35160)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: component; Owner: postgres
 --
 
@@ -2637,7 +2878,7 @@ ALTER TABLE ONLY part
 SET search_path = ebom, pg_catalog;
 
 --
--- TOC entry 3334 (class 2606 OID 35162)
+-- TOC entry 3341 (class 2606 OID 35162)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2646,7 +2887,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3336 (class 2606 OID 35164)
+-- TOC entry 3343 (class 2606 OID 35164)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2655,7 +2896,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3332 (class 2606 OID 35166)
+-- TOC entry 3339 (class 2606 OID 35166)
 -- Name: component component_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2664,7 +2905,7 @@ ALTER TABLE ONLY component
 
 
 --
--- TOC entry 3338 (class 2606 OID 35168)
+-- TOC entry 3345 (class 2606 OID 35168)
 -- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2673,7 +2914,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3340 (class 2606 OID 35170)
+-- TOC entry 3347 (class 2606 OID 35170)
 -- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2682,7 +2923,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3342 (class 2606 OID 35172)
+-- TOC entry 3349 (class 2606 OID 35172)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2691,7 +2932,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3344 (class 2606 OID 35174)
+-- TOC entry 3351 (class 2606 OID 35174)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2700,7 +2941,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3346 (class 2606 OID 35176)
+-- TOC entry 3353 (class 2606 OID 35176)
 -- Name: information information_part_code_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2709,7 +2950,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3348 (class 2606 OID 35178)
+-- TOC entry 3355 (class 2606 OID 35178)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2718,7 +2959,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3350 (class 2606 OID 35180)
+-- TOC entry 3357 (class 2606 OID 35180)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2727,7 +2968,7 @@ ALTER TABLE ONLY part
 
 
 --
--- TOC entry 3359 (class 2620 OID 35181)
+-- TOC entry 3366 (class 2620 OID 35181)
 -- Name: definition set_prev_doc_fsmt; Type: TRIGGER; Schema: ebom; Owner: postgres
 --
 
@@ -2735,7 +2976,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON definition FOR EACH ROW EXECUT
 
 
 --
--- TOC entry 3351 (class 2606 OID 35182)
+-- TOC entry 3358 (class 2606 OID 35182)
 -- Name: assembly assembly_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2744,7 +2985,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3352 (class 2606 OID 35187)
+-- TOC entry 3359 (class 2606 OID 35187)
 -- Name: assembly assembly_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2753,7 +2994,7 @@ ALTER TABLE ONLY assembly
 
 
 --
--- TOC entry 3353 (class 2606 OID 35192)
+-- TOC entry 3360 (class 2606 OID 35192)
 -- Name: buyable buyable_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2762,7 +3003,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3354 (class 2606 OID 35197)
+-- TOC entry 3361 (class 2606 OID 35197)
 -- Name: buyable buyable_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2771,7 +3012,7 @@ ALTER TABLE ONLY buyable
 
 
 --
--- TOC entry 3355 (class 2606 OID 35202)
+-- TOC entry 3362 (class 2606 OID 35202)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2780,7 +3021,7 @@ ALTER TABLE ONLY definition
 
 
 --
--- TOC entry 3356 (class 2606 OID 35207)
+-- TOC entry 3363 (class 2606 OID 35207)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2789,7 +3030,7 @@ ALTER TABLE ONLY information
 
 
 --
--- TOC entry 3357 (class 2606 OID 35212)
+-- TOC entry 3364 (class 2606 OID 35212)
 -- Name: part part_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2798,7 +3039,7 @@ ALTER TABLE ONLY part
 
 
 --
--- TOC entry 3358 (class 2606 OID 35217)
+-- TOC entry 3365 (class 2606 OID 35217)
 -- Name: part part_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -2806,7 +3047,7 @@ ALTER TABLE ONLY part
     ADD CONSTRAINT part_part_code_fkey FOREIGN KEY (part_code, version_num) REFERENCES component.part(part_code, version_num);
 
 
--- Completed on 2017-11-23 11:33:09 EET
+-- Completed on 2017-11-23 18:12:00 EET
 
 --
 -- PostgreSQL database dump complete
