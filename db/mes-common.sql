@@ -700,12 +700,12 @@ BEGIN
 
   SELECT
     max(definition.version_num)
-  FROM 
-    ebom.information, 
+  FROM
+    ebom.information,
     ebom.definition
-  WHERE 
+  WHERE
     information.id = definition.information_id AND
-    information.part_code = (__head.component_spec).part_code AND 
+    information.part_code = (__head.component_spec).part_code AND
     information.version_num = (__head.component_spec).version_num
   INTO
     _max_version_num;
@@ -733,7 +733,7 @@ BEGIN
     FROM
       ebom.information
     WHERE
-      information.part_code = (__head.component_spec).part_code AND 
+      information.part_code = (__head.component_spec).part_code AND
       information.version_num = (__head.component_spec).version_num
     INTO
       _information_id;
@@ -902,21 +902,3 @@ $BODY$
   COST 100;
 ALTER FUNCTION ebom.reinit(bigint, common.component_specification[])
   OWNER TO postgres;
-
-
-SET search_path = ebom, pg_catalog;
-INSERT INTO information VALUES (1, DEFAULT, '11.31.050-001', 1, '11с31п-50х40: information', '2017-10-23');
-INSERT INTO definition VALUES (1, DEFAULT, '11с31п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21 20:55:30.985148+03', 1);
-INSERT INTO assembly VALUES (1, '80.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO assembly VALUES (1, '82.31.050-001', 1, 1.0000, 'ASSEMBLY');
-INSERT INTO buyable VALUES (1, 'Гайка М12', 1, 1.0000, 'BUYABLE');
-INSERT INTO part VALUES (1, '40.31.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '50.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '51.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '52.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '53.01.004-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '60.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '61.01.050-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '70.01.050-001', 1, 2.0000, 'PART');
-INSERT INTO part VALUES (1, '70.04.020-001', 1, 1.0000, 'PART');
-INSERT INTO part VALUES (1, '72.01.009-001', 1, 2.0000, 'PART');
