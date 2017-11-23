@@ -75,6 +75,176 @@ def _adapt(o):
             return _ext.adapt(o)
 
 
+class ComponentSpecification(object):
+    def __init__(self, s=None, curs=None):
+        self.part_code = ''
+        self.version_num = 0
+        self.quantity = Decimal(0)
+        self.uom_code = ''
+        self.component_type = ''
+        if s:
+            self.from_string(s)
+
+    def __repr__(self):
+        return "{0}(part_code={1}, version_num={2}, quantity={3}, uom_code={4}, component_type={5})" \
+            .format(type(self).__name__,
+                    self.part_code,
+                    self.version_num,
+                    str(self.quantity),
+                    self.uom_code,
+                    self.component_type)
+
+    def __conform__(self, proto):
+        if proto == _ext.ISQLQuote:
+            return self
+
+    def to_dict(self):
+        return {"part_code": self.good_code,
+                "version_num": int(self.quantity),
+                "quantity": float(self.quantity),
+                "uom_code": self.uom_code,
+                "component_type": self.component_type}
+
+    def from_dict(self, d):
+        self.part_code = d['part_code']
+        self.version_num = int(d['version_num'])
+        self.quantity = Decimal(d['quantity'])
+        self.uom_code = d['uom_code']
+        self.component_type = d['component_type']
+
+    def from_tuple(self, t):
+        self.part_code = t[0]
+        self.version_num = int(t[1])
+        self.quantity = Decimal(t[2])
+        self.uom_code = t[3]
+        self.component_type = t[4]
+
+    def from_string(self, s):
+        if s is None:
+            return None
+        m = re.match(r"\((\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?\)", s)
+        if m:
+            self.from_tuple((m.group(1),
+                             m.group(2),
+                             m.group(3),
+                             m.group(4),
+                             m.group(5)))
+        else:
+            raise psycopg2.InterfaceError("bad component_specification representation: %r" % s)
+
+    def getquoted(self):
+        return "({0}, {1}, {2})::common.component_specification"\
+            .format(_adapt(self.part_code),
+                    _adapt(self.version_num),
+                    _adapt(self.quantity),
+                    _adapt(self.uom_code),
+                    _adapt(self.component_type))
+
+
+def register_common_component_specification(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'component_specification')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'component_specification')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    COMPONENT_SPECIFICATION = _ext.new_type((oid1,), "COMPONENT_SPECIFICATION", ComponentSpecification)
+    COMPONENT_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "COMPONENT_SPECIFICATION_ARRAY", COMPONENT_SPECIFICATION)
+
+    _ext.register_type(COMPONENT_SPECIFICATION, conn_or_curs)
+    _ext.register_type(COMPONENT_SPECIFICATION_ARRAY, conn_or_curs)
+
+    return COMPONENT_SPECIFICATION
+
+
+class MaterialSpecification(object):
+    def __init__(self, s=None, curs=None):
+        self.part_code = ''
+        self.version_num = 0
+        self.quantity = Decimal(0)
+        self.uom_code = ''
+        self.material_type = ''
+        if s:
+            self.from_string(s)
+
+    def __repr__(self):
+        return "{0}(part_code={1}, version_num={2}, quantity={3}, uom_code={4}, material_type={5})" \
+            .format(type(self).__name__,
+                    self.part_code,
+                    self.version_num,
+                    str(self.quantity),
+                    self.uom_code,
+                    self.material_type)
+
+    def __conform__(self, proto):
+        if proto == _ext.ISQLQuote:
+            return self
+
+    def to_dict(self):
+        return {"part_code": self.good_code,
+                "version_num": int(self.quantity),
+                "quantity": float(self.quantity),
+                "uom_code": self.uom_code,
+                "material_type": self.material_type}
+
+    def from_dict(self, d):
+        self.part_code = d['part_code']
+        self.version_num = int(d['version_num'])
+        self.quantity = Decimal(d['quantity'])
+        self.uom_code = d['uom_code']
+        self.material_type = d['material_type']
+
+    def from_tuple(self, t):
+        self.part_code = t[0]
+        self.version_num = int(t[1])
+        self.quantity = Decimal(t[2])
+        self.uom_code = t[3]
+        self.material_type = t[4]
+
+    def from_string(self, s):
+        if s is None:
+            return None
+        m = re.match(r"\((\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?\)", s)
+        if m:
+            self.from_tuple((m.group(1),
+                             m.group(2),
+                             m.group(3),
+                             m.group(4),
+                             m.group(5)))
+        else:
+            raise psycopg2.InterfaceError("bad material_specification representation: %r" % s)
+
+    def getquoted(self):
+        return "({0}, {1}, {2})::common.material_specification"\
+            .format(_adapt(self.part_code),
+                    _adapt(self.version_num),
+                    _adapt(self.quantity),
+                    _adapt(self.uom_code),
+                    _adapt(self.material_type))
+
+
+def register_common_material_specification(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'material_specification')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'material_specification')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    MATERIAL_SPECIFICATION = _ext.new_type((oid1,), "MATERIAL_SPECIFICATION", MaterialSpecification)
+    MATERIAL_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "MATERIAL_SPECIFICATION_ARRAY", MATERIAL_SPECIFICATION)
+
+    _ext.register_type(MATERIAL_SPECIFICATION, conn_or_curs)
+    _ext.register_type(MATERIAL_SPECIFICATION_ARRAY, conn_or_curs)
+
+    return MATERIAL_SPECIFICATION
+
+
 class DocumentBody(object):
     def __init__(self, s=None, curs=None):
         self.good_code = ''
@@ -390,6 +560,8 @@ def register_common_outbound_head(oid=None, conn_or_curs=None):
 
 def register(conn):
     psycopg2.extras.register_uuid()
+    register_common_component_specification(conn_or_curs=conn)
+    register_common_material_specification(conn_or_curs=conn)
     register_common_document_body(conn_or_curs=conn)
     register_common_document_head(conn_or_curs=conn)
     register_common_outbound_head(conn_or_curs=conn)
