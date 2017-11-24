@@ -1,2 +1,2 @@
 1) correct semantic: doctype or document_type
-
+2) +version_num to part_code

@@ -133,7 +133,7 @@ class ComponentSpecification(object):
             raise psycopg2.InterfaceError("bad component_specification representation: %r" % s)
 
     def getquoted(self):
-        return "({0}, {1}, {2})::common.component_specification"\
+        return "({0}, {1}, {2}, {3}, {4})::common.component_specification"\
             .format(_adapt(self.part_code),
                     _adapt(self.version_num),
                     _adapt(self.quantity),
@@ -218,7 +218,7 @@ class MaterialSpecification(object):
             raise psycopg2.InterfaceError("bad material_specification representation: %r" % s)
 
     def getquoted(self):
-        return "({0}, {1}, {2})::common.material_specification"\
+        return "({0}, {1}, {2}, {3}, {4})::common.material_specification"\
             .format(_adapt(self.part_code),
                     _adapt(self.version_num),
                     _adapt(self.quantity),
@@ -243,6 +243,453 @@ def register_common_material_specification(oid=None, conn_or_curs=None):
     _ext.register_type(MATERIAL_SPECIFICATION_ARRAY, conn_or_curs)
 
     return MATERIAL_SPECIFICATION
+
+
+class PersonnelSpecification(object):
+    def __init__(self, s=None, curs=None):
+        self.personnel_code = ''
+        self.version_num = 0
+        self.quantity = Decimal(0)
+        self.uom_code = ''
+        if s:
+            self.from_string(s)
+
+    def __repr__(self):
+        return "{0}(personnel_code={1}, version_num={2}, quantity={3}, uom_code={4})" \
+            .format(type(self).__name__,
+                    self.personnel_code,
+                    self.version_num,
+                    str(self.quantity),
+                    self.uom_code)
+
+    def __conform__(self, proto):
+        if proto == _ext.ISQLQuote:
+            return self
+
+    def to_dict(self):
+        return {"personnel_code": self.good_code,
+                "version_num": int(self.quantity),
+                "quantity": float(self.quantity),
+                "uom_code": self.uom_code}
+
+    def from_dict(self, d):
+        self.personnel_code = d['personnel_code']
+        self.version_num = int(d['version_num'])
+        self.quantity = Decimal(d['quantity'])
+        self.uom_code = d['uom_code']
+
+    def from_tuple(self, t):
+        self.personnel_code = t[0]
+        self.version_num = int(t[1])
+        self.quantity = Decimal(t[2])
+        self.uom_code = t[3]
+
+    def from_string(self, s):
+        if s is None:
+            return None
+        m = re.match(r"\((\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?\)", s)
+        if m:
+            self.from_tuple((m.group(1),
+                             m.group(2),
+                             m.group(3),
+                             m.group(4)))
+        else:
+            raise psycopg2.InterfaceError("bad personnel_specification representation: %r" % s)
+
+    def getquoted(self):
+        return "({0}, {1}, {2}, {4})::common.personnel_specification"\
+            .format(_adapt(self.personnel_code),
+                    _adapt(self.version_num),
+                    _adapt(self.quantity),
+                    _adapt(self.uom_code))
+
+
+def register_common_personnel_specification(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'personnel_specification')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'personnel_specification')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    PERSONNEL_SPECIFICATION = _ext.new_type((oid1,), "PERSONNEL_SPECIFICATION", PersonnelSpecification)
+    PERSONNEL_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "PERSONNEL_SPECIFICATION_ARRAY", PERSONNEL_SPECIFICATION)
+
+    _ext.register_type(PERSONNEL_SPECIFICATION, conn_or_curs)
+    _ext.register_type(PERSONNEL_SPECIFICATION_ARRAY, conn_or_curs)
+
+    return PERSONNEL_SPECIFICATION
+
+
+class ToolingSpecification(object):
+    def __init__(self, s=None, curs=None):
+        self.tooling_code = ''
+        self.version_num = 0
+        self.quantity = Decimal(0)
+        self.uom_code = ''
+        if s:
+            self.from_string(s)
+
+    def __repr__(self):
+        return "{0}(tooling_code={1}, version_num={2}, quantity={3}, uom_code={4})" \
+            .format(type(self).__name__,
+                    self.tooling_code,
+                    self.version_num,
+                    str(self.quantity),
+                    self.uom_code)
+
+    def __conform__(self, proto):
+        if proto == _ext.ISQLQuote:
+            return self
+
+    def to_dict(self):
+        return {"tooling_code": self.good_code,
+                "version_num": int(self.quantity),
+                "quantity": float(self.quantity),
+                "uom_code": self.uom_code}
+
+    def from_dict(self, d):
+        self.tooling_code = d['tooling_code']
+        self.version_num = int(d['version_num'])
+        self.quantity = Decimal(d['quantity'])
+        self.uom_code = d['uom_code']
+
+    def from_tuple(self, t):
+        self.tooling_code = t[0]
+        self.version_num = int(t[1])
+        self.quantity = Decimal(t[2])
+        self.uom_code = t[3]
+
+    def from_string(self, s):
+        if s is None:
+            return None
+        m = re.match(r"\((\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?\)", s)
+        if m:
+            self.from_tuple((m.group(1),
+                             m.group(2),
+                             m.group(3),
+                             m.group(4)))
+        else:
+            raise psycopg2.InterfaceError("bad tooling_specification representation: %r" % s)
+
+    def getquoted(self):
+        return "({0}, {1}, {2}, {4})::common.tooling_specification"\
+            .format(_adapt(self.tooling_code),
+                    _adapt(self.version_num),
+                    _adapt(self.quantity),
+                    _adapt(self.uom_code))
+
+
+def register_common_tooling_specification(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'tooling_specification')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'tooling_specification')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    TOOLING_SPECIFICATION = _ext.new_type((oid1,), "TOOLING_SPECIFICATION", ToolingSpecification)
+    TOOLING_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "TOOLING_SPECIFICATION_ARRAY", TOOLING_SPECIFICATION)
+
+    _ext.register_type(TOOLING_SPECIFICATION, conn_or_curs)
+    _ext.register_type(TOOLING_SPECIFICATION_ARRAY, conn_or_curs)
+
+    return TOOLING_SPECIFICATION
+
+
+class EquipmentSpecification(object):
+    def __init__(self, s=None, curs=None):
+        self.equipment_code = ''
+        self.version_num = 0
+        self.quantity = Decimal(0)
+        self.uom_code = ''
+        if s:
+            self.from_string(s)
+
+    def __repr__(self):
+        return "{0}(equipment_code={1}, version_num={2}, quantity={3}, uom_code={4})" \
+            .format(type(self).__name__,
+                    self.equipment_code,
+                    self.version_num,
+                    str(self.quantity),
+                    self.uom_code)
+
+    def __conform__(self, proto):
+        if proto == _ext.ISQLQuote:
+            return self
+
+    def to_dict(self):
+        return {"equipment_code": self.good_code,
+                "version_num": int(self.quantity),
+                "quantity": float(self.quantity),
+                "uom_code": self.uom_code}
+
+    def from_dict(self, d):
+        self.equipment_code = d['equipment_code']
+        self.version_num = int(d['version_num'])
+        self.quantity = Decimal(d['quantity'])
+        self.uom_code = d['uom_code']
+
+    def from_tuple(self, t):
+        self.equipment_code = t[0]
+        self.version_num = int(t[1])
+        self.quantity = Decimal(t[2])
+        self.uom_code = t[3]
+
+    def from_string(self, s):
+        if s is None:
+            return None
+        m = re.match(r"\((\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?\)", s)
+        if m:
+            self.from_tuple((m.group(1),
+                             m.group(2),
+                             m.group(3),
+                             m.group(4)))
+        else:
+            raise psycopg2.InterfaceError("bad equipment_specification representation: %r" % s)
+
+    def getquoted(self):
+        return "({0}, {1}, {2}, {4})::common.equipment_specification"\
+            .format(_adapt(self.equipment_code),
+                    _adapt(self.version_num),
+                    _adapt(self.quantity),
+                    _adapt(self.uom_code))
+
+
+def register_common_equipment_specification(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'equipment_specification')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'equipment_specification')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    EQUIPMENT_SPECIFICATION = _ext.new_type((oid1,), "EQUIPMENT_SPECIFICATION", EquipmentSpecification)
+    EQUIPMENT_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "EQUIPMENT_SPECIFICATION_ARRAY", EQUIPMENT_SPECIFICATION)
+
+    _ext.register_type(EQUIPMENT_SPECIFICATION, conn_or_curs)
+    _ext.register_type(EQUIPMENT_SPECIFICATION_ARRAY, conn_or_curs)
+
+    return EQUIPMENT_SPECIFICATION
+
+
+class DependencySpecification(object):
+    def __init__(self, s=None, curs=None):
+        self.ancestor = None
+        self.descendant = None
+        self.depth = None
+        if s:
+            self.from_string(s)
+
+    def __repr__(self):
+        return "{0}(dependency_code={1}, version_num={2}, quantity={3})" \
+            .format(type(self).__name__,
+                    self.ancestor,
+                    self.descendant,
+                    self.depth)
+
+    def __conform__(self, proto):
+        if proto == _ext.ISQLQuote:
+            return self
+
+    def to_dict(self):
+        return {"ancestor": self.ancestor,
+                "descendant": self.descendant,
+                "depth": int(self.depth)}
+
+    def from_dict(self, d):
+        self.ancestor = d['ancestor']
+        self.descendant = d['descendant']
+        self.depth = int(d['depth'])
+
+    def from_tuple(self, t):
+        self.ancestor = uuid.UUID(t[0])
+        self.descendant = uuid.UUID(t[1])
+        self.depth = int(t[2])
+
+    def from_string(self, s):
+        if s is None:
+            return None
+        m = re.match(r"\((\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?,(\"[^\"]*\"|[^,]+)?\)", s)
+        if m:
+            self.from_tuple((m.group(1),
+                             m.group(2),
+                             m.group(3)))
+        else:
+            raise psycopg2.InterfaceError("bad dependency_specification representation: %r" % s)
+
+    def getquoted(self):
+        return "({0}, {1}, {2})::common.dependency_specification"\
+            .format(_adapt(self.ancestor),
+                    _adapt(self.descendant),
+                    _adapt(self.depth))
+
+
+def register_common_dependency_specification(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'dependency_specification')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'dependency_specification')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    DEPENDENCY_SPECIFICATION = _ext.new_type((oid1,), "DEPENDENCY_SPECIFICATION", DependencySpecification)
+    DEPENDENCY_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "DEPENDENCY_SPECIFICATION_ARRAY", DEPENDENCY_SPECIFICATION)
+
+    _ext.register_type(DEPENDENCY_SPECIFICATION, conn_or_curs)
+    _ext.register_type(DEPENDENCY_SPECIFICATION_ARRAY, conn_or_curs)
+
+    return DEPENDENCY_SPECIFICATION
+
+
+class EbomHead(object):
+    def __init__(self, s=None, curs=None):
+        self.document_id = None
+        self.gid = None
+        self.display_name = None
+        self.version_num = None
+        self.document_date = None
+        self.curr_fsmt = None
+        self.document_type = None
+        self.component_spec = None
+        if s:
+            self.from_string(s)
+
+    def from_string(self, s):
+        pass
+
+
+def register_common_ebom_head(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'ebom_head')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'ebom_head')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    EBOM_HEAD = _ext.new_type((oid1,), "EBOM_HEAD", EbomHead)
+    EBOM_HEAD_ARRAY = _ext.new_array_type((oid2,), "EBOM_HEAD_ARRAY", EBOM_HEAD)
+
+    _ext.register_type(EBOM_HEAD, conn_or_curs)
+    _ext.register_type(EBOM_HEAD_ARRAY, conn_or_curs)
+
+    return EBOM_HEAD
+
+
+class MbomHead(object):
+    def __init__(self, s=None, curs=None):
+        self.document_id = None
+        self.gid = None
+        self.display_name = None
+        self.version_num = None
+        self.document_date = None
+        self.curr_fsmt = None
+        self.document_type = None
+        self.material_spec = None
+        if s:
+            self.from_string(s)
+
+    def from_string(self, s):
+        pass
+
+
+def register_common_mbom_head(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'mbom_head')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'mbom_head')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    MBOM_HEAD = _ext.new_type((oid1,), "MBOM_HEAD", MbomHead)
+    MBOM_HEAD_ARRAY = _ext.new_array_type((oid2,), "MBOM_HEAD_ARRAY", MBOM_HEAD)
+
+    _ext.register_type(MBOM_HEAD, conn_or_curs)
+    _ext.register_type(MBOM_HEAD_ARRAY, conn_or_curs)
+
+    return MBOM_HEAD
+
+
+class OperationHead(object):
+    def __init__(self, s=None, curs=None):
+        self.document_id = None
+        self.gid = None
+        self.display_name = None
+        self.version_num = None
+        self.document_date = None
+        self.curr_fsmt = None
+        self.document_type = None
+        self.producible_spec = None
+        if s:
+            self.from_string(s)
+
+    def from_string(self, s):
+        pass
+
+
+def register_common_operation_head(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'operation_head')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'operation_head')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    OPERATION_HEAD = _ext.new_type((oid1,), "OPERATION_HEAD", OperationHead)
+    OPERATION_HEAD_ARRAY = _ext.new_array_type((oid2,), "OPERATION_HEAD_ARRAY", OPERATION_HEAD)
+
+    _ext.register_type(OPERATION_HEAD, conn_or_curs)
+    _ext.register_type(OPERATION_HEAD_ARRAY, conn_or_curs)
+
+    return OPERATION_HEAD
+
+
+class OperationSegment(object):
+    def __init__(self, s=None, curs=None):
+        self.gid = None
+        self.operation_code = None
+        self.material_spec = None
+        self.personnel_spec = None
+        self.equipmet_spec = None
+        self.tooling_spec = None
+        if s:
+            self.from_string(s)
+
+    def from_string(self, s):
+        pass
+
+
+def register_common_operation_segment(oid=None, conn_or_curs=None):
+    if not oid:
+        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'operation_segment')
+        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'operation_segment')
+    elif isinstance(oid, (list, tuple)):
+        oid1, oid2 = oid
+    else:
+        print('error')
+        exit(1)
+
+    OPERATION_SEGMENT = _ext.new_type((oid1,), "OPERATION_SEGMENT", OperationSegment)
+    OPERATION_SEGMENT_ARRAY = _ext.new_array_type((oid2,), "OPERATION_SEGMENT_ARRAY", OPERATION_SEGMENT)
+
+    _ext.register_type(OPERATION_SEGMENT, conn_or_curs)
+    _ext.register_type(OPERATION_SEGMENT_ARRAY, conn_or_curs)
+
+    return OPERATION_SEGMENT
 
 
 class DocumentBody(object):
@@ -562,6 +1009,14 @@ def register(conn):
     psycopg2.extras.register_uuid()
     register_common_component_specification(conn_or_curs=conn)
     register_common_material_specification(conn_or_curs=conn)
+    register_common_personnel_specification(conn_or_curs=conn)
+    register_common_tooling_specification(conn_or_curs=conn)
+    register_common_equipment_specification(conn_or_curs=conn)
+    register_common_dependency_specification(conn_or_curs=conn)
+    register_common_operation_segment(conn_or_curs=conn)
+    register_common_ebom_head(conn_or_curs=conn)
+    register_common_mbom_head(conn_or_curs=conn)
+    register_common_operation_head(conn_or_curs=conn)
     register_common_document_body(conn_or_curs=conn)
     register_common_document_head(conn_or_curs=conn)
     register_common_outbound_head(conn_or_curs=conn)
