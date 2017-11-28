@@ -4,34 +4,43 @@ CREATE TYPE common.material_specification AS (
   version_num integer,
   quantity    common.quantity,
   uom_code    character varying,
+  -- weight common.quantity,
   material_type common.material_kind
 );
 
 
-CREATE TYPE common.material_oper AS (
+CREATE TYPE common.operation_material AS (
   part_code character varying,
   version_num integer,
-  material_type common.material_kind
-  consumed_qty common.quantity,
-  consumed_uom character varying,
-  rationing_qty common.quantity,
-  rationing_uom character varying,
+  quantity common.quantity, -- consumption_rate
+  uom_code character varying, -- measure_EV
+  --workpiece_weight common.quantity,
+  material_type common.material_kind,
+  rationing_qty integer, -- единица нормарования (на сколько операций задана норма)
+   
+  -- part_weight common.quantity,    -- дублирует значение из operation_head.producible_spec.weight
+  -- part_count integer,             -- дублирует значение из operation_head.producible_spec.quantity для всех записей 
+  -- utilisation_ratio numeric(3,2)  -- отношение material_specification.weight operation_head.producible_spec.weight
 );
 
-CREATE TYPE common.personnel_oper AS (
+CREATE TYPE common.operation_material AS (
+  rationing_qty integer, -- единица нормарования (на сколько операций задана норма)
+  material_spec common.material_specification
+);
+
+ 
+CREATE TYPE common.operation_personnel AS (
   personnel_code character varying,
   version_num integer,
-  simultaneously_qty integer,
-  simultaneously_uom character varying,
-  batch_qty common.quantity,
-  batch_uom character varying,
-  time_per_piece_ratio common.quantity,
-  standard_setup_time interval,
-  standard_piece_time interval,
-  workers_qty integer,
-  rationing_qty common.quantity,
-  rationing_uom character varying,
+  rationing_qty integer,              -- единица нормирования (на сколько операций задана норма)
+  batch_qty integer,                  -- ОП, объем партии
+  worker_qty integer,                 -- количество рабочих, занятых в операции
+  setup_time interval,                -- норма подготовительно-заключительного времени
+  piece_time interval,                -- норма штучного времени
+  simultaneously_qty integer,         -- количество одновременно изготавливаемых изделий при выполнении одной операции
+  simultaneously_factor numeric(3,2)  -- коеффициент штучного времени при многостаночном обслуживании unit time factor for multi-maintenance
 );
+
 
 
 /*
@@ -63,7 +72,7 @@ CREATE TYPE common.tooling_specification AS (
 CREATE TYPE common.operation_segment AS (
   gid uuid,
   operation_code character varying,
-  --material_spec  common.material_specification[],
+  material_spec  common.material_specification[],
   personnel_spec common.personnel_specification[],
   equipmet_spec  common.equipment_specification[],
   tooling_spec   common.tooling_specification[]
