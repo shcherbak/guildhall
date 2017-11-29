@@ -112,6 +112,10 @@ CREATE TYPE common.personnel_specification AS (
   -- simultaneously_factor numeric(3,2)  -- коеффициент штучного времени при многостаночном обслуживании unit time factor for multi-maintenance
 );
 
+-- Table: operation.tooling
+
+
+
 
 CREATE TYPE common.operation_head AS (
   document_id bigint,
