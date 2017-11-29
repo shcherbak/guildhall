@@ -46,15 +46,19 @@ SET default_with_oids = false;
 -- Name: material; Type: TABLE; Schema: operation; Owner: postgres
 --
 
-CREATE TABLE material (
-    segment_id bigint NOT NULL,
-    serial_num integer DEFAULT 1 NOT NULL,
-    part_code character varying NOT NULL,
-    version_num integer NOT NULL,
-    consumed_qty common.quantity,
-    consumed_uom character varying DEFAULT 'pcs'::character varying NOT NULL,
-    rationing_qty common.quantity,
-    rationing_uom character varying DEFAULT 'pcs'::character varying NOT NULL
+
+CREATE TABLE material
+(
+  segment_id bigint NOT NULL,
+  part_code character varying NOT NULL,
+  version_num integer NOT NULL,
+  quantity common.quantity NOT NULL,
+  uom_code character varying NOT NULL DEFAULT 'pcs'::character varying,
+  material_type common.material_kind NOT NULL,
+  CONSTRAINT material_pkey PRIMARY KEY (segment_id, part_code)
+)
+WITH (
+  OIDS=FALSE
 );
 
 
