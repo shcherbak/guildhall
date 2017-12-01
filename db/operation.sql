@@ -256,18 +256,16 @@ BEGIN
     definition.published_date,
     definition.curr_fsmt,
     'OPERATION'::common.document_kind,
-      (producible.part_code, 
-      producible.version_num, 
-      producible.quantity, 
-      producible.uom_code, 
-      producible.material_type)::common.material_specification
+      (information.part_code, 
+      information.version_num, 
+      1.0::common.quantity, 
+      'pcs', 
+      'PRODUCIBLE')::common.material_specification
     )::common.operation_head
   FROM
     operation.information, 
-    operation.definition, 
-    operation.producible
+    operation.definition
   WHERE
-    information.id = producible.information_id AND
     information.id = definition.information_id AND
     definition.id = __document_id;
 END;
@@ -312,22 +310,146 @@ equipmet_spec  common.equipment_specification[],
 tooling_spec   common.tooling_specification[]
 */
 
+CREATE OR REPLACE FUNCTION operation.get_consumable_spec(__segment_id bigint)
+  RETURNS common.consumable_specification[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY (
+      SELECT 
+        (material.part_code, 
+        material.version_num, 
+        material.quantity, 
+        material.uom_code, 
+        material.material_type, 
+        material.rationing_qty)::common.consumable_specification
+      FROM 
+        operation.material
+      WHERE 
+        material.segment_id = __segment_id
+    );
+END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION operation.get_consumable_spec(bigint)
+  OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION operation.get_personnel_spec(__segment_id bigint)
+  RETURNS common.personnel_specification[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY (
+      SELECT 
+        (personnel.personnel_code, 
+        personnel.version_num, 
+        personnel.rationing_qty, 
+        personnel.batch_qty, 
+        personnel.workers_qty, 
+        personnel.setup_time, 
+        personnel.piece_time)::common.personnel_specification
+      FROM 
+        operation.personnel
+      WHERE 
+        personnel.segment_id = __segment_id
+    );
+END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION operation.get_personnel_spec(bigint)
+  OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION operation.get_equipment_spec(__segment_id bigint)
+  RETURNS common.equipment_specification[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY (
+      SELECT 
+        (equipment.equipment_code, 
+        equipment.version_num, 
+        equipment.quantity, 
+        equipment.uom_code)::common.equipment_specification
+      FROM 
+        operation.equipment
+      WHERE 
+        equipment.segment_id = __segment_id
+    );
+END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION operation.get_equipment_spec(bigint)
+  OWNER TO postgres;
+
+
+CREATE OR REPLACE FUNCTION operation.get_tooling_spec(__segment_id bigint)
+  RETURNS common.tooling_specification[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY (
+      SELECT 
+        (tooling.tooling_code, 
+        tooling.version_num, 
+        tooling.quantity, 
+        tooling.uom_code)::common.tooling_specification
+      FROM 
+        operation.tooling
+      WHERE 
+        tooling.segment_id = __segment_id
+    );
+END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION operation.get_tooling_spec(bigint)
+  OWNER TO postgres;
+
+
+
+CREATE OR REPLACE FUNCTION operation.get_segment(__segment_id bigint)
+  RETURNS common.operation_segment AS
+$BODY$
+BEGIN
+  RETURN
+
+      --SELECT 
+        (NULL::uuid,
+        segment.operation_code,
+        operation.get_consumable_spec(__segment_id := __segment_id),
+        operation.get_personnel_spec(__segment_id := __segment_id),
+        operation.get_equipment_spec(__segment_id := __segment_id),
+        operation.get_tooling_spec(__segment_id := __segment_id))::common.operation_segment
+      FROM 
+        operation.segment
+      WHERE 
+        segment.id = __segment_id;
+    --;
+END
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION operation.get_segment(bigint)
+  OWNER TO postgres;
+
+
 CREATE OR REPLACE FUNCTION operation.get_body(__document_id bigint)
   RETURNS common.operation_segment[] AS
 $BODY$
 BEGIN
   RETURN
     ARRAY(
-      SELECT
-        (material.part_code,
-        material.version_num,
-        material.quantity,
-        'pcs',
-        material.material_type)::common.operation_segment
-      FROM
-        operation.material
-      WHERE
-        material.definition_id = __document_id
+      SELECT 
+        operation.get_segment(segment.id)
+      FROM 
+        operation.segment
+      WHERE 
+        segment.definition_id = __document_id
     );
 END
 $BODY$
