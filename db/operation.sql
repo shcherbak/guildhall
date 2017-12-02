@@ -419,7 +419,7 @@ BEGIN
   RETURN
 
       --SELECT 
-        (NULL::uuid,
+        (segment.gid,
         segment.operation_code,
         operation.get_consumable_spec(__segment_id := __segment_id),
         operation.get_personnel_spec(__segment_id := __segment_id),
