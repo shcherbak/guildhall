@@ -596,66 +596,65 @@ ALTER FUNCTION operation.init(common.operation_head, common.material_specificati
   OWNER TO postgres;
 
 
--- DROP FUNCTION operation.reinit(bigint, common.material_specification[]);
+-- Function: operation.reinit(bigint, common.operation_segment[], common.dependency_specification[])
+
+-- DROP FUNCTION operation.reinit(bigint, common.operation_segment[], common.dependency_specification[]);
 
 CREATE OR REPLACE FUNCTION operation.reinit(
     __document_id bigint,
     __body common.operation_segment[],
-    __deps dependency_specification[])
+    __deps common.dependency_specification[])
   RETURNS void AS
 $BODY$
 DECLARE
-  _item common.material_specification;
+  _segment_id bigint;
+  _seg common.operation_segment;
+  _dep common.dependency_specification;
 BEGIN
 
   DELETE FROM
-    operation.material
+    operation.segment
   WHERE
     definition_id = __document_id;
 
-  FOREACH _item IN
+  FOREACH _seg IN
     ARRAY __body
   LOOP
-    IF (_item.material_type = 'CONSUMABLE') THEN
-      INSERT INTO
-        operation.consumable (
-          definition_id,
-          part_code,
-          version_num,
-          quantity,
-          uom_code,
-          material_type)
-      VALUES (
-        __document_id,
-        _item.part_code,
-        _item.version_num,
-        _item.quantity,
-        _item.uom_code,
-        _item.material_type);
-    ELSIF (_item.material_type = 'PRIMAL') THEN
-      INSERT INTO
-        operation.primal (
-          definition_id,
-          part_code,
-          version_num,
-          quantity,
-          uom_code,
-          material_type)
-      VALUES (
-        __document_id,
-        _item.part_code,
-        _item.version_num,
-        _item.quantity,
-        _item.uom_code,
-        _item.material_type);
-    ELSE
-      RAISE '% unknown material_type', _item;
-    END IF;
+    INSERT INTO
+      operation.segment (
+        id,
+        gid,
+        definition_id,
+        operation_code)
+    VALUES (
+      DEFAULT,
+      _seg.gid,
+      __document_id,
+      _seg.operation_code)
+    RETURNING id INTO _segment_id;
+    PERFORM operation.set_consumable_spec(_segment_id, _seg.consumable_spec);
+    PERFORM operation.set_personnel_spec(_segment_id, _seg.personnel_spec);
+    PERFORM operation.set_equipment_spec(_segment_id, _seg.equipmet_spec);
+    PERFORM operation.set_tooling_spec(_segment_id, _seg.tooling_spec);
+  END LOOP;
+
+  FOREACH _dep IN
+    ARRAY __deps
+  LOOP
+    INSERT INTO
+      operation.dependency (
+        ancestor,
+        descendant,
+        depth)
+    VALUES (
+      _item.ancestor,
+      _item.descendant,
+      _item.depth);
   END LOOP;
 
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION operation.reinit(bigint, common.material_specification[], dependency_specification[])
+ALTER FUNCTION operation.reinit(bigint, common.operation_segment[], common.dependency_specification[])
   OWNER TO postgres;
