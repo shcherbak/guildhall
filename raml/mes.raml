@@ -10,15 +10,6 @@ documentation:
   - title: Use cases
     content: |
       Show the manufacturing capacity
-  - title: Product data processing
-    content: |
-      Stage 0. Load inventory data, location data
-      Stage 1. Load EBOM to system, COMMIT
-      Stage 2. Define material route (if not exists, create referential data (?))
-      Stage 3. Define MBOM for earch route stride/segment
-      Stage 4. Define Operation for each MBOM
-      Stage 5. Generate Product definitions for each MBOM*Route variant
-  - title: 
   - title: Manufacturing Execution System
     content: |
       Personnel Capability
@@ -45,12 +36,6 @@ documentation:
       Consumable Actual
 
 schemas:
-  - Product: !include json/commons-material-schema.json
-  - Products: !include json/commons-materials-schema.json
-  - Material: !include json/commons-material-schema.json
-  - Materials: !include json/commons-materials-schema.json
-  - Component: !include json/commons-material-schema.json
-  - Components: !include json/commons-materials-schema.json
   - Inventory: !include json/commons-material-schema.json
   - Inventories: !include json/commons-materials-schema.json
   - Equipment: !include json/commons-material-schema.json
@@ -74,111 +59,7 @@ schemas:
   - Routes: !include json/commons-message-schema.json
 
 
-/materials:
-  get:
-    description: Get a list of Materials
-    responses:
-      200:
-        body:
-          application/json:
-            schema: Materials
-  post:
-    description: Add new Material
-    body:
-      application/json:
-        schema: Material
-    responses:
-      201:
-        body:
-          application/json:
-            schema: Material
-  /{resourceId}:
-    get:
-      description: Get a Material by ID
-      responses:
-        200:
-          body:
-            application/json:
-              schema: Material
-        404:
-          body:
-            application/json:
-              schema: Error
-    put:
-      description: Update Material by ID
-      body:
-        application/json:
-          schema: Material
-      responses:
-        200:
-          body:
-            application/json:
-              schema: Material
-        404:
-          body:
-            application/json:
-              schema: Error
-    delete:
-      description: Delete a Material by ID
-      responses:
-        204:
-        404:
-          body:
-            application/json:
-              schema: Error
 
-/components:
-  get:
-    description: Get a list of Components
-    responses:
-      200:
-        body:
-          application/json:
-            schema: Components
-  post:
-    description: Add new Component
-    body:
-      application/json:
-        schema: Component
-    responses:
-      201:
-        body:
-          application/json:
-            schema: Component
-  /{resourceId}:
-    get:
-      description: Get a Component by ID
-      responses:
-        200:
-          body:
-            application/json:
-              schema: Component
-        404:
-          body:
-            application/json:
-              schema: Error
-    put:
-      description: Update Component by ID
-      body:
-        application/json:
-          schema: Component
-      responses:
-        200:
-          body:
-            application/json:
-              schema: Component
-        404:
-          body:
-            application/json:
-              schema: Error
-    delete:
-      description: Delete a Component by ID
-      responses:
-        204:
-        404:
-          body:
-            application/json:
-              schema: Error
 
 /inventories:
   get:
@@ -232,6 +113,165 @@ schemas:
           body:
             application/json:
               schema: Error
+
+  /materials:
+    get:
+      description: Get a list of Materials
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Inventories
+    post:
+      description: Add new Material
+      body:
+        application/json:
+          schema: Inventory
+      responses:
+        201:
+          body:
+            application/json:
+              schema: Inventory
+    /{resourceId}:
+      get:
+        description: Get a Material by ID
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Inventory
+          404:
+            body:
+              application/json:
+                schema: Error
+      put:
+        description: Update Material by ID
+        body:
+          application/json:
+            schema: Inventory
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Inventory
+          404:
+            body:
+              application/json:
+                schema: Error
+      delete:
+        description: Delete a Material by ID
+        responses:
+          204:
+          404:
+            body:
+              application/json:
+                schema: Error
+
+  /components:
+    get:
+      description: Get a list of Components
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Inventories
+    post:
+      description: Add new Component
+      body:
+        application/json:
+          schema: Inventory
+      responses:
+        201:
+          body:
+            application/json:
+              schema: Inventory
+    /{resourceId}:
+      get:
+        description: Get a Component by ID
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Inventory
+          404:
+            body:
+              application/json:
+                schema: Error
+      put:
+        description: Update Component by ID
+        body:
+          application/json:
+            schema: Inventory
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Inventory
+          404:
+            body:
+              application/json:
+                schema: Error
+      delete:
+        description: Delete a Component by ID
+        responses:
+          204:
+          404:
+            body:
+              application/json:
+                schema: Error
+
+  /products:
+    get:
+      description: Get a list of Products
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Inventories
+    post:
+      description: Add new Product
+      body:
+        application/json:
+          schema: Inventory
+      responses:
+        201:
+          body:
+            application/json:
+              schema: Inventory
+    /{resourceId}:
+      get:
+        description: Get a Product by ID
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Inventory
+          404:
+            body:
+              application/json:
+                schema: Error
+      put:
+        description: Update Product by ID
+        body:
+          application/json:
+            schema: Inventory
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Inventory
+          404:
+            body:
+              application/json:
+                schema: Error
+      delete:
+        description: Delete a Product by ID
+        responses:
+          204:
+          404:
+            body:
+              application/json:
+                schema: Error
 
 /equipments:
   get:
@@ -392,59 +432,6 @@ schemas:
             application/json:
               schema: Error
 
-
-/products:
-  get:
-    description: Get a list of Products
-    responses:
-      200:
-        body:
-          application/json:
-            schema: Products
-  post:
-    description: Add new Product
-    body:
-      application/json:
-        schema: Product
-    responses:
-      201:
-        body:
-          application/json:
-            schema: Product
-  /{resourceId}:
-    get:
-      description: Get a Product by ID
-      responses:
-        200:
-          body:
-            application/json:
-              schema: Product
-        404:
-          body:
-            application/json:
-              schema: Error
-    put:
-      description: Update Product by ID
-      body:
-        application/json:
-          schema: Product
-      responses:
-        200:
-          body:
-            application/json:
-              schema: Product
-        404:
-          body:
-            application/json:
-              schema: Error
-    delete:
-      description: Delete a Product by ID
-      responses:
-        204:
-        404:
-          body:
-            application/json:
-              schema: Error
 
 /requests:
   get:
