@@ -1,3 +1,4 @@
 1) correct semantic: doctype or document_type
 2) +version_num to part_code
-mbom.information filed order
+mbom.information field order
+route.segment -> route.stride
