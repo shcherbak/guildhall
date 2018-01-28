@@ -21,7 +21,7 @@
       "description": "Warehouse storage unit"
     }
   },
-  "additionalPoperties": false,
+  "additionalProperties": false,
   "required": [
     "id",
     "part_code",
