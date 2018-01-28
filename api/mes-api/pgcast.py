@@ -10,46 +10,53 @@ import psycopg2.extras
 import re
 
 
-def _get_pg_nspname_oid(conn, nspname):
-    _sql = 'SELECT oid FROM pg_namespace WHERE nspname = %s'
-    _connection = conn
-    try:
-        _curs = _connection.cursor()
-        _curs.execute(_sql, (nspname,))
-        _oid = _curs.fetchone()[0]
-        _curs.close()
-        return _oid
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
 
+def pg_typ_caster(connection, nspname, typname, mapclass):
+    def _get_pg_nspname_oid():
+        _sql = 'SELECT oid FROM pg_namespace WHERE nspname = %s'
+        try:
+            _curs = connection.cursor()
+            _curs.execute(_sql, (nspname,))
+            _oid = _curs.fetchone()[0]
+            _curs.close()
+            return _oid
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
 
-def _get_pg_typname_oid(conn, nspname, typname):
-    _sql = 'SELECT oid FROM pg_type WHERE typname = %s AND typnamespace = %s;'
-    _connection = conn
-    try:
-        _nspoid = _get_pg_nspname_oid(_connection, nspname)
-        _curs = _connection.cursor()
-        _curs.execute(_sql, (typname, _nspoid,))
-        _oid = _curs.fetchone()[0]
-        _curs.close()
-        return _oid
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
+    def _get_pg_typname_oid():
+        _sql = 'SELECT oid FROM pg_type WHERE typname = %s AND typnamespace = %s;'
+        try:
+            _nspoid = _get_pg_nspname_oid()
+            _curs = connection.cursor()
+            _curs.execute(_sql, (typname, _nspoid,))
+            _oid = _curs.fetchone()[0]
+            _curs.close()
+            return _oid
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
 
+    def _get_pg_typarray_oid():
+        _sql = 'SELECT typarray FROM pg_type WHERE typname = %s AND typnamespace = %s'
+        try:
+            _nspoid = _get_pg_nspname_oid()
+            _curs = connection.cursor()
+            _curs.execute(_sql, (typname, _nspoid,))
+            _oid = _curs.fetchone()[0]
+            _curs.close()
+            return _oid
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
 
-def _get_pg_typarray_oid(conn, nspname, typname):
-    _sql = 'SELECT typarray FROM pg_type WHERE typname = %s AND typnamespace = %s'
-    _connection = conn
-    try:
-        _nspoid = _get_pg_nspname_oid(_connection, nspname)
-        _curs = _connection.cursor()
-        _curs.execute(_sql, (typname, _nspoid,))
-        _oid = _curs.fetchone()[0]
-        _curs.close()
-        return _oid
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
+    oid1 = _get_pg_typname_oid()
+    oid2 = _get_pg_typarray_oid()
 
+    pg_udf_type = _ext.new_type((oid1,), typname.upper(), mapclass)
+    pg_udf_type_array = _ext.new_array_type((oid2,), "{0}_ARRAY".format(typname.upper()), pg_udf_type)
+
+    _ext.register_type(pg_udf_type, connection)
+    _ext.register_type(pg_udf_type_array, connection)
+
+    return pg_udf_type
 
 
 def date_from_py(pydate):
@@ -141,25 +148,6 @@ class ComponentSpecification(object):
                     _adapt(self.component_type))
 
 
-def register_common_component_specification(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'component_specification')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'component_specification')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    COMPONENT_SPECIFICATION = _ext.new_type((oid1,), "COMPONENT_SPECIFICATION", ComponentSpecification)
-    COMPONENT_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "COMPONENT_SPECIFICATION_ARRAY", COMPONENT_SPECIFICATION)
-
-    _ext.register_type(COMPONENT_SPECIFICATION, conn_or_curs)
-    _ext.register_type(COMPONENT_SPECIFICATION_ARRAY, conn_or_curs)
-
-    return COMPONENT_SPECIFICATION
-
-
 class MaterialSpecification(object):
     def __init__(self, s=None, curs=None):
         self.part_code = ''
@@ -226,25 +214,6 @@ class MaterialSpecification(object):
                     _adapt(self.material_type))
 
 
-def register_common_material_specification(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'material_specification')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'material_specification')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    MATERIAL_SPECIFICATION = _ext.new_type((oid1,), "MATERIAL_SPECIFICATION", MaterialSpecification)
-    MATERIAL_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "MATERIAL_SPECIFICATION_ARRAY", MATERIAL_SPECIFICATION)
-
-    _ext.register_type(MATERIAL_SPECIFICATION, conn_or_curs)
-    _ext.register_type(MATERIAL_SPECIFICATION_ARRAY, conn_or_curs)
-
-    return MATERIAL_SPECIFICATION
-
-
 class PersonnelSpecification(object):
     def __init__(self, s=None, curs=None):
         self.personnel_code = ''
@@ -302,25 +271,6 @@ class PersonnelSpecification(object):
                     _adapt(self.version_num),
                     _adapt(self.quantity),
                     _adapt(self.uom_code))
-
-
-def register_common_personnel_specification(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'personnel_specification')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'personnel_specification')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    PERSONNEL_SPECIFICATION = _ext.new_type((oid1,), "PERSONNEL_SPECIFICATION", PersonnelSpecification)
-    PERSONNEL_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "PERSONNEL_SPECIFICATION_ARRAY", PERSONNEL_SPECIFICATION)
-
-    _ext.register_type(PERSONNEL_SPECIFICATION, conn_or_curs)
-    _ext.register_type(PERSONNEL_SPECIFICATION_ARRAY, conn_or_curs)
-
-    return PERSONNEL_SPECIFICATION
 
 
 class ToolingSpecification(object):
@@ -382,25 +332,6 @@ class ToolingSpecification(object):
                     _adapt(self.uom_code))
 
 
-def register_common_tooling_specification(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'tooling_specification')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'tooling_specification')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    TOOLING_SPECIFICATION = _ext.new_type((oid1,), "TOOLING_SPECIFICATION", ToolingSpecification)
-    TOOLING_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "TOOLING_SPECIFICATION_ARRAY", TOOLING_SPECIFICATION)
-
-    _ext.register_type(TOOLING_SPECIFICATION, conn_or_curs)
-    _ext.register_type(TOOLING_SPECIFICATION_ARRAY, conn_or_curs)
-
-    return TOOLING_SPECIFICATION
-
-
 class EquipmentSpecification(object):
     def __init__(self, s=None, curs=None):
         self.equipment_code = ''
@@ -460,25 +391,6 @@ class EquipmentSpecification(object):
                     _adapt(self.uom_code))
 
 
-def register_common_equipment_specification(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'equipment_specification')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'equipment_specification')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    EQUIPMENT_SPECIFICATION = _ext.new_type((oid1,), "EQUIPMENT_SPECIFICATION", EquipmentSpecification)
-    EQUIPMENT_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "EQUIPMENT_SPECIFICATION_ARRAY", EQUIPMENT_SPECIFICATION)
-
-    _ext.register_type(EQUIPMENT_SPECIFICATION, conn_or_curs)
-    _ext.register_type(EQUIPMENT_SPECIFICATION_ARRAY, conn_or_curs)
-
-    return EQUIPMENT_SPECIFICATION
-
-
 class DependencySpecification(object):
     def __init__(self, s=None, curs=None):
         self.ancestor = None
@@ -531,25 +443,6 @@ class DependencySpecification(object):
                     _adapt(self.depth))
 
 
-def register_common_dependency_specification(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'dependency_specification')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'dependency_specification')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    DEPENDENCY_SPECIFICATION = _ext.new_type((oid1,), "DEPENDENCY_SPECIFICATION", DependencySpecification)
-    DEPENDENCY_SPECIFICATION_ARRAY = _ext.new_array_type((oid2,), "DEPENDENCY_SPECIFICATION_ARRAY", DEPENDENCY_SPECIFICATION)
-
-    _ext.register_type(DEPENDENCY_SPECIFICATION, conn_or_curs)
-    _ext.register_type(DEPENDENCY_SPECIFICATION_ARRAY, conn_or_curs)
-
-    return DEPENDENCY_SPECIFICATION
-
-
 class EbomHead(object):
     def __init__(self, s=None, curs=None):
         self.document_id = None
@@ -565,25 +458,6 @@ class EbomHead(object):
 
     def from_string(self, s):
         pass
-
-
-def register_common_ebom_head(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'ebom_head')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'ebom_head')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    EBOM_HEAD = _ext.new_type((oid1,), "EBOM_HEAD", EbomHead)
-    EBOM_HEAD_ARRAY = _ext.new_array_type((oid2,), "EBOM_HEAD_ARRAY", EBOM_HEAD)
-
-    _ext.register_type(EBOM_HEAD, conn_or_curs)
-    _ext.register_type(EBOM_HEAD_ARRAY, conn_or_curs)
-
-    return EBOM_HEAD
 
 
 class MbomHead(object):
@@ -603,25 +477,6 @@ class MbomHead(object):
         pass
 
 
-def register_common_mbom_head(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'mbom_head')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'mbom_head')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    MBOM_HEAD = _ext.new_type((oid1,), "MBOM_HEAD", MbomHead)
-    MBOM_HEAD_ARRAY = _ext.new_array_type((oid2,), "MBOM_HEAD_ARRAY", MBOM_HEAD)
-
-    _ext.register_type(MBOM_HEAD, conn_or_curs)
-    _ext.register_type(MBOM_HEAD_ARRAY, conn_or_curs)
-
-    return MBOM_HEAD
-
-
 class OperationHead(object):
     def __init__(self, s=None, curs=None):
         self.document_id = None
@@ -639,25 +494,6 @@ class OperationHead(object):
         pass
 
 
-def register_common_operation_head(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'operation_head')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'operation_head')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    OPERATION_HEAD = _ext.new_type((oid1,), "OPERATION_HEAD", OperationHead)
-    OPERATION_HEAD_ARRAY = _ext.new_array_type((oid2,), "OPERATION_HEAD_ARRAY", OPERATION_HEAD)
-
-    _ext.register_type(OPERATION_HEAD, conn_or_curs)
-    _ext.register_type(OPERATION_HEAD_ARRAY, conn_or_curs)
-
-    return OPERATION_HEAD
-
-
 class OperationSegment(object):
     def __init__(self, s=None, curs=None):
         self.gid = None
@@ -671,25 +507,6 @@ class OperationSegment(object):
 
     def from_string(self, s):
         pass
-
-
-def register_common_operation_segment(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'operation_segment')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'operation_segment')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    OPERATION_SEGMENT = _ext.new_type((oid1,), "OPERATION_SEGMENT", OperationSegment)
-    OPERATION_SEGMENT_ARRAY = _ext.new_array_type((oid2,), "OPERATION_SEGMENT_ARRAY", OPERATION_SEGMENT)
-
-    _ext.register_type(OPERATION_SEGMENT, conn_or_curs)
-    _ext.register_type(OPERATION_SEGMENT_ARRAY, conn_or_curs)
-
-    return OPERATION_SEGMENT
 
 
 class DocumentBody(object):
@@ -742,25 +559,6 @@ class DocumentBody(object):
             .format(_adapt(self.good_code),
                     _adapt(self.quantity),
                     _adapt(self.uom_code))
-
-
-def register_common_document_body(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'document_body')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'document_body')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-        exit(1)
-
-    DOCUMENT_BODY = _ext.new_type((oid1,), "DOCUMENT_BODY", DocumentBody)
-    DOCUMENT_BODY_ARRAY = _ext.new_array_type((oid2,), "DOCUMENT_BODY_ARRAY", DOCUMENT_BODY)
-
-    _ext.register_type(DOCUMENT_BODY, conn_or_curs)
-    _ext.register_type(DOCUMENT_BODY_ARRAY, conn_or_curs)
-
-    return DOCUMENT_BODY
 
 
 class DocumentHead(object):
@@ -852,24 +650,6 @@ class DocumentHead(object):
                     _adapt(self.facility_code),
                     _adapt(self.curr_fsmt),
                     _adapt(self.doctype))
-
-
-def register_common_document_head(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'document_head')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'document_head')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-
-    DOCUMENT_HEAD = _ext.new_type((oid1,), "DOCUMENT_HEAD", DocumentHead)
-    DOCUMENT_HEAD_ARRAY = _ext.new_array_type((oid2,), "DOCUMENT_HEAD_ARRAY", DOCUMENT_HEAD)
-
-    _ext.register_type(DOCUMENT_HEAD, conn_or_curs)
-    _ext.register_type(DOCUMENT_HEAD_ARRAY, conn_or_curs)
-
-    return DOCUMENT_HEAD
 
 
 class OutboundHead(object):
@@ -987,36 +767,18 @@ class OutboundHead(object):
                     _adapt(self.due_date))
 
 
-def register_common_outbound_head(oid=None, conn_or_curs=None):
-    if not oid:
-        oid1 = _get_pg_typname_oid(conn_or_curs, 'common', 'outbound_head')
-        oid2 = _get_pg_typarray_oid(conn_or_curs, 'common', 'outbound_head')
-    elif isinstance(oid, (list, tuple)):
-        oid1, oid2 = oid
-    else:
-        print('error')
-
-    OUTBOUND_HEAD = _ext.new_type((oid1,), "OUTBOUND_HEAD", OutboundHead)
-    OUTBOUND_HEAD_ARRAY = _ext.new_array_type((oid2,), "OUTBOUND_HEAD_ARRAY", OUTBOUND_HEAD)
-
-    _ext.register_type(OUTBOUND_HEAD, conn_or_curs)
-    _ext.register_type(OUTBOUND_HEAD_ARRAY, conn_or_curs)
-
-    return OUTBOUND_HEAD
-
-
 def register(conn):
     psycopg2.extras.register_uuid()
-    register_common_component_specification(conn_or_curs=conn)
-    register_common_material_specification(conn_or_curs=conn)
-    register_common_personnel_specification(conn_or_curs=conn)
-    register_common_tooling_specification(conn_or_curs=conn)
-    register_common_equipment_specification(conn_or_curs=conn)
-    register_common_dependency_specification(conn_or_curs=conn)
-    register_common_operation_segment(conn_or_curs=conn)
-    register_common_ebom_head(conn_or_curs=conn)
-    register_common_mbom_head(conn_or_curs=conn)
-    register_common_operation_head(conn_or_curs=conn)
-    register_common_document_body(conn_or_curs=conn)
-    register_common_document_head(conn_or_curs=conn)
-    register_common_outbound_head(conn_or_curs=conn)
+    pg_typ_caster(connection=conn, nspname='common', typname='component_specificatio', mapclass=ComponentSpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='material_specification', mapclass=MaterialSpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='personnel_specification', mapclass=PersonnelSpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='tooling_specification', mapclass=ToolingSpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='equipment_specification', mapclass=EquipmentSpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='dependency_specification', mapclass=DependencySpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='operation_segment', mapclass=OperationSegment)
+    pg_typ_caster(connection=conn, nspname='common', typname='ebom_head', mapclass=EbomHead)
+    pg_typ_caster(connection=conn, nspname='common', typname='mbom_head', mapclass=MbomHead)
+    pg_typ_caster(connection=conn, nspname='common', typname='operation_head', mapclass=OperationHead)
+    pg_typ_caster(connection=conn, nspname='common', typname='document_body', mapclass=DocumentBody)
+    pg_typ_caster(connection=conn, nspname='common', typname='document_head', mapclass=DocumentHead)
+    pg_typ_caster(connection=conn, nspname='common', typname='outbound_head', mapclass=OutboundHead)
