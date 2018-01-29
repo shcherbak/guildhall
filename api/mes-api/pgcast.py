@@ -418,6 +418,58 @@ class EbomHead(PgUserTypeMaping):
         if s:
             self.from_string(s)
 
+    def to_dict(self):
+        if self.document_date:
+            _document_date = self.document_date.strftime('%Y-%m-%d')
+        else:
+            _document_date = None
+        return {"document_id": self.document_id,
+                "gid": self.gid,
+                "display_name": self.display_name,
+                "version_num": self.version_num,
+                "document_date": _document_date,
+                "curr_fsmt": self.curr_fsmt,
+                "document_type": self.document_type,
+                "component_spec": self.component_spec}
+
+    def from_dict(self, d):
+        if len(d['document_date']) > 0:
+            _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
+        else:
+            _document_date = None
+
+        self.document_id = d['document_id']
+        self.gid = d['gid']
+        self.display_name = d['display_name']
+        self.version_num = d['version_num']
+        self.document_date = _document_date
+        self.curr_fsmt = d['curr_fsmt']
+        self.document_type = d['document_type']
+        self.component_spec = d['component_spec']
+
+    def from_tuple(self, t):
+        self.document_id = int(t[0])
+        self.gid = uuid.UUID(t[1])
+        self.display_name = t[2]
+        self.version_num = t[3]
+        if len(t[4]) > 0:
+            self.document_date = datetime.datetime.strptime(t[4], "%Y-%m-%d")
+        else:
+            self.document_date = None
+        self.curr_fsmt = t[5]
+        self.document_type = t[6]
+        self.component_spec = t[7]
+
+    def to_tuple(self):
+        return (self.document_id,
+                self.gid,
+                self.display_name,
+                self.version_num,
+                self.document_date,
+                self.curr_fsmt,
+                self.document_type,
+                self.component_spec)
+
 
 class MbomHead(PgUserTypeMaping):
     pg_schm_name = 'common'
@@ -436,6 +488,58 @@ class MbomHead(PgUserTypeMaping):
         self.material_spec = None
         if s:
             self.from_string(s)
+
+    def to_dict(self):
+        if self.document_date:
+            _document_date = self.document_date.strftime('%Y-%m-%d')
+        else:
+            _document_date = None
+        return {"document_id": self.document_id,
+                "gid": self.gid,
+                "display_name": self.display_name,
+                "version_num": self.version_num,
+                "document_date": _document_date,
+                "curr_fsmt": self.curr_fsmt,
+                "document_type": self.document_type,
+                "material_spec": self.material_spec}
+
+    def from_dict(self, d):
+        if len(d['document_date']) > 0:
+            _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
+        else:
+            _document_date = None
+
+        self.document_id = d['document_id']
+        self.gid = d['gid']
+        self.display_name = d['display_name']
+        self.version_num = d['version_num']
+        self.document_date = _document_date
+        self.curr_fsmt = d['curr_fsmt']
+        self.document_type = d['document_type']
+        self.material_spec = d['material_spec']
+
+    def from_tuple(self, t):
+        self.document_id = int(t[0])
+        self.gid = uuid.UUID(t[1])
+        self.display_name = t[2]
+        self.version_num = t[3]
+        if len(t[4]) > 0:
+            self.document_date = datetime.datetime.strptime(t[4], "%Y-%m-%d")
+        else:
+            self.document_date = None
+        self.curr_fsmt = t[5]
+        self.document_type = t[6]
+        self.material_spec = t[7]
+
+    def to_tuple(self):
+        return (self.document_id,
+                self.gid,
+                self.display_name,
+                self.version_num,
+                self.document_date,
+                self.curr_fsmt,
+                self.document_type,
+                self.material_spec)
 
 
 class OperationHead(PgUserTypeMaping):
@@ -456,22 +560,106 @@ class OperationHead(PgUserTypeMaping):
         if s:
             self.from_string(s)
 
+    def to_dict(self):
+        if self.document_date:
+            _document_date = self.document_date.strftime('%Y-%m-%d')
+        else:
+            _document_date = None
+        return {"document_id": self.document_id,
+                "gid": self.gid,
+                "display_name": self.display_name,
+                "version_num": self.version_num,
+                "document_date": _document_date,
+                "curr_fsmt": self.curr_fsmt,
+                "document_type": self.document_type,
+                "producible_spec": self.producible_spec}
+
+    def from_dict(self, d):
+        if len(d['document_date']) > 0:
+            _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
+        else:
+            _document_date = None
+
+        self.document_id = d['document_id']
+        self.gid = d['gid']
+        self.display_name = d['display_name']
+        self.version_num = d['version_num']
+        self.document_date = _document_date
+        self.curr_fsmt = d['curr_fsmt']
+        self.document_type = d['document_type']
+        self.producible_spec = d['producible_spec']
+
+    def from_tuple(self, t):
+        self.document_id = int(t[0])
+        self.gid = uuid.UUID(t[1])
+        self.display_name = t[2]
+        self.version_num = t[3]
+        if len(t[4]) > 0:
+            self.document_date = datetime.datetime.strptime(t[4], "%Y-%m-%d")
+        else:
+            self.document_date = None
+        self.curr_fsmt = t[5]
+        self.document_type = t[6]
+        self.producible_spec = t[7]
+
+    def to_tuple(self):
+        return (self.document_id,
+                self.gid,
+                self.display_name,
+                self.version_num,
+                self.document_date,
+                self.curr_fsmt,
+                self.document_type,
+                self.producible_spec)
+
 
 class OperationSegment(PgUserTypeMaping):
     pg_schm_name = 'common'
     pg_type_name = 'operation_segment'
     pg_field_list = ['gid', 'operation_code', 'material_spec', 'personnel_spec',
-                     'equipmet_spec', 'tooling_spec']
+                     'equipment_spec', 'tooling_spec']
 
     def __init__(self, s=None, curs=None):
         self.gid = None
         self.operation_code = None
         self.material_spec = None
         self.personnel_spec = None
-        self.equipmet_spec = None
+        self.equipment_spec = None
         self.tooling_spec = None
         if s:
             self.from_string(s)
+
+    def to_dict(self):
+        return {"gid": self.gid,
+                "operation_code": self.operation_code,
+                "material_spec": self.material_spec,
+                "personnel_spec": self.personnel_spec,
+                "equipment_spec": self.equipment_spec,
+                "tooling_spec": self.tooling_spec}
+
+    def from_dict(self, d):
+        self.gid = d['gid']
+        self.operation_code = d['operation_code']
+        self.material_spec = d['material_spec']
+        self.personnel_spec = d['personnel_spec']
+        self.equipment_spec = d['equipment_spec']
+        self.tooling_spec = d['tooling_spec']
+
+    def from_tuple(self, t):
+        self.gid = uuid.UUID(t[0])
+        self.operation_code = t[1]
+        self.material_spec = t[2]
+        self.personnel_spec = t[3]
+        self.equipment_spec = t[4]
+        self.tooling_spec = t[5]
+
+    def to_tuple(self):
+        return (self.gid,
+                self.operation_code,
+                self.material_spec,
+                self.personnel_spec,
+                self.equipment_spec,
+                self.tooling_spec)
 
 
 def register(conn):
