@@ -208,6 +208,18 @@ class Reserve(OutboundDocument):
     DECOMMIT_DOCUMENT_SQL = "SELECT reserve.do_decommit(__document_id := %s, __apprise := %s)"
 
 
+class EbomDocument(object):
+    pass
+
+
+class MbomDocument(object):
+    pass
+
+
+class OperationDocument(object):
+    pass
+
+
 class BaseDocumentList:
     GET_LSIT_SQL = None
 
