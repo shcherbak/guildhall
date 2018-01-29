@@ -93,7 +93,11 @@ def post_ebom():
 
 @app.route('/eboms/<int:document_id>', methods=['GET'])
 def get_demand(document_id):
-    document = dao.Demand(pool, document_id)
+    document = dao.EbomDocument(pool, document_id)
+    #print(type(document.head))
+    #print(document.head)
+    #print(type(document.body[0]))
+    #print(type(document.body))
     return jsonify(document.to_dict())
 
 
@@ -181,7 +185,7 @@ def post_reserve():
 
 @app.route('/mboms/<int:document_id>', methods=['GET'])
 def get_reserve(document_id):
-    document = dao.Reserve(pool, document_id)
+    document = dao.MbomDocument(pool, document_id)
     return jsonify(document.to_dict())
 
 
@@ -236,6 +240,15 @@ def patch_reserve_fsmt(document_id):
         response = jsonify(success=success, message="unexpected error"), 400
 
     return response
+
+@app.route('/operations/<int:document_id>', methods=['GET'])
+def get_opertion(document_id):
+    document = dao.OperationDocument(pool, document_id)
+    #print(type(document.head))
+    #print(document.head)
+    #print(type(document.body[0]))
+    #print(type(document.body))
+    return jsonify(document.to_dict())
 
 
 if __name__ == '__main__':

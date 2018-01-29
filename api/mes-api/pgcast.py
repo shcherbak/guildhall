@@ -490,6 +490,7 @@ class MbomHead(PgUserTypeMaping):
             self.from_string(s)
 
     def to_dict(self):
+        #ms = MaterialSpecification().from_string(self.material_spec)
         if self.document_date:
             _document_date = self.document_date.strftime('%Y-%m-%d')
         else:
@@ -504,6 +505,7 @@ class MbomHead(PgUserTypeMaping):
                 "material_spec": self.material_spec}
 
     def from_dict(self, d):
+        #ms = MaterialSpecification()
         if len(d['document_date']) > 0:
             _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
         else:
@@ -516,7 +518,7 @@ class MbomHead(PgUserTypeMaping):
         self.document_date = _document_date
         self.curr_fsmt = d['curr_fsmt']
         self.document_type = d['document_type']
-        self.material_spec = d['material_spec']
+        self.material_spec = MaterialSpecification().from_dict(d['material_spec'])
 
     def from_tuple(self, t):
         self.document_id = int(t[0])
@@ -664,7 +666,7 @@ class OperationSegment(PgUserTypeMaping):
 
 def register(conn):
     psycopg2.extras.register_uuid()
-    pg_typ_caster(connection=conn, nspname='common', typname='component_specificatio', mapclass=ComponentSpecification)
+    pg_typ_caster(connection=conn, nspname='common', typname='component_specification', mapclass=ComponentSpecification)
     pg_typ_caster(connection=conn, nspname='common', typname='material_specification', mapclass=MaterialSpecification)
     pg_typ_caster(connection=conn, nspname='common', typname='personnel_specification', mapclass=PersonnelSpecification)
     pg_typ_caster(connection=conn, nspname='common', typname='tooling_specification', mapclass=ToolingSpecification)

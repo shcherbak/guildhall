@@ -208,17 +208,73 @@ class Reserve(OutboundDocument):
     DECOMMIT_DOCUMENT_SQL = "SELECT reserve.do_decommit(__document_id := %s, __apprise := %s)"
 
 
-class EbomDocument(object):
-    pass
+class EbomDocument(BaseDocument):
+    GET_HEAD_SQL = "SELECT ebom.get_head(__document_id := %s)"
+    GET_BODY_SQL = "SELECT ebom.get_body(__document_id := %s)"
+    UPDATE_BODY_SQL = "SELECT ebom.reinit(__document_id := %s, __body := %s)"
+    DELETE_DOCUMENT_SQL = "SELECT ebom.destroy(__document_id := %s)"
+    CREATE_DOCUMENT_SQL = "SELECT ebom.init(__head := %s, __body := %s)"
+    COMMIT_DOCUMENT_SQL = "SELECT ebom.do_commit(__document_id := %s, __apprise := %s)"
+    DECOMMIT_DOCUMENT_SQL = "SELECT ebom.do_decommit(__document_id := %s, __apprise := %s)"
+
+    def from_dict(self, d):
+        self.head = pgcast.EbomHead()
+        self.head.from_dict(d['head'])
+        #print(d['head'])
+        #print(d['body'])
+        self.body = []
+        for row in d['body']:
+            print(row)
+            b = pgcast.ComponentSpecification()
+            b.from_dict(row)
+            self.body.append(b)
+            # return self.create_document(self.head, self.body)
 
 
-class MbomDocument(object):
-    pass
+class MbomDocument(BaseDocument):
+    GET_HEAD_SQL = "SELECT mbom.get_head(__document_id := %s)"
+    GET_BODY_SQL = "SELECT mbom.get_body(__document_id := %s)"
+    UPDATE_BODY_SQL = "SELECT mbom.reinit(__document_id := %s, __body := %s)"
+    DELETE_DOCUMENT_SQL = "SELECT mbom.destroy(__document_id := %s)"
+    CREATE_DOCUMENT_SQL = "SELECT mbom.init(__head := %s, __body := %s)"
+    COMMIT_DOCUMENT_SQL = "SELECT mbom.do_commit(__document_id := %s, __apprise := %s)"
+    DECOMMIT_DOCUMENT_SQL = "SELECT mbom.do_decommit(__document_id := %s, __apprise := %s)"
+
+    def from_dict(self, d):
+        self.head = pgcast.MbomHead()
+        self.head.from_dict(d['head'])
+        #print(d['head'])
+        #print(d['body'])
+        self.body = []
+        for row in d['body']:
+            print(row)
+            b = pgcast.MaterialSpecification()
+            b.from_dict(row)
+            self.body.append(b)
+            # return self.create_document(self.head, self.body)
 
 
-class OperationDocument(object):
-    pass
+class OperationDocument(BaseDocument):
+    GET_HEAD_SQL = "SELECT operation.get_head(__document_id := %s)"
+    GET_BODY_SQL = "SELECT operation.get_body(__document_id := %s)"
+    UPDATE_BODY_SQL = "SELECT operation.reinit(__document_id := %s, __body := %s)"
+    DELETE_DOCUMENT_SQL = "SELECT operation.destroy(__document_id := %s)"
+    CREATE_DOCUMENT_SQL = "SELECT operation.init(__head := %s, __body := %s)"
+    COMMIT_DOCUMENT_SQL = "SELECT operation.do_commit(__document_id := %s, __apprise := %s)"
+    DECOMMIT_DOCUMENT_SQL = "SELECT operation.do_decommit(__document_id := %s, __apprise := %s)"
 
+    def from_dict(self, d):
+        self.head = pgcast.OperationHead()
+        self.head.from_dict(d['head'])
+        #print(d['head'])
+        #print(d['body'])
+        self.body = []
+        for row in d['body']:
+            print(row)
+            b = pgcast.OperationSegment()
+            b.from_dict(row)
+            self.body.append(b)
+            # return self.create_document(self.head, self.body)
 
 class BaseDocumentList:
     GET_LSIT_SQL = None
