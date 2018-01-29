@@ -430,7 +430,7 @@ class EbomHead(PgUserTypeMaping):
                 "document_date": _document_date,
                 "curr_fsmt": self.curr_fsmt,
                 "document_type": self.document_type,
-                "component_spec": self.component_spec}
+                "component_spec": ComponentSpecification(self.component_spec).to_dict()}
 
     def from_dict(self, d):
         if len(d['document_date']) > 0:
@@ -446,6 +446,9 @@ class EbomHead(PgUserTypeMaping):
         self.curr_fsmt = d['curr_fsmt']
         self.document_type = d['document_type']
         self.component_spec = d['component_spec']
+        #spec = ComponentSpecification.from_dict(d['component_spec'])
+        #self.component_spec = spec
+        #print(type(spec))
 
     def from_tuple(self, t):
         self.document_id = int(t[0])
@@ -502,7 +505,7 @@ class MbomHead(PgUserTypeMaping):
                 "document_date": _document_date,
                 "curr_fsmt": self.curr_fsmt,
                 "document_type": self.document_type,
-                "material_spec": self.material_spec}
+                "material_spec": MaterialSpecification(self.material_spec).to_dict()}
 
     def from_dict(self, d):
         #ms = MaterialSpecification()
@@ -574,7 +577,7 @@ class OperationHead(PgUserTypeMaping):
                 "document_date": _document_date,
                 "curr_fsmt": self.curr_fsmt,
                 "document_type": self.document_type,
-                "producible_spec": self.producible_spec}
+                "producible_spec": MaterialSpecification(self.producible_spec).to_dict()}
 
     def from_dict(self, d):
         if len(d['document_date']) > 0:
@@ -630,8 +633,11 @@ class OperationSegment(PgUserTypeMaping):
         self.tooling_spec = None
         if s:
             self.from_string(s)
+            #print(self.material_spec)
+            #print(type(self.material_spec))
 
     def to_dict(self):
+        print("call to_dict")
         return {"gid": self.gid,
                 "operation_code": self.operation_code,
                 "material_spec": self.material_spec,
@@ -640,6 +646,7 @@ class OperationSegment(PgUserTypeMaping):
                 "tooling_spec": self.tooling_spec}
 
     def from_dict(self, d):
+        print("call from_dict")
         self.gid = d['gid']
         self.operation_code = d['operation_code']
         self.material_spec = d['material_spec']
@@ -648,6 +655,7 @@ class OperationSegment(PgUserTypeMaping):
         self.tooling_spec = d['tooling_spec']
 
     def from_tuple(self, t):
+        print("call from_tuple")
         self.gid = uuid.UUID(t[0])
         self.operation_code = t[1]
         self.material_spec = t[2]
@@ -656,6 +664,7 @@ class OperationSegment(PgUserTypeMaping):
         self.tooling_spec = t[5]
 
     def to_tuple(self):
+        print("call to_tuple")
         return (self.gid,
                 self.operation_code,
                 self.material_spec,
