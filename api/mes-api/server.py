@@ -67,7 +67,7 @@ def hello_world():
 def get_eboms():
     sdate, edate, facility = date_range_helper(request)
     print (sdate, edate, facility)
-    return jsonify(dao.DemandList(pool, facility, sdate, edate).to_dict())
+    return jsonify(dao.EbomList(pool, facility, sdate, edate).to_dict())
 
 
 @app.route('/eboms', methods=['POST'])
@@ -103,7 +103,7 @@ def get_demand(document_id):
 
 @app.route('/eboms/<int:document_id>', methods=['DELETE'])
 def del_demand(document_id):
-    document = dao.Demand(pool)
+    document = dao.EbomDocument(pool)
     success = document.delete(document_id)
     if success:
         response = ('', 204)
@@ -117,7 +117,7 @@ def del_demand(document_id):
 def patch_demand_body(document_id):
     data = request.get_json()
     if data:
-        d = dao.Demand(pool)
+        d = dao.EbomDocument(pool)
         d.from_dict(data)
         d.reinit(document_id)
         return jsonify(str(document_id))
@@ -134,7 +134,7 @@ def patch_demand_fsmt(document_id):
         response = jsonify(success=False, errors=inputs.errors), 400
     else:
         data = request.get_json()
-        document = dao.Demand(pool)
+        document = dao.EbomDocument(pool)
 
         if data['curr_fsmt'] == 'COMMITTED':
             success = document.commit(document_id)
@@ -159,7 +159,7 @@ def patch_demand_fsmt(document_id):
 @app.route('/mboms', methods=['GET'])
 def get_reserves():
     sdate, edate, facility = date_range_helper(request)
-    return jsonify(dao.ReserveList(pool, facility, sdate, edate).to_dict())
+    return jsonify(dao.MbomList(pool, facility, sdate, edate).to_dict())
 
 
 @app.route('/mboms', methods=['POST'])
@@ -172,7 +172,7 @@ def post_reserve():
         return response
     else:
         data = request.get_json()
-        document = dao.Reserve(pool)
+        document = dao.MbomDocument(pool)
         document.from_dict(data)
         document_id = document.init()
     if document_id:
@@ -191,7 +191,7 @@ def get_reserve(document_id):
 
 @app.route('/mboms/<int:document_id>', methods=['DELETE'])
 def del_reserve(document_id):
-    document = dao.Reserve(pool)
+    document = dao.MbomDocument(pool)
     success = document.delete(document_id)
     if success:
         response = ('', 204)
@@ -205,7 +205,7 @@ def del_reserve(document_id):
 def patch_reserve_body(document_id):
     data = request.get_json()
     if data:
-        d = dao.Reserve(pool)
+        d = dao.MbomDocument(pool)
         d.from_dict(data)
         d.reinit(document_id)
         return jsonify(str(document_id))
@@ -222,7 +222,7 @@ def patch_reserve_fsmt(document_id):
         response = jsonify(success=False, errors=inputs.errors), 400
     else:
         data = request.get_json()
-        document = dao.Reserve(pool)
+        document = dao.MbomDocument(pool)
 
         if data['curr_fsmt'] == 'COMMITTED':
             success = document.commit(document_id)

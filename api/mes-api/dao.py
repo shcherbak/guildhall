@@ -175,39 +175,6 @@ class BaseDocument:
         # return self
 
 
-class OutboundDocument(BaseDocument):
-    def from_dict(self, d):
-        self.head = pgcast.OutboundHead()
-        self.head.from_dict(d['head'])
-        self.body = []
-        for row in d['body']:
-            b = pgcast.DocumentBody()
-            b.from_dict(row)
-            self.body.append(b)
-            # return self.create_document(self.head, self.body)
-        #print (self.head.to_dict())
-
-
-class Demand(OutboundDocument):
-    GET_HEAD_SQL = "SELECT demand.get_head(__document_id := %s)"
-    GET_BODY_SQL = "SELECT demand.get_body(__document_id := %s)"
-    UPDATE_BODY_SQL = "SELECT demand.reinit(__document_id := %s, __body := %s)"
-    DELETE_DOCUMENT_SQL = "SELECT demand.destroy(__document_id := %s)"
-    CREATE_DOCUMENT_SQL = "SELECT demand.init(__head := %s, __body := %s)"
-    COMMIT_DOCUMENT_SQL = "SELECT demand.do_commit(__document_id := %s, __apprise := %s)"
-    DECOMMIT_DOCUMENT_SQL = "SELECT demand.do_decommit(__document_id := %s, __apprise := %s)"
-
-
-class Reserve(OutboundDocument):
-    GET_HEAD_SQL = "SELECT reserve.get_head(__document_id := %s)"
-    GET_BODY_SQL = "SELECT reserve.get_body(__document_id := %s)"
-    UPDATE_BODY_SQL = "SELECT reserve.reinit(__document_id := %s, __body := %s)"
-    DELETE_DOCUMENT_SQL = "SELECT reserve.destroy(__document_id := %s)"
-    CREATE_DOCUMENT_SQL = "SELECT reserve.init(__head := %s, __body := %s)"
-    COMMIT_DOCUMENT_SQL = "SELECT reserve.do_commit(__document_id := %s, __apprise := %s)"
-    DECOMMIT_DOCUMENT_SQL = "SELECT reserve.do_decommit(__document_id := %s, __apprise := %s)"
-
-
 class EbomDocument(BaseDocument):
     GET_HEAD_SQL = "SELECT ebom.get_head(__document_id := %s)"
     GET_BODY_SQL = "SELECT ebom.get_body(__document_id := %s)"
@@ -370,9 +337,13 @@ class BaseDocumentList:
         return result_list
 
 
-class DemandList(BaseDocumentList):
+class MbomList(BaseDocumentList):
     GET_LSIT_SQL = "SELECT demand.get_head_batch_proposed(__facility_code := %s, __date_start := %s, __date_end := %s)"
 
 
-class ReserveList(BaseDocumentList):
+class EbomList(BaseDocumentList):
+    GET_LSIT_SQL = "SELECT reserve.get_all()"
+
+
+class OperationList(BaseDocumentList):
     GET_LSIT_SQL = "SELECT reserve.get_head_batch_proposed(__facility_code := %s, __date_start := %s, __date_end := %s)"
