@@ -637,31 +637,82 @@ class OperationSegment(PgUserTypeMaping):
             #print(type(self.material_spec))
 
     def to_dict(self):
-        print("call to_dict")
+        print("call OperationSegment to_dict")
+        _mspec = []
+        for s in self.material_spec:
+            _mspec.append(s.to_dict())
+        _tspec = []
+        for s in self.tooling_spec:
+            _tspec.append(s.to_dict())
         return {"gid": self.gid,
                 "operation_code": self.operation_code,
-                "material_spec": self.material_spec,
+                "material_spec": _mspec,
                 "personnel_spec": self.personnel_spec,
                 "equipment_spec": self.equipment_spec,
-                "tooling_spec": self.tooling_spec}
+                "tooling_spec": _tspec}
 
     def from_dict(self, d):
-        print("call from_dict")
+        self.material_spec = []
+        for row in d['material_spec']:
+            print(row)
+            b = MaterialSpecification()
+            b.from_dict(row)
+            self.material_spec.append(b)
+
+        self.tooling_spec = []
+        for row in d['tooling_spec']:
+            print(row)
+            b = ToolingSpecification()
+            b.from_dict(row)
+            self.tooling_spec.append(b)
+        print("call OperationSegment from_dict")
         self.gid = d['gid']
         self.operation_code = d['operation_code']
-        self.material_spec = d['material_spec']
+        #self.material_spec = d['material_spec']
         self.personnel_spec = d['personnel_spec']
         self.equipment_spec = d['equipment_spec']
-        self.tooling_spec = d['tooling_spec']
+        #self.tooling_spec = d['tooling_spec']
 
     def from_tuple(self, t):
-        print("call from_tuple")
+        print("call OperationSegment from_tuple")
         self.gid = uuid.UUID(t[0])
         self.operation_code = t[1]
-        self.material_spec = t[2]
+        #self.material_spec = t[2]
+        #print(type(self.material_spec))
+        #print(self.material_spec)
+        #print(type(self.material_spec))
+        #lin = self.material_spec
+        self.material_spec = []
+        lin = t[2]
+        lin = lin.replace("{\"", "")
+        lin = lin.replace("\"}", "")
+        print("lin IS ", lin)
+        fields = lin.split("\",\"")
+        for filed in fields:
+            print(filed)
+            print(MaterialSpecification(filed))
+            self.material_spec.append(MaterialSpecification(filed))
+        #print(MaterialSpecification(self.material_spec))
+        #self.material_spec = []
+        #for row in t[2]:
+        #    print(row)
+        #    #b = MaterialSpecification()
+        #    #b.from_tuple(row)
+        #    #self.material_spec.append(b)
+        #    #print(b)
         self.personnel_spec = t[3]
         self.equipment_spec = t[4]
-        self.tooling_spec = t[5]
+        #self.tooling_spec = t[5]
+        self.tooling_spec = []
+        lin = t[5]
+        lin = lin.replace("{\"", "")
+        lin = lin.replace("\"}", "")
+        print("lin IS ", lin)
+        fields = lin.split("\",\"")
+        for filed in fields:
+            print(filed)
+            print(ToolingSpecification(filed))
+            self.tooling_spec.append(ToolingSpecification(filed))
 
     def to_tuple(self):
         print("call to_tuple")
