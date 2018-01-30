@@ -165,6 +165,12 @@ class PgUserTypeMaping(object):
             .format(schema=self.pg_schm_name, pgtype=self.pg_type_name, t=self.adapt_tuple(self.to_tuple()))
 
 
+    def _complex_string_to_list(self, s):
+        s = s.replace("{\"", "")
+        s = s.replace("\"}", "")
+        return s.split("\",\"")
+
+
 class ComponentSpecification(PgUserTypeMaping):
     pg_schm_name = 'common'
     pg_type_name = 'component_specification'
@@ -644,11 +650,17 @@ class OperationSegment(PgUserTypeMaping):
         _tspec = []
         for s in self.tooling_spec:
             _tspec.append(s.to_dict())
+        _pspec = []
+        for s in self.personnel_spec:
+            _pspec.append(s.to_dict())
+        _espec = []
+        for s in self.equipment_spec:
+            _espec.append(s.to_dict())
         return {"gid": self.gid,
                 "operation_code": self.operation_code,
                 "material_spec": _mspec,
-                "personnel_spec": self.personnel_spec,
-                "equipment_spec": self.equipment_spec,
+                "personnel_spec": _pspec,
+                "equipment_spec": _espec,
                 "tooling_spec": _tspec}
 
     def from_dict(self, d):
@@ -665,52 +677,59 @@ class OperationSegment(PgUserTypeMaping):
             b = ToolingSpecification()
             b.from_dict(row)
             self.tooling_spec.append(b)
+
+        self.personnel_spec = []
+        for row in d['personnel_spec']:
+            print(row)
+            b = PersonnelSpecification()
+            b.from_dict(row)
+            self.personnel_spec.append(b)
+
+        self.equipment_spec = []
+        for row in d['equipment_spec']:
+            print(row)
+            b = EquipmentSpecification()
+            b.from_dict(row)
+            self.equipment_spec.append(b)
+
         print("call OperationSegment from_dict")
         self.gid = d['gid']
         self.operation_code = d['operation_code']
         #self.material_spec = d['material_spec']
-        self.personnel_spec = d['personnel_spec']
-        self.equipment_spec = d['equipment_spec']
+        #self.personnel_spec = d['personnel_spec']
+        #self.equipment_spec = d['equipment_spec']
         #self.tooling_spec = d['tooling_spec']
 
     def from_tuple(self, t):
         print("call OperationSegment from_tuple")
         self.gid = uuid.UUID(t[0])
         self.operation_code = t[1]
-        #self.material_spec = t[2]
-        #print(type(self.material_spec))
-        #print(self.material_spec)
-        #print(type(self.material_spec))
-        #lin = self.material_spec
+
         self.material_spec = []
-        lin = t[2]
-        lin = lin.replace("{\"", "")
-        lin = lin.replace("\"}", "")
-        print("lin IS ", lin)
-        fields = lin.split("\",\"")
+        fields = self._complex_string_to_list(t[2])
         for filed in fields:
-            print(filed)
+            #print(filed)
             print(MaterialSpecification(filed))
             self.material_spec.append(MaterialSpecification(filed))
-        #print(MaterialSpecification(self.material_spec))
-        #self.material_spec = []
-        #for row in t[2]:
-        #    print(row)
-        #    #b = MaterialSpecification()
-        #    #b.from_tuple(row)
-        #    #self.material_spec.append(b)
-        #    #print(b)
-        self.personnel_spec = t[3]
-        self.equipment_spec = t[4]
-        #self.tooling_spec = t[5]
-        self.tooling_spec = []
-        lin = t[5]
-        lin = lin.replace("{\"", "")
-        lin = lin.replace("\"}", "")
-        print("lin IS ", lin)
-        fields = lin.split("\",\"")
+
+        self.personnel_spec = []
+        fields = self._complex_string_to_list(t[3])
         for filed in fields:
-            print(filed)
+            #print(filed)
+            print(PersonnelSpecification(filed))
+            self.personnel_spec.append(PersonnelSpecification(filed))
+
+        self.equipment_spec = []
+        fields = self._complex_string_to_list(t[4])
+        for filed in fields:
+            #print(filed)
+            print(EquipmentSpecification(filed))
+            self.equipment_spec.append(EquipmentSpecification(filed))
+
+        self.tooling_spec = []
+        fields = self._complex_string_to_list(t[5])
+        for filed in fields:
+            #print(filed)
             print(ToolingSpecification(filed))
             self.tooling_spec.append(ToolingSpecification(filed))
 
