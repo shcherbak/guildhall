@@ -257,11 +257,54 @@ class MbomDocument(BaseDocument):
 class OperationDocument(BaseDocument):
     GET_HEAD_SQL = "SELECT operation.get_head(__document_id := %s)"
     GET_BODY_SQL = "SELECT operation.get_body(__document_id := %s)"
+    GET_DEPS_SQL = "SELECT operation.get_deps(__document_id := %s)"
     UPDATE_BODY_SQL = "SELECT operation.reinit(__document_id := %s, __body := %s)"
     DELETE_DOCUMENT_SQL = "SELECT operation.destroy(__document_id := %s)"
     CREATE_DOCUMENT_SQL = "SELECT operation.init(__head := %s, __body := %s)"
     COMMIT_DOCUMENT_SQL = "SELECT operation.do_commit(__document_id := %s, __apprise := %s)"
     DECOMMIT_DOCUMENT_SQL = "SELECT operation.do_decommit(__document_id := %s, __apprise := %s)"
+
+    def __init__(self, pool, document_id=None):
+        self.pool = pool
+        self.errors = []
+        if document_id:
+            self.load(document_id)
+        else:
+            self.head = None
+            self.body = None
+            self.deps = None
+
+    def load(self, document_id):
+        self._load_head(document_id)
+        self._load_body(document_id)
+        self._load_deps(document_id)
+
+    def _load_deps(self, document_id):
+        conn = None
+        try:
+            conn = self.pool.getconn()
+            pgcast.register(conn)
+            curs = conn.cursor()
+            curs.execute(self.GET_DEPS_SQL, (document_id,))
+            self.deps = curs.fetchone()[0]
+            conn.commit()
+            curs.close()
+        except (Exception, psycopg2.DatabaseError) as error:
+            print(error)
+        finally:
+            if conn is not None:
+                self.pool.putconn(conn)
+
+    def to_dict(self):
+        _body = []
+        for row in self.body:
+            _body.append(row.to_dict())
+        _deps = []
+        for row in self.deps:
+            _deps.append(row.to_dict())
+        return {"head": self.head.to_dict(),
+                "body": _body,
+                "deps": _deps}
 
     def from_dict(self, d):
         self.head = pgcast.OperationHead()
@@ -274,6 +317,13 @@ class OperationDocument(BaseDocument):
             b = pgcast.OperationSegment()
             b.from_dict(row)
             self.body.append(b)
+            # return self.create_document(self.head, self.body)
+        self.deps = []
+        for row in d['deps']:
+            print(row)
+            b = pgcast.DependencySpecification()
+            b.from_dict(row)
+            self.deps.append(b)
             # return self.create_document(self.head, self.body)
 
 class BaseDocumentList:

@@ -128,6 +128,7 @@ class PgUserTypeMaping(object):
         return result
 
     def from_string(self, s):
+        #print("CALL FROM STRINGS")
         rv = []
         for m in self._re_tokenize.finditer(s):
             if m is None:
@@ -166,9 +167,24 @@ class PgUserTypeMaping(object):
 
 
     def _complex_string_to_list(self, s):
+        #print("CALL _complex_string_to_list")
+        if s == '{}':
+            return ()
         s = s.replace("{\"", "")
         s = s.replace("\"}", "")
-        return s.split("\",\"")
+        result = s.split("\",\"")
+        if (len(result)>0):
+            return tuple(result)
+        else:
+            return ()
+
+    def _adapt_list_to_dict(self, spec_list):
+        #print("CALL _adapt_list_to_dict")
+        _res = []
+        for s in spec_list:
+            _res.append(s.to_dict())
+        return tuple(_res)
+
 
 
 class ComponentSpecification(PgUserTypeMaping):
@@ -391,13 +407,15 @@ class DependencySpecification(PgUserTypeMaping):
                 "depth": int(self.depth)}
 
     def from_dict(self, d):
-        self.ancestor = d['ancestor']
-        self.descendant = d['descendant']
+        self.ancestor = int(d['ancestor'])
+        self.descendant = int(d['descendant'])
         self.depth = int(d['depth'])
 
     def from_tuple(self, t):
-        self.ancestor = uuid.UUID(t[0])
-        self.descendant = uuid.UUID(t[1])
+        #self.ancestor = uuid.UUID(t[0])
+        self.ancestor = int(t[0])
+        #self.descendant = uuid.UUID(t[1])
+        self.descendant = int(t[1])
         self.depth = int(t[2])
 
     def to_tuple(self):
@@ -644,26 +662,15 @@ class OperationSegment(PgUserTypeMaping):
 
     def to_dict(self):
         print("call OperationSegment to_dict")
-        _mspec = []
-        for s in self.material_spec:
-            _mspec.append(s.to_dict())
-        _tspec = []
-        for s in self.tooling_spec:
-            _tspec.append(s.to_dict())
-        _pspec = []
-        for s in self.personnel_spec:
-            _pspec.append(s.to_dict())
-        _espec = []
-        for s in self.equipment_spec:
-            _espec.append(s.to_dict())
         return {"gid": self.gid,
                 "operation_code": self.operation_code,
-                "material_spec": _mspec,
-                "personnel_spec": _pspec,
-                "equipment_spec": _espec,
-                "tooling_spec": _tspec}
+                "material_spec": self._adapt_list_to_dict(self.material_spec),
+                "personnel_spec": self._adapt_list_to_dict(self.personnel_spec),
+                "equipment_spec": self._adapt_list_to_dict(self.equipment_spec),
+                "tooling_spec": self._adapt_list_to_dict(self.tooling_spec)}
 
     def from_dict(self, d):
+        print("call OperationSegment from_dict")
         self.material_spec = []
         for row in d['material_spec']:
             print(row)
@@ -706,32 +713,41 @@ class OperationSegment(PgUserTypeMaping):
         self.operation_code = t[1]
 
         self.material_spec = []
+        #print("TYP", t[2])
         fields = self._complex_string_to_list(t[2])
-        for filed in fields:
-            #print(filed)
-            print(MaterialSpecification(filed))
-            self.material_spec.append(MaterialSpecification(filed))
+        if (len(fields) > 0):
+            for filed in fields:
+                #print(filed)
+                print(MaterialSpecification(filed))
+                self.material_spec.append(MaterialSpecification(filed))
 
         self.personnel_spec = []
         fields = self._complex_string_to_list(t[3])
-        for filed in fields:
-            #print(filed)
-            print(PersonnelSpecification(filed))
-            self.personnel_spec.append(PersonnelSpecification(filed))
+        #print("PERS", fields)
+        #print("TYP", type(t[3]))
+        #print(t[3])
+        if (len(fields) > 0):
+            for filed in fields:
+                #print(filed)
+                print(PersonnelSpecification(filed))
+                self.personnel_spec.append(PersonnelSpecification(filed))
+
 
         self.equipment_spec = []
         fields = self._complex_string_to_list(t[4])
-        for filed in fields:
-            #print(filed)
-            print(EquipmentSpecification(filed))
-            self.equipment_spec.append(EquipmentSpecification(filed))
+        if (len(fields) > 0):
+            for filed in fields:
+                #print(filed)
+                print(EquipmentSpecification(filed))
+                self.equipment_spec.append(EquipmentSpecification(filed))
 
         self.tooling_spec = []
         fields = self._complex_string_to_list(t[5])
-        for filed in fields:
-            #print(filed)
-            print(ToolingSpecification(filed))
-            self.tooling_spec.append(ToolingSpecification(filed))
+        if (len(fields) > 0):
+            for filed in fields:
+                #print(filed)
+                print(ToolingSpecification(filed))
+                self.tooling_spec.append(ToolingSpecification(filed))
 
     def to_tuple(self):
         print("call to_tuple")
