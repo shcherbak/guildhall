@@ -10,6 +10,7 @@ import psycopg2.extras
 import re
 
 
+
 def pg_typ_caster(connection, nspname, typname, mapclass):
     def _get_pg_nspname_oid():
         _sql = 'SELECT oid FROM pg_namespace WHERE nspname = %s'
@@ -79,17 +80,25 @@ class PgUserTypeMaping(object):
     def decimal_from_pg(self, sqlnumeric):
         pass
 
-    @staticmethod
-    def _adapt(o):
+    def py2pg_adapt(self, o):
         if o is None:
             return 'NULL'
         else:
-            # return _ext.adapt(o)
             if isinstance(o, str):
                 return "'{0}'".format(o)
+                # return o
+            elif isinstance(o, int):
+                return o
+            elif isinstance(o, Decimal):
+                return o
+            elif isinstance(o, datetime.date):
+                return _ext.DateFromPy(o)
+                # _ext.Flo
+            elif isinstance(o, datetime.timedelta):
+                return _ext.IntervalFromPy(o)
             else:
-                # return _ext.adapt(obj=o, alternate=None, protocol=None)
-                return _ext.adapt(obj=o, alternate=None, protocol=None)
+                #return _ext.adapt(obj=o, alternate=None, protocol=None)
+                return _ext.adapt(o, None, None)
 
     _re_tokenize = re.compile(r"""
       \(? ([,)])                        # an empty token, representing NULL
@@ -114,8 +123,7 @@ class PgUserTypeMaping(object):
     def __repr__(self):
         return self.repr_helper(self.pg_field_list).format(t=self.pg_type_name, d=self.to_dict())
 
-    @staticmethod
-    def repr_helper(field_list):
+    def repr_helper(self, field_list):
         result = '{t}=('
         idx = 1
         length = len(field_list)
@@ -128,7 +136,6 @@ class PgUserTypeMaping(object):
         return result
 
     def from_string(self, s):
-        #print("CALL FROM STRINGS")
         rv = []
         for m in self._re_tokenize.finditer(s):
             if m is None:
@@ -143,13 +150,12 @@ class PgUserTypeMaping(object):
         self.from_tuple(tuple(rv))
 
     def adapt_tuple(self, t):
-        l = []
+        result = []
         for i in t:
-            l.append(self._adapt(i))
-        return tuple(l)
+            result.append(self.py2pg_adapt(i))
+        return tuple(result)
 
-    @staticmethod
-    def repr_helper2(field_list):
+    def repr_helper2(self, field_list):
         result = '('
         idx = 0
         length = len(field_list) - 1
@@ -165,26 +171,22 @@ class PgUserTypeMaping(object):
         return self.repr_helper2(self.pg_field_list) \
             .format(schema=self.pg_schm_name, pgtype=self.pg_type_name, t=self.adapt_tuple(self.to_tuple()))
 
-
     def _complex_string_to_list(self, s):
-        #print("CALL _complex_string_to_list")
         if s == '{}':
             return ()
         s = s.replace("{\"", "")
         s = s.replace("\"}", "")
         result = s.split("\",\"")
-        if (len(result)>0):
+        if len(result) > 0:
             return tuple(result)
         else:
             return ()
 
     def _adapt_list_to_dict(self, spec_list):
-        #print("CALL _adapt_list_to_dict")
         _res = []
         for s in spec_list:
             _res.append(s.to_dict())
         return tuple(_res)
-
 
 
 class ComponentSpecification(PgUserTypeMaping):
@@ -194,11 +196,11 @@ class ComponentSpecification(PgUserTypeMaping):
                      'uom_code', 'component_type']
 
     def __init__(self, s=None, curs=None):
-        self.part_code = ''
-        self.version_num = 0
-        self.quantity = Decimal(0)
-        self.uom_code = ''
-        self.component_type = ''
+        self.part_code = None
+        self.version_num = None
+        self.quantity = None
+        self.uom_code = None
+        self.component_type = None
         if s:
             self.from_string(s)
 
@@ -238,11 +240,11 @@ class MaterialSpecification(PgUserTypeMaping):
                      'uom_code', 'material_type']
 
     def __init__(self, s=None, curs=None):
-        self.part_code = ''
-        self.version_num = 0
-        self.quantity = Decimal(0)
-        self.uom_code = ''
-        self.material_type = ''
+        self.part_code = None
+        self.version_num = None
+        self.quantity = None
+        self.uom_code = None
+        self.material_type = None
         if s:
             self.from_string(s)
 
@@ -281,10 +283,10 @@ class PersonnelSpecification(PgUserTypeMaping):
     pg_field_list = ['personnel_code', 'version_num', 'quantity', 'uom_code']
 
     def __init__(self, s=None, curs=None):
-        self.personnel_code = ''
-        self.version_num = 0
-        self.quantity = Decimal(0)
-        self.uom_code = ''
+        self.personnel_code = None
+        self.version_num = None
+        self.quantity = None
+        self.uom_code = None
         if s:
             self.from_string(s)
 
@@ -319,10 +321,10 @@ class ToolingSpecification(PgUserTypeMaping):
     pg_field_list = ['tooling_code', 'version_num', 'quantity', 'uom_code']
 
     def __init__(self, s=None, curs=None):
-        self.tooling_code = ''
-        self.version_num = 0
-        self.quantity = Decimal(0)
-        self.uom_code = ''
+        self.tooling_code = None
+        self.version_num = None
+        self.quantity = None
+        self.uom_code = None
         if s:
             self.from_string(s)
 
@@ -357,10 +359,10 @@ class EquipmentSpecification(PgUserTypeMaping):
     pg_field_list = ['equipment_code', 'version_num', 'quantity', 'uom_code']
 
     def __init__(self, s=None, curs=None):
-        self.equipment_code = ''
-        self.version_num = 0
-        self.quantity = Decimal(0)
-        self.uom_code = ''
+        self.equipment_code = None
+        self.version_num = None
+        self.quantity = None
+        self.uom_code = None
         if s:
             self.from_string(s)
 
