@@ -86,14 +86,12 @@ class PgUserTypeMaping(object):
         else:
             if isinstance(o, str):
                 return "'{0}'".format(o)
-                # return o
             elif isinstance(o, int):
                 return o
             elif isinstance(o, Decimal):
                 return o
             elif isinstance(o, datetime.date):
                 return _ext.DateFromPy(o)
-                # _ext.Flo
             elif isinstance(o, datetime.timedelta):
                 return _ext.IntervalFromPy(o)
             else:
@@ -207,7 +205,7 @@ class ComponentSpecification(PgUserTypeMaping):
     def to_dict(self):
         return {"part_code": self.part_code,
                 "version_num": int(self.version_num),
-                "quantity": float(self.quantity),
+                "quantity": float('%.4f'%(self.quantity)),
                 "uom_code": self.uom_code,
                 "component_type": self.component_type}
 
@@ -251,7 +249,7 @@ class MaterialSpecification(PgUserTypeMaping):
     def to_dict(self):
         return {"part_code": self.part_code,
                 "version_num": int(self.version_num),
-                "quantity": float(self.quantity),
+                "quantity": float('%.4f'%(self.quantity)),
                 "uom_code": self.uom_code,
                 "material_type": self.material_type}
 
@@ -293,7 +291,7 @@ class PersonnelSpecification(PgUserTypeMaping):
     def to_dict(self):
         return {"personnel_code": self.personnel_code,
                 "version_num": int(self.version_num),
-                "quantity": float(self.quantity),
+                "quantity": float('%.4f'%(self.quantity)),
                 "uom_code": self.uom_code}
 
     def from_dict(self, d):
@@ -331,7 +329,7 @@ class ToolingSpecification(PgUserTypeMaping):
     def to_dict(self):
         return {"tooling_code": self.tooling_code,
                 "version_num": int(self.version_num),
-                "quantity": float(self.quantity),
+                "quantity": float('%.4f'%(self.quantity)),
                 "uom_code": self.uom_code}
 
     def from_dict(self, d):
@@ -369,7 +367,7 @@ class EquipmentSpecification(PgUserTypeMaping):
     def to_dict(self):
         return {"equipment_code": self.equipment_code,
                 "version_num": int(self.version_num),
-                "quantity": float(self.quantity),
+                "quantity": float('%.4f'%(self.quantity)),
                 "uom_code": self.uom_code}
 
     def from_dict(self, d):
