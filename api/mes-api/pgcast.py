@@ -339,24 +339,24 @@ class ComponentSpecification(PgUserTypeMaping):
 
     def to_dict(self):
         return {"part_code": self.part_code,
-                "version_num": int(self.version_num),
-                "quantity": float('%.4f'%(self.quantity)),
+                "version_num": self.version_num,
+                "quantity": decimal_to_string(self.quantity),
                 "uom_code": self.uom_code,
                 "component_type": self.component_type}
 
     def from_dict(self, d):
-        self.part_code = d['part_code']
-        self.version_num = int(d['version_num'])
-        self.quantity = Decimal(d['quantity'])
-        self.uom_code = d['uom_code']
-        self.component_type = d['component_type']
+        self.part_code = parse_string_from_dict(d, 'part_code')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.quantity = parse_decimal_from_dict(d, 'quantity')
+        self.uom_code = parse_string_from_dict(d, 'uom_code')
+        self.component_type = parse_string_from_dict(d, 'component_type')
 
     def from_tuple(self, t):
-        self.part_code = t[0]
-        self.version_num = int(t[1])
-        self.quantity = Decimal(t[2])
-        self.uom_code = t[3]
-        self.component_type = t[4]
+        self.part_code = parse_string_from_tuple(t, 0)
+        self.version_num = parse_int_from_tuple(t, 1)
+        self.quantity = parse_decimal_from_tuple(t, 2)
+        self.uom_code = parse_string_from_tuple(t, 3)
+        self.component_type = parse_string_from_tuple(t, 4)
 
     def to_tuple(self):
         return (self.part_code,
@@ -383,24 +383,24 @@ class MaterialSpecification(PgUserTypeMaping):
 
     def to_dict(self):
         return {"part_code": self.part_code,
-                "version_num": int(self.version_num),
-                "quantity": float('%.4f'%(self.quantity)),
+                "version_num": self.version_num,
+                "quantity": decimal_to_string(self.quantity),
                 "uom_code": self.uom_code,
                 "material_type": self.material_type}
 
     def from_dict(self, d):
-        self.part_code = d['part_code']
-        self.version_num = int(d['version_num'])
-        self.quantity = Decimal(d['quantity'])
-        self.uom_code = d['uom_code']
-        self.material_type = d['material_type']
+        self.part_code = parse_string_from_dict(d, 'part_code')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.quantity = parse_decimal_from_dict(d, 'quantity')
+        self.uom_code = parse_string_from_dict(d, 'uom_code')
+        self.material_type = parse_string_from_dict(d, 'material_type')
 
     def from_tuple(self, t):
-        self.part_code = t[0]
-        self.version_num = int(t[1])
-        self.quantity = Decimal(t[2])
-        self.uom_code = t[3]
-        self.material_type = t[4]
+        self.part_code = parse_string_from_tuple(t, 0)
+        self.version_num = parse_int_from_tuple(t, 1)
+        self.quantity = parse_decimal_from_tuple(t, 2)
+        self.uom_code = parse_string_from_tuple(t, 3)
+        self.material_type = parse_string_from_tuple(t, 4)
 
     def to_tuple(self):
         return (self.part_code,
@@ -425,21 +425,21 @@ class PersonnelSpecification(PgUserTypeMaping):
 
     def to_dict(self):
         return {"personnel_code": self.personnel_code,
-                "version_num": int(self.version_num),
-                "quantity": float('%.4f'%(self.quantity)),
+                "version_num": self.version_num,
+                "quantity": decimal_to_string(self.quantity),
                 "uom_code": self.uom_code}
 
     def from_dict(self, d):
-        self.personnel_code = d['personnel_code']
-        self.version_num = int(d['version_num'])
-        self.quantity = Decimal(d['quantity'])
-        self.uom_code = d['uom_code']
+        self.personnel_code = parse_string_from_dict(d, 'personnel_code')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.quantity = parse_decimal_from_dict(d, 'quantity')
+        self.uom_code = parse_string_from_dict(d, 'uom_code')
 
     def from_tuple(self, t):
-        self.personnel_code = t[0]
-        self.version_num = int(t[1])
-        self.quantity = Decimal(t[2])
-        self.uom_code = t[3]
+        self.personnel_code = parse_string_from_tuple(t, 0)
+        self.version_num = parse_int_from_tuple(t, 1)
+        self.quantity = parse_decimal_from_tuple(t, 2)
+        self.uom_code = parse_string_from_tuple(t, 3)
 
     def to_tuple(self):
         return (self.personnel_code,
@@ -463,21 +463,21 @@ class ToolingSpecification(PgUserTypeMaping):
 
     def to_dict(self):
         return {"tooling_code": self.tooling_code,
-                "version_num": int(self.version_num),
-                "quantity": float('%.4f'%(self.quantity)),
+                "version_num": self.version_num,
+                "quantity": decimal_to_string(self.quantity),
                 "uom_code": self.uom_code}
 
     def from_dict(self, d):
-        self.tooling_code = d['tooling_code']
-        self.version_num = int(d['version_num'])
-        self.quantity = Decimal(d['quantity'])
-        self.uom_code = d['uom_code']
+        self.tooling_code = parse_string_from_dict(d, 'tooling_code')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.quantity = parse_decimal_from_dict(d, 'quantity')
+        self.uom_code = parse_string_from_dict(d, 'uom_code')
 
     def from_tuple(self, t):
-        self.tooling_code = t[0]
-        self.version_num = int(t[1])
-        self.quantity = Decimal(t[2])
-        self.uom_code = t[3]
+        self.tooling_code = parse_string_from_tuple(t, 0)
+        self.version_num = parse_int_from_tuple(t, 1)
+        self.quantity = parse_decimal_from_tuple(t, 2)
+        self.uom_code = parse_string_from_tuple(t, 3)
 
     def to_tuple(self):
         return (self.tooling_code,
@@ -501,21 +501,21 @@ class EquipmentSpecification(PgUserTypeMaping):
 
     def to_dict(self):
         return {"equipment_code": self.equipment_code,
-                "version_num": int(self.version_num),
-                "quantity": float('%.4f'%(self.quantity)),
+                "version_num": self.version_num,
+                "quantity": decimal_to_string(self.quantity),
                 "uom_code": self.uom_code}
 
     def from_dict(self, d):
-        self.equipment_code = d['equipment_code']
-        self.version_num = int(d['version_num'])
-        self.quantity = Decimal(d['quantity'])
-        self.uom_code = d['uom_code']
+        self.equipment_code = parse_string_from_dict(d, 'equipment_code')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.quantity = parse_decimal_from_dict(d, 'quantity')
+        self.uom_code = parse_string_from_dict(d, 'uom_code')
 
     def from_tuple(self, t):
-        self.equipment_code = t[0]
-        self.version_num = int(t[1])
-        self.quantity = Decimal(t[2])
-        self.uom_code = t[3]
+        self.equipment_code = parse_string_from_tuple(t, 0)
+        self.version_num = parse_int_from_tuple(t, 1)
+        self.quantity = parse_decimal_from_tuple(t, 2)
+        self.uom_code = parse_string_from_tuple(t, 3)
 
     def to_tuple(self):
         return (self.equipment_code,
@@ -539,19 +539,17 @@ class DependencySpecification(PgUserTypeMaping):
     def to_dict(self):
         return {"ancestor": self.ancestor,
                 "descendant": self.descendant,
-                "depth": int(self.depth)}
+                "depth": self.depth}
 
     def from_dict(self, d):
-        self.ancestor = int(d['ancestor'])
-        self.descendant = int(d['descendant'])
-        self.depth = int(d['depth'])
+        self.ancestor = parse_int_from_dict(d, 'ancestor')
+        self.descendant = parse_int_from_dict(d, 'descendant')
+        self.depth = parse_int_from_dict(d, 'depth')
 
     def from_tuple(self, t):
-        #self.ancestor = uuid.UUID(t[0])
-        self.ancestor = int(t[0])
-        #self.descendant = uuid.UUID(t[1])
-        self.descendant = int(t[1])
-        self.depth = int(t[2])
+        self.ancestor = parse_int_from_tuple(t, 0)
+        self.descendant = parse_int_from_tuple(t, 1)
+        self.depth = parse_int_from_tuple(t, 2)
 
     def to_tuple(self):
         return (self.ancestor,
@@ -578,53 +576,42 @@ class EbomHead(PgUserTypeMaping):
             self.from_string(s)
 
     def to_dict(self):
-        if self.document_date:
-            _document_date = self.document_date.strftime('%Y-%m-%d')
-        else:
-            _document_date = None
         return {"document_id": self.document_id,
                 "gid": self.gid,
                 "display_name": self.display_name,
                 "version_num": self.version_num,
-                "document_date": _document_date,
+                "document_date": date_to_string(self.document_date),
                 "curr_fsmt": self.curr_fsmt,
                 "document_type": self.document_type,
                 "component_spec": ComponentSpecification(self.component_spec).to_dict()}
 
     def from_dict(self, d):
-        if len(d['document_date']) > 0:
-            _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
-        else:
-            _document_date = None
-
-        self.document_id = d['document_id']
-        self.gid = d['gid']
-        self.display_name = d['display_name']
-        self.version_num = d['version_num']
-        self.document_date = _document_date
-        self.curr_fsmt = d['curr_fsmt']
-        self.document_type = d['document_type']
-        self.component_spec = d['component_spec']
-        #spec = ComponentSpecification.from_dict(d['component_spec'])
+        self.document_id = parse_int_from_dict(d, 'document_id')
+        self.gid = parse_uuid_from_dict(d, 'gid')
+        self.display_name = parse_string_from_dict(d, 'display_name')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.document_date = parse_date_from_dict(d, 'document_date')
+        self.curr_fsmt = parse_string_from_dict(d, 'curr_fsmt')
+        self.document_type = parse_string_from_dict(d, 'document_type')
+        #self.component_spec = parse_string_from_dict(d, 'component_spec')
+        #self.component_spec = d['component_spec']
+        self.component_spec = ComponentSpecification().from_dict(d['component_spec'])
         #self.component_spec = spec
         #print(type(spec))
 
     def from_tuple(self, t):
-        self.document_id = int(t[0])
-        self.gid = uuid.UUID(t[1])
-        self.display_name = t[2]
-        self.version_num = t[3]
-        if len(t[4]) > 0:
-            self.document_date = datetime.datetime.strptime(t[4], "%Y-%m-%d")
-        else:
-            self.document_date = None
-        self.curr_fsmt = t[5]
-        self.document_type = t[6]
-        self.component_spec = t[7]
+        self.document_id = parse_int_from_tuple(t, 0)
+        self.gid = parse_uuid_from_tuple(t, 1)
+        self.display_name = parse_string_from_tuple(t, 2)
+        self.version_num = parse_int_from_tuple(t, 3)
+        self.document_date = parse_date_from_tuple(t, 4)
+        self.curr_fsmt = parse_string_from_tuple(t, 5)
+        self.document_type = parse_string_from_tuple(t, 6)
+        self.component_spec = parse_string_from_tuple(t, 7)
 
     def to_tuple(self):
         return (self.document_id,
-                self.gid,
+                uuid_to_string(self.gid),
                 self.display_name,
                 self.version_num,
                 self.document_date,
@@ -667,37 +654,28 @@ class MbomHead(PgUserTypeMaping):
                 "material_spec": MaterialSpecification(self.material_spec).to_dict()}
 
     def from_dict(self, d):
-        #ms = MaterialSpecification()
-        if len(d['document_date']) > 0:
-            _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
-        else:
-            _document_date = None
-
-        self.document_id = d['document_id']
-        self.gid = d['gid']
-        self.display_name = d['display_name']
-        self.version_num = d['version_num']
-        self.document_date = _document_date
-        self.curr_fsmt = d['curr_fsmt']
-        self.document_type = d['document_type']
+        self.document_id = parse_int_from_dict(d, 'document_id')
+        self.gid = parse_uuid_from_dict(d, 'gid')
+        self.display_name = parse_string_from_dict(d, 'display_name')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.document_date = parse_date_from_dict(d, 'document_date')
+        self.curr_fsmt = parse_string_from_dict(d, 'curr_fsmt')
+        self.document_type = parse_string_from_dict(d, 'document_type')
         self.material_spec = MaterialSpecification().from_dict(d['material_spec'])
 
     def from_tuple(self, t):
-        self.document_id = int(t[0])
-        self.gid = uuid.UUID(t[1])
-        self.display_name = t[2]
-        self.version_num = t[3]
-        if len(t[4]) > 0:
-            self.document_date = datetime.datetime.strptime(t[4], "%Y-%m-%d")
-        else:
-            self.document_date = None
-        self.curr_fsmt = t[5]
-        self.document_type = t[6]
-        self.material_spec = t[7]
+        self.document_id = parse_int_from_tuple(t, 0)
+        self.gid = parse_uuid_from_tuple(t, 1)
+        self.display_name = parse_string_from_tuple(t, 2)
+        self.version_num = parse_int_from_tuple(t, 3)
+        self.document_date = parse_date_from_tuple(t, 4)
+        self.curr_fsmt = parse_string_from_tuple(t, 5)
+        self.document_type = parse_string_from_tuple(t, 6)
+        self.material_spec = parse_string_from_tuple(t, 7)
 
     def to_tuple(self):
         return (self.document_id,
-                self.gid,
+                uuid_to_string(self.gid),
                 self.display_name,
                 self.version_num,
                 self.document_date,
@@ -739,36 +717,29 @@ class OperationHead(PgUserTypeMaping):
                 "producible_spec": MaterialSpecification(self.producible_spec).to_dict()}
 
     def from_dict(self, d):
-        if len(d['document_date']) > 0:
-            _document_date = datetime.datetime.strptime(d['document_date'], "%Y-%m-%d").date()
-        else:
-            _document_date = None
-
-        self.document_id = d['document_id']
-        self.gid = d['gid']
-        self.display_name = d['display_name']
-        self.version_num = d['version_num']
-        self.document_date = _document_date
-        self.curr_fsmt = d['curr_fsmt']
-        self.document_type = d['document_type']
-        self.producible_spec = d['producible_spec']
+        self.document_id = parse_int_from_dict(d, 'document_id')
+        self.gid = parse_uuid_from_dict(d, 'gid')
+        self.display_name = parse_string_from_dict(d, 'display_name')
+        self.version_num = parse_int_from_dict(d, 'version_num')
+        self.document_date = parse_date_from_dict(d, 'document_date')
+        self.curr_fsmt = parse_string_from_dict(d, 'curr_fsmt')
+        self.document_type = parse_string_from_dict(d, 'document_type')
+        self.producible_spec = MaterialSpecification().from_dict(d['producible_spec'])
+        #self.producible_spec = d['producible_spec']
 
     def from_tuple(self, t):
-        self.document_id = int(t[0])
-        self.gid = uuid.UUID(t[1])
-        self.display_name = t[2]
-        self.version_num = t[3]
-        if len(t[4]) > 0:
-            self.document_date = datetime.datetime.strptime(t[4], "%Y-%m-%d")
-        else:
-            self.document_date = None
-        self.curr_fsmt = t[5]
-        self.document_type = t[6]
-        self.producible_spec = t[7]
+        self.document_id = parse_int_from_tuple(t, 0)
+        self.gid = parse_uuid_from_tuple(t, 1)
+        self.display_name = parse_string_from_tuple(t, 2)
+        self.version_num = parse_int_from_tuple(t, 3)
+        self.document_date = parse_date_from_tuple(t, 4)
+        self.curr_fsmt = parse_string_from_tuple(t, 5)
+        self.document_type = parse_string_from_tuple(t, 6)
+        self.producible_spec = parse_string_from_tuple(t, 7)
 
     def to_tuple(self):
         return (self.document_id,
-                self.gid,
+                uuid_to_string(self.gid),
                 self.display_name,
                 self.version_num,
                 self.document_date,
