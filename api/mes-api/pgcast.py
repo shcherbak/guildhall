@@ -59,6 +59,141 @@ def pg_typ_caster(connection, nspname, typname, mapclass):
     return pg_udf_type
 
 
+
+def parse_string_from_dict(dict_object, dict_element):
+    try:
+        _result = dict_object[dict_element]
+    except (Exception, KeyError):
+        _result = None
+    return _result
+
+
+def parse_int_from_dict(dict_object, dict_element):
+    try:
+        if dict_object[dict_element]:
+            _result = int(dict_object[dict_element])
+        else:
+            _result = None
+    except (Exception, KeyError):
+        _result = None
+    return _result
+
+
+def parse_decimal_from_dict(dict_object, dict_element):
+    try:
+        if dict_object[dict_element]:
+            _result = Decimal(dict_object[dict_element])
+        else:
+            _result = None
+    except (Exception, KeyError):
+        _result = None
+    return _result
+
+
+def parse_date_from_dict(dict_object, dict_element):
+    try:
+        if len(dict_object[dict_element]) > 0:
+            _result = date_from_string(dict_object[dict_element])
+        else:
+            _result = None
+    except (Exception, KeyError):
+        _result = None
+    return _result
+
+
+def parse_uuid_from_dict(dict_object, dict_element):
+    try:
+        _result = uuid.UUID(dict_object[dict_element])
+    except (Exception, KeyError):
+        _result = None
+    return _result
+
+
+def parse_string_from_tuple(tuple_object, tuple_element):
+    try:
+        _result = tuple_object[tuple_element]
+    except (Exception, IndexError):
+        _result = None
+    return _result
+
+
+def parse_int_from_tuple(tuple_object, tuple_element):
+    try:
+        if tuple_object[tuple_element]:
+            _result = int(tuple_object[tuple_element])
+        else:
+            _result = None
+    except (Exception, IndexError):
+        _result = None
+    return _result
+
+
+def parse_decimal_from_tuple(tuple_object, tuple_element):
+    try:
+        if tuple_object[tuple_element]:
+            _result = Decimal(tuple_object[tuple_element])
+        else:
+            _result = None
+    except (Exception, IndexError):
+        _result = None
+    return _result
+
+
+def parse_date_from_tuple(tuple_object, tuple_element):
+    try:
+        if len(tuple_object[tuple_element]) > 0:
+            _result = date_from_string(tuple_object[tuple_element])
+        else:
+            _result = None
+    except (Exception, IndexError):
+        _result = None
+    return _result
+
+
+def parse_interval_from_tuple(tuple_object, tuple_element):
+    try:
+        _result = _ext.PYINTERVAL(tuple_object[tuple_element], None)
+    except (Exception, IndexError):
+        _result = None
+    return _result
+
+
+def parse_uuid_from_tuple(tuple_object, tuple_element):
+    try:
+        _result = uuid.UUID(tuple_object[tuple_element])
+    except (Exception, IndexError):
+        _result = None
+    return _result
+
+
+def date_from_string(str_date):
+    if str_date and len(str_date) > 0:
+        return datetime.datetime.strptime(str_date, "%Y-%m-%d")
+    else:
+        return None
+
+
+def date_to_string(pydate):
+    if pydate:
+        return pydate.strftime('%Y-%m-%d')
+    else:
+        return None
+
+
+def decimal_to_string(pydecimal, precision=4):
+    if pydecimal:
+        return float('%.4f'%(pydecimal))
+    else:
+        return None
+
+
+def uuid_to_string(pyuuid):
+    if pyuuid:
+        return str(pyuuid)
+    else:
+        return None
+
+
 class PgUserTypeMaping(object):
     pg_schm_name = ''
     pg_type_name = ''
