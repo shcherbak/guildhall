@@ -182,7 +182,7 @@ def date_to_string(pydate):
 
 def decimal_to_string(pydecimal, precision=4):
     if pydecimal:
-        return float('%.4f'%(pydecimal))
+        return float("{0:.{1}f}".format(pydecimal, precision))
     else:
         return None
 
