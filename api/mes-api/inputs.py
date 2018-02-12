@@ -81,17 +81,11 @@ class Inputs(object):
 
 
 class FsmtJsonInputs(Inputs):
-    json = [JsonSchema(schema=j.loads(open("schema/warehouse-fsmt-schema.json").read()))]
+    json = [JsonSchema(schema=j.loads(open("schema/manufacturing-fsmt-schema.json").read()))]
 
-class GenericDocumentJsonInputs(Inputs):
-    json = [JsonSchema(schema=j.loads(open("schema/warehouse-generic-document-schema.json").read()))]
-
-class InboundDocumentJsonInputs(Inputs):
-    json = [JsonSchema(schema=j.loads(open("schema/warehouse-inbound-document-schema.json").read()))]
-
-class OutboundDocumentJsonInputs(Inputs):
-    json = [JsonSchema(schema=j.loads(open("schema/warehouse-outbound-document-schema.json").read()))]
+class BomDocumentJsonInputs(Inputs):
+    json = [JsonSchema(schema=j.loads(open("schema/manufacturing-bom-document-schema.json").read()))]
 
 class JsonInputsMsg(Inputs):
-    schema = j.loads(open("schema/warehouse-fsmt-schema.json").read())
+    schema = j.loads(open("schema/manufacturing-fsmt-schema.json").read())
     json = [JsonSchema(schema=schema, message='JSON data did not validate.')]

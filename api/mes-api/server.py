@@ -9,9 +9,7 @@ from flask import Flask, jsonify, request
 import dao
 from connection import pool
 from inputs import (FsmtJsonInputs,
-                    OutboundDocumentJsonInputs,
-                    InboundDocumentJsonInputs,
-                    GenericDocumentJsonInputs)
+                    BomDocumentJsonInputs)
 
 app = Flask(__name__)
 app.config.from_object('serverconfig')
@@ -74,13 +72,13 @@ def get_eboms():
 def post_ebom():
     success = False
     document_id = None
-    inputs = OutboundDocumentJsonInputs(request)
+    inputs = BomDocumentJsonInputs(request)
     if not inputs.validate():
         response = jsonify(success=success, errors=inputs.errors), 400
         return response
     else:
         data = request.get_json()
-        document = dao.Demand(pool)
+        document = dao.EbomDocument(pool)
         document.from_dict(data)
         document_id = document.init()
     if document_id:
@@ -94,10 +92,6 @@ def post_ebom():
 @app.route('/eboms/<int:document_id>', methods=['GET'])
 def get_demand(document_id):
     document = dao.EbomDocument(pool, document_id)
-    #print(type(document.head))
-    #print(document.head)
-    #print(type(document.body[0]))
-    #print(type(document.body))
     return jsonify(document.to_dict())
 
 
@@ -109,7 +103,6 @@ def del_demand(document_id):
         response = ('', 204)
     else:
         response = jsonify(success=False, errors=document.errors), 400
-
     return response
 
 
@@ -152,8 +145,6 @@ def patch_demand_fsmt(document_id):
         response = jsonify(success=success, message="unexpected error"), 400
 
     return response
-
-
 
 
 @app.route('/mboms', methods=['GET'])

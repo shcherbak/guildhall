@@ -595,6 +595,7 @@ class EbomHead(PgUserTypeMaping):
         self.document_type = parse_string_from_dict(d, 'document_type')
         #self.component_spec = parse_string_from_dict(d, 'component_spec')
         #self.component_spec = d['component_spec']
+        # KeyError: 'component_spec'
         self.component_spec = ComponentSpecification().from_dict(d['component_spec'])
         #self.component_spec = spec
         #print(type(spec))
