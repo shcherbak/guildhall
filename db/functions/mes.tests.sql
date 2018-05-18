@@ -1069,4 +1069,3 @@ $BODY$
   COST 100;
 ALTER FUNCTION tests.__inventory__get_head()
   OWNER TO postgres;
-
