@@ -3,8 +3,18 @@
 mbom.information field order
 route.segment -> route.stride
 
+add support for phantom inventory
+add support for production doctype
+
 find duplicated on commit
-init mbom from given ebom  
+init mbom from given ebom use soft link
+
+init process from given mbom, use validation, deduplication, hard link
+init operation on process commit, use validation, deduplication, hard link
+map operation to physical asset
+
+generate routes for given product definition
+
 mes.inventory.do_commit
 mes.inventory.do_decommit
 mes.ebom.do_commit
