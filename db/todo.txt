@@ -174,3 +174,251 @@ wms.tests.__stocktake__is_document_locked
 wms.tests.__uom__get_domain
 wms.tests.__uom__get_factor
 
+unify
+
+
+CREATE OR REPLACE FUNCTION tests.__production__get_body()
+  RETURNS void AS
+$BODY$
+DECLARE
+  _body common.production_segment[];
+  _test_body CONSTANT common.production_segment[] := ARRAY[
+      (
+        '70d09038-5dfe-11e8-b545-d4bed939923a', 'OP-0001-01',
+        ARRAY[('Гайка-М12-001', 1, 1.0000, 'pcs', 'PRIMAL', 1)]::common.consumable_specification[],
+        ARRAY[('PERSONNEL-01', 1, 1, 1, 1, '00:30:00', '00:10:00')]::common.personnel_specification[],
+        ARRAY[('EQUIPMENT-001', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+        ARRAY[('TOOLING-001', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+      ),
+      (
+        'b978dcdc-5dfe-11e8-b547-d4bed939923a', 'OP-0001-02',
+        ARRAY[('80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE', 1)]::common.consumable_specification[],
+        ARRAY[('PERSONNEL-02', 1, 1, 1, 1, '00:40:00', '00:20:00')]::common.personnel_specification[],
+        ARRAY[('EQUIPMENT-002', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+        ARRAY[('TOOLING-002', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+      ),
+      (
+        'da20e25e-5dfe-11e8-b548-d4bed939923a', 'OP-0001-03',
+        ARRAY[('72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE', 1)]::common.consumable_specification[],
+        ARRAY[('PERSONNEL-03', 1, 1, 1, 1, '00:50:00', '00:30:00')]::common.personnel_specification[],
+        ARRAY[('EQUIPMENT-003', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+        ARRAY[('TOOLING-003', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+      )
+    ]::common.production_segment[];
+BEGIN
+  
+  RAISE DEBUG '#trace Check __production__get_body()';
+
+  INSERT INTO
+    inventory.information
+      ( id, gid, part_code, display_name, published_date )
+    VALUES
+      ( 101, 'a711da30-fa3a-11e7-8e63-d4bed939923a', '11.31.050-001', '11с31п-50х40: information', '2018-01-15' ),
+      ( 102, 'b39a3ff4-fa3a-11e7-8e64-d4bed939923a', '11.32.050-001', '11с32п-50х40: information', '2018-01-15' ),
+      ( 103, 'f08b5682-fa3a-11e7-86da-d4bed939923a', '11.33.050-001', '11с33п-50х40: information', '2018-01-15' ),
+      ( 104, '8236af18-eb1a-11e6-8a73-d4bed939923a', '80.31.050-001', 'xxxxxxxxxxxa: information', '2018-01-15' ),
+      ( 105, 'f20d7196-01d1-11e7-b441-d4bed939923a', '72.01.009-001', 'xxxxxxxxxxxb: information', '2018-01-15' ),
+      ( 106, '9b2952fa-01d1-11e7-b440-d4bed939923a', 'Гайка-М12-001', 'xxxxxxxxxxxc: information', '2018-01-15' );
+
+  INSERT INTO
+    inventory.definition 
+      ( id, gid, display_name, version_num, published_date, prev_fsmt, prev_fsmt_date, curr_fsmt, curr_fsmt_date, information_id, uom_code )
+    VALUES 
+      ( 101, 'c9000ec8-fa3a-11e7-9489-d4bed939923a', '11.31.050-001', 1, '2018-01-10', NULL, NULL, 'DECOMMITTED', '2018-01-10', 101, 'pcs' ),
+      ( 102, 'd83fb96a-fa3a-11e7-948a-d4bed939923a', '11.32.050-001', 1, '2018-01-15', NULL, NULL, 'COMMITTED', '2018-01-15', 102, 'pcs' ),
+      ( 103, 'cf77e3ea-0b5c-4e62-be62-63704f4071b7', '11.32.050-001', 2, '2018-01-16', NULL, NULL, 'PROPOSED', '2018-01-16', 102, 'pcs' ),
+      ( 104, 'c792f74d-7e6e-4577-ad69-987f56af7af7', '11.33.050-001', 1, '2018-01-17', NULL, NULL, 'COMMITTED', '2018-01-17', 103, 'pcs' ),
+      ( 105, '9b2952fa-01d1-11e7-b440-d4bed939923a', '80.31.050-001', 1, '2018-01-17', NULL, NULL, 'COMMITTED', '2018-01-17', 104, 'pcs' ),
+      ( 106, '8236af18-eb1a-11e6-8a73-d4bed939923a', '72.01.009-001', 1, '2018-01-17', NULL, NULL, 'COMMITTED', '2018-01-17', 105, 'pcs' ),
+      ( 107, 'f20d7196-01d1-11e7-b441-d4bed939923a', 'Гайка-М12-001', 1, '2018-01-17', NULL, NULL, 'COMMITTED', '2018-01-17', 106, 'pcs' );
+
+  INSERT INTO
+    inventory.producible
+      ( part_code, version_num, display_name, published_date, inventory_type, uom_code, definition_id )
+    VALUES
+      ( '11.31.050-001', 1, '11с31п-50х40: information', '2018-01-15', 'PRODUCIBLE', 'pcs', 101 ),
+      ( '11.32.050-001', 1, '11с32п-50х40: information', '2018-01-15', 'PRODUCIBLE', 'pcs', 102 ),
+      ( '11.32.050-001', 2, '11с32п-50х40: information', '2018-01-15', 'PRODUCIBLE', 'pcs', 103 ),
+      ( '11.33.050-001', 1, '11с32п-50х40: information', '2018-01-15', 'PRODUCIBLE', 'pcs', 104 ),
+      ( '80.31.050-001', 1, '80с31п-50х40: information', '2018-01-15', 'PRODUCIBLE', 'pcs', 104 );
+
+  INSERT INTO
+    inventory.part
+      ( part_code, version_num, display_name, published_date, inventory_type, uom_code, definition_id )
+    VALUES
+      ( '72.01.009-001', 1, '72с01п-50х40: information', '2018-01-15', 'PART', 'pcs', 105 ),
+      ( '80.31.050-001', 1, '80с31п-50х40: information', '2018-01-15', 'PART', 'pcs', 104 );
+
+  INSERT INTO
+    inventory.consumable
+      ( part_code, version_num, display_name, published_date, inventory_type, uom_code, definition_id )
+    VALUES
+      ( '72.01.009-001', 1, '72с01п-50х40: information', '2018-01-15', 'CONSUMABLE', 'pcs', 105 ),
+      ( '80.31.050-001', 1, '80с31п-50х40: information', '2018-01-15', 'CONSUMABLE', 'pcs', 104 );
+
+  INSERT INTO
+    inventory.primal
+      ( part_code, version_num, display_name, published_date, inventory_type, uom_code, definition_id )
+    VALUES
+      ( 'Гайка-М12-001', 1, 'Гайка-М12-001: information', '2018-01-15', 'PRIMAL', 'pcs', 106 );
+
+  INSERT INTO
+    production.information
+      ( id, gid, part_code, version_num, display_name, published_date )
+    VALUES
+      ( 101, '733dcfde-d041-11e7-91f5-54ab3aa56755', '11.32.050-001', 1, '11с32п-50х40: information', '2017-10-23' );
+  
+  INSERT INTO
+    production.definition
+      ( id, gid, display_name, version_num, published_date, prev_fsmt, prev_fsmt_date, curr_fsmt, curr_fsmt_date, information_id )
+    VALUES
+      ( 201, '8236af18-eb1a-11e6-8a73-d4bed939923a', '11с32п-50х40: definition', 1, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21', 101 ),
+      ( 202, '9b2952fa-01d1-11e7-b440-d4bed939923a', '11с32п-50х40: definition', 2, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21', 101 ),
+      ( 203, 'f20d7196-01d1-11e7-b441-d4bed939923a', '11с32п-50х40: definition', 3, '2017-10-21', NULL, NULL, 'PROPOSED', '2017-10-21', 101 );
+      
+  INSERT INTO
+    production.segment
+      ( id, gid, definition_id, operation_code )
+    VALUES
+      ( 301, '70d09038-5dfe-11e8-b545-d4bed939923a', 203, 'OP-0001-01' ),
+      ( 302, 'b978dcdc-5dfe-11e8-b547-d4bed939923a', 203, 'OP-0001-02' ),
+      ( 303, 'da20e25e-5dfe-11e8-b548-d4bed939923a', 203, 'OP-0001-03' );
+
+  INSERT INTO
+    production.primal 
+      ( segment_id, part_code, version_num, quantity, uom_code, material_type ) 
+    VALUES
+      ( 301, 'Гайка-М12-001', 1, 1.0000, 'pcs', 'PRIMAL' );
+
+  INSERT INTO
+    production.consumable 
+      ( segment_id, part_code, version_num, quantity, uom_code, material_type )
+    VALUES
+      ( 302, '80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE' ),
+      ( 303, '72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE' );
+
+  INSERT INTO
+    production.equipment
+      ( segment_id, equipment_code, version_num, quantity, uom_code )
+    VALUES
+      ( 301, 'EQUIPMENT-001', 1, 1.0000, 'pcs' ),
+      ( 302, 'EQUIPMENT-002', 1, 1.0000, 'pcs' ),
+      ( 303, 'EQUIPMENT-003', 1, 1.0000, 'pcs' );
+
+  INSERT INTO
+    production.tooling
+      ( segment_id, tooling_code, version_num, quantity, uom_code )
+    VALUES
+      ( 301, 'TOOLING-001', 1, 1.0000, 'pcs' ),
+      ( 302, 'TOOLING-002', 1, 1.0000, 'pcs' ),
+      ( 303, 'TOOLING-003', 1, 1.0000, 'pcs' );
+
+  INSERT INTO
+    production.personnel
+      ( segment_id, personnel_code, version_num, rationing_qty, batch_qty, workers_qty, setup_time, piece_time )
+    VALUES
+      ( 301, 'PERSONNEL-01', 1, 1, 1, 1, '00:30:00', '00:10:00' ),
+      ( 302, 'PERSONNEL-02', 1, 1, 1, 1, '00:40:00', '00:20:00' ),
+      ( 303, 'PERSONNEL-03', 1, 1, 1, 1, '00:50:00', '00:30:00' );
+
+  INSERT INTO
+    production.dependency
+      ( ancestor, descendant, depth )
+    VALUES
+      ( 'b978dcdc-5dfe-11e8-b547-d4bed939923a', '70d09038-5dfe-11e8-b545-d4bed939923a', 1 ),
+      ( 'da20e25e-5dfe-11e8-b548-d4bed939923a', 'b978dcdc-5dfe-11e8-b547-d4bed939923a', 2 );
+
+  _body := production.get_body(203);
+  PERFORM pgunit.assert_array_equals(_test_body, _body, 'Incorrect _body value');
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION tests.__production__get_body()
+  OWNER TO postgres;
+
+
+
+
+snippets
+
+select ARRAY[
+  (
+    '70d09038-5dfe-11e8-b545-d4bed939923a', 'OP-0001-01',
+    ARRAY[('Гайка-М12-001', 1, 1.0000, 'pcs', 'PRIMAL', 1)]::common.consumable_specification[],
+    ARRAY[('PERSONNEL-01', 1, 1, 1, 1, '00:30:00', '00:10:00')]::common.personnel_specification[],
+    ARRAY[('EQUIPMENT-001', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+    ARRAY[('TOOLING-001', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+  ),
+  (
+    'b978dcdc-5dfe-11e8-b547-d4bed939923a', 'OP-0001-01',
+    ARRAY[('80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE', 1)]::common.consumable_specification[],
+    ARRAY[('PERSONNEL-02', 1, 1, 1, 1, '00:40:00', '00:20:00')]::common.personnel_specification[],
+    ARRAY[('EQUIPMENT-002', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+    ARRAY[('TOOLING-002', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+  ),
+  (
+    'da20e25e-5dfe-11e8-b548-d4bed939923a', 'OP-0001-01',
+    ARRAY[('72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE', 1)]::common.consumable_specification[],
+    ARRAY[('PERSONNEL-03', 1, 1, 1, 1, '00:50:00', '00:30:00')]::common.personnel_specification[],
+    ARRAY[('EQUIPMENT-003', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+    ARRAY[('TOOLING-002', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+  )
+]::common.production_segment[];
+
+
+
+
+
+
+
+
+
+
+SELECT production.init(
+    (203,'9b2952fa-01d1-11e7-b440-d4bed939923a','11с32п-50х40: definition',3,'2017-10-21','PROPOSED','EBOM',('11.32.050-001',1,1.0000,'pcs','PRODUCIBLE'))::common.production_head,
+    ARRAY[
+      (
+        '70d09038-5dfe-11e8-b545-d4bed939923a', 'OP-0001-01',
+        ARRAY[('Гайка-М12-001', 1, 1.0000, 'pcs', 'PRIMAL', 1)]::common.consumable_specification[],
+        ARRAY[('PERSONNEL-01', 1, 1, 1, 1, '00:30:00', '00:10:00')]::common.personnel_specification[],
+        ARRAY[('EQUIPMENT-001', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+        ARRAY[('TOOLING-001', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+      ),
+      (
+        'b978dcdc-5dfe-11e8-b547-d4bed939923a', 'OP-0001-02',
+        ARRAY[('80.31.050-001', 1, 1.0000, 'pcs', 'CONSUMABLE', 1)]::common.consumable_specification[],
+        ARRAY[('PERSONNEL-02', 1, 1, 1, 1, '00:40:00', '00:20:00')]::common.personnel_specification[],
+        ARRAY[('EQUIPMENT-002', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+        ARRAY[('TOOLING-002', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+      ),
+      (
+        'da20e25e-5dfe-11e8-b548-d4bed939923a', 'OP-0001-03',
+        ARRAY[('72.01.009-001', 1, 2.0000, 'pcs', 'CONSUMABLE', 1)]::common.consumable_specification[],
+        ARRAY[('PERSONNEL-03', 1, 1, 1, 1, '00:50:00', '00:30:00')]::common.personnel_specification[],
+        ARRAY[('EQUIPMENT-003', 1, 1.0000, 'pcs')]::common.equipment_specification[],
+        ARRAY[('TOOLING-003', 1, 1.0000, 'pcs')]::common.tooling_specification[]
+      )
+    ]::common.production_segment[],
+    ARRAY[
+      ( 'b978dcdc-5dfe-11e8-b547-d4bed939923a', '70d09038-5dfe-11e8-b545-d4bed939923a', 1 ),
+      ( 'da20e25e-5dfe-11e8-b548-d4bed939923a', 'b978dcdc-5dfe-11e8-b547-d4bed939923a', 2 )
+    ]::common.dependency_specification[]
+);
+
+
+select 
+  (
+    203,
+    '9b2952fa-01d1-11e7-b440-d4bed939923a',
+    '11с32п-50х40: definition',
+    3,
+    '2017-10-21',
+    'PROPOSED',
+    'PRODUCTION',
+    ('11.32.050-001',1,1.0000,'pcs','PRODUCIBLE')
+  )::common.production_head
+
+
+  
