@@ -36,27 +36,35 @@ documentation:
       Consumable Actual
 
 schemas:
-  - Inventory: !include json/commons-material-schema.json
-  - Inventories: !include json/commons-materials-schema.json
-  - Equipment: !include json/commons-material-schema.json
-  - Equipments: !include json/commons-materials-schema.json
-  - Tooling: !include json/commons-material-schema.json
-  - Toolings: !include json/commons-materials-schema.json
-  - Personnel: !include json/manufacturing-fsmt-schema.json
-  - Person: !include json/manufacturing-fsmt-schema.json
-  - Process: !include json/manufacturing-fsmt-schema.json
-  - Processes: !include json/manufacturing-fsmt-schema.json
-  - Route: !include json/commons-message-schema.json
-  - Routes: !include json/commons-message-schema.json
-  - Operation: !include json/manufacturing-operation-document-schema.json
-  - Operations: !include json/manufacturing-operation-documents-schema.json
-  - FSMT: !include json/manufacturing-fsmt-schema.json
-  - EBOM: !include json/manufacturing-bom-document-schema.json
-  - EBOMs: !include json/manufacturing-bom-documents-schema.json
-  - MBOM: !include json/manufacturing-bom-document-schema.json
-  - MBOMs: !include json/manufacturing-bom-documents-schema.json
-  - Error: !include json/commons-error-schema.json
-  - Message: !include json/commons-message-schema.json
+  - Inventory:      !include json/commons-material-schema.json
+  - Inventories:    !include json/commons-materials-schema.json
+  - Equipment:      !include json/commons-material-schema.json
+  - Equipments:     !include json/commons-materials-schema.json
+  - Tooling:        !include json/commons-material-schema.json
+  - Toolings:       !include json/commons-materials-schema.json
+  - Operation:      !include json/manufacturing-fsmt-schema.json
+  - Operations:     !include json/manufacturing-fsmt-schema.json
+  - Person:         !include json/manufacturing-fsmt-schema.json
+  - Personnel:      !include json/manufacturing-fsmt-schema.json
+  - Request:        !include json/manufacturing-fsmt-schema.json
+  - Requests:       !include json/manufacturing-fsmt-schema.json
+  - Response:       !include json/manufacturing-fsmt-schema.json
+  - Responses:      !include json/manufacturing-fsmt-schema.json
+  - Product:        !include json/manufacturing-fsmt-schema.json
+  - Products:       !include json/manufacturing-fsmt-schema.json
+  - Process:        !include json/manufacturing-process-document-schema.json
+  - Processes:      !include json/manufacturing-process-documents-schema.json
+  - Route:          !include json/manufacturing-route-document-schema.json
+  - Routes:         !include json/manufacturing-route-documents-schema.json
+  - Stride:         !include json/manufacturing-stride-document-schema.json
+  - Strides:        !include json/manufacturing-stride-documents-schema.json
+  - FSMT:           !include json/manufacturing-fsmt-schema.json
+  - EBOM:           !include json/manufacturing-bom-document-schema.json
+  - EBOMs:          !include json/manufacturing-bom-documents-schema.json
+  - MBOM:           !include json/manufacturing-bom-document-schema.json
+  - MBOMs:          !include json/manufacturing-bom-documents-schema.json
+  - Error:          !include json/commons-error-schema.json
+  - Message:        !include json/commons-message-schema.json
 
 
 /inventories:
@@ -430,6 +438,58 @@ schemas:
             application/json:
               schema: Error
 
+/oprations:
+  get:
+    description: Get a list of Operations
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Operations
+  post:
+    description: Add new Operation
+    body:
+      application/json:
+        schema: Operation
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Operation
+  /{resourceId}:
+    get:
+      description: Get a Operation by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Operation
+        404:
+          body:
+            application/json:
+              schema: Error
+    put:
+      description: Update Operation by ID
+      body:
+        application/json:
+          schema: Operation
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Operation
+        404:
+          body:
+            application/json:
+              schema: Error
+    delete:
+      description: Delete a Operation by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
 
 /requests:
   get:
@@ -453,44 +513,11 @@ schemas:
     /fsmt:
       put:
 
-/production:
-  get:
-  post:
-  /{resourceId}:
-    get:
-    delete:
-    /definition:
-      patch:
-    /fsmt:
-      put:
-
-/processes:
-  get:
-  post:
-  /{resourceId}:
-    get:
-    delete:
-    /definition:
-      patch:
-    /fsmt:
-      put:
-
 /routes:
-  get:
-  post:
-  /{resourceId}:
-    get:
-    delete:
-    /definition:
-      patch:
-    /fsmt:
-      put:
-
-/operations:
   description: |
-    An operation card (KTP)
+    A route card (KTP)
   get:
-    description: Get a list of Operation cards
+    description: Get a list of Route cards
     queryParameters:
       sdate:
         displayName: Start Date
@@ -517,14 +544,14 @@ schemas:
       200:
         body:
           application/json:
-            schema: Operations
-            example: !include ./json/manufacturing-operation-documents-example.json
+            schema: Routes
+            example: !include ./json/manufacturing-route-documents-example.json
   post:
-    description: Add new Operation card
+    description: Add new Route card
     body:
       application/json:
-        schema: Operation
-        example: !include ./json/manufacturing-operation-document-example.json
+        schema: Route
+        example: !include ./json/manufacturing-route-document-example.json
     responses:
       201:
         body:
@@ -538,20 +565,20 @@ schemas:
               example: !include ./json/commons-error-example.json
   /{resourceId}:
     get:
-      description: Get a Operation Card by ID
+      description: Get a Route Card by ID
       responses:
         200:
           body:
             application/json:
-              schema: Operation
-              example: !include ./json/manufacturing-operation-document-example.json
+              schema: Route
+              example: !include ./json/manufacturing-route-document-example.json
         404:
           body:
             application/json:
               schema: Error
               example: !include ./json/commons-error-example.json
     delete:
-      description: Delete a Operation Card by ID
+      description: Delete a Route Card by ID
       responses:
         204:
         404:
@@ -564,8 +591,256 @@ schemas:
         description: Reinit definition
         body:
           application/json:
-            schema: Operation
-            example: !include ./json/manufacturing-operation-document-example.json
+            schema: Route
+            example: !include ./json/manufacturing-route-document-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          400:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+      /personnel:
+        patch:
+          description: Reinit personnel definition
+          responses:
+            501:
+      /toolings:
+        patch:
+          description: Reinit toolings definition
+          responses:
+            501:
+      /materials:
+        patch:
+          description: Reinit material definition
+          responses:
+            501:
+    /fsmt:
+      put:
+        body:
+          application/json:
+            schema: FSMT
+            example: !include ./json/manufacturing-fsmt-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          404:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+
+/processes:
+  description: |
+    A process card (KTP)
+  get:
+    description: Get a list of Process cards
+    queryParameters:
+      sdate:
+        displayName: Start Date
+        type: date
+        description: Start date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-01
+      edate:
+        displayName: End Date
+        type: date
+        description: End date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-10
+      hierarhy:
+        displayName: Hierarhy
+        type: string
+        description: Hierarhy scope
+        example: SITE
+        required: false
+        default: SITE
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Processs
+            example: !include ./json/manufacturing-process-documents-example.json
+  post:
+    description: Add new Process card
+    body:
+      application/json:
+        schema: Process
+        example: !include ./json/manufacturing-process-document-example.json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Message
+            example: !include ./json/commons-message-example.json
+      400:
+        body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+  /{resourceId}:
+    get:
+      description: Get a Process Card by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Process
+              example: !include ./json/manufacturing-process-document-example.json
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    delete:
+      description: Delete a Process Card by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    /definition:
+      patch:
+        description: Reinit definition
+        body:
+          application/json:
+            schema: Process
+            example: !include ./json/manufacturing-process-document-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          400:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+      /personnel:
+        patch:
+          description: Reinit personnel definition
+          responses:
+            501:
+      /toolings:
+        patch:
+          description: Reinit toolings definition
+          responses:
+            501:
+      /materials:
+        patch:
+          description: Reinit material definition
+          responses:
+            501:
+    /fsmt:
+      put:
+        body:
+          application/json:
+            schema: FSMT
+            example: !include ./json/manufacturing-fsmt-example.json
+        responses:
+          200:
+            body:
+              application/json:
+                schema: Message
+                example: !include ./json/commons-message-example.json
+          404:
+            body:
+              application/json:
+                schema: Error
+                example: !include ./json/commons-error-example.json
+
+/strides:
+  description: |
+    A stride card (KTP)
+  get:
+    description: Get a list of Stride cards
+    queryParameters:
+      sdate:
+        displayName: Start Date
+        type: date
+        description: Start date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-01
+      edate:
+        displayName: End Date
+        type: date
+        description: End date
+        example: 2017-01-01
+        required: false
+        default: 2017-01-10
+      hierarhy:
+        displayName: Hierarhy
+        type: string
+        description: Hierarhy scope
+        example: SITE
+        required: false
+        default: SITE
+    responses:
+      200:
+        body:
+          application/json:
+            schema: Strides
+            example: !include ./json/manufacturing-stride-documents-example.json
+  post:
+    description: Add new Stride card
+    body:
+      application/json:
+        schema: Stride
+        example: !include ./json/manufacturing-stride-document-example.json
+    responses:
+      201:
+        body:
+          application/json:
+            schema: Message
+            example: !include ./json/commons-message-example.json
+      400:
+        body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+  /{resourceId}:
+    get:
+      description: Get a Stride Card by ID
+      responses:
+        200:
+          body:
+            application/json:
+              schema: Stride
+              example: !include ./json/manufacturing-stride-document-example.json
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    delete:
+      description: Delete a Stride Card by ID
+      responses:
+        204:
+        404:
+          body:
+            application/json:
+              schema: Error
+              example: !include ./json/commons-error-example.json
+    /definition:
+      patch:
+        description: Reinit definition
+        body:
+          application/json:
+            schema: Stride
+            example: !include ./json/manufacturing-stride-document-example.json
         responses:
           200:
             body:

@@ -4,7 +4,7 @@
   "description": "Manufacturing Internal Documents Collection Type definition",
   "type": "array",
   "items": {
-    "$ref": "manufacturing-operation-information-schema.json"
+    "$ref": "manufacturing-route-information-schema.json"
   },
   "uniqueItems": true
 }

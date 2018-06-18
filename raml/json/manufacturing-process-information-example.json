@@ -6,7 +6,7 @@
     "version_num": 1,
     "hierarhy_scope": "SITE",
     "curr_fsmt": "PROPOSED",
-    "doctype": "OPERATION",
+    "doctype": "PROCESS",
     "producible": {
       "part_code": "10.01.001-001",
       "quantity": 1,

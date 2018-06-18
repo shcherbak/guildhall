@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Manufacturing Internal Documents Collection",
+  "description": "Manufacturing Internal Documents Collection Type definition",
+  "type": "array",
+  "items": {
+    "$ref": "manufacturing-stride-information-schema.json"
+  },
+  "uniqueItems": true
+}
