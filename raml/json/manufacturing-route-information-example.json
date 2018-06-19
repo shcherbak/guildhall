@@ -1,7 +1,7 @@
 {
     "document_id": 1,
     "gid": "b3dbaf2c-3f1c-11e7-b691-d4bed939923a",
-    "display_name": "STK-A10-AB1AA0",
+    "display_name": "ROU-A10-AB1AA0",
     "document_date": "2017-02-01",
     "version_num": 1,
     "hierarhy_scope": "SITE",
@@ -9,6 +9,7 @@
     "doctype": "PROCESS",
     "producible": {
       "part_code": "10.01.001-001",
+      "version_num": 1,
       "quantity": 1,
       "uom_code": "pcs"
     }
