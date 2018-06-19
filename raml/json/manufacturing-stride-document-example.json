@@ -74,5 +74,13 @@
         "uom_code": "pcs"
       }
     ]
-  }
+  },
+  "location_spec": [
+    {
+      "location_code": "LOCATION-01"
+    },
+    {
+      "location_code": "LOCATION-02"
+    }
+  ]
 }

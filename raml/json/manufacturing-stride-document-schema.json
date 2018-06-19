@@ -260,6 +260,21 @@
           }
         }
       }
+    },
+    "location_spec": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "location_code": {
+            "type": "string",
+            "title": "The Tooling_code Schema.",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          }
+        }
+      }
     }
   }
 }
