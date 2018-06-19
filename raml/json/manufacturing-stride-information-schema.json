@@ -50,7 +50,8 @@
         "PRODUCT",
         "PROCESS",
         "REQUEST",
-        "RESPONSE"
+        "RESPONSE",
+        "STRIDE"
       ]
     },
     "ancestor": {
@@ -128,6 +129,7 @@
   "required": [
     "document_date",
     "hierarhy_scope",
-    "producible"
+    "ancestor",
+    "descendant"
   ]
 }
