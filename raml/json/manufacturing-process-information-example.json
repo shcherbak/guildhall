@@ -9,6 +9,7 @@
     "doctype": "PROCESS",
     "producible": {
       "part_code": "10.01.001-001",
+      "version_num": 1,
       "quantity": 1,
       "uom_code": "pcs"
     }
