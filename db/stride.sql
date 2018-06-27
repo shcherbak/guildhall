@@ -512,7 +512,7 @@ END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION stride.get_node_root(character varying, integer, integer)
+ALTER FUNCTION stride.get_node_top(character varying, integer, integer)
   OWNER TO postgres;
 
 CREATE OR REPLACE FUNCTION stride.get_node_children(__part_code character varying, __version_num integer, __process_num integer, __segment_num integer)
@@ -569,7 +569,7 @@ BEGIN
         information_parent.part_code, 
         information_parent.version_num, 
         information_parent.process_num, 
-        information_parent.segment_num)::commmon.node
+        information_parent.segment_num)::common.node
       FROM 
         stride.information information_child, 
         stride.descendant, 
@@ -618,7 +618,7 @@ DECLARE
   _a int := 1;
 BEGIN
 
-  _roots := stride.get_node_root('72.01.009-001', 1, 1);
+  _roots := stride.get_node_top('72.01.009-001', 1, 1);
   --RAISE NOTICE '_roots = %', _roots;
 
 
@@ -770,7 +770,41 @@ begin
 end $$;
 
 
+CREATE OR REPLACE FUNCTION stride.test()
+  RETURNS void AS
+$BODY$
+DECLARE
+_arr int[][];
+_arr_unnest int[];
+BEGIN
 
+_arr = ARRAY[ ARRAY[ 21, 22, 23 ], ARRAY[ 11 ,12, 13 ] , ARRAY [ 31, 32, 33, 34 ] ];
+
+RAISE NOTICE '_arr: %', _arr;
+RAISE NOTICE '_arr[1:1]: %', _arr[1:1];
+RAISE NOTICE '_arr[1:2]: %', _arr[1:2];
+RAISE NOTICE '_arr[1:3]: %', _arr[1:3];
+RAISE NOTICE '_arr[1:2][1:3]: %', _arr[1:2][1:3];
+RAISE NOTICE '_arr[1:2][2:3]: %', _arr[1:2][2:3];
+RAISE NOTICE '_arr[2:2][2:3]: %', _arr[2:2][2:3];
+RAISE NOTICE '_arr[1:]: %', _arr[1:];
+RAISE NOTICE '_arr[:1]: %', _arr[:1];
+RAISE NOTICE '_arr[2:]: %', _arr[2:];
+RAISE NOTICE '_arr[:2]: %', _arr[:2];
+RAISE NOTICE '_arr[1]: %', _arr[1:1];
+RAISE NOTICE '_arr[2]: %', _arr[2:2];
+RAISE NOTICE '_arr[3]: %', _arr[3:3];
+RAISE NOTICE 'array_ndims(_arr): %', array_ndims(_arr);
+RAISE NOTICE 'array_dims(_arr): %', array_dims(_arr);
+
+
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION stride.test()
+  OWNER TO postgres;
 
 
   FOREACH _node IN
@@ -1036,6 +1070,624 @@ FROM
 
 
 
+
+
+
+
+CREATE OR REPLACE FUNCTION stride.get_path()
+  RETURNS void AS
+$BODY$
+DECLARE
+  _roots common.node[];
+  _root common.node;
+  _node common.node;
+  _prev_node common.node;
+  _parents common.node[];
+  _parent common.node;
+  _new common.node[];
+  _cnt int := 1;
+  counter INTEGER := 0; 
+  _BIG common.node[][];
+  _element common.node[];
+  _i int := 1;
+  _a int := 1;
+  _r record;
+BEGIN
+
+  _roots := stride.get_node_top('72.01.009-001', 1, 1);
+  RAISE NOTICE '_roots = %', _roots;
+
+
+  foreach _root in array _roots loop
+
+    _node := _root;
+    RAISE NOTICE '_node #%', _node;
+
+    insert into stride.t1 values (DEFAULT, ARRAY[(_node)]::common.node[]);
+
+    _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+
+    WHILE array_length(_parents, 1) > 0 LOOP
+
+      foreach _parent in array _parents loop
+        _prev_node := _node;
+        _node := _parent;
+        RAISE NOTICE '_parent #%', _node;
+
+
+        if array_length(_parents, 1) > 1 then
+
+          FOR _i IN 1..(array_length(_parents, 1) - 1) LOOP
+
+            for _r IN select * from stride.t1 LOOP
+
+              raise notice '_r.s1 %', _r.s1;
+              raise notice '_prev_node %', _prev_node;
+              _element := _r.s1;
+
+              -- если послений текущий элемент в таблище равен предыдущему обработаному,
+              -- копируем весь путь
+              if _element[array_upper(_element, 1)] = _prev_node then
+                insert into stride.t1 values (DEFAULT, _element);
+              end if;
+      
+            end loop;
+
+          end loop;
+        end if;
+
+            for _r IN select * from stride.t1 LOOP
+
+              raise notice '_r.s1 %', _r.s1;
+              raise notice '_prev_node %', _prev_node;
+              _element := _r.s1;
+              -- послений элемент в таблице равен предыдущему обработаному,
+              -- добавляем элемент в путь
+              if _element[array_upper(_element, 1)] = _prev_node then
+                _new := array_append(_element, _parent);
+                update stride.t1 set s1 = _new where id = _r.id;
+              end if;
+      
+            end loop;
+
+
+        _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+      end loop;
+   
+    end loop;
+
+    _cnt := _cnt + 1;
+  end loop;
+  
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+
+{
+"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)",
+"(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)",
+"(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)",
+"(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)",
+"(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)"
+}
+
+{
+"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)",
+"(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)",
+"(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)",
+"(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)",
+"(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)"
+}
+
+
+
+
+
+
+
+.........................
+
+найти конечные узлы графа
+
+для каждого узла в конечных узлах графа выполнить цикл
+
+  _предыдущий_узел = конечный узел
+  _следующий_узел = конечный узел
+
+  _следующие_узлы = выбрать _следующие_узлы по _предыдущий_узел
+
+  пока не закончатся _следующие_узлы выполнять цикл
+
+    _следующий_узел = 
+
+
+    _следующие_узлы = выбрать _следующие_узлы по узлу
+  конец цикла
+
+конец цикла
+
+*/
+
+
+
+CREATE OR REPLACE FUNCTION stride.get_last(__last_in_path common.node)
+  RETURNS SETOF stride.t1 AS
+$BODY$
+DECLARE
+  _record record;
+BEGIN
+
+
+    for _record in
+        select * from stride.t1
+    loop
+      if _record.s1[array_length(_record.s1, 1)] = __last_in_path then
+        return next _record;
+      end if;
+    end loop;
+  
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+-- select stride.get_last(('a8627dc7-8584-4cc5-9e6d-4cf8594f23e0','F1-02','72.01.009-001',1,1,2)::common.node);
+
+CREATE OR REPLACE FUNCTION stride.append_node(__last_in_path common.node, __append common.node)
+  RETURNS void AS
+$BODY$
+DECLARE
+  _record record;
+  _arr common.node[];
+BEGIN
+
+
+    for _record in
+        select * from stride.t1
+    loop
+      if _record.s1[array_length(_record.s1, 1)] = __last_in_path then
+        _arr := array_append(_arr, __append);
+        update stride.t1 set s1 = _arr where id = _record.id;
+      end if;
+    end loop;
+  
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+
+
+  --
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.6.7
+-- Dumped by pg_dump version 9.6.7
+
+-- Started on 2018-06-27 13:41:48 EEST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET search_path = stride, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 378 (class 1259 OID 370275)
+-- Name: t1; Type: TABLE; Schema: stride; Owner: postgres
+--
+
+CREATE TABLE t1 (
+    id bigint NOT NULL,
+    s1 common.node[]
+);
+
+
+ALTER TABLE t1 OWNER TO postgres;
+
+--
+-- TOC entry 377 (class 1259 OID 370273)
+-- Name: t1_id_seq; Type: SEQUENCE; Schema: stride; Owner: postgres
+--
+
+CREATE SEQUENCE t1_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE t1_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2956 (class 0 OID 0)
+-- Dependencies: 377
+-- Name: t1_id_seq; Type: SEQUENCE OWNED BY; Schema: stride; Owner: postgres
+--
+
+ALTER SEQUENCE t1_id_seq OWNED BY t1.id;
+
+
+--
+-- TOC entry 2827 (class 2604 OID 370278)
+-- Name: t1 id; Type: DEFAULT; Schema: stride; Owner: postgres
+--
+
+ALTER TABLE ONLY t1 ALTER COLUMN id SET DEFAULT nextval('t1_id_seq'::regclass);
+
+
+--
+-- TOC entry 2951 (class 0 OID 370275)
+-- Dependencies: 378
+-- Data for Name: t1; Type: TABLE DATA; Schema: stride; Owner: postgres
+--
+
+INSERT INTO t1 (id, s1) VALUES (9, '{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)","(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)"}');
+INSERT INTO t1 (id, s1) VALUES (10, '{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)","(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)"}');
+
+
+--
+-- TOC entry 2957 (class 0 OID 0)
+-- Dependencies: 377
+-- Name: t1_id_seq; Type: SEQUENCE SET; Schema: stride; Owner: postgres
+--
+
+SELECT pg_catalog.setval('t1_id_seq', 10, true);
+
+
+--
+-- TOC entry 2829 (class 2606 OID 370283)
+-- Name: t1 t1_pkey; Type: CONSTRAINT; Schema: stride; Owner: postgres
+--
+
+ALTER TABLE ONLY t1
+    ADD CONSTRAINT t1_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2018-06-27 13:41:48 EEST
+
+--
+-- PostgreSQL database dump complete
+--
+
+{"(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)",
+"(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)",
+"(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)",
+"(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE OR REPLACE FUNCTION stride.get_path()
+  RETURNS void AS
+$BODY$
+DECLARE
+  _roots common.node[];
+  _root common.node;
+  _node common.node;
+  _prev_node common.node;
+  _curr_node common.node;
+  _next_node common.node;
+  _parents common.node[];
+  _parent common.node;
+  _new common.node[];
+  _cnt int := 1;
+  counter INTEGER := 0; 
+  _BIG common.node[][];
+  _element common.node[];
+  _i int := 1;
+  _a int := 1;
+  _r record;
+BEGIN
+
+  _roots := stride.get_node_top('72.01.009-001', 1, 1);
+  RAISE NOTICE '_roots = %', _roots;
+
+
+  foreach _root in array _roots loop
+
+    _prev_node := _root;
+    _curr_node := _root;
+    _next_node := _root;
+    RAISE NOTICE '_prev_node #%', _prev_node;
+    RAISE NOTICE '_curr_node #%', _curr_node;
+    RAISE NOTICE '_next_node #%', _next_node;
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+    RAISE NOTICE '_parents #%', _parents;
+
+    while array_length(_parents, 1) > 0 loop
+      RAISE NOTICE 'LOOP #%', _cnt;
+      foreach _node in array _parents loop
+        _prev_node := _curr_node;
+        _curr_node := _node;
+        RAISE NOTICE '_prev_node #%', _prev_node;
+        RAISE NOTICE '_curr_node #%', _curr_node;
+      end loop;
+
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+    _cnt := _cnt + 1;
+    end loop;
+
+  end loop;
+  
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+/*
+[QUERY    ] select stride.get_path()
+NOTICE:  _roots = {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _next_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _parents #{"(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)"}
+NOTICE:  LOOP #1
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  LOOP #2
+NOTICE:  _prev_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  _prev_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)
+NOTICE:  LOOP #3
+NOTICE:  _prev_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)
+NOTICE:  _curr_node #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+*/
+
+
+
+
+CREATE OR REPLACE FUNCTION stride.get_path()
+  RETURNS void AS
+$BODY$
+DECLARE
+  _roots common.node[];
+  _root common.node;
+  _node common.node;
+  _prev_node common.node;
+  _curr_node common.node;
+  _next_node common.node;
+  _parents common.node[];
+  _parent common.node;
+  _new common.node[];
+  _cnt int := 1;
+  counter INTEGER := 0; 
+  _BIG common.node[][];
+  _element common.node[];
+  _i int := 1;
+  _a int := 1;
+  _r record;
+BEGIN
+
+  _roots := stride.get_node_top('72.01.009-001', 1, 1);
+  RAISE NOTICE '_roots = %', _roots;
+
+
+  foreach _root in array _roots loop
+
+    _prev_node := _root;
+    _curr_node := _root;
+    _next_node := _root;
+    RAISE NOTICE '_prev_node #%', _prev_node;
+    RAISE NOTICE '_curr_node #%', _curr_node;
+    RAISE NOTICE '_next_node #%', _next_node;
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+    RAISE NOTICE '_parents #%', _parents;
+
+    while array_length(_parents, 1) > 0 loop
+      RAISE NOTICE 'LOOP #%', _cnt;
+      _prev_node := _curr_node;
+      
+      foreach _node in array _parents loop
+        _curr_node := _node;
+        RAISE NOTICE '_prev_node #%', _prev_node;
+        RAISE NOTICE '_curr_node #%', _curr_node;
+      end loop;
+
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+    _cnt := _cnt + 1;
+    end loop;
+
+  end loop;
+  
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+/*
+[QUERY    ] select stride.get_path()
+NOTICE:  _roots = {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _next_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _parents #{"(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)"}
+NOTICE:  LOOP #1
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  LOOP #2
+NOTICE:  _prev_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  _prev_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)
+NOTICE:  LOOP #3
+NOTICE:  _prev_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)
+NOTICE:  _curr_node #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+*/
+
+
+
+CREATE OR REPLACE FUNCTION stride.get_path()
+  RETURNS void AS
+$BODY$
+DECLARE
+  _roots common.node[];
+  _root common.node;
+  _node common.node;
+  _prev_node common.node;
+  _curr_node common.node;
+  _next_node common.node;
+  _parents common.node[];
+  _parent common.node;
+  _new common.node[];
+  _cnt int := 1;
+  counter INTEGER := 0; 
+  _BIG common.node[][];
+  _element common.node[];
+  _i int := 1;
+  _a int := 1;
+  _r record;
+BEGIN
+
+  _roots := stride.get_node_top('72.01.009-001', 1, 1);
+  --RAISE NOTICE '_roots = %', _roots;
+
+
+  _root := _roots[1];
+
+  _parents := stride.get_node_parents(_root.part_code, _root.version_num, _root.process_num, _root.segment_num);
+
+  while array_length(_parents, 1) > 0 loop
+
+    if _prev_node is null then
+      _prev_node := _root;
+    end if;
+
+    if _curr_node is null then
+      _curr_node := _root;
+    end if;
+
+    if array_length(_parents, 1) > 1 then
+      foreach _node in array _parents loop
+        foreach _r in select * from stride.get_last(_prev_node) loop
+      end loop;
+    end if;
+
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+  end loop;
+
+/*
+  foreach _root in array _roots loop
+
+    _prev_node := _root;
+    _curr_node := _root;
+    _next_node := _root;
+    RAISE NOTICE '_prev_node #%', _prev_node;
+    RAISE NOTICE '_curr_node #%', _curr_node;
+    RAISE NOTICE '_next_node #%', _next_node;
+
+    insert into stride.t1 values (DEFAULT, ARRAY[(_root)]::common.node[]);
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+    RAISE NOTICE '_parents #%', _parents;
+
+    while array_length(_parents, 1) > 0 loop
+      RAISE NOTICE 'LOOP #%', _cnt;
+            
+      foreach _node in array _parents loop
+        
+        RAISE NOTICE '_prev_node #%', _prev_node;
+        RAISE NOTICE '_curr_node #%', _curr_node;
+        _prev_node := _curr_node;
+        _curr_node := _node; 
+      end loop;
+
+
+    _parents := stride.get_node_parents(_curr_node.part_code, _curr_node.version_num, _curr_node.process_num, _curr_node.segment_num);
+    _cnt := _cnt + 1;
+    end loop;
+
+  end loop;
+*/  
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+
+[QUERY    ] select stride.get_path()
+            NOTICE:  _roots = {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+
+            NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+
+            NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _curr_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+
+            NOTICE:  _prev_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+
+            NOTICE:  _prev_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)
+
+
+[QUERY    ] select stride.get_path()
+NOTICE:  _roots = {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _next_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _parents #{"(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)"}
+NOTICE:  LOOP #1
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  !!! _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  !!! _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  !!! _element #{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+NOTICE:  LOOP #2
+NOTICE:  _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  _curr_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  !!! _prev_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  !!! _curr_node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+NOTICE:  !!! _element #{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+NOTICE:  _prev_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  !!! _prev_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  !!! _curr_node #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+NOTICE:  !!! _element #{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)"}
+NOTICE:  LOOP #3
+NOTICE:  _prev_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,G1-01,72.01.009-001,1,1,2)
+NOTICE:  !!! _prev_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  !!! _curr_node #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+NOTICE:  !!! _element #{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)","(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)"}
 
 
 
