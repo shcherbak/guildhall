@@ -465,50 +465,435 @@ CREATE TYPE common.vertex_specification AS
 ALTER TYPE common.vertex_specification
   OWNER TO postgres;
 
-CREATE OR REPLACE FUNCTION stride.get_path(__part_code character varying, __version_num integer, __process_num integer)
-  RETURNS common.vertex_specification[] AS
+CREATE TYPE common.node AS
+   (gid uuid,
+    facility_code character varying,
+    part_code character varying,
+    version_num integer,
+    process_num integer,
+    segment_num integer);
+ALTER TYPE common.node
+  OWNER TO postgres;
+
+CREATE OR REPLACE FUNCTION stride.get_node_top(__part_code character varying, __version_num integer, __process_num integer)
+  RETURNS common.node[] AS
 $BODY$
-DECLARE
-  _root common.vertex_specification;
-  _path common.vertex_specification[];
 BEGIN
-  _root := (information.part_code, 
-            information.version_num, 
-            information.process_num, 
-            information.segment_num,
-            'OP-CODE',
-            1.0,
-            'pc',
-            'PRODUCIBLE')::common.vertex_specification
-            --facility.facility_code, 
-            --definition.gid
+  RETURN
+    ARRAY(
+      SELECT
+        (definition.gid, 
+        facility.facility_code, 
+        information.part_code, 
+        information.version_num, 
+        information.process_num, 
+        information.segment_num)::common.node
+      FROM 
+        stride.information, 
+        stride.definition,  
+        stride.facility
+      WHERE 
+        information.id = definition.information_id AND
+        definition.id = facility.definition_id AND
+        information.part_code = __part_code AND 
+        information.version_num = __version_num AND
+        information.process_num = __process_num AND
+        NOT EXISTS (
+          SELECT 
+            definition_id 
           FROM 
-            --stride.facility, 
-            stride.definition, 
-            stride.descendant, 
-            stride.information
-          WHERE 
-            --definition.id = facility.definition_id AND
-            definition.id = descendant.definition_id AND
-            information.id = definition.information_id AND
-            descendant.segment_num = 0 AND 
-            information.part_code = __part_code AND 
-            information.version_num = __version_num AND
-            information.process_num = __process_num AND
-            1 = 1;
-
-  PERFORM array_append(_path, _root);
-
-/*
-
-*/
+            stride.descendant
+          WHERE
+            definition_id = definition.id 
+        )
+    );
 
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION stride.get_path(character varying, integer, integer)
+ALTER FUNCTION stride.get_node_root(character varying, integer, integer)
   OWNER TO postgres;
+
+CREATE OR REPLACE FUNCTION stride.get_node_children(__part_code character varying, __version_num integer, __process_num integer, __segment_num integer)
+  RETURNS common.node[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY(
+      SELECT 
+        (definition_child.gid, 
+        facility.facility_code, 
+        information_child.part_code, 
+        information_child.version_num, 
+        information_child.process_num, 
+        information_child.segment_num)::common.node
+      FROM 
+        stride.information information_parent, 
+        stride.information information_child, 
+        stride.definition definition_parent, 
+        stride.descendant, 
+        stride.definition definition_child, 
+        stride.facility
+      WHERE 
+        information_parent.id = definition_parent.information_id AND
+        information_child.id = definition_child.information_id AND
+        definition_parent.id = descendant.definition_id AND
+        descendant.part_code = information_child.part_code AND
+        descendant.version_num = information_child.version_num AND
+        descendant.process_num = information_child.process_num AND
+        descendant.segment_num = information_child.segment_num AND
+        definition_child.id = facility.definition_id AND
+        information_parent.part_code = __part_code AND 
+        information_parent.version_num = __version_num AND 
+        information_parent.process_num = __process_num AND 
+        information_parent.segment_num = __segment_num
+    );
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION stride.get_node_root(character varying, integer, integer, integer)
+  OWNER TO postgres;
+
+CREATE OR REPLACE FUNCTION stride.get_node_parents(__part_code character varying, __version_num integer, __process_num integer, __segment_num integer)
+  RETURNS common.node[] AS
+$BODY$
+BEGIN
+  RETURN
+    ARRAY(
+      SELECT 
+        (definition_parent.gid, 
+        facility.facility_code, 
+        information_parent.part_code, 
+        information_parent.version_num, 
+        information_parent.process_num, 
+        information_parent.segment_num)::commmon.node
+      FROM 
+        stride.information information_child, 
+        stride.descendant, 
+        stride.definition definition_parent, 
+        stride.information information_parent, 
+        stride.facility
+      WHERE 
+        information_child.part_code = descendant.part_code AND
+        information_child.version_num = descendant.version_num AND
+        information_child.process_num = descendant.process_num AND
+        information_child.segment_num = descendant.segment_num AND
+        definition_parent.id = descendant.definition_id AND
+        definition_parent.id = facility.definition_id AND
+        information_parent.id = definition_parent.information_id AND
+        information_child.part_code = __part_code AND 
+        information_child.version_num = __version_num AND 
+        information_child.process_num = __process_num AND 
+        information_child.segment_num = __segment_num
+    );
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+ALTER FUNCTION stride.get_node_parents(character varying, integer, integer, integer)
+  OWNER TO postgres;
+
+  PERFORM array_append(_path, _root);
+
+
+CREATE OR REPLACE FUNCTION stride.get_path()
+  RETURNS void AS
+$BODY$
+DECLARE
+  _roots common.node[];
+  _root common.node;
+  _node common.node;
+  _prev_node common.node;
+  _parents common.node[];
+  _parent common.node;
+  _cnt int := 1;
+  counter INTEGER := 0; 
+  _BIG common.node[][];
+  _element common.node[];
+  _i int := 1;
+  _a int := 1;
+BEGIN
+
+  _roots := stride.get_node_root('72.01.009-001', 1, 1);
+  --RAISE NOTICE '_roots = %', _roots;
+
+
+  foreach _root in array _roots loop
+
+    _node := _root;
+    RAISE NOTICE '_node #%', _node;
+
+    _BIG = _BIG || _node;
+    --RAISE NOTICE '_BIG #%', _BIG;
+
+    _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+
+    WHILE array_length(_parents, 1) > 0 LOOP
+   
+      /*_node := _parents[1];
+      RAISE NOTICE '_parent #%', _node;
+      _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);*/
+      --RAISE NOTICE '_parents #%', _parents;
+
+      --RAISE NOTICE '_parents_lenght #%', array_length(_parents, 1); 
+
+
+      foreach _parent in array _parents loop
+        _prev_node := _node;
+        _node := _parent;
+        RAISE NOTICE '_parent #%', _node;
+
+
+        if array_length(_parents, 1) > 1 then
+
+          FOR _i IN 1..(array_length(_parents, 1) - 1) LOOP
+
+            for _a IN 1..array_length(_BIG, 1) LOOP
+
+              if _BIG[_a] = _prev_node then
+                _BIG = array_append(_BIG, _BIG[_a]);
+                RAISE NOTICE '_BIG: %', _BIG;
+              end if;
+      
+            end loop;
+
+          end loop;
+        end if;
+
+        for _a IN 1..array_length(_BIG, 1) LOOP
+
+          if _BIG[_a][array_upper(_BIG[_a], 1)] = _prev_node then
+
+          _BIG[_a] := _BIG[_a] || _parent;
+          RAISE NOTICE '_BIG: %', _BIG;
+
+          end if;
+
+        end loop;
+
+        /*FOR _i IN 1..array_length(_BIG, 1) LOOP
+        RAISE NOTICE 'Counter: %', _i;
+
+        if _BIG[_i] = _parent then
+        RAISE NOTICE 'equals';
+        end if;
+        END LOOP;*/
+
+        
+
+        --if array_length(_parents, 1) > 1 THEN
+        --RAISE NOTICE 'NOTICE#1';
+        --end loop;
+        --end if;
+          
+
+
+        _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+      end loop;
+   
+    end loop;
+
+    _cnt := _cnt + 1;
+  end loop;
+  
+
+
+
+  /*
+  _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+  RAISE NOTICE '_parents #%', _parents;
+
+  _node := _parents[1];
+  RAISE NOTICE '_parent #%', _node;
+
+  _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+  RAISE NOTICE '_parents #%', _parents;
+
+  _node := _parents[1];
+  RAISE NOTICE '_parent #%', _node;
+
+
+  _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+  RAISE NOTICE '_parents #%', _parents;
+
+  _node := _parents[1];
+  RAISE NOTICE '_parent #%', _node;
+
+
+  _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+  RAISE NOTICE '_parents #%', _parents;
+
+  _node := _parents[1];
+  RAISE NOTICE '_parent #%', _node;
+
+*/
+
+
+  /*WHILE array_length(_parents, 1) > 0 LOOP
+  _node := stride.get_node_parents(_parents[1].part_code, _parents[1].version_num, _parents[1].process_num, _parents[1].segment_num);
+  _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+  END LOOP;*/
+
+END;
+$BODY$
+  LANGUAGE plpgsql VOLATILE
+  COST 100;
+
+
+create or replace function stride.recursive_function (ct int, pr int)
+returns table (counter int, product int)
+language plpgsql
+as $$
+begin
+    return query select ct, pr;
+    if ct < 10 then
+        return query select * from stride.recursive_function(ct+ 1, pr * (ct+ 1));
+    end if;
+end $$;
+
+create or replace function stride.loop_function ()
+returns table (counter int, product int)
+language plpgsql
+as $$
+declare
+    ct int;
+    pr int = 1;
+begin
+    for ct in 1..10 loop
+        pr = ct* pr;
+        return query select ct, pr;
+    end loop;
+end $$;
+
+
+
+
+
+  FOREACH _node IN
+    ARRAY _root
+  LOOP
+
+    _cnt := _cnt + 1;
+    RAISE NOTICE 'LOOP #%', _cnt;
+
+    RAISE NOTICE '_node #%', _node;
+
+    --_parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+    /*
+    WHILE array_length(_parents, 1) > 0 LOOP
+      _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+      RAISE NOTICE '_parents = %', _parents;
+    END LOOP ; 
+    */
+    /*counter := 0;
+    WHILE counter <= 10 LOOP
+    counter := counter + 1 ; 
+    RAISE NOTICE 'counter #%', counter;
+    END LOOP ;*/
+
+    _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+    RAISE NOTICE '_parents = %', _parents;
+
+    WHILE _array_length(_parents, 1) > 0  loop
+      counter := counter + 1;
+      RAISE NOTICE 'counter = %', counter;
+
+      _parents := stride.get_node_parents(_node.part_code, _node.version_num, _node.process_num, _node.segment_num);
+      RAISE NOTICE '_parents = %', _parents;
+
+      FOREACH _parent IN ARRAY _parents LOOP
+        _parents := stride.get_node_parents(_parent.part_code, _parent.version_num, _parent.process_num, _parent.segment_num);
+        RAISE NOTICE '_parents = %', _parents;
+      END LOOP;
+
+
+    END LOOP;
+    
+  END LOOP;
+
+
+
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+
+[QUERY    ] select stride.get_path()
+            NOTICE:  _roots = {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)"}
+            
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F4-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+            
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F4-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+
+
+
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F4-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+            
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F4-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+
+
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+            
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+
+
+
+
+[QUERY    ] select stride.get_path()
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _BIG: {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)"}
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F4-01,72.01.009-001,1,1,3)
+            NOTICE:  else
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  else
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+            NOTICE:  else
+            NOTICE:  _node #(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F2-01,72.01.009-001,1,1,3)
+            NOTICE:  _BIG: {"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)","(3709941e-5878-4878-9711-68da8137185c,F4-01,72.01.009-001,1,1,4)"}
+            NOTICE:  _parent #(63a9f5a0-3a0c-4c50-b3d4-20d8bb62a17a,F4-01,72.01.009-001,1,1,3)
+            NOTICE:  else
+            NOTICE:  _parent #(a8627dc7-8584-4cc5-9e6d-4cf8594f23e0,F1-02,72.01.009-001,1,1,2)
+            NOTICE:  else
+            NOTICE:  _parent #(10b6043c-455d-4644-8e5a-790d9ed36a86,F1-01,72.01.009-001,1,1,1)
+            NOTICE:  else
+
+
+
+
+
+
+
 
 '72.01.009-001';1;1;1;'F1-01';'10b6043c-455d-4644-8e5a-790d9ed36a86'
 '72.01.009-001';1;1;2;'F1-02';'a8627dc7-8584-4cc5-9e6d-4cf8594f23e0'
@@ -564,10 +949,76 @@ select stride.get_tree_descendants(__part_code character varying, __version_num 
 
 
 
+CREATE TABLE stride.employees (
+ employee_id serial PRIMARY KEY,
+ full_name VARCHAR NOT NULL,
+ manager_id INT
+);
+
+INSERT INTO stride.employees (
+ employee_id,
+ full_name,
+ manager_id
+)
+VALUES
+ (1, 'Michael North', NULL),
+ (2, 'Megan Berry', 1),
+ (3, 'Sarah Berry', 1),
+ (4, 'Zoe Black', 1),
+ (5, 'Tim James', 1),
+ (6, 'Bella Tucker', 2),
+ (7, 'Ryan Metcalfe', 2),
+ (8, 'Max Mills', 2),
+ (9, 'Benjamin Glover', 2),
+ (10, 'Carolyn Henderson', 3),
+ (11, 'Nicola Kelly', 3),
+ (12, 'Alexandra Climo', 3),
+ (13, 'Dominic King', 3),
+ (14, 'Leonard Gray', 4),
+ (15, 'Eric Rampling', 4),
+ (16, 'Piers Paige', 7),
+ (17, 'Ryan Henderson', 7),
+ (18, 'Frank Tucker', 8),
+ (19, 'Nathan Ferguson', 8),
+ (20, 'Kevin Rampling', 8);
+
+ WITH RECURSIVE subordinates AS (
+ SELECT
+ employee_id,
+ manager_id,
+ full_name
+ FROM
+ stride.employees
+ WHERE
+ employee_id = 2
+ UNION
+ SELECT
+ e.employee_id,
+ e.manager_id,
+ e.full_name
+ FROM
+ sride.employees e
+ INNER JOIN subordinates s ON s.employee_id = e.manager_id
+) SELECT
+ *
+FROM
+ subordinates;
 
 
-
-
+ WITH RECURSIVE subordinates AS (
+  SELECT * from stride.get_node_parents('72.01.009-001',1,1,4)
+  UNION
+  SELECT
+  e.employee_id,
+  e.manager_id,
+  e.full_name
+  FROM
+  sride.employees e
+  INNER JOIN subordinates s ON s.employee_id = e.manager_id
+) SELECT
+ *
+FROM
+ subordinates;
 
 
 
