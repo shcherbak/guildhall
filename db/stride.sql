@@ -1691,3 +1691,49 @@ NOTICE:  !!! _element #{"(3709941e-5878-4878-9711-68da8137185c,F2-02,72.01.009-0
 
 
 
+WITH RECURSIVE subordinates AS (
+SELECT 
+  v1.i_part_code, 
+  v1.i_version_num, 
+  v1.i_process_num, 
+  v1.i_segment_num
+FROM 
+  stride.v1
+WHERE 
+  v1.i_part_code = '72.01.009-001' AND 
+  v1.i_version_num = 1 AND 
+  v1.i_process_num = 1 --AND 
+  --v1.i_segment_num = 3
+ UNION
+SELECT 
+  v11.i_part_code, 
+  v11.i_version_num, 
+  v11.i_process_num, 
+  v11.i_segment_num
+FROM 
+  stride.v1 v11
+ INNER JOIN subordinates s ON 
+    s.i_part_code = v11.i_part_code AND 
+    s.i_version_num = v11.i_version_num AND
+    s.i_process_num = v11.i_process_num --AND
+    --s.i_segment_num = v11.i_segment_num
+) SELECT
+ *
+FROM
+ subordinates;
+
+
+SELECT 
+  facility.facility_code
+FROM 
+  stride.information, 
+  stride.definition, 
+  stride.facility
+WHERE 
+  information.id = definition.information_id AND
+  definition.id = facility.definition_id AND
+  information.part_code = '72.01.009-001' AND 
+  information.version_num = 1 AND 
+  information.process_num = 1 AND 
+  information.segment_num = 1;
+
