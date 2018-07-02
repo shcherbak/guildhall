@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.8
 -- Dumped by pg_dump version 9.6.8
 
--- Started on 2018-07-03 02:25:27 EEST
+-- Started on 2018-07-03 02:35:12 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -5938,7 +5938,7 @@ $$;
 ALTER FUNCTION schedule.get_julianized_week(__date date) OWNER TO postgres;
 
 --
--- TOC entry 607 (class 1255 OID 105014)
+-- TOC entry 606 (class 1255 OID 105014)
 -- Name: append_pathway(common.vertex_specs, uuid, common.vertex_specs); Type: FUNCTION; Schema: stride; Owner: postgres
 --
 
@@ -5978,7 +5978,7 @@ $$;
 ALTER FUNCTION stride.append_pathway(__find_node common.vertex_specs, __run_gid uuid, __append_node common.vertex_specs) OWNER TO postgres;
 
 --
--- TOC entry 609 (class 1255 OID 105016)
+-- TOC entry 608 (class 1255 OID 105016)
 -- Name: consider_pathway(character varying, integer); Type: FUNCTION; Schema: stride; Owner: postgres
 --
 
@@ -6074,7 +6074,7 @@ $$;
 ALTER FUNCTION stride.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 606 (class 1255 OID 105013)
+-- TOC entry 605 (class 1255 OID 105013)
 -- Name: fork_pathway(common.vertex_specs, uuid, integer); Type: FUNCTION; Schema: stride; Owner: postgres
 --
 
@@ -6170,11 +6170,11 @@ $$;
 ALTER FUNCTION stride.get_consumable_spec(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 605 (class 1255 OID 105000)
+-- TOC entry 610 (class 1255 OID 105021)
 -- Name: get_edges_by_child(common.vertex_specs); Type: FUNCTION; Schema: stride; Owner: postgres
 --
 
-CREATE FUNCTION stride.get_edges_by_child(__child common.vertex_specs) RETURNS common.edge_specs
+CREATE FUNCTION stride.get_edges_by_child(__child common.vertex_specs) RETURNS common.edge_specs[]
     LANGUAGE plpgsql
     AS $$
 BEGIN
@@ -6363,7 +6363,7 @@ CREATE TABLE stride.pathway (
 ALTER TABLE stride.pathway OWNER TO postgres;
 
 --
--- TOC entry 610 (class 1255 OID 105020)
+-- TOC entry 609 (class 1255 OID 105020)
 -- Name: get_pathway(character varying, integer); Type: FUNCTION; Schema: stride; Owner: postgres
 --
 
@@ -6421,7 +6421,7 @@ $$;
 ALTER FUNCTION stride.get_personnel_spec(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 608 (class 1255 OID 105018)
+-- TOC entry 607 (class 1255 OID 105018)
 -- Name: get_roots(character varying, integer); Type: FUNCTION; Schema: stride; Owner: postgres
 --
 
@@ -13408,6 +13408,7 @@ SELECT pg_catalog.setval('facility.information_id_seq', 1, false);
 -- Data for Name: definition; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
+INSERT INTO inventory.definition VALUES (19, '94ed2528-7e4f-11e8-b5ac-d4bed939923a', '11--1', 1, '2018-07-03', NULL, NULL, 'PROPOSED', '2018-07-03 02:28:10.086799+03', 19, 'pcs');
 
 
 --
@@ -13425,6 +13426,7 @@ SELECT pg_catalog.setval('inventory.definition_id_seq', 18, true);
 -- Data for Name: information; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
+INSERT INTO inventory.information VALUES (19, '7108c342-7e4f-11e8-9884-d4bed939923a', '11.01.001-001', '11-01', '2018-07-03');
 
 
 --
@@ -13433,7 +13435,7 @@ SELECT pg_catalog.setval('inventory.definition_id_seq', 18, true);
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: inventory; Owner: postgres
 --
 
-SELECT pg_catalog.setval('inventory.information_id_seq', 18, true);
+SELECT pg_catalog.setval('inventory.information_id_seq', 19, true);
 
 
 --
@@ -13474,6 +13476,7 @@ SELECT pg_catalog.setval('inventory.information_id_seq', 18, true);
 -- Data for Name: producible; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
 
+INSERT INTO inventory.producible VALUES ('11.01.001-001', 1, '11-01', '2018-01-01', 'PRODUCIBLE', 'pcs', 19);
 
 
 --
@@ -13953,7 +13956,7 @@ SELECT pg_catalog.setval('route.segment_id_seq', 1, false);
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: stride; Owner: postgres
 --
 
-SELECT pg_catalog.setval('stride.definition_id_seq', 1, false);
+SELECT pg_catalog.setval('stride.definition_id_seq', 2, true);
 
 
 --
@@ -13994,7 +13997,7 @@ SELECT pg_catalog.setval('stride.definition_id_seq', 1, false);
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: stride; Owner: postgres
 --
 
-SELECT pg_catalog.setval('stride.information_id_seq', 1, false);
+SELECT pg_catalog.setval('stride.information_id_seq', 4, true);
 
 
 --
@@ -15979,7 +15982,7 @@ ALTER TABLE ONLY uom.information
     ADD CONSTRAINT uom_base_uom_code_fkey FOREIGN KEY (base_uom_code) REFERENCES uom.information(uom_code);
 
 
--- Completed on 2018-07-03 02:25:28 EEST
+-- Completed on 2018-07-03 02:35:13 EEST
 
 --
 -- PostgreSQL database dump complete
