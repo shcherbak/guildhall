@@ -355,3 +355,28 @@ $BODY$
 ALTER FUNCTION stride2.get_path()
   OWNER TO postgres;
 
+INSERT INTO
+  information
+    (id, gid, display_name, published_date, part_code, version_num, process_num, segment_num, operation_code)
+  VALUES
+  (1, '964a7710-7eca-11e8-aed7-2c4d54562450', '22.25.050-001', '2018-01-01', '22.25.050-001', 1, 1, 0, 'O1'),
+  (2, 'aac5daea-7eca-11e8-aed7-2c4d54562450', '22.25.050-001', '2018-01-01', '22.25.050-001', 1, 1, 1, 'O2'),
+  (3, 'bb0bf24a-7eca-11e8-aed7-2c4d54562450', '22.25.050-001', '2018-01-01', '22.25.050-001', 1, 1, 2, 'O3'),
+  (4, 'c554e81a-7eca-11e8-aed7-2c4d54562450', '22.25.050-001', '2018-01-01', '22.25.050-001', 1, 1, 3, 'O4');
+
+INSERT INTO
+  definition
+    (id, gid, display_name, version_num, published_date, prev_fsmt, prev_fsmt_date, curr_fsmt, curr_fsmt_date, information_id, operation_code)
+  VALUES 
+    (1, 'e9860bc4-7eca-11e8-afb8-2c4d54562450', '22.25.050-001', 1, '2018-01-01', NULL, NULL, 'PROPOSED', '2018-07-03 17:11:00.116154+03', 1, 'O1'),
+    (2, 'f3acc12e-7eca-11e8-afb8-2c4d54562450', '22.25.050-001', 1, '2018-01-01', NULL, NULL, 'PROPOSED', '2018-07-03 17:11:17.14767+03', 2, 'O2'),
+    (3, 'fa4d7302-7eca-11e8-afb8-2c4d54562450', '22.25.050-001', 1, '2018-01-01', NULL, NULL, 'PROPOSED', '2018-07-03 17:11:28.267181+03', 3, 'O3'),
+    (4, '043031ac-7ecb-11e8-afb8-2c4d54562450', '22.25.050-001', 1, '2018-01-01', NULL, NULL, 'PROPOSED', '2018-07-03 17:11:44.85244+03', 4, 'O4');
+
+INSERT INTO
+  descendant
+    (definition_id, part_code, version_num, process_num, segment_num, operation_code) 
+  VALUES
+    (2, '22.25.050-001', 1, 1, 3, 'O2'),
+    (3, '22.25.050-001', 1, 1, 4, 'O3'),
+    (4, '22.25.050-001', 1, 1, 1, 'O4');
