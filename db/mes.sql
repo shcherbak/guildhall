@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.8
 -- Dumped by pg_dump version 9.6.8
 
--- Started on 2018-07-04 23:32:13 EEST
+-- Started on 2018-07-05 08:07:46 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16193,7 +16193,7 @@ ALTER TABLE ONLY uom.information
     ADD CONSTRAINT uom_base_uom_code_fkey FOREIGN KEY (base_uom_code) REFERENCES uom.information(uom_code);
 
 
--- Completed on 2018-07-04 23:32:15 EEST
+-- Completed on 2018-07-05 08:07:47 EEST
 
 --
 -- PostgreSQL database dump complete
