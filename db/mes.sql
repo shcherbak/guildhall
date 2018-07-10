@@ -5,7 +5,7 @@
 -- Dumped from database version 9.6.7
 -- Dumped by pg_dump version 9.6.7
 
--- Started on 2018-07-10 10:38:52 EEST
+-- Started on 2018-07-10 16:23:36 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -5675,7 +5675,7 @@ $$;
 ALTER FUNCTION route.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 628 (class 1255 OID 378366)
+-- TOC entry 627 (class 1255 OID 378366)
 -- Name: get_body(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5699,7 +5699,7 @@ $$;
 ALTER FUNCTION route.get_body(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 626 (class 1255 OID 378373)
+-- TOC entry 625 (class 1255 OID 378373)
 -- Name: get_consumable_spec(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5728,7 +5728,7 @@ $$;
 ALTER FUNCTION route.get_consumable_spec(__segment_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 623 (class 1255 OID 378370)
+-- TOC entry 622 (class 1255 OID 378370)
 -- Name: get_equipment_spec(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5775,7 +5775,7 @@ $$;
 ALTER FUNCTION route.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 621 (class 1255 OID 378367)
+-- TOC entry 620 (class 1255 OID 378367)
 -- Name: get_head(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5831,7 +5831,7 @@ $$;
 ALTER FUNCTION route.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
 --
--- TOC entry 625 (class 1255 OID 378372)
+-- TOC entry 624 (class 1255 OID 378372)
 -- Name: get_personnel_spec(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5861,29 +5861,34 @@ $$;
 ALTER FUNCTION route.get_personnel_spec(__segment_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 631 (class 1255 OID 378378)
+-- TOC entry 633 (class 1255 OID 378384)
 -- Name: get_segment(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
-CREATE FUNCTION get_segment(__segment_id bigint) RETURNS common.process_segment
+CREATE FUNCTION get_segment(__segment_id bigint) RETURNS common.route_segment
     LANGUAGE plpgsql
     AS $$
 BEGIN
   RETURN
-    (segment.gid,
-    segment.operation_code,
-    segment.facility_code,
-    (segment.part_code,
-    segment.version_num,
-    1.0::common.quantity,
-    'pcs',
-    'PRODUCIBLE'::common.material_kind,
-    segment.process_num,
-    segment.segment_num)::common.phantom_specification,
-    route.get_consumable_spec(__segment_id := __segment_id),
-    route.get_personnel_spec(__segment_id := __segment_id),
-    route.get_equipment_spec(__segment_id := __segment_id),
-    route.get_tooling_spec(__segment_id := __segment_id))::common.process_segment
+    (
+      segment.gid,
+      segment.order_num,
+      segment.operation_code,
+      segment.facility_code,
+      (
+        segment.part_code,
+        segment.version_num,
+        1.0::common.quantity,
+        'pcs',
+        'PRODUCIBLE'::common.material_kind,
+        segment.process_num,
+        segment.segment_num
+      )::common.phantom_specification,
+      route.get_consumable_spec(__segment_id := __segment_id),
+      route.get_personnel_spec(__segment_id := __segment_id),
+      route.get_equipment_spec(__segment_id := __segment_id),
+      route.get_tooling_spec(__segment_id := __segment_id)
+    )::common.route_segment
   FROM 
     route.segment
   WHERE 
@@ -5895,7 +5900,7 @@ $$;
 ALTER FUNCTION route.get_segment(__segment_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 624 (class 1255 OID 378371)
+-- TOC entry 623 (class 1255 OID 378371)
 -- Name: get_tooling_spec(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5922,7 +5927,7 @@ $$;
 ALTER FUNCTION route.get_tooling_spec(__segment_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 611 (class 1255 OID 378382)
+-- TOC entry 631 (class 1255 OID 378382)
 -- Name: get_weight(bigint); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -5934,7 +5939,7 @@ BEGIN
     FROM
       route.weight
     WHERE
-      definition_id = __document_gid;
+      definition_id = __document_id;
 END;
 $$;
 
@@ -5955,6 +5960,7 @@ DECLARE
   _definition_id bigint;
   _max_version_num integer;
   _seg common.route_segment;
+  _segment_order_num integer := 1;
 BEGIN
 
   IF (__head.document_date IS NULL) THEN
@@ -6029,7 +6035,6 @@ BEGIN
   FOREACH _seg IN
     ARRAY __body
   LOOP
-    --RAISE NOTICE '_seg.facility_code : %', _seg.facility_code;
     INSERT INTO
       route.segment (
         id,
@@ -6046,18 +6051,22 @@ BEGIN
       DEFAULT,
       _seg.gid,
       _definition_id,
-      1,
+      _segment_order_num,
       _seg.operation_code,
-      (_seg.phantom_specification).part_code,
-      (_seg.phantom_specification).version_num,
-      (_seg.phantom_specification).process_num,
-      (_seg.phantom_specification).segment_num,
+      (_seg.phantom_spec).part_code,
+      (_seg.phantom_spec).version_num,
+      (_seg.phantom_spec).process_num,
+      (_seg.phantom_spec).segment_num,
       _seg.facility_code)
     RETURNING id INTO _segment_id;
+
     PERFORM route.set_consumable_spec(_segment_id, _seg.consumable_spec);
     PERFORM route.set_personnel_spec(_segment_id, _seg.personnel_spec);
     PERFORM route.set_equipment_spec(_segment_id, _seg.equipmet_spec);
     PERFORM route.set_tooling_spec(_segment_id, _seg.tooling_spec);
+
+    _segment_order_num := _segment_order_num +1;
+
   END LOOP;
 
   INSERT INTO
@@ -6077,7 +6086,7 @@ $$;
 ALTER FUNCTION route.init(__head common.route_head, __body common.route_segment[], __heft common.quantity) OWNER TO postgres;
 
 --
--- TOC entry 622 (class 1255 OID 378369)
+-- TOC entry 621 (class 1255 OID 378369)
 -- Name: reinit(bigint, common.quantity); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -6106,7 +6115,7 @@ $$;
 ALTER FUNCTION route.reinit(__document_id bigint, __heft common.quantity) OWNER TO postgres;
 
 --
--- TOC entry 627 (class 1255 OID 378374)
+-- TOC entry 626 (class 1255 OID 378374)
 -- Name: set_consumable_spec(bigint, common.consumable_specification[]); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -6170,7 +6179,7 @@ $$;
 ALTER FUNCTION route.set_consumable_spec(__segment_id bigint, __material common.consumable_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 619 (class 1255 OID 378375)
+-- TOC entry 618 (class 1255 OID 378375)
 -- Name: set_equipment_spec(bigint, common.equipment_specification[]); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -6206,7 +6215,7 @@ $$;
 ALTER FUNCTION route.set_equipment_spec(__segment_id bigint, __equipment common.equipment_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 629 (class 1255 OID 378376)
+-- TOC entry 628 (class 1255 OID 378376)
 -- Name: set_personnel_spec(bigint, common.personnel_specification[]); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -6248,7 +6257,7 @@ $$;
 ALTER FUNCTION route.set_personnel_spec(__segment_id bigint, __personnel common.personnel_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 630 (class 1255 OID 378377)
+-- TOC entry 629 (class 1255 OID 378377)
 -- Name: set_tooling_spec(bigint, common.tooling_specification[]); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -6284,7 +6293,7 @@ $$;
 ALTER FUNCTION route.set_tooling_spec(__segment_id bigint, __tooling common.tooling_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 633 (class 1255 OID 378383)
+-- TOC entry 630 (class 1255 OID 378383)
 -- Name: set_weight(bigint, common.quantity); Type: FUNCTION; Schema: route; Owner: postgres
 --
 
@@ -9517,7 +9526,7 @@ $$;
 ALTER FUNCTION tests.__process__get_id_by_gid() OWNER TO postgres;
 
 --
--- TOC entry 612 (class 1255 OID 376786)
+-- TOC entry 611 (class 1255 OID 376786)
 -- Name: __process__init(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -9644,7 +9653,7 @@ $$;
 ALTER FUNCTION tests.__process__init() OWNER TO postgres;
 
 --
--- TOC entry 613 (class 1255 OID 376787)
+-- TOC entry 612 (class 1255 OID 376787)
 -- Name: __process__reinit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -9796,7 +9805,7 @@ $$;
 ALTER FUNCTION tests.__process__reinit() OWNER TO postgres;
 
 --
--- TOC entry 614 (class 1255 OID 376789)
+-- TOC entry 613 (class 1255 OID 376789)
 -- Name: __tooling__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -9832,7 +9841,7 @@ $$;
 ALTER FUNCTION tests.__tooling__destroy() OWNER TO postgres;
 
 --
--- TOC entry 615 (class 1255 OID 376790)
+-- TOC entry 614 (class 1255 OID 376790)
 -- Name: __tooling__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -9880,7 +9889,7 @@ $$;
 ALTER FUNCTION tests.__tooling__get_head() OWNER TO postgres;
 
 --
--- TOC entry 616 (class 1255 OID 376791)
+-- TOC entry 615 (class 1255 OID 376791)
 -- Name: __tooling__init(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -9910,7 +9919,7 @@ $$;
 ALTER FUNCTION tests.__tooling__init() OWNER TO postgres;
 
 --
--- TOC entry 617 (class 1255 OID 376792)
+-- TOC entry 616 (class 1255 OID 376792)
 -- Name: _load_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -10396,7 +10405,7 @@ $$;
 ALTER FUNCTION tests._load_data() OWNER TO postgres;
 
 --
--- TOC entry 618 (class 1255 OID 376794)
+-- TOC entry 617 (class 1255 OID 376794)
 -- Name: _reset_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -10693,7 +10702,7 @@ $$;
 ALTER FUNCTION uom.get_domain(_uom_code character varying) OWNER TO postgres;
 
 --
--- TOC entry 620 (class 1255 OID 376800)
+-- TOC entry 619 (class 1255 OID 376800)
 -- Name: get_factor(character varying, character varying); Type: FUNCTION; Schema: uom; Owner: postgres
 --
 
@@ -17059,7 +17068,7 @@ ALTER TABLE ONLY information
     ADD CONSTRAINT uom_base_uom_code_fkey FOREIGN KEY (base_uom_code) REFERENCES information(uom_code);
 
 
--- Completed on 2018-07-10 10:38:53 EEST
+-- Completed on 2018-07-10 16:23:36 EEST
 
 --
 -- PostgreSQL database dump complete
