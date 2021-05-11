@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../jargon" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../steward" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../stockpile" vcs="Git" />
+    <mapping directory="$USER_HOME$/work/terraform/cdk-smen" vcs="Git" />
+  </component>
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/work/terraform/cdk-smen/.idea/cdk-smen.iml" filepath="$USER_HOME$/work/terraform/cdk-smen/.idea/cdk-smen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/guildhall.iml" filepath="$PROJECT_DIR$/.idea/guildhall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jargon/.idea/jargon.iml" filepath="$PROJECT_DIR$/../jargon/.idea/jargon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../steward/.idea/steward.iml" filepath="$PROJECT_DIR$/../steward/.idea/steward.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../stockpile/.idea/stockpile.iml" filepath="$PROJECT_DIR$/../stockpile/.idea/stockpile.iml" />
+    </modules>
+  </component>
+</project>
