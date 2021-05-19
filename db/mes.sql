@@ -5,7 +5,7 @@
 -- Dumped from database version 11.12 (Debian 11.12-0+deb10u1)
 -- Dumped by pg_dump version 11.12 (Debian 11.12-0+deb10u1)
 
--- Started on 2021-05-19 14:16:09 EEST
+-- Started on 2021-05-19 14:20:35 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -29,7 +29,7 @@ CREATE SCHEMA balance;
 ALTER SCHEMA balance OWNER TO postgres;
 
 --
--- TOC entry 5017 (class 0 OID 0)
+-- TOC entry 5016 (class 0 OID 0)
 -- Dependencies: 16
 -- Name: SCHEMA balance; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -48,7 +48,7 @@ CREATE SCHEMA binding;
 ALTER SCHEMA binding OWNER TO postgres;
 
 --
--- TOC entry 5018 (class 0 OID 0)
+-- TOC entry 5017 (class 0 OID 0)
 -- Dependencies: 35
 -- Name: SCHEMA binding; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -67,7 +67,7 @@ CREATE SCHEMA calendar;
 ALTER SCHEMA calendar OWNER TO postgres;
 
 --
--- TOC entry 5019 (class 0 OID 0)
+-- TOC entry 5018 (class 0 OID 0)
 -- Dependencies: 29
 -- Name: SCHEMA calendar; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -86,7 +86,7 @@ CREATE SCHEMA claim;
 ALTER SCHEMA claim OWNER TO postgres;
 
 --
--- TOC entry 5020 (class 0 OID 0)
+-- TOC entry 5019 (class 0 OID 0)
 -- Dependencies: 9
 -- Name: SCHEMA claim; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -105,7 +105,7 @@ CREATE SCHEMA common;
 ALTER SCHEMA common OWNER TO postgres;
 
 --
--- TOC entry 5021 (class 0 OID 0)
+-- TOC entry 5020 (class 0 OID 0)
 -- Dependencies: 14
 -- Name: SCHEMA common; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -124,7 +124,7 @@ CREATE SCHEMA cutoff;
 ALTER SCHEMA cutoff OWNER TO postgres;
 
 --
--- TOC entry 5022 (class 0 OID 0)
+-- TOC entry 5021 (class 0 OID 0)
 -- Dependencies: 20
 -- Name: SCHEMA cutoff; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -143,7 +143,7 @@ CREATE SCHEMA ebom;
 ALTER SCHEMA ebom OWNER TO postgres;
 
 --
--- TOC entry 5023 (class 0 OID 0)
+-- TOC entry 5022 (class 0 OID 0)
 -- Dependencies: 36
 -- Name: SCHEMA ebom; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -162,7 +162,7 @@ CREATE SCHEMA equipment;
 ALTER SCHEMA equipment OWNER TO postgres;
 
 --
--- TOC entry 5024 (class 0 OID 0)
+-- TOC entry 5023 (class 0 OID 0)
 -- Dependencies: 37
 -- Name: SCHEMA equipment; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -181,7 +181,7 @@ CREATE SCHEMA facility;
 ALTER SCHEMA facility OWNER TO postgres;
 
 --
--- TOC entry 5025 (class 0 OID 0)
+-- TOC entry 5024 (class 0 OID 0)
 -- Dependencies: 24
 -- Name: SCHEMA facility; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -200,7 +200,7 @@ CREATE SCHEMA inventory;
 ALTER SCHEMA inventory OWNER TO postgres;
 
 --
--- TOC entry 5026 (class 0 OID 0)
+-- TOC entry 5025 (class 0 OID 0)
 -- Dependencies: 25
 -- Name: SCHEMA inventory; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -219,7 +219,7 @@ CREATE SCHEMA issue;
 ALTER SCHEMA issue OWNER TO postgres;
 
 --
--- TOC entry 5027 (class 0 OID 0)
+-- TOC entry 5026 (class 0 OID 0)
 -- Dependencies: 8
 -- Name: SCHEMA issue; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -238,7 +238,7 @@ CREATE SCHEMA mbom;
 ALTER SCHEMA mbom OWNER TO postgres;
 
 --
--- TOC entry 5028 (class 0 OID 0)
+-- TOC entry 5027 (class 0 OID 0)
 -- Dependencies: 31
 -- Name: SCHEMA mbom; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -257,7 +257,7 @@ CREATE SCHEMA operation;
 ALTER SCHEMA operation OWNER TO postgres;
 
 --
--- TOC entry 5029 (class 0 OID 0)
+-- TOC entry 5028 (class 0 OID 0)
 -- Dependencies: 22
 -- Name: SCHEMA operation; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -276,7 +276,7 @@ CREATE SCHEMA personnel;
 ALTER SCHEMA personnel OWNER TO postgres;
 
 --
--- TOC entry 5030 (class 0 OID 0)
+-- TOC entry 5029 (class 0 OID 0)
 -- Dependencies: 18
 -- Name: SCHEMA personnel; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -295,7 +295,7 @@ CREATE SCHEMA pgunit;
 ALTER SCHEMA pgunit OWNER TO postgres;
 
 --
--- TOC entry 5031 (class 0 OID 0)
+-- TOC entry 5030 (class 0 OID 0)
 -- Dependencies: 11
 -- Name: SCHEMA pgunit; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -314,7 +314,7 @@ CREATE SCHEMA process;
 ALTER SCHEMA process OWNER TO postgres;
 
 --
--- TOC entry 5032 (class 0 OID 0)
+-- TOC entry 5031 (class 0 OID 0)
 -- Dependencies: 12
 -- Name: SCHEMA process; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -333,7 +333,7 @@ CREATE SCHEMA product;
 ALTER SCHEMA product OWNER TO postgres;
 
 --
--- TOC entry 5033 (class 0 OID 0)
+-- TOC entry 5032 (class 0 OID 0)
 -- Dependencies: 33
 -- Name: SCHEMA product; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -352,7 +352,7 @@ CREATE SCHEMA receipt;
 ALTER SCHEMA receipt OWNER TO postgres;
 
 --
--- TOC entry 5034 (class 0 OID 0)
+-- TOC entry 5033 (class 0 OID 0)
 -- Dependencies: 30
 -- Name: SCHEMA receipt; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -371,7 +371,7 @@ CREATE SCHEMA request;
 ALTER SCHEMA request OWNER TO postgres;
 
 --
--- TOC entry 5035 (class 0 OID 0)
+-- TOC entry 5034 (class 0 OID 0)
 -- Dependencies: 21
 -- Name: SCHEMA request; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -390,7 +390,7 @@ CREATE SCHEMA requirement;
 ALTER SCHEMA requirement OWNER TO postgres;
 
 --
--- TOC entry 5036 (class 0 OID 0)
+-- TOC entry 5035 (class 0 OID 0)
 -- Dependencies: 10
 -- Name: SCHEMA requirement; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -409,7 +409,7 @@ CREATE SCHEMA response;
 ALTER SCHEMA response OWNER TO postgres;
 
 --
--- TOC entry 5037 (class 0 OID 0)
+-- TOC entry 5036 (class 0 OID 0)
 -- Dependencies: 28
 -- Name: SCHEMA response; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -428,7 +428,7 @@ CREATE SCHEMA schedule;
 ALTER SCHEMA schedule OWNER TO postgres;
 
 --
--- TOC entry 5038 (class 0 OID 0)
+-- TOC entry 5037 (class 0 OID 0)
 -- Dependencies: 17
 -- Name: SCHEMA schedule; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -447,7 +447,7 @@ CREATE SCHEMA stockcard;
 ALTER SCHEMA stockcard OWNER TO postgres;
 
 --
--- TOC entry 5039 (class 0 OID 0)
+-- TOC entry 5038 (class 0 OID 0)
 -- Dependencies: 23
 -- Name: SCHEMA stockcard; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -466,7 +466,7 @@ CREATE SCHEMA stocktake;
 ALTER SCHEMA stocktake OWNER TO postgres;
 
 --
--- TOC entry 5040 (class 0 OID 0)
+-- TOC entry 5039 (class 0 OID 0)
 -- Dependencies: 38
 -- Name: SCHEMA stocktake; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -485,7 +485,7 @@ CREATE SCHEMA tests;
 ALTER SCHEMA tests OWNER TO postgres;
 
 --
--- TOC entry 5041 (class 0 OID 0)
+-- TOC entry 5040 (class 0 OID 0)
 -- Dependencies: 19
 -- Name: SCHEMA tests; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -504,7 +504,7 @@ CREATE SCHEMA tooling;
 ALTER SCHEMA tooling OWNER TO postgres;
 
 --
--- TOC entry 5042 (class 0 OID 0)
+-- TOC entry 5041 (class 0 OID 0)
 -- Dependencies: 32
 -- Name: SCHEMA tooling; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -523,7 +523,7 @@ CREATE SCHEMA uom;
 ALTER SCHEMA uom OWNER TO postgres;
 
 --
--- TOC entry 5043 (class 0 OID 0)
+-- TOC entry 5042 (class 0 OID 0)
 -- Dependencies: 15
 -- Name: SCHEMA uom; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -542,7 +542,7 @@ CREATE SCHEMA work;
 ALTER SCHEMA work OWNER TO postgres;
 
 --
--- TOC entry 5044 (class 0 OID 0)
+-- TOC entry 5043 (class 0 OID 0)
 -- Dependencies: 34
 -- Name: SCHEMA work; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -559,7 +559,7 @@ CREATE EXTENSION IF NOT EXISTS pldbgapi WITH SCHEMA public;
 
 
 --
--- TOC entry 5045 (class 0 OID 0)
+-- TOC entry 5044 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: EXTENSION pldbgapi; Type: COMMENT; Schema: -; Owner: 
 --
@@ -576,7 +576,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql_check WITH SCHEMA public;
 
 
 --
--- TOC entry 5046 (class 0 OID 0)
+-- TOC entry 5045 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION plpgsql_check; Type: COMMENT; Schema: -; Owner: 
 --
@@ -593,7 +593,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 
 
 --
--- TOC entry 5047 (class 0 OID 0)
+-- TOC entry 5046 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
 --
@@ -602,7 +602,7 @@ COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UU
 
 
 --
--- TOC entry 1338 (class 1247 OID 54352)
+-- TOC entry 1337 (class 1247 OID 54352)
 -- Name: day_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -615,7 +615,7 @@ CREATE TYPE common.day_kind AS ENUM (
 ALTER TYPE common.day_kind OWNER TO postgres;
 
 --
--- TOC entry 1341 (class 1247 OID 54359)
+-- TOC entry 1340 (class 1247 OID 54359)
 -- Name: calendar_body; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -629,7 +629,7 @@ CREATE TYPE common.calendar_body AS (
 ALTER TYPE common.calendar_body OWNER TO postgres;
 
 --
--- TOC entry 1344 (class 1247 OID 54362)
+-- TOC entry 1343 (class 1247 OID 54362)
 -- Name: calendar_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -643,7 +643,7 @@ CREATE TYPE common.calendar_head AS (
 ALTER TYPE common.calendar_head OWNER TO postgres;
 
 --
--- TOC entry 1347 (class 1247 OID 54364)
+-- TOC entry 1346 (class 1247 OID 54364)
 -- Name: component_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -657,8 +657,8 @@ CREATE TYPE common.component_kind AS ENUM (
 ALTER TYPE common.component_kind OWNER TO postgres;
 
 --
--- TOC entry 5048 (class 0 OID 0)
--- Dependencies: 1347
+-- TOC entry 5047 (class 0 OID 0)
+-- Dependencies: 1346
 -- Name: TYPE component_kind; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -666,7 +666,7 @@ COMMENT ON TYPE common.component_kind IS 'engineering bill of materials componen
 
 
 --
--- TOC entry 1350 (class 1247 OID 54372)
+-- TOC entry 1349 (class 1247 OID 54372)
 -- Name: quantity; Type: DOMAIN; Schema: common; Owner: postgres
 --
 
@@ -677,8 +677,8 @@ CREATE DOMAIN common.quantity AS numeric(20,4) DEFAULT 0
 ALTER DOMAIN common.quantity OWNER TO postgres;
 
 --
--- TOC entry 5049 (class 0 OID 0)
--- Dependencies: 1350
+-- TOC entry 5048 (class 0 OID 0)
+-- Dependencies: 1349
 -- Name: DOMAIN quantity; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -686,7 +686,7 @@ COMMENT ON DOMAIN common.quantity IS 'quantity domain';
 
 
 --
--- TOC entry 1354 (class 1247 OID 54376)
+-- TOC entry 1353 (class 1247 OID 54376)
 -- Name: component_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -703,8 +703,8 @@ CREATE TYPE common.component_specification AS (
 ALTER TYPE common.component_specification OWNER TO postgres;
 
 --
--- TOC entry 5050 (class 0 OID 0)
--- Dependencies: 1354
+-- TOC entry 5049 (class 0 OID 0)
+-- Dependencies: 1353
 -- Name: TYPE component_specification; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -712,7 +712,7 @@ COMMENT ON TYPE common.component_specification IS 'engineering bill of materials
 
 
 --
--- TOC entry 1357 (class 1247 OID 54378)
+-- TOC entry 1356 (class 1247 OID 54378)
 -- Name: material_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -726,7 +726,7 @@ CREATE TYPE common.material_kind AS ENUM (
 ALTER TYPE common.material_kind OWNER TO postgres;
 
 --
--- TOC entry 1360 (class 1247 OID 54387)
+-- TOC entry 1359 (class 1247 OID 54387)
 -- Name: consumable_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -743,7 +743,7 @@ CREATE TYPE common.consumable_specification AS (
 ALTER TYPE common.consumable_specification OWNER TO postgres;
 
 --
--- TOC entry 1363 (class 1247 OID 54390)
+-- TOC entry 1362 (class 1247 OID 54390)
 -- Name: dependency_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -756,7 +756,7 @@ CREATE TYPE common.dependency_specification AS (
 ALTER TYPE common.dependency_specification OWNER TO postgres;
 
 --
--- TOC entry 1366 (class 1247 OID 54393)
+-- TOC entry 1365 (class 1247 OID 54393)
 -- Name: document_body; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -770,7 +770,7 @@ CREATE TYPE common.document_body AS (
 ALTER TYPE common.document_body OWNER TO postgres;
 
 --
--- TOC entry 1369 (class 1247 OID 54395)
+-- TOC entry 1368 (class 1247 OID 54395)
 -- Name: document_fsmt; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -784,7 +784,7 @@ CREATE TYPE common.document_fsmt AS ENUM (
 ALTER TYPE common.document_fsmt OWNER TO postgres;
 
 --
--- TOC entry 1372 (class 1247 OID 54402)
+-- TOC entry 1371 (class 1247 OID 54402)
 -- Name: document_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -811,7 +811,7 @@ CREATE TYPE common.document_kind AS ENUM (
 ALTER TYPE common.document_kind OWNER TO postgres;
 
 --
--- TOC entry 1375 (class 1247 OID 54437)
+-- TOC entry 1374 (class 1247 OID 54437)
 -- Name: document_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -829,7 +829,7 @@ CREATE TYPE common.document_head AS (
 ALTER TYPE common.document_head OWNER TO postgres;
 
 --
--- TOC entry 1378 (class 1247 OID 54440)
+-- TOC entry 1377 (class 1247 OID 54440)
 -- Name: ebom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -846,8 +846,8 @@ CREATE TYPE common.ebom_head AS (
 ALTER TYPE common.ebom_head OWNER TO postgres;
 
 --
--- TOC entry 5051 (class 0 OID 0)
--- Dependencies: 1378
+-- TOC entry 5050 (class 0 OID 0)
+-- Dependencies: 1377
 -- Name: TYPE ebom_head; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -855,7 +855,7 @@ COMMENT ON TYPE common.ebom_head IS 'engineering bill of materials information';
 
 
 --
--- TOC entry 1381 (class 1247 OID 54443)
+-- TOC entry 1380 (class 1247 OID 54443)
 -- Name: ebom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -868,8 +868,8 @@ CREATE TYPE common.ebom_document AS (
 ALTER TYPE common.ebom_document OWNER TO postgres;
 
 --
--- TOC entry 5052 (class 0 OID 0)
--- Dependencies: 1381
+-- TOC entry 5051 (class 0 OID 0)
+-- Dependencies: 1380
 -- Name: TYPE ebom_document; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -877,7 +877,7 @@ COMMENT ON TYPE common.ebom_document IS 'engineering bill of materials document'
 
 
 --
--- TOC entry 1384 (class 1247 OID 54446)
+-- TOC entry 1383 (class 1247 OID 54446)
 -- Name: equipment_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -895,7 +895,7 @@ CREATE TYPE common.equipment_head AS (
 ALTER TYPE common.equipment_head OWNER TO postgres;
 
 --
--- TOC entry 1387 (class 1247 OID 54449)
+-- TOC entry 1386 (class 1247 OID 54449)
 -- Name: equipment_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -910,7 +910,7 @@ CREATE TYPE common.equipment_specification AS (
 ALTER TYPE common.equipment_specification OWNER TO postgres;
 
 --
--- TOC entry 1390 (class 1247 OID 54451)
+-- TOC entry 1389 (class 1247 OID 54451)
 -- Name: facility_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -926,7 +926,7 @@ CREATE TYPE common.facility_kind AS ENUM (
 ALTER TYPE common.facility_kind OWNER TO postgres;
 
 --
--- TOC entry 1393 (class 1247 OID 54463)
+-- TOC entry 1392 (class 1247 OID 54463)
 -- Name: facility_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -945,7 +945,7 @@ CREATE TYPE common.facility_head AS (
 ALTER TYPE common.facility_head OWNER TO postgres;
 
 --
--- TOC entry 1396 (class 1247 OID 54466)
+-- TOC entry 1395 (class 1247 OID 54466)
 -- Name: facility_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -959,7 +959,7 @@ CREATE TYPE common.facility_specification AS (
 ALTER TYPE common.facility_specification OWNER TO postgres;
 
 --
--- TOC entry 1399 (class 1247 OID 54469)
+-- TOC entry 1398 (class 1247 OID 54469)
 -- Name: inbound_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -978,7 +978,7 @@ CREATE TYPE common.inbound_head AS (
 ALTER TYPE common.inbound_head OWNER TO postgres;
 
 --
--- TOC entry 1402 (class 1247 OID 54472)
+-- TOC entry 1401 (class 1247 OID 54472)
 -- Name: inventory_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -998,7 +998,7 @@ CREATE TYPE common.inventory_head AS (
 ALTER TYPE common.inventory_head OWNER TO postgres;
 
 --
--- TOC entry 1405 (class 1247 OID 54474)
+-- TOC entry 1404 (class 1247 OID 54474)
 -- Name: inventory_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1018,7 +1018,7 @@ CREATE TYPE common.inventory_kind AS ENUM (
 ALTER TYPE common.inventory_kind OWNER TO postgres;
 
 --
--- TOC entry 1408 (class 1247 OID 54495)
+-- TOC entry 1407 (class 1247 OID 54495)
 -- Name: unit_conversion_type; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1032,7 +1032,7 @@ CREATE TYPE common.unit_conversion_type AS (
 ALTER TYPE common.unit_conversion_type OWNER TO postgres;
 
 --
--- TOC entry 1411 (class 1247 OID 54498)
+-- TOC entry 1410 (class 1247 OID 54498)
 -- Name: inventory_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1046,7 +1046,7 @@ CREATE TYPE common.inventory_document AS (
 ALTER TYPE common.inventory_document OWNER TO postgres;
 
 --
--- TOC entry 1414 (class 1247 OID 54501)
+-- TOC entry 1413 (class 1247 OID 54501)
 -- Name: inventory_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1062,7 +1062,7 @@ CREATE TYPE common.inventory_specification AS (
 ALTER TYPE common.inventory_specification OWNER TO postgres;
 
 --
--- TOC entry 1417 (class 1247 OID 54504)
+-- TOC entry 1416 (class 1247 OID 54504)
 -- Name: material_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1079,7 +1079,7 @@ CREATE TYPE common.material_specification AS (
 ALTER TYPE common.material_specification OWNER TO postgres;
 
 --
--- TOC entry 1420 (class 1247 OID 54507)
+-- TOC entry 1419 (class 1247 OID 54507)
 -- Name: mbom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1098,7 +1098,7 @@ CREATE TYPE common.mbom_head AS (
 ALTER TYPE common.mbom_head OWNER TO postgres;
 
 --
--- TOC entry 1423 (class 1247 OID 54510)
+-- TOC entry 1422 (class 1247 OID 54510)
 -- Name: mbom_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1111,7 +1111,7 @@ CREATE TYPE common.mbom_document AS (
 ALTER TYPE common.mbom_document OWNER TO postgres;
 
 --
--- TOC entry 1426 (class 1247 OID 54513)
+-- TOC entry 1425 (class 1247 OID 54513)
 -- Name: operation_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1129,7 +1129,7 @@ CREATE TYPE common.operation_head AS (
 ALTER TYPE common.operation_head OWNER TO postgres;
 
 --
--- TOC entry 1429 (class 1247 OID 54516)
+-- TOC entry 1428 (class 1247 OID 54516)
 -- Name: outbound_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1149,7 +1149,7 @@ CREATE TYPE common.outbound_head AS (
 ALTER TYPE common.outbound_head OWNER TO postgres;
 
 --
--- TOC entry 1432 (class 1247 OID 54519)
+-- TOC entry 1431 (class 1247 OID 54519)
 -- Name: personnel_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1167,7 +1167,7 @@ CREATE TYPE common.personnel_head AS (
 ALTER TYPE common.personnel_head OWNER TO postgres;
 
 --
--- TOC entry 1435 (class 1247 OID 54522)
+-- TOC entry 1434 (class 1247 OID 54522)
 -- Name: personnel_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1185,7 +1185,7 @@ CREATE TYPE common.personnel_specification AS (
 ALTER TYPE common.personnel_specification OWNER TO postgres;
 
 --
--- TOC entry 1438 (class 1247 OID 54524)
+-- TOC entry 1437 (class 1247 OID 54524)
 -- Name: policy_mode; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1199,7 +1199,7 @@ CREATE TYPE common.policy_mode AS ENUM (
 ALTER TYPE common.policy_mode OWNER TO postgres;
 
 --
--- TOC entry 1441 (class 1247 OID 54533)
+-- TOC entry 1440 (class 1247 OID 54533)
 -- Name: process_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1216,7 +1216,7 @@ CREATE TYPE common.process_head AS (
 ALTER TYPE common.process_head OWNER TO postgres;
 
 --
--- TOC entry 1444 (class 1247 OID 54536)
+-- TOC entry 1443 (class 1247 OID 54536)
 -- Name: tooling_specification; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1231,7 +1231,7 @@ CREATE TYPE common.tooling_specification AS (
 ALTER TYPE common.tooling_specification OWNER TO postgres;
 
 --
--- TOC entry 1447 (class 1247 OID 54539)
+-- TOC entry 1446 (class 1247 OID 54539)
 -- Name: process_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1248,7 +1248,7 @@ CREATE TYPE common.process_segment AS (
 ALTER TYPE common.process_segment OWNER TO postgres;
 
 --
--- TOC entry 1450 (class 1247 OID 54542)
+-- TOC entry 1449 (class 1247 OID 54542)
 -- Name: process_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1262,8 +1262,8 @@ CREATE TYPE common.process_document AS (
 ALTER TYPE common.process_document OWNER TO postgres;
 
 --
--- TOC entry 5053 (class 0 OID 0)
--- Dependencies: 1450
+-- TOC entry 5052 (class 0 OID 0)
+-- Dependencies: 1449
 -- Name: TYPE process_document; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -1271,7 +1271,7 @@ COMMENT ON TYPE common.process_document IS 'operation';
 
 
 --
--- TOC entry 1453 (class 1247 OID 54545)
+-- TOC entry 1452 (class 1247 OID 54545)
 -- Name: product_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1288,7 +1288,7 @@ CREATE TYPE common.product_head AS (
 ALTER TYPE common.product_head OWNER TO postgres;
 
 --
--- TOC entry 1456 (class 1247 OID 54548)
+-- TOC entry 1455 (class 1247 OID 54548)
 -- Name: product_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1301,7 +1301,7 @@ CREATE TYPE common.product_segment AS (
 ALTER TYPE common.product_segment OWNER TO postgres;
 
 --
--- TOC entry 1459 (class 1247 OID 54551)
+-- TOC entry 1458 (class 1247 OID 54551)
 -- Name: product_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1315,7 +1315,7 @@ CREATE TYPE common.product_document AS (
 ALTER TYPE common.product_document OWNER TO postgres;
 
 --
--- TOC entry 1462 (class 1247 OID 54553)
+-- TOC entry 1461 (class 1247 OID 54553)
 -- Name: quantity_signed; Type: DOMAIN; Schema: common; Owner: postgres
 --
 
@@ -1325,8 +1325,8 @@ CREATE DOMAIN common.quantity_signed AS numeric(20,4) DEFAULT 0;
 ALTER DOMAIN common.quantity_signed OWNER TO postgres;
 
 --
--- TOC entry 5054 (class 0 OID 0)
--- Dependencies: 1462
+-- TOC entry 5053 (class 0 OID 0)
+-- Dependencies: 1461
 -- Name: DOMAIN quantity_signed; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -1334,7 +1334,7 @@ COMMENT ON DOMAIN common.quantity_signed IS 'quantity signed domain';
 
 
 --
--- TOC entry 1465 (class 1247 OID 54556)
+-- TOC entry 1464 (class 1247 OID 54556)
 -- Name: response_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1352,7 +1352,7 @@ CREATE TYPE common.response_head AS (
 ALTER TYPE common.response_head OWNER TO postgres;
 
 --
--- TOC entry 1468 (class 1247 OID 54559)
+-- TOC entry 1467 (class 1247 OID 54559)
 -- Name: response_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1365,7 +1365,7 @@ CREATE TYPE common.response_segment AS (
 ALTER TYPE common.response_segment OWNER TO postgres;
 
 --
--- TOC entry 1471 (class 1247 OID 54562)
+-- TOC entry 1470 (class 1247 OID 54562)
 -- Name: response_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1378,8 +1378,8 @@ CREATE TYPE common.response_document AS (
 ALTER TYPE common.response_document OWNER TO postgres;
 
 --
--- TOC entry 5055 (class 0 OID 0)
--- Dependencies: 1471
+-- TOC entry 5054 (class 0 OID 0)
+-- Dependencies: 1470
 -- Name: TYPE response_document; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -1387,7 +1387,7 @@ COMMENT ON TYPE common.response_document IS 'response';
 
 
 --
--- TOC entry 1474 (class 1247 OID 54565)
+-- TOC entry 1473 (class 1247 OID 54565)
 -- Name: stocktake_body; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1402,7 +1402,7 @@ CREATE TYPE common.stocktake_body AS (
 ALTER TYPE common.stocktake_body OWNER TO postgres;
 
 --
--- TOC entry 1477 (class 1247 OID 54568)
+-- TOC entry 1476 (class 1247 OID 54568)
 -- Name: tooling_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1420,7 +1420,7 @@ CREATE TYPE common.tooling_head AS (
 ALTER TYPE common.tooling_head OWNER TO postgres;
 
 --
--- TOC entry 1480 (class 1247 OID 54570)
+-- TOC entry 1479 (class 1247 OID 54570)
 -- Name: uom_domain_kind; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1435,7 +1435,7 @@ CREATE TYPE common.uom_domain_kind AS ENUM (
 ALTER TYPE common.uom_domain_kind OWNER TO postgres;
 
 --
--- TOC entry 1483 (class 1247 OID 54581)
+-- TOC entry 1482 (class 1247 OID 54581)
 -- Name: uom_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1450,7 +1450,7 @@ CREATE TYPE common.uom_head AS (
 ALTER TYPE common.uom_head OWNER TO postgres;
 
 --
--- TOC entry 1486 (class 1247 OID 54584)
+-- TOC entry 1485 (class 1247 OID 54584)
 -- Name: work_head; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1468,7 +1468,7 @@ CREATE TYPE common.work_head AS (
 ALTER TYPE common.work_head OWNER TO postgres;
 
 --
--- TOC entry 1489 (class 1247 OID 54587)
+-- TOC entry 1488 (class 1247 OID 54587)
 -- Name: work_segment; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1481,7 +1481,7 @@ CREATE TYPE common.work_segment AS (
 ALTER TYPE common.work_segment OWNER TO postgres;
 
 --
--- TOC entry 1492 (class 1247 OID 54590)
+-- TOC entry 1491 (class 1247 OID 54590)
 -- Name: work_document; Type: TYPE; Schema: common; Owner: postgres
 --
 
@@ -1494,8 +1494,8 @@ CREATE TYPE common.work_document AS (
 ALTER TYPE common.work_document OWNER TO postgres;
 
 --
--- TOC entry 5056 (class 0 OID 0)
--- Dependencies: 1492
+-- TOC entry 5055 (class 0 OID 0)
+-- Dependencies: 1491
 -- Name: TYPE work_document; Type: COMMENT; Schema: common; Owner: postgres
 --
 
@@ -2247,7 +2247,7 @@ $$;
 ALTER FUNCTION balance.gain_stock_reserved_qty(__facility_code character varying, __inventory common.document_body) OWNER TO postgres;
 
 --
--- TOC entry 919 (class 1255 OID 54608)
+-- TOC entry 918 (class 1255 OID 54608)
 -- Name: get_stock_on_hand_qty(character varying); Type: FUNCTION; Schema: balance; Owner: postgres
 --
 
@@ -2273,7 +2273,7 @@ $$;
 ALTER FUNCTION balance.get_stock_on_hand_qty(__facility_code character varying) OWNER TO postgres;
 
 --
--- TOC entry 920 (class 1255 OID 54609)
+-- TOC entry 919 (class 1255 OID 54609)
 -- Name: get_stock_on_hand_qty(character varying, character varying[]); Type: FUNCTION; Schema: balance; Owner: postgres
 --
 
@@ -2300,7 +2300,7 @@ $$;
 ALTER FUNCTION balance.get_stock_on_hand_qty(__facility_code character varying, __part_codes character varying[]) OWNER TO postgres;
 
 --
--- TOC entry 921 (class 1255 OID 54610)
+-- TOC entry 920 (class 1255 OID 54610)
 -- Name: get_stock_on_hand_qty(character varying, character varying); Type: FUNCTION; Schema: balance; Owner: postgres
 --
 
@@ -3086,7 +3086,7 @@ $$;
 ALTER FUNCTION binding.get_claim_binded_to_cutoff(__cutoff_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 939 (class 1255 OID 54641)
+-- TOC entry 938 (class 1255 OID 54641)
 -- Name: get_cutoff_binded_to(common.document_head); Type: FUNCTION; Schema: binding; Owner: postgres
 --
 
@@ -3973,7 +3973,7 @@ $$;
 ALTER FUNCTION claim.disallow_editing_of_committed_document_body() OWNER TO postgres;
 
 --
--- TOC entry 934 (class 1255 OID 54690)
+-- TOC entry 933 (class 1255 OID 54690)
 -- Name: do_commit(bigint, boolean); Type: FUNCTION; Schema: claim; Owner: postgres
 --
 
@@ -4021,7 +4021,7 @@ $$;
 ALTER FUNCTION claim.do_commit(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 935 (class 1255 OID 54691)
+-- TOC entry 934 (class 1255 OID 54691)
 -- Name: do_decommit(bigint, boolean); Type: FUNCTION; Schema: claim; Owner: postgres
 --
 
@@ -4475,7 +4475,7 @@ $_$;
 ALTER FUNCTION common.array_sort(anyarray) OWNER TO postgres;
 
 --
--- TOC entry 875 (class 1255 OID 54706)
+-- TOC entry 874 (class 1255 OID 54706)
 -- Name: assemly_to_consumable(common.component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -4500,7 +4500,7 @@ $$;
 ALTER FUNCTION common.assemly_to_consumable(__component common.component_specification) OWNER TO postgres;
 
 --
--- TOC entry 889 (class 1255 OID 54707)
+-- TOC entry 888 (class 1255 OID 54707)
 -- Name: assemly_to_producible(common.component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -4525,7 +4525,7 @@ $$;
 ALTER FUNCTION common.assemly_to_producible(__component common.component_specification) OWNER TO postgres;
 
 --
--- TOC entry 890 (class 1255 OID 54708)
+-- TOC entry 889 (class 1255 OID 54708)
 -- Name: buyable_to_consumable(common.component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -4550,7 +4550,7 @@ $$;
 ALTER FUNCTION common.buyable_to_consumable(__component common.component_specification) OWNER TO postgres;
 
 --
--- TOC entry 917 (class 1255 OID 54709)
+-- TOC entry 916 (class 1255 OID 54709)
 -- Name: buyable_to_primal(common.component_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -4575,7 +4575,7 @@ $$;
 ALTER FUNCTION common.buyable_to_primal(__component common.component_specification) OWNER TO postgres;
 
 --
--- TOC entry 924 (class 1255 OID 54710)
+-- TOC entry 923 (class 1255 OID 54710)
 -- Name: consumable_to_assembly(common.material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -4600,7 +4600,7 @@ $$;
 ALTER FUNCTION common.consumable_to_assembly(__material common.material_specification) OWNER TO postgres;
 
 --
--- TOC entry 925 (class 1255 OID 54711)
+-- TOC entry 924 (class 1255 OID 54711)
 -- Name: consumable_to_buyable(common.material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -4625,7 +4625,7 @@ $$;
 ALTER FUNCTION common.consumable_to_buyable(__material common.material_specification) OWNER TO postgres;
 
 --
--- TOC entry 926 (class 1255 OID 54712)
+-- TOC entry 925 (class 1255 OID 54712)
 -- Name: consumable_to_part(common.material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -5173,7 +5173,7 @@ $$;
 ALTER FUNCTION common.producible_to_assembly(__material common.material_specification) OWNER TO postgres;
 
 --
--- TOC entry 927 (class 1255 OID 54729)
+-- TOC entry 926 (class 1255 OID 54729)
 -- Name: producible_to_part(common.material_specification); Type: FUNCTION; Schema: common; Owner: postgres
 --
 
@@ -5236,7 +5236,7 @@ $$;
 ALTER FUNCTION cutoff.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 929 (class 1255 OID 54732)
+-- TOC entry 928 (class 1255 OID 54732)
 -- Name: do_blockers_check(common.document_head, common.document_kind, date, date); Type: FUNCTION; Schema: cutoff; Owner: postgres
 --
 
@@ -5315,7 +5315,7 @@ $$;
 ALTER FUNCTION cutoff.do_blockers_denote(__document_id bigint, __head common.document_head[]) OWNER TO postgres;
 
 --
--- TOC entry 930 (class 1255 OID 54735)
+-- TOC entry 929 (class 1255 OID 54735)
 -- Name: do_blockers_exclude(common.document_head, common.document_kind, date, date); Type: FUNCTION; Schema: cutoff; Owner: postgres
 --
 
@@ -5477,7 +5477,7 @@ $$;
 ALTER FUNCTION cutoff.do_commit(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 932 (class 1255 OID 54737)
+-- TOC entry 931 (class 1255 OID 54737)
 -- Name: do_decommit(bigint, boolean); Type: FUNCTION; Schema: cutoff; Owner: postgres
 --
 
@@ -5940,7 +5940,7 @@ $$;
 ALTER FUNCTION ebom.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5057 (class 0 OID 0)
+-- TOC entry 5056 (class 0 OID 0)
 -- Dependencies: 594
 -- Name: FUNCTION destroy(__document_id bigint); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6163,7 +6163,7 @@ $$;
 ALTER FUNCTION ebom.do_commit(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 5058 (class 0 OID 0)
+-- TOC entry 5057 (class 0 OID 0)
 -- Dependencies: 597
 -- Name: FUNCTION do_commit(__document_id bigint, __apprise boolean); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6239,7 +6239,7 @@ $$;
 ALTER FUNCTION ebom.get_body(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5059 (class 0 OID 0)
+-- TOC entry 5058 (class 0 OID 0)
 -- Dependencies: 598
 -- Name: FUNCTION get_body(__document_id bigint); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6268,7 +6268,7 @@ $$;
 ALTER FUNCTION ebom.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5060 (class 0 OID 0)
+-- TOC entry 5059 (class 0 OID 0)
 -- Dependencies: 599
 -- Name: FUNCTION get_gid_by_id(__document_id bigint); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6315,7 +6315,7 @@ $$;
 ALTER FUNCTION ebom.get_head(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5061 (class 0 OID 0)
+-- TOC entry 5060 (class 0 OID 0)
 -- Dependencies: 600
 -- Name: FUNCTION get_head(__document_id bigint); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6344,7 +6344,7 @@ $$;
 ALTER FUNCTION ebom.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
 --
--- TOC entry 5062 (class 0 OID 0)
+-- TOC entry 5061 (class 0 OID 0)
 -- Dependencies: 601
 -- Name: FUNCTION get_id_by_gid(__document_gid uuid); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6402,7 +6402,7 @@ $$;
 ALTER FUNCTION ebom.resubmit(__document_id bigint, __body common.component_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 5063 (class 0 OID 0)
+-- TOC entry 5062 (class 0 OID 0)
 -- Dependencies: 602
 -- Name: FUNCTION resubmit(__document_id bigint, __body common.component_specification[]); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6476,7 +6476,7 @@ $$;
 ALTER FUNCTION ebom.revert(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 5064 (class 0 OID 0)
+-- TOC entry 5063 (class 0 OID 0)
 -- Dependencies: 603
 -- Name: FUNCTION revert(__document_id bigint, __apprise boolean); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6621,7 +6621,7 @@ $$;
 ALTER FUNCTION ebom.submit(__head common.ebom_head, __body common.component_specification[]) OWNER TO postgres;
 
 --
--- TOC entry 5065 (class 0 OID 0)
+-- TOC entry 5064 (class 0 OID 0)
 -- Dependencies: 595
 -- Name: FUNCTION submit(__head common.ebom_head, __body common.component_specification[]); Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -6995,7 +6995,7 @@ $$;
 ALTER FUNCTION facility.submit(__head common.facility_head) OWNER TO postgres;
 
 --
--- TOC entry 938 (class 1255 OID 54794)
+-- TOC entry 937 (class 1255 OID 54794)
 -- Name: convert_quantity(character varying, integer, common.quantity, character varying, character varying); Type: FUNCTION; Schema: inventory; Owner: postgres
 --
 
@@ -7328,7 +7328,7 @@ $$;
 ALTER FUNCTION inventory.get_meas_spec(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 937 (class 1255 OID 57074)
+-- TOC entry 936 (class 1255 OID 57074)
 -- Name: get_uom_conversion_factors(character varying, integer, character varying, character varying); Type: FUNCTION; Schema: inventory; Owner: postgres
 --
 
@@ -7774,7 +7774,7 @@ $$;
 ALTER FUNCTION issue.disallow_editing_of_committed_document_body() OWNER TO postgres;
 
 --
--- TOC entry 940 (class 1255 OID 54808)
+-- TOC entry 939 (class 1255 OID 54808)
 -- Name: do_commit(bigint, boolean); Type: FUNCTION; Schema: issue; Owner: postgres
 --
 
@@ -7826,7 +7826,7 @@ $$;
 ALTER FUNCTION issue.do_commit(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 933 (class 1255 OID 54809)
+-- TOC entry 932 (class 1255 OID 54809)
 -- Name: do_decommit(bigint, boolean); Type: FUNCTION; Schema: issue; Owner: postgres
 --
 
@@ -8243,7 +8243,7 @@ $$;
 ALTER FUNCTION mbom.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 936 (class 1255 OID 54822)
+-- TOC entry 935 (class 1255 OID 54822)
 -- Name: get_body(bigint); Type: FUNCTION; Schema: mbom; Owner: postgres
 --
 
@@ -8292,7 +8292,7 @@ $$;
 ALTER FUNCTION mbom.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 871 (class 1255 OID 54824)
+-- TOC entry 870 (class 1255 OID 54824)
 -- Name: get_head(bigint); Type: FUNCTION; Schema: mbom; Owner: postgres
 --
 
@@ -10025,7 +10025,7 @@ $$;
 ALTER FUNCTION process.revert(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 5066 (class 0 OID 0)
+-- TOC entry 5065 (class 0 OID 0)
 -- Dependencies: 677
 -- Name: FUNCTION revert(__document_id bigint, __apprise boolean); Type: COMMENT; Schema: process; Owner: postgres
 --
@@ -10976,7 +10976,7 @@ $$;
 ALTER FUNCTION product.revert(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 5067 (class 0 OID 0)
+-- TOC entry 5066 (class 0 OID 0)
 -- Dependencies: 695
 -- Name: FUNCTION revert(__document_id bigint, __apprise boolean); Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -11191,7 +11191,7 @@ $$;
 ALTER FUNCTION receipt.disallow_editing_of_committed_document_body() OWNER TO postgres;
 
 --
--- TOC entry 941 (class 1255 OID 54887)
+-- TOC entry 940 (class 1255 OID 54887)
 -- Name: do_commit(bigint, boolean); Type: FUNCTION; Schema: receipt; Owner: postgres
 --
 
@@ -11243,7 +11243,7 @@ $$;
 ALTER FUNCTION receipt.do_commit(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 942 (class 1255 OID 54888)
+-- TOC entry 941 (class 1255 OID 54888)
 -- Name: do_decommit(bigint, boolean); Type: FUNCTION; Schema: receipt; Owner: postgres
 --
 
@@ -11775,7 +11775,7 @@ $$;
 ALTER FUNCTION response.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5068 (class 0 OID 0)
+-- TOC entry 5067 (class 0 OID 0)
 -- Dependencies: 709
 -- Name: FUNCTION destroy(__document_id bigint); Type: COMMENT; Schema: response; Owner: postgres
 --
@@ -11976,7 +11976,7 @@ $$;
 ALTER FUNCTION response.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5069 (class 0 OID 0)
+-- TOC entry 5068 (class 0 OID 0)
 -- Dependencies: 714
 -- Name: FUNCTION get_gid_by_id(__document_id bigint); Type: COMMENT; Schema: response; Owner: postgres
 --
@@ -12033,7 +12033,7 @@ $$;
 ALTER FUNCTION response.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
 --
--- TOC entry 5070 (class 0 OID 0)
+-- TOC entry 5069 (class 0 OID 0)
 -- Dependencies: 716
 -- Name: FUNCTION get_id_by_gid(__document_gid uuid); Type: COMMENT; Schema: response; Owner: postgres
 --
@@ -12824,7 +12824,7 @@ $$;
 ALTER FUNCTION stocktake.disallow_editing_of_committed_document_body() OWNER TO postgres;
 
 --
--- TOC entry 922 (class 1255 OID 54955)
+-- TOC entry 921 (class 1255 OID 54955)
 -- Name: do_commit(bigint, boolean); Type: FUNCTION; Schema: stocktake; Owner: postgres
 --
 
@@ -12916,7 +12916,7 @@ $$;
 ALTER FUNCTION stocktake.do_commit(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 923 (class 1255 OID 54956)
+-- TOC entry 922 (class 1255 OID 54956)
 -- Name: do_decommit(bigint, boolean); Type: FUNCTION; Schema: stocktake; Owner: postgres
 --
 
@@ -13255,7 +13255,7 @@ $$;
 ALTER FUNCTION stocktake.numerator_nextval(__facility_code character varying, __julianized_week integer) OWNER TO postgres;
 
 --
--- TOC entry 864 (class 1255 OID 54969)
+-- TOC entry 863 (class 1255 OID 54969)
 -- Name: resubmit(bigint, common.document_body[]); Type: FUNCTION; Schema: stocktake; Owner: postgres
 --
 
@@ -13321,7 +13321,7 @@ $$;
 ALTER FUNCTION stocktake.submit(__head common.document_head) OWNER TO postgres;
 
 --
--- TOC entry 928 (class 1255 OID 54965)
+-- TOC entry 927 (class 1255 OID 54965)
 -- Name: submit(common.document_head, common.document_body[]); Type: FUNCTION; Schema: stocktake; Owner: postgres
 --
 
@@ -13917,7 +13917,7 @@ $$;
 ALTER FUNCTION tests.__binding__get_claim_binded_to_cutoff() OWNER TO postgres;
 
 --
--- TOC entry 931 (class 1255 OID 54991)
+-- TOC entry 930 (class 1255 OID 54991)
 -- Name: __binding__get_cutoff_binded_to(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -17871,7 +17871,7 @@ $$;
 ALTER FUNCTION tests.__process__get_head() OWNER TO postgres;
 
 --
--- TOC entry 852 (class 1255 OID 55118)
+-- TOC entry 851 (class 1255 OID 55118)
 -- Name: __process__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -17963,7 +17963,7 @@ $$;
 ALTER FUNCTION tests.__process__get_id_by_gid() OWNER TO postgres;
 
 --
--- TOC entry 853 (class 1255 OID 55119)
+-- TOC entry 852 (class 1255 OID 55119)
 -- Name: __process__resubmit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18115,7 +18115,7 @@ $$;
 ALTER FUNCTION tests.__process__resubmit() OWNER TO postgres;
 
 --
--- TOC entry 854 (class 1255 OID 55121)
+-- TOC entry 853 (class 1255 OID 55121)
 -- Name: __process__submit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18242,7 +18242,7 @@ $$;
 ALTER FUNCTION tests.__process__submit() OWNER TO postgres;
 
 --
--- TOC entry 855 (class 1255 OID 55122)
+-- TOC entry 854 (class 1255 OID 55122)
 -- Name: __product__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18308,7 +18308,7 @@ $$;
 ALTER FUNCTION tests.__product__destroy() OWNER TO postgres;
 
 --
--- TOC entry 856 (class 1255 OID 55123)
+-- TOC entry 855 (class 1255 OID 55123)
 -- Name: __product__get_body(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18402,7 +18402,7 @@ $$;
 ALTER FUNCTION tests.__product__get_body() OWNER TO postgres;
 
 --
--- TOC entry 857 (class 1255 OID 55124)
+-- TOC entry 856 (class 1255 OID 55124)
 -- Name: __product__get_gid_by_id(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18494,7 +18494,7 @@ $$;
 ALTER FUNCTION tests.__product__get_gid_by_id() OWNER TO postgres;
 
 --
--- TOC entry 858 (class 1255 OID 55125)
+-- TOC entry 857 (class 1255 OID 55125)
 -- Name: __product__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18603,7 +18603,7 @@ $$;
 ALTER FUNCTION tests.__product__get_head() OWNER TO postgres;
 
 --
--- TOC entry 859 (class 1255 OID 55126)
+-- TOC entry 858 (class 1255 OID 55126)
 -- Name: __product__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18695,7 +18695,7 @@ $$;
 ALTER FUNCTION tests.__product__get_id_by_gid() OWNER TO postgres;
 
 --
--- TOC entry 860 (class 1255 OID 55127)
+-- TOC entry 859 (class 1255 OID 55127)
 -- Name: __receipt__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18727,7 +18727,7 @@ $$;
 ALTER FUNCTION tests.__receipt__destroy() OWNER TO postgres;
 
 --
--- TOC entry 861 (class 1255 OID 55128)
+-- TOC entry 860 (class 1255 OID 55128)
 -- Name: __receipt__generate_display_name(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18752,7 +18752,7 @@ $$;
 ALTER FUNCTION tests.__receipt__generate_display_name() OWNER TO postgres;
 
 --
--- TOC entry 862 (class 1255 OID 55129)
+-- TOC entry 861 (class 1255 OID 55129)
 -- Name: __receipt__get_body(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18784,7 +18784,7 @@ $$;
 ALTER FUNCTION tests.__receipt__get_body() OWNER TO postgres;
 
 --
--- TOC entry 863 (class 1255 OID 55130)
+-- TOC entry 862 (class 1255 OID 55130)
 -- Name: __receipt__get_gid_by_id(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18859,7 +18859,7 @@ $$;
 ALTER FUNCTION tests.__receipt__get_head() OWNER TO postgres;
 
 --
--- TOC entry 865 (class 1255 OID 55132)
+-- TOC entry 864 (class 1255 OID 55132)
 -- Name: __receipt__get_head_batch(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18905,7 +18905,7 @@ $$;
 ALTER FUNCTION tests.__receipt__get_head_batch() OWNER TO postgres;
 
 --
--- TOC entry 866 (class 1255 OID 55133)
+-- TOC entry 865 (class 1255 OID 55133)
 -- Name: __receipt__get_head_batch_proposed(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18954,7 +18954,7 @@ $$;
 ALTER FUNCTION tests.__receipt__get_head_batch_proposed() OWNER TO postgres;
 
 --
--- TOC entry 867 (class 1255 OID 55134)
+-- TOC entry 866 (class 1255 OID 55134)
 -- Name: __receipt__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -18983,7 +18983,7 @@ $$;
 ALTER FUNCTION tests.__receipt__get_id_by_gid() OWNER TO postgres;
 
 --
--- TOC entry 868 (class 1255 OID 55136)
+-- TOC entry 867 (class 1255 OID 55136)
 -- Name: __receipt__numerator_nextval(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19019,7 +19019,7 @@ $$;
 ALTER FUNCTION tests.__receipt__numerator_nextval() OWNER TO postgres;
 
 --
--- TOC entry 869 (class 1255 OID 55137)
+-- TOC entry 868 (class 1255 OID 55137)
 -- Name: __receipt__resubmit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19052,7 +19052,7 @@ $$;
 ALTER FUNCTION tests.__receipt__resubmit() OWNER TO postgres;
 
 --
--- TOC entry 870 (class 1255 OID 55138)
+-- TOC entry 869 (class 1255 OID 55138)
 -- Name: __receipt__submit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19083,7 +19083,7 @@ $$;
 ALTER FUNCTION tests.__receipt__submit() OWNER TO postgres;
 
 --
--- TOC entry 872 (class 1255 OID 55151)
+-- TOC entry 871 (class 1255 OID 55151)
 -- Name: __schedule__get_date_of_julianized_day(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19112,7 +19112,7 @@ $$;
 ALTER FUNCTION tests.__schedule__get_date_of_julianized_day() OWNER TO postgres;
 
 --
--- TOC entry 873 (class 1255 OID 55152)
+-- TOC entry 872 (class 1255 OID 55152)
 -- Name: __schedule__get_julianized_day(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19141,7 +19141,7 @@ $$;
 ALTER FUNCTION tests.__schedule__get_julianized_day() OWNER TO postgres;
 
 --
--- TOC entry 874 (class 1255 OID 55153)
+-- TOC entry 873 (class 1255 OID 55153)
 -- Name: __schedule__get_julianized_week(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19170,7 +19170,7 @@ $$;
 ALTER FUNCTION tests.__schedule__get_julianized_week() OWNER TO postgres;
 
 --
--- TOC entry 876 (class 1255 OID 55154)
+-- TOC entry 875 (class 1255 OID 55154)
 -- Name: __stockcard__assign_issue(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19219,7 +19219,7 @@ $$;
 ALTER FUNCTION tests.__stockcard__assign_issue() OWNER TO postgres;
 
 --
--- TOC entry 877 (class 1255 OID 55156)
+-- TOC entry 876 (class 1255 OID 55156)
 -- Name: __stockcard__assign_receipt(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19268,7 +19268,7 @@ $$;
 ALTER FUNCTION tests.__stockcard__assign_receipt() OWNER TO postgres;
 
 --
--- TOC entry 878 (class 1255 OID 55157)
+-- TOC entry 877 (class 1255 OID 55157)
 -- Name: __stockcard__assign_stocktake(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19319,7 +19319,7 @@ $$;
 ALTER FUNCTION tests.__stockcard__assign_stocktake() OWNER TO postgres;
 
 --
--- TOC entry 879 (class 1255 OID 55158)
+-- TOC entry 878 (class 1255 OID 55158)
 -- Name: __stockcard__deassign_issue(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19362,7 +19362,7 @@ $$;
 ALTER FUNCTION tests.__stockcard__deassign_issue() OWNER TO postgres;
 
 --
--- TOC entry 880 (class 1255 OID 55160)
+-- TOC entry 879 (class 1255 OID 55160)
 -- Name: __stockcard__deassign_receipt(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19405,7 +19405,7 @@ $$;
 ALTER FUNCTION tests.__stockcard__deassign_receipt() OWNER TO postgres;
 
 --
--- TOC entry 881 (class 1255 OID 55161)
+-- TOC entry 880 (class 1255 OID 55161)
 -- Name: __stockcard__deassign_stocktake(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19449,7 +19449,7 @@ $$;
 ALTER FUNCTION tests.__stockcard__deassign_stocktake() OWNER TO postgres;
 
 --
--- TOC entry 882 (class 1255 OID 55162)
+-- TOC entry 881 (class 1255 OID 55162)
 -- Name: __stocktake__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19481,7 +19481,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__destroy() OWNER TO postgres;
 
 --
--- TOC entry 883 (class 1255 OID 55163)
+-- TOC entry 882 (class 1255 OID 55163)
 -- Name: __stocktake__generate_display_name(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19506,7 +19506,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__generate_display_name() OWNER TO postgres;
 
 --
--- TOC entry 884 (class 1255 OID 55164)
+-- TOC entry 883 (class 1255 OID 55164)
 -- Name: __stocktake__get_body(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19538,7 +19538,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__get_body() OWNER TO postgres;
 
 --
--- TOC entry 885 (class 1255 OID 55165)
+-- TOC entry 884 (class 1255 OID 55165)
 -- Name: __stocktake__get_gid_by_id(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19567,7 +19567,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__get_gid_by_id() OWNER TO postgres;
 
 --
--- TOC entry 886 (class 1255 OID 55166)
+-- TOC entry 885 (class 1255 OID 55166)
 -- Name: __stocktake__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19611,7 +19611,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__get_head() OWNER TO postgres;
 
 --
--- TOC entry 887 (class 1255 OID 55167)
+-- TOC entry 886 (class 1255 OID 55167)
 -- Name: __stocktake__get_head_batch(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19656,7 +19656,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__get_head_batch() OWNER TO postgres;
 
 --
--- TOC entry 888 (class 1255 OID 55168)
+-- TOC entry 887 (class 1255 OID 55168)
 -- Name: __stocktake__get_head_batch_proposed(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19703,7 +19703,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__get_head_batch_proposed() OWNER TO postgres;
 
 --
--- TOC entry 891 (class 1255 OID 55169)
+-- TOC entry 890 (class 1255 OID 55169)
 -- Name: __stocktake__get_id_by_gid(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19732,7 +19732,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__get_id_by_gid() OWNER TO postgres;
 
 --
--- TOC entry 892 (class 1255 OID 55170)
+-- TOC entry 891 (class 1255 OID 55170)
 -- Name: __stocktake__numerator_nextval(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19768,7 +19768,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__numerator_nextval() OWNER TO postgres;
 
 --
--- TOC entry 893 (class 1255 OID 55171)
+-- TOC entry 892 (class 1255 OID 55171)
 -- Name: __stocktake__resubmit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19801,7 +19801,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__resubmit() OWNER TO postgres;
 
 --
--- TOC entry 894 (class 1255 OID 55172)
+-- TOC entry 893 (class 1255 OID 55172)
 -- Name: __stocktake__submit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19832,7 +19832,7 @@ $$;
 ALTER FUNCTION tests.__stocktake__submit() OWNER TO postgres;
 
 --
--- TOC entry 895 (class 1255 OID 55173)
+-- TOC entry 894 (class 1255 OID 55173)
 -- Name: __tooling__destroy(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19868,7 +19868,7 @@ $$;
 ALTER FUNCTION tests.__tooling__destroy() OWNER TO postgres;
 
 --
--- TOC entry 896 (class 1255 OID 55174)
+-- TOC entry 895 (class 1255 OID 55174)
 -- Name: __tooling__get_head(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -19916,7 +19916,7 @@ $$;
 ALTER FUNCTION tests.__tooling__get_head() OWNER TO postgres;
 
 --
--- TOC entry 897 (class 1255 OID 55175)
+-- TOC entry 896 (class 1255 OID 55175)
 -- Name: __tooling__submit(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -20600,7085 +20600,7 @@ $$;
 ALTER FUNCTION tests._load_ebom() OWNER TO postgres;
 
 --
--- TOC entry 851 (class 1255 OID 55179)
--- Name: _load_inventory(); Type: FUNCTION; Schema: tests; Owner: postgres
---
-
-CREATE FUNCTION tests._load_inventory() RETURNS void
-    LANGUAGE plpgsql
-    AS $$
-BEGIN
-  
-  /*
-  SELECT 
-    'PERFORM inventory.submit((NULL, NULL, ''' || substance.name || ''', ''' || substance.code || ''', 1, ''2021-01-01'', ''pcs'', ''PROPOSED'', ''INVENTORY'')::common.inventory_head,
-  	ARRAY[(''pcs'', ''pcs'', 1)]::common.unit_conversion_type[],
-  	ARRAY[(''PART''), (''STORABLE''), (''PRODUCIBLE''), (''CONSUMABLE'')]::common.inventory_kind[]);'''
-  FROM 
-    public.substance
-  WHERE
-    (substance.code LIKE '%.%.%-%' AND substance.code NOT LIKE '%.%.%-%.%')
-  ORDER BY substance.code;
-  */
-
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN25x20', '11.01.025-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN32х25', '11.01.032-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN40х32', '11.01.040-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN50х40', '11.01.050-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN65х50', '11.01.065-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN80х65', '11.01.080-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN100х80', '11.01.100-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN125х100', '11.01.125-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN150х125', '11.01.150-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с031п DN200х150', '11.01.200-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN20х20', '11.02.020-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN25х25', '11.02.025-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN32х32', '11.02.032-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN40х40', '11.02.040-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN50х50', '11.02.050-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN65х65', '11.02.065-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN80х80', '11.02.080-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN100х100', '11.02.100-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN125х125', '11.02.125-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с037п DN150х150', '11.02.150-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN15х10', '11.21.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN20х15', '11.21.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN25х20', '11.21.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN32х25', '11.21.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN40х32', '11.21.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN50х40', '11.21.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN65х50', '11.21.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN80х65', '11.21.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN100х80', '11.21.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN125х100', '11.21.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN150х125', '11.21.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с21п DN200х150', '11.21.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN50х40', '11.22.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN65х50', '11.22.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN80х65', '11.22.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN100х80', '11.22.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN125х100', '11.22.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN150х125', '11.22.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с22п DN200х150', '11.22.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN25х20', '11.23.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN32х25', '11.23.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN40х32', '11.23.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN50х40', '11.23.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN65х50', '11.23.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN80х65', '11.23.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN100х80', '11.23.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN125х100', '11.23.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN150х125', '11.23.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п1 DN200х150', '11.23.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п1 DN200x150', '11.23.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п1 DN200x150', '11.23.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DNх25х20', '11.24.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN32х25', '11.24.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN40х32', '11.24.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN50х40', '11.24.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN65х50', '11.24.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN80х65', '11.24.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN100х80', '11.24.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN125х100', '11.24.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN150х125', '11.24.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п1 DN200х150', '11.24.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п1 DN200x150', '11.24.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с332п1 DN200x150', '11.24.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN20х20', '11.25.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN25х25', '11.25.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN32х32', '11.25.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN40х40', '11.25.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN50х50', '11.25.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN65х65', '11.25.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN80х80', '11.25.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN100х100', '11.25.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN125х125', '11.25.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п1 DN125х125', '11.25.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п1 DN125х125', '11.25.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п1 DN150х150', '11.25.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п1 DN150x150', '11.25.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п1 DN150x150', '11.25.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN20х20', '11.26.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN25х25', '11.26.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN32х32', '11.26.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN40х40', '11.26.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN50х50', '11.26.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN65х65', '11.26.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN80х80', '11.26.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN100х100', '11.26.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN125х125', '11.26.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п1 DN125х125', '11.26.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с338п1 DN125х125', '11.26.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п1 DN150х150', '11.26.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п1 DN150x150', '11.26.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п1 DN150x150', '11.26.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN15x10', '11.27.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN20х15', '11.27.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN25х20', '11.27.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN32х25', '11.27.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN40х32', '11.27.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN50х40', '11.27.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN65х50', '11.27.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN80х65', '11.27.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN100х80', '11.27.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN125х100', '11.27.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN150х125', '11.27.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с27п DN200х150', '11.27.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN15х10', '11.28.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN20х15', '11.28.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN25х20', '11.28.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN32х25', '11.28.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN40х32', '11.28.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN50х40', '11.28.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN65х50', '11.28.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN80х65', '11.28.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN100х80', '11.28.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN125х100', '11.28.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN150х125', '11.28.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с28п DN200х150', '11.28.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN15х10', '11.30.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN20х15', '11.30.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN20х15', '11.30.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN25х20', '11.30.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN25х20', '11.30.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN32х25', '11.30.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN32х25', '11.30.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN40х32', '11.30.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN40х32', '11.30.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN50х40', '11.30.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN50х40', '11.30.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN65х50', '11.30.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN65х50', '11.30.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п1 DN80х65', '11.30.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п1 DN80х65', '11.30.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN15х10', '11.31.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN20х15', '11.31.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN20х15', '11.31.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN25х20', '11.31.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN25х20', '11.31.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN32х25', '11.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN32х25', '11.31.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN40х32', '11.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN40х32', '11.31.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN40х32', '11.31.040-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN50х40', '11.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN50х40', '11.31.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN65х50', '11.31.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN65х50', '11.31.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN80х65', '11.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN80х65', '11.31.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN100х80', '11.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN100х80', '11.31.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN125х100', '11.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN125х100', '11.31.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN125х100', '11.31.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN150х125', '11.31.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN150х125', '11.31.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN150х125', '11.31.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с31п DN200х150', '11.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN200х150', '11.31.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN200х150', '11.31.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN250х200', '11.31.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN250х200', '11.31.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN300х250', '11.31.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN300х250', '11.31.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN350х300', '11.31.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN350х300', '11.31.350-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с931п DN400х300', '11.31.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с331п DN400х300', '11.31.400-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN15х10', '11.32.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN20х15', '11.32.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN20х15', '11.32.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN25х20', '11.32.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN25х20', '11.32.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN32х25', '11.32.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN32х25', '11.32.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN40х32', '11.32.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN40х32', '11.32.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN50х40', '11.32.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN50х40', '11.32.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN65х50', '11.32.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN65х50', '11.32.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN80х65', '11.32.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN80х65', '11.32.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN100х80', '11.32.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN100х80', '11.32.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN125х100', '11.32.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN125х100', '11.32.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с332п DN125х100', '11.32.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN150х125', '11.32.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN150х125', '11.32.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с332п DN150х125', '11.32.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с32п DN200х150', '11.32.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN200х150', '11.32.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с332п DN200х150', '11.32.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN250х200', '11.32.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с332п DN250х200', '11.32.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с932п DN300х250', '11.32.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с332п DN300х250', '11.32.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN15х10', '11.33.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN20х15', '11.33.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN25х20', '11.33.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN32х25', '11.33.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN40х32', '11.33.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN50х40', '11.33.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN50х40', '11.33.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN50x50', '11.33.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN65х50', '11.33.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN65х50', '11.33.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN80х65', '11.33.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN80х65', '11.33.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN80х80', '11.33.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN100х80', '11.33.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN100х80', '11.33.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN100х100', '11.33.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN100х80', '11.33.100-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN100х80', '11.33.100-202', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN125х100', '11.33.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN125х100', '11.33.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN125х100', '11.33.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN150х125', '11.33.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN150х125', '11.33.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN150х125', '11.33.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN150х100', '11.33.150-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN150х100', '11.33.150-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN150х100', '11.33.150-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с33п DN200х150', '11.33.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN200х150', '11.33.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN200х150', '11.33.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN250х200', '11.33.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN250х200', '11.33.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN300х250', '11.33.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN300х250', '11.33.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN350х300', '11.33.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN350х300', '11.33.350-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с933п DN400х300', '11.33.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с333п DN400х300', '11.33.400-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN15х10', '11.34.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п1 DN15х10', '11.34.015-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN20х15', '11.34.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN20х15', '11.34.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п1 DN20х15', '11.34.020-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN25х20', '11.34.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN25х20', '11.34.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п1 DN25х20', '11.34.025-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN32х25', '11.34.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN32х25', '11.34.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п1 DN32х25', '11.34.032-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN40х32', '11.34.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN40х32', '11.34.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п1 DN40х32', '11.34.040-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN50х40', '11.34.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN50х40', '11.34.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п1 DN50х40', '11.34.050-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN65х50', '11.34.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN65х50', '11.34.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN80х65', '11.34.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN80х65', '11.34.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN100х80', '11.34.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN100х80', '11.34.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN125х100', '11.34.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN125х100', '11.34.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN150х125', '11.34.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN150х125', '11.34.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с34п DN200х150', '11.34.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с934п DN200х150', '11.34.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с334п DN200х150', '11.34.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN25х25', '11.35.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN25х25', '11.35.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN32х32', '11.35.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN32х32', '11.35.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN40х40', '11.35.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN40х40', '11.35.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN50х50', '11.35.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN50х50', '11.35.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN65х65', '11.35.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN65х65', '11.35.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN80х80', '11.35.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN80х80', '11.35.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN100х100', '11.35.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN100х100', '11.35.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с35п DN125х125', '11.35.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с935п DN125х125', '11.35.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN15x15', '11.36.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN20х20', '11.36.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN25х25', '11.36.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN25х25', '11.36.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN32х32', '11.36.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN32х32', '11.36.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN40х40', '11.36.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN40х40', '11.36.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN50х50', '11.36.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN50х50', '11.36.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN50x50', '11.36.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN65х65', '11.36.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN65х65', '11.36.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN80х80', '11.36.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN80х80', '11.36.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN100х100', '11.36.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN100х100', '11.36.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с336п DN100x100 ', '11.36.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN125х125', '11.36.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN125х125', '11.36.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с336п DN125x125', '11.36.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с36п DN150х150', '11.36.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с936п DN150х150', '11.36.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с336п DN150х150', '11.36.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с336п DN200х200 PN16', '11.36.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с336п DN250х250 PN16', '11.36.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с336п DN300х300', '11.36.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN15х15', '11.37.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN15х15', '11.37.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN20х20', '11.37.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN20х20', '11.37.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN25х25', '11.37.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN25х25', '11.37.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN32х32', '11.37.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN32х32', '11.37.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN40х40', '11.37.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN40х40', '11.37.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN50х50', '11.37.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN50х50', '11.37.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN65х65', '11.37.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN65х65', '11.37.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN80х80', '11.37.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN80х80', '11.37.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN100х100', '11.37.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN100х100', '11.37.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п DN100х100', '11.37.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN125х125', '11.37.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN125х125', '11.37.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п DN125х125', '11.37.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с37п DN150х150', '11.37.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN150х150', '11.37.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п DN150х150', '11.37.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN200х200', '11.37.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п DN200х200', '11.37.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN250х250', '11.37.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п DN250х250', '11.37.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с937п DN300х300', '11.37.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с337п DN300х300', '11.37.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN15х15', '11.38.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN15х15', '11.38.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN20х20', '11.38.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN20х20', '11.38.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN25х25', '11.38.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN25х25', '11.38.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN32х32', '11.38.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN32х32', '11.38.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN40х40', '11.38.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN40х40', '11.38.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN50х50', '11.38.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN50х50', '11.38.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN65х65', '11.38.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN65х65', '11.38.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN80х80', '11.38.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN80х80', '11.38.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN100х100', '11.38.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN100х100', '11.38.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с338п DN100х100', '11.38.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN125х125', '11.38.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN125х125', '11.38.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с338п DN125х125', '11.38.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с38п DN150х150', '11.38.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN150х150', '11.38.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с338п DN150х150', '11.38.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN200х200 PN25', '11.38.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN200х200 PN16', '11.38.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с338п DN200х200 PN25', '11.38.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN250х250 PN25', '11.38.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN250х250 PN16', '11.38.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с338п DN250х250 PN25', '11.38.250-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с938п DN300х300', '11.38.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN15х15', '11.39.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN15х15', '11.39.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN15x15', '11.39.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN20х20', '11.39.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN20х20', '11.39.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN20х20', '11.39.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN25х25', '11.39.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN25х25', '11.39.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN25x25', '11.39.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN32х32', '11.39.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN32х32', '11.39.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN32x32', '11.39.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN40х40', '11.39.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN40х40', '11.39.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN40x40', '11.39.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN50х50', '11.39.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN50х50', '11.39.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN50x50  ', '11.39.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN65х65', '11.39.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN65х65', '11.39.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN80х80', '11.39.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN80х80', '11.39.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN50x50', '11.39.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с39п DN100х100', '11.39.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с939п DN100х100', '11.39.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN50х50', '11.41.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN50х50', '11.41.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN65х50', '11.41.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN65х65', '11.41.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN65х50', '11.41.065-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN65х65', '11.41.065-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN80х80', '11.41.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN80х80', '11.41.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN100х80', '11.41.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN100х100', '11.41.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN100х80', '11.41.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN100х100', '11.41.100-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN100х100', '11.41.100-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN125х100', '11.41.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN125х100', '11.41.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN125х100', '11.41.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN125x125', '11.41.125-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с41п DN150х100', '11.41.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN150х150', '11.41.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN150х100', '11.41.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN150х150', '11.41.150-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN150х100', '11.41.150-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN200х150', '11.41.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN200х200', '11.41.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN200х150', '11.41.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN200х200', '11.41.200-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN250х200', '11.41.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN250х250', '11.41.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN250х200', '11.41.250-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN250х250', '11.41.250-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN300х250', '11.41.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN300х250', '11.41.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN300х300', '11.41.300-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN300х300', '11.41.300-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN350х300', '11.41.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN350х300', '11.41.350-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с341п DN400х300', '11.41.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с941п DN400х300', '11.41.400-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN25х25', '11.42.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN25х25', '11.42.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN32х32', '11.42.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN32х32', '11.42.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN40х40', '11.42.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN40х40', '11.42.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN50х50', '11.42.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN50х50', '11.42.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN65х50', '11.42.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN65х65', '11.42.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN65х50', '11.42.065-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN65х65', '11.42.065-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN80х80', '11.42.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN80х80', '11.42.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN100х80', '11.42.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN100х80', '11.42.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN125х100', '11.42.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN125х100', '11.42.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с342п DN125х100', '11.42.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с42п DN150х100', '11.42.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN150х100', '11.42.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с342п DN150х100', '11.42.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с942п DN200х150', '11.42.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с342п DN200х150', '11.42.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN15x15', '11.51.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN20x20', '11.51.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN25x25', '11.51.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN32x32', '11.51.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN40x40', '11.51.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN50x50', '11.51.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN65x65', '11.51.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN80x80', '11.51.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с51п DN100x100', '11.51.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN15x10', '11.52.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN20х15', '11.52.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN25х20', '11.52.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN25х20', '11.52.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN32х25', '11.52.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN40х32', '11.52.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN50х40', '11.52.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN65х50', '11.52.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN80х65', '11.52.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN100х80', '11.52.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN125х80', '11.52.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN150х100', '11.52.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с52п DN200х150', '11.52.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с952п DN200х150', '11.52.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с352п DN200х150', '11.52.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с64п DN25х25', '11.64.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с964п DN25х25', '11.64.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с64п DN32х32', '11.64.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с964п DN32х32', '11.64.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с64п DN40х40', '11.64.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с964п DN40х40', '11.64.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с64п DN50х50', '11.64.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с964п DN50х50', '11.64.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с64п DN80х80', '11.64.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с964п DN80х80', '11.64.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с64п DN100х80', '11.64.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с964п DN100х80', '11.64.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN15x10 (приварний)', '11.67.015-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN15x10 (фланцевий)', '11.67.015-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN20x15 (приварний)', '11.67.020-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN20x15 (фланцевий)', '11.67.020-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN25x20 (приварний)', '11.67.025-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN25x20 (фланцевий)', '11.67.025-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN32x25 (приварний)', '11.67.032-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN32x25 (фланцевий)', '11.67.032-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN40x32 (приварний)', '11.67.040-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN40x32 (фланцевий)', '11.67.040-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN50x40 (приварний)', '11.67.050-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN50x40 (фланцевий)', '11.67.050-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN65x50 (приварний)', '11.67.065-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN65x50 (фланцевий)', '11.67.065-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN80x65 (приварний)', '11.67.080-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN80x65 (фланцевий)', '11.67.080-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN100x80 (приварний)', '11.67.100-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN100x80 (фланцевий)', '11.67.100-001 (фл)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN125x100 (приварний)', '11.67.125-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кран 11с67п DN150x125 (приварний)', '11.67.150-001 (пр)', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN50х50', '15.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN65х65', '15.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN80х80', '15.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN100х100', '15.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN125х125', '15.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN150х150', '15.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Затвор 32с60р DN200х200', '15.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Елеватор 40с10бк 1', '16.01.001-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Елеватор 40с10бк 2', '16.01.002-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Елеватор 40с10бк 3', '16.01.003-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Елеватор 40с10бк 4', '16.01.004-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пожежна підставка', '17.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L210', '17.16.008-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L310', '17.16.008-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L410', '17.16.008-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L510', '17.16.008-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L610', '17.16.008-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L650', '17.16.008-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L710', '17.16.008-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L760', '17.16.008-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L810', '17.16.008-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L910', '17.16.008-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1010', '17.16.008-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1110', '17.16.008-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1210', '17.16.008-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1310', '17.16.008-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1410', '17.16.008-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1510', '17.16.008-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1610', '17.16.008-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1710', '17.16.008-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1810', '17.16.008-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L1910', '17.16.008-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L2010', '17.16.008-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М16х1,5 S19 L3010', '17.16.008-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L210', '17.18.008-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L310', '17.18.008-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L410', '17.18.008-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L510', '17.18.008-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L610', '17.18.008-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L650', '17.18.008-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L710', '17.18.008-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L760', '17.18.008-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L810', '17.18.008-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L910', '17.18.008-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1010', '17.18.008-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1110', '17.18.008-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1210', '17.18.008-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1310', '17.18.008-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1410', '17.18.008-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1510', '17.18.008-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1610', '17.18.008-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1710', '17.18.008-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1810', '17.18.008-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L1910', '17.18.008-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L2010', '17.18.008-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-08 2SN М18х1,5 S22 L3010', '17.18.008-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L210', '17.18.010-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L310', '17.18.010-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L410', '17.18.010-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L510', '17.18.010-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L610', '17.18.010-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L650', '17.18.010-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L710', '17.18.010-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L760', '17.18.010-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L810', '17.18.010-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L910', '17.18.010-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1010', '17.18.010-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1110', '17.18.010-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1210', '17.18.010-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1310', '17.18.010-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1410', '17.18.010-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1510', '17.18.010-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1610', '17.18.010-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1710', '17.18.010-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1810', '17.18.010-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L1910', '17.18.010-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L2010', '17.18.010-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М18х1,5 S22 L3010', '17.18.010-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L210', '17.20.010-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L310', '17.20.010-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L410', '17.20.010-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L510', '17.20.010-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L610', '17.20.010-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L650', '17.20.010-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L710', '17.20.010-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L760', '17.20.010-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L810', '17.20.010-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L910', '17.20.010-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1010', '17.20.010-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1110', '17.20.010-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1210', '17.20.010-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1310', '17.20.010-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1410', '17.20.010-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1510', '17.20.010-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1610', '17.20.010-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1710', '17.20.010-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1810', '17.20.010-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L1910', '17.20.010-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L2010', '17.20.010-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-10 2SN М20х1,5 S24 L3010', '17.20.010-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L210', '17.20.012-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L310', '17.20.012-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L410', '17.20.012-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L510', '17.20.012-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L610', '17.20.012-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L650', '17.20.012-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L710', '17.20.012-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L760', '17.20.012-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L810', '17.20.012-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L910', '17.20.012-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1010', '17.20.012-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1110', '17.20.012-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1210', '17.20.012-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1310', '17.20.012-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1410', '17.20.012-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1510', '17.20.012-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1610', '17.20.012-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1710', '17.20.012-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1810', '17.20.012-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L1910', '17.20.012-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L2010', '17.20.012-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М20х1,5 S24 L3010', '17.20.012-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L210', '17.22.012-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L310', '17.22.012-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L410', '17.22.012-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L510', '17.22.012-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L610', '17.22.012-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L650', '17.22.012-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L710', '17.22.012-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L760', '17.22.012-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L810', '17.22.012-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L910', '17.22.012-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1010', '17.22.012-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1110', '17.22.012-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1210', '17.22.012-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1310', '17.22.012-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1410', '17.22.012-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1510', '17.22.012-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1610', '17.22.012-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1710', '17.22.012-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1810', '17.22.012-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L1910', '17.22.012-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L2010', '17.22.012-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-12 2SN М22х1,5 S27 L3010', '17.22.012-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L210', '17.27.016-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L310', '17.27.016-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L410', '17.27.016-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L510', '17.27.016-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L610', '17.27.016-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L650', '17.27.016-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L710', '17.27.016-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L760', '17.27.016-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L810', '17.27.016-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L910', '17.27.016-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1010', '17.27.016-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1110', '17.27.016-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1210', '17.27.016-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1310', '17.27.016-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1410', '17.27.016-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1510', '17.27.016-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1610', '17.27.016-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1710', '17.27.016-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1810', '17.27.016-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L1910', '17.27.016-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L2010', '17.27.016-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-16 2SN М27х1,5 S32 L3010', '17.27.016-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L210', '17.30.020-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L310', '17.30.020-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L410', '17.30.020-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L510', '17.30.020-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L610', '17.30.020-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L650', '17.30.020-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L710', '17.30.020-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L760', '17.30.020-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L810', '17.30.020-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L910', '17.30.020-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1010', '17.30.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1110', '17.30.020-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1210', '17.30.020-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1310', '17.30.020-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1410', '17.30.020-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1510', '17.30.020-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1610', '17.30.020-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1710', '17.30.020-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1810', '17.30.020-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L1910', '17.30.020-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L2010', '17.30.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М30х1,5 S36 L3010', '17.30.020-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L210', '17.33.020-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L310', '17.33.020-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L410', '17.33.020-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L510', '17.33.020-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L610', '17.33.020-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L650', '17.33.020-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L710', '17.33.020-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L760', '17.33.020-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L810', '17.33.020-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L910', '17.33.020-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1010', '17.33.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1110', '17.33.020-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1210', '17.33.020-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1310', '17.33.020-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1410', '17.33.020-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1510', '17.33.020-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1610', '17.33.020-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1710', '17.33.020-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1810', '17.33.020-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L1910', '17.33.020-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L2010', '17.33.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-20 2SN М33х2,0 S41 L3010', '17.33.020-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L210', '17.42.025-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L310', '17.42.025-031', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L410', '17.42.025-041', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L510', '17.42.025-051', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L610', '17.42.025-061', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L650', '17.42.025-065', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L710', '17.42.025-071', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L760', '17.42.025-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L810', '17.42.025-081', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L910', '17.42.025-091', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1010', '17.42.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1110', '17.42.025-111', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1210', '17.42.025-121', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1310', '17.42.025-131', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1410', '17.42.025-141', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1510', '17.42.025-151', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1610', '17.42.025-161', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1710', '17.42.025-171', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1810', '17.42.025-181', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L1910', '17.42.025-191', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L2010', '17.42.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'РВТ-25 2SN М42х2,0 S50 L3010', '17.42.025-301', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN15', '20.10.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN20', '20.10.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN25', '20.10.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN32', '20.10.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN40', '20.10.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN50', '20.10.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN65', '20.10.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN80 (8 отв.)', '20.10.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN80 (4 отв.)', '20.10.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN100', '20.10.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN125', '20.10.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN150', '20.10.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN10 DN200', '20.10.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN15', '20.16.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN20', '20.16.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN25', '20.16.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN32', '20.16.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN40', '20.16.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN50', '20.16.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN65', '20.16.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN80', '20.16.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN100', '20.16.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN125', '20.16.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN150', '20.16.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN16 DN200', '20.16.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN15', '20.25.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN20', '20.25.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN25', '20.25.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN32', '20.25.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN40', '20.25.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN50', '20.25.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN65', '20.25.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN80', '20.25.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN100', '20.25.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN125', '20.25.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN150', '20.25.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12820 PN25 DN200', '20.25.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN15', '21.16.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN15/21,3', '21.16.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN15', '21.16.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN20', '21.16.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN20/26,9', '21.16.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN20', '21.16.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN25', '21.16.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN25/33,7', '21.16.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN25', '21.16.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN32', '21.16.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN32/42,4', '21.16.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN32', '21.16.032-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN40', '21.16.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN40/48,3', '21.16.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN40', '21.16.040-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN50', '21.16.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN50/60,3', '21.16.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN50', '21.16.050-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN65', '21.16.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN65/76,1 8отв', '21.16.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN65/76,1 4отв', '21.16.065-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN65 8отв.', '21.16.065-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN65 4отв.', '21.16.065-202', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN80', '21.16.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN80/88,9', '21.16.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN80', '21.16.080-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN100', '21.16.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN100/114,3', '21.16.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN100/108', '21.16.100-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN100', '21.16.100-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN125', '21.16.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN125/139,7', '21.16.125-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN125/133', '21.16.125-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN125', '21.16.125-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN150', '21.16.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN150/168,3', '21.16.150-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN150/159', '21.16.150-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-13 PN16 DN150', '21.16.150-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN16 DN200', '21.16.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN16 DN200/219,1', '21.16.200-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN20', '21.25.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN25', '21.25.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN32', '21.25.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN40', '21.25.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN50', '21.25.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN65', '21.25.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN80', '21.25.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN100', '21.25.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN125', '21.25.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN150', '21.25.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN25 DN200', '21.25.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN15/21,3', '21.40.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN20/26,9', '21.40.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN25/33,7', '21.40.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN32/42,4', '21.40.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN40/48,3', '21.40.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN40 DN50', '21.40.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN50/60,3', '21.40.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN40 DN65', '21.40.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN65/76,1', '21.40.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN40 DN80', '21.40.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN80/88,9', '21.40.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN40 DN100', '21.40.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN100/114,3', '21.40.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN100/108', '21.40.100-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN40 DN125', '21.40.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN125/139,7', '21.40.125-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN125/133', '21.40.125-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ГОСТ12821 PN40 DN150', '21.40.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN150/168,3', '21.40.150-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN150/159', '21.40.150-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець EN1092-1 Тип-11 PN40 DN200/219,1', '21.40.200-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN15х15', '22.16.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN15x10', '22.16.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN20х20', '22.16.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN20х15', '22.16.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN25х25', '22.16.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN25х20', '22.16.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN32х32', '22.16.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN32х25', '22.16.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN40х40', '22.16.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN40х32', '22.16.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN50x50', '22.16.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN50x50', '22.16.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN50х40', '22.16.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN65x50', '22.16.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN65х50', '22.16.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN80x68', '22.16.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN80x80', '22.16.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN80х65', '22.16.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN100x100', '22.16.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN100x100', '22.16.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN100x100', '22.16.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN100х80', '22.16.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN125x125', '22.16.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с36п DN125x125', '22.16.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN125х100', '22.16.125-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN150x125', '22.16.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN150х100', '22.16.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN150х125', '22.16.150-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN200х150', '22.16.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN200х200 PN16', '22.16.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с22п DN200х150', '22.16.200-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN250х200', '22.16.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN300х250', '22.16.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN350х300', '22.16.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с33п DN400х300', '22.16.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN15х15', '22.25.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN15х10', '22.25.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN20х15', '22.25.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN25х20', '22.25.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN25х25', '22.25.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN32х25', '22.25.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN32х32', '_-22.25.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN40х32', '22.25.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN40х40', '22.25.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN50х40', '22.25.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN50х50', '22.25.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN65х50', '22.25.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN65х65', '22.25.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN80х65', '22.25.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN80х80', '22.25.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN100х80', '22.25.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN100х100', '22.25.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN125х100', '22.25.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN125х125', '22.25.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN150х125', '22.25.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN200х150', '22.25.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с38п DN200x200', '22.25.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN250х200', '22.25.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с32п DN300х250', '22.25.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN25х25', '23.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN25х25 LH', '23.01.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN32х32', '23.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN32х32 LH', '23.01.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN40х40', '23.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN40х40 LH', '23.01.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN50х50', '23.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN50х50 LH', '23.01.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN65х50', '23.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN65х50 LH', '23.01.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN65х65', '23.01.065-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN65х65 LH', '23.01.065-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN80х80', '23.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN80х80 LH', '23.01.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN100х80', '23.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN100х80 LH', '23.01.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN125х100', '23.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN125х100 LH', '23.01.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN150х100', '23.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN150х100 LH', '23.01.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN200х150', '23.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN200х150 LH', '23.01.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN250х200', '23.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN300х250', '23.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с42п DN400х300', '23.01.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с64п DN80х80', '23.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN125х100', '23.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN125х125', '23.02.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN150х100', '23.02.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN200х150', '23.02.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN250х200', '23.02.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN300х250', '23.02.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN350х300', '23.02.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN400х300', '23.02.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN150х150', '23.03.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с41п DN200х150', '23.03.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN100х100', '23.04.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN125х100', '23.04.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN125x125', '23.04.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN150х100', '23.04.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN200х150', '23.04.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN200х200', '23.04.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с41п DN250х250', '23.04.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець котушки 11с64п DN100х80', '23.05.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с64п DN25х25', '24.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с64п DN32х32', '24.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с64п DN40х40', '24.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с41п DN50х50', '24.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с64п DN50х50', '24.01.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с41п DN65х50', '24.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с41п DN65х65', '24.01.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с41п DN80х80', '24.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с64п DN80х80', '24.01.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець зовнішній 11с41п DN100х80', '24.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с64п DN25х25', '24.02.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с64п DN32х32', '24.02.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с64п DN40х40', '24.02.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с41п DN50х50', '24.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с64п DN50х50', '24.02.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с41п DN65х50', '24.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с41п DN65х65', '24.02.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с41п DN80х80', '24.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець внтурішній 11с64п DN80х80', '24.02.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN15х15', '24.03.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN15х10', '24.03.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN15x10', '24.03.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN15x15', '24.03.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN20х15', '24.03.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN20x15', '24.03.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN20x20 ', '24.03.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN25х20', '24.03.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN25х20', '24.03.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN25x20', '24.03.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN25x25 ', '24.03.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN32х25', '24.03.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN32x25', '24.03.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN32х32', '24.03.032-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN40х32', '24.03.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN40x32 ', '24.03.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN40х40', '24.03.040-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN50х40', '24.03.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN50x40', '24.03.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN50x50', '24.03.050-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN65х50', '24.03.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN65x50', '24.03.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN65х65', '24.03.065-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN80х65', '24.03.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN80x65', '24.03.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN80x80 ', '24.03.080-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN100х80', '24.03.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN100x80', '24.03.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN100x100 ', '24.03.100-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN125х80', '24.03.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN150х100', '24.03.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11с52п DN200х150', '24.03.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 40с10бк Ру10 DN40', '25.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 40с10бк Ру10 DN50', '25.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 40с10бк Ру10 DN80', '25.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F05  (d=22)', '25.03.005-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець перехідний під F05', '25.03.005-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F07  (d=22)', '25.03.007-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F07  (d=32)', '25.03.007-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець перехідний під F07', '25.03.007-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F10 (d=38)', '25.03.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F10 (d=35)', '25.03.010-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець перехідний під F10', '25.03.010-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F12', '25.03.012-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець F12 EN ISO 5211', '25.03.012-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець перехідний під F12', '25.03.012-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F14 ', '25.03.014-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F14 ', '25.03.014-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F16 ', '25.03.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець ISO5211 F16', '25.03.016-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець БФ60 DN50', '25.04.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець БФ60 DN100', '25.04.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець БФ60 DN125', '25.04.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець пожежної підставки', '25.06.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець 11лс51п DN15х15', '25.07.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець обмежувача 11с31п1 DN25', '25.08.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець обмежувача 11с31п1 DN40', '25.08.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець обмежувача 11с31п1 DN65', '25.08.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець обмежувача 11с31п1 DN125', '25.08.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фланець обмежувача 11с31п1 DN200', '25.08.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід ГОСТ 3262 DN15', '30.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід ГОСТ 3262 DN15', '30.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 57х3,0', '30.02.057-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 76х3,5', '30.02.076-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 89х3,5', '30.02.089-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 89х4,0', '30.02.089-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 108х4,0', '30.02.108-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 133х4,0', '30.02.133-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 2D 159х5,0', '30.02.159-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 26,9х2,5', '30.03.028-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 26,9х2,5 ВГП', '30.03.028-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 33,7х2,0', '30.03.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 33,7х3,0', '30.03.032-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 33,7х3,0 ВГП', '30.03.032-103', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 42,4х3,0', '30.03.042-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 42,4х3,0 ВГП', '30.03.042-103', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 45х3,0', '30.03.045-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 48,3х3,0', '30.03.048-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 48,3х3,0 ВГП', '30.03.048-103', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 57х3,0', '30.03.057-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 76х3,5', '30.03.076-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 89х3,5', '30.03.089-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 108х4,0', '30.03.108-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 114х4,0', '30.03.114-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 133х4,0', '30.03.133-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 159х5,0', '30.03.159-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 219х6,0', '30.03.219-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Відвід 3D 219х8,0', '30.03.219-008', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 25х21', '31.01.025-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 32х21', '31.01.032-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 32х25', '31.01.032-025', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 38х21', '31.01.038-021', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 38х25', '31.01.038-025', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 38х32', '31.01.038-032', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 45х25', '31.01.045-025', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 45х32', '31.01.045-032', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 45х38', '31.01.045-038', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 57х32', '31.01.057-032', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 57х38', '31.01.057-038', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 57х45', '31.01.057-045', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 76х45', '31.01.076-045', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 76х57', '31.01.076-057', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 89х45', '31.01.089-045', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 89х57', '31.01.089-057', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 89х76', '31.01.089-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 108х57', '31.01.108-057', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 108х76', '31.01.108-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 108х89', '31.01.108-089', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 133х76', '31.01.133-076', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 133х89', '31.01.133-089', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 133х108', '31.01.133-108', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 159х108', '31.01.159-108', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 159х133', '31.01.159-133', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід 219х159', '31.01.219-159', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN15', '32.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN20', '32.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN25', '32.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN32', '32.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN40', '32.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN50', '32.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN65', '32.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN80', '32.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Згін DN100', '32.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка компресійна БГК DN50', '32.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка компресійна БГК DN80', '32.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка компресійна БГК DN100', '32.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN15', '33.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN20', '33.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN25', '33.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN32', '33.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN40', '33.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN50', '33.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN65', '33.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN80', '33.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Різьба DN100', '33.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN15', '34.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN20', '34.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN25', '34.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN32', '34.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN40', '34.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN50', '34.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN65', '34.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN80', '34.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бочонок ГОСТ 6357 DN100', '34.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN15', '35.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта DN15', '35.01.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN20', '35.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN25', '35.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN32', '35.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN40', '35.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN50', '35.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN65', '35.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта DN65', '35.01.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN80', '35.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта ГОСТ 8966 DN100', '35.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта РВТ-08', '35.02.008-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта РВТ-10', '35.02.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта РВТ-12', '35.02.012-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта РВТ-16', '35.02.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта РВТ-20', '35.02.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Муфта РВТ-25', '35.02.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN15', '36.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка М22х1,5 ручки оцинкована', '36.01.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN20', '36.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN25', '36.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN32', '36.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN40', '36.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN50', '36.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN65', '36.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN80', '36.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Контргайка ГОСТ 8968 DN100', '36.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-08 М16х1,5 S19', '36.02.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-08 М18х1,5 S22', '36.02.018-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-10 М18х1,5 S22', '36.02.018-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-10 М20х1,5 S24', '36.02.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-12 М20х1,5 S24', '36.02.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-12 М22х1,5 S27', '36.02.022-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-16 М27х1,5 S32', '36.02.027-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-20 М30х1,5 S36', '36.02.030-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-20 М33х2,0 S41', '36.02.033-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка РВТ-25 М42х2,0 S50', '36.02.042-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка М18х1,5 упора', '36.03.018-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32', '36.04.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32 LH', '36.04.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32x10', '36.04.032-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32x10 LH', '36.04.032-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32x15', '36.04.032-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32x15 LH', '36.04.032-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32x20', '36.04.032-007', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Футорка DN32x20 LH', '36.04.032-008', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка піджимна верхня 11с31п1 DN25', '36.05.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка піджимна верхня 11с31п1 DN65', '36.05.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка піджимна верхня 11с31п1 DN125', '36.05.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гайка піджимна верхня 11с31п1 DN200', '36.05.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ніпель РВТ-08', '37.01.008-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ніпель РВТ-10', '37.01.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ніпель РВТ-12', '37.01.012-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ніпель РВТ-16', '37.01.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ніпель РВТ-20', '37.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ніпель РВТ-25', '37.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN50', '40.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN80', '40.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN100', '40.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN15х10', '40.21.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN20х15', '40.21.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN32х25', '40.21.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN40х32', '40.21.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN50х40', '40.21.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN65х50', '40.21.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN80х65', '40.21.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN100х80', '40.21.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN125х100', '40.21.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ21 DN150х125', '40.21.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ22 DN65х50', '40.22.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ22 DN80х65', '40.22.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ22 DN100х80', '40.22.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ22 DN125х100', '40.22.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ22 DN150х125', '40.22.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с27п DN200x150', '40.27.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ28 DN50х40', '40.28.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN15х10', '40.30.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c39п1 DN15x10 ', '40.30.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN20х15', '40.30.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c39п1 DN20x15', '40.30.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN25х20', '40.30.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c39п1 DN25x20 ', '40.30.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN32х25', '40.30.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c39п1 DN32x25 ', '40.30.032-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN40х32', '40.30.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN50х40', '40.30.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN65х50', '40.30.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ30 DN80х65', '40.30.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN15х10', '40.31.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN15х15', '40.31.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c31п DN15x10', '40.31.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN20х15', '40.31.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c31п DN20x15', '40.31.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN25х20', '40.31.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c31п DN25x20', '40.31.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN32х25', '40.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c31п DN32x25  ', '40.31.032-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN40х32', '40.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN40х32 (кор)', '40.31.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN50х40', '40.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN65х50', '40.31.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN80х65', '40.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN100х80', '40.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN100х80', '40.31.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN125х100', '40.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN150х125', '40.31.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN200х150', '40.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN250х200', '40.31.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN300х250', '40.31.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок-сегмент КТ31 DN350х300', '40.31.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок-сегмент КТ31 DN400х300', '40.31.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN15х10', '40.32.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN15х15', '40.32.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c32п DN15x10  ', '40.32.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN20х15', '40.32.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c32п DN20x15', '40.32.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN25х20', '40.32.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c32п DN25x20  ', '40.32.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN32х25', '40.32.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c32п DN32x25', '40.32.032-201
-  ', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN40х32', '40.32.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN50х40', '40.32.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN65х50', '40.32.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN80х65', '40.32.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN100х80', '40.32.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN100х80', '40.32.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN125х100', '40.32.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN150х125', '40.32.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN200х150', '40.32.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN250х200', '40.32.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ32 DN300х250', '40.32.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок-сегмент КТ32 DN350х300', '40.32.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок-сегмент КТ32 DN400х300', '40.32.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN15х10', '40.33.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c33п DN15x10  ', '40.33.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN20х15', '40.33.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c33п DN20x15  ', '40.33.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN25х20', '40.33.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c33п DN25x20  ', '40.33.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN32х25', '40.33.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c33п DN32x25', '40.33.032-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN40х32', '40.33.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN50х40', '40.33.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN50x50', '40.33.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN65х50', '40.33.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN80х65', '40.33.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN80x80', '40.33.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN100х80', '40.33.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN100х100', '40.33.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN100х80', '40.33.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN150х100', '40.33.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с34п DN15x10', '40.34.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ34 DN125х100', '40.34.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN25х25', '40.35.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN32х32', '40.35.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN40х40', '40.35.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN50х50', '40.35.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN65х65', '40.35.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN80х80', '40.35.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN100х100', '40.35.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ35 DN125х125', '40.35.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с36п DN25x25', '40.36.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ36 DN50х50', '40.36.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ36 DN65х65', '40.36.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ36 DN80х80', '40.36.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ36 DN100х100', '40.36.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ36 DN125х125', '40.36.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN15х15', '40.37.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN15х15', '40.37.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c37п DN15x15', '40.37.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN20х20', '40.37.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN20х20', '40.37.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c37п DN20x20  ', '40.37.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN25х25', '40.37.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN25х25', '40.37.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c37п DN25x25', '40.37.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN32х32', '40.37.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN32х32', '40.37.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN40х40', '40.37.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN40х40', '40.37.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN50х50', '40.37.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN50х50', '40.37.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN65х65', '40.37.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN65х65', '40.37.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN80х80', '40.37.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN80х80', '40.37.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN100х100', '40.37.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN100х100', '40.37.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN125х125', '40.37.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN125х125', '40.37.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN150х150', '40.37.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN150х150', '40.37.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN200х200', '40.37.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN250х250', '40.37.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN250х250', '40.37.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN300х300', '40.37.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN15х15', '40.38.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c38п DN15x15  ', '40.38.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN25x25', '40.38.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11c38п DN25x25  ', '40.38.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN32x32', '40.38.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN40х40', '40.38.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN50х50', '40.38.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN65х65', '40.38.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN80х80', '40.38.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN100х100', '40.38.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN100х100', '40.38.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN125х125', '40.38.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN125х125', '40.38.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN150х150', '40.38.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN150х150', '40.38.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN200х200', '40.38.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN250х250', '40.38.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN250х250', '40.38.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN300х300', '40.38.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN15х15', '40.39.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN15х15', '40.39.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN20х20', '40.39.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN20х20', '40.39.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN25х25', '40.39.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN25х25', '40.39.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN32х32', '40.39.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN32х32', '40.39.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN40х40', '40.39.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN40х40', '40.39.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN50х50', '40.39.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN50х50', '40.39.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN65х65', '40.39.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN65x65', '40.39.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN80х80', '40.39.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN80x80 ', '40.39.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ39 DN100х100', '40.39.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок 11с39п DN100x100', '40.39.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС64 DN100х80', '41.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN100х100', '41.01.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN125х100', '41.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN125x125', '41.01.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN150х100', '41.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN150х150', '41.01.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN200х150', '41.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN200х200', '41.01.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN250х200', '41.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN250х250', '41.01.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN300х250', '41.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN300х300', '41.01.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок котушки 11с31п DN300x250', '41.01.300-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN350х300', '41.01.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КС41 DN400х300', '41.01.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN25', '41.02.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN32', '41.02.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN40', '41.02.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN50', '41.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN65', '41.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN80', '41.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN100', '41.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN125', '41.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN150', '41.02.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN200', '41.02.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN200', '41.02.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок БГК DN200', '41.02.200-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN25', '41.03.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN32', '41.03.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN40', '41.03.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN50', '41.03.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN65', '41.03.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN80', '41.03.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN100', '41.03.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN125', '41.03.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN150', '41.03.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка ПК DN200', '41.03.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус пожежної підставки (L=420)', '41.04.221-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31п1 DN40x32', '41.23.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31п1 DN50x40', '41.23.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ27 DN65x50', '41.27.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ27 DN80x65', '41.27.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ27 DN100x80', '41.27.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с28п DN15x10', '41.28.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN15х10', '41.30.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN20х15', '41.30.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN20х15', '41.30.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN25х20', '41.30.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN25х20', '41.30.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN32х25', '41.30.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN32х25', '41.30.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN40х32', '41.30.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN40х32', '41.30.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN50х40', '41.30.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN65х50', '41.30.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN65х50', '41.30.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ30 DN80х65', '41.30.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN15х10', '41.31.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN20х15', '41.31.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN20х15', '41.31.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN25х20', '41.31.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ931 DN25х20', '41.31.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN25х20', '41.31.025-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ931 DN25х20', '41.31.025-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN32х25', '41.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN32х25', '41.31.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN40х32', '41.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN40х32', '41.31.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN50х40', '41.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN65х50', '41.31.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN65х50', '41.31.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN80х65', '41.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN100х80', '41.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN100х80', '41.31.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN125х100', '41.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN125х100', '41.31.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN125х100', '41.31.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN125x100 ', '41.31.125-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN150х125', '41.31.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN150х125', '41.31.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN150х125', '41.31.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN200х150', '41.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN250х200', '41.31.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN250х200', '41.31.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN300х250', '41.31.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN350х300', '41.31.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ31 DN400х300', '41.31.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ32 DN15х10', '41.32.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ33 DN50x50', '41.33.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ33 DN80x80', '41.33.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ33 DN100x100', '41.33.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN15х10', '41.34.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN20х15', '41.34.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN25х20', '41.34.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN32х25', '41.34.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN40х32', '41.34.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ34 DN50х40', '41.34.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN15х15', '41.37.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN15х15', '41.37.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN25х25', '41.37.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN25х25', '41.37.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN100х100', '41.37.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN100х100', '41.37.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN150х150', '41.37.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN200х200', '41.37.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN200х200', '41.37.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ37 DN250х250', '41.37.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN15х15', '41.39.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN20х20', '41.39.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN25х25 ', '41.39.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ39 DN32х32', '41.39.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ39 DN32х32', '41.39.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN32x32', '41.39.032-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN40x40 ', '41.39.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN50х50', '41.39.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ39 DN50х50', '41.39.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ39 DN65х65', '41.39.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса 11с39п DN80x80', '41.39.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN25х25', '41.41.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN25х25', '41.41.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN32х32', '41.41.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN32х32', '41.41.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN40х40', '41.41.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN65х50', '41.41.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN65х65', '41.41.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN100х80', '41.41.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN125х100', '41.41.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN125х100', '41.41.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN125х100', '41.41.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41п DN125x125', '41.41.125-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN150х150', '41.41.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN200х150', '41.41.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN250х200', '41.41.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN250х200', '41.41.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN300х250', '41.41.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КС41 DN350х300', '41.41.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN15х15', '41.51.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN20х20', '41.51.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN25х25', '41.51.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN32х32', '41.51.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN40х40', '41.51.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN50х50', '41.51.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN65х65', '41.51.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN80х80', '41.51.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КМ51 DN100х100', '41.51.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN15x10', '41.52.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN20х15', '41.52.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN25х20', '41.52.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN25х20', '41.52.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN32х25', '41.52.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN40х32', '41.52.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN50х40', '41.52.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN65х50', '41.52.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN80х65', '41.52.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN100x80', '41.52.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN125х80', '41.52.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN150х100', '41.52.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок корпуса КТ52 DN200х150', '41.52.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус БФ60 DN50х50 ', '41.60.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус БФ60 DN65х65 ', '41.60.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус БФ60 DN80х80 ', '41.60.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус БФ60 DN100х100 ', '41.60.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус БФ60 DN125х125 ', '41.60.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус БФ60 DN150х150 ', '41.60.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN15', '42.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ52 DN15х10', '42.01.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN20х15', '42.01.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN25', '42.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN32', '42.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN50', '42.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN80', '42.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN80', '42.01.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN125', '42.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN150', '42.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка 11с36п DN150х150 (35х47)', '42.01.150-002 ', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31 DN200', '42.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки 36х16 (Sq=19)', '42.02.036-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки DN50 (22х12)', '42.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки DN80 (32х15)', '42.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки DN125 (36х16)', '42.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки DN200 (50х27)', '42.02.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка Т-ключа DN15 ', '42.03.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка Т-ключа DN40', '42.03.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка Т-ключа DN80', '42.03.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка Т-ключа DN125 ', '42.03.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка Т-ключа DN200', '42.03.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка опорна КС341 М20', '42.04.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка БФ60 DN50', '42.05.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка БФ60 DN65', '42.05.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка БФ60 DN80', '42.05.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка БФ60 DN100', '42.05.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка БФ60 DN125', '42.05.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Стійка БФ60 DN150', '42.05.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки БФ60 DN50', '42.06.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки БФ60 DN100', '42.06.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ручки БФ60 DN125', '42.06.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК нижня DN25', '42.07.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК нижня DN40', '42.07.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК нижня DN80', '42.07.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК нижня DN125', '42.07.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК нижня DN200', '42.07.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК верхня DN25', '42.08.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК верхня DN40', '42.08.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК верхня DN65', '42.08.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК верхня DN125', '42.08.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка БГК верхня DN200', '42.08.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ931 DN20', '42.09.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ931 DN40', '42.09.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ931 DN80', '42.09.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ931 DN80х65', '42.09.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ931 DN125', '42.09.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ931 DN150', '42.09.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ331 DN200', '42.09.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КС341 DN200х150', '42.09.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ331 DN250х200', '42.09.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КС341 DN250х200', '42.09.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ331 DN250х200', '42.09.250-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КС341 DN250х200', '42.09.250-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ331 DN300х250', '42.09.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка до пожежної підставки 207х6', '42.10.207-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN25', '42.11.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN25', '42.11.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN40', '42.11.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN65', '42.11.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN125', '42.11.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN150', '42.11.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ31п1 DN200', '42.11.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка перехідна DN300', '42.12.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN15', '42.13.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN20', '42.13.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN25', '42.13.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN32', '42.13.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN40', '42.13.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN50', '42.13.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN65', '42.13.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN80', '42.13.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN100', '42.13.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN125', '42.13.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN150', '42.13.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Бобишка КТ27 DN200', '42.13.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок ЕВС №1', '43.01.048-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок ЕВС №3', '43.01.057-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок боковий ЕВС №1', '43.02.057-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок боковий ЕВС №3', '43.02.089-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок конусний ЕВС №1', '43.03.057-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок конусний ЕВС №3', '43.03.089-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Дифузор ЕВС №1', '43.04.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Дифузор ЕВС №2', '43.04.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Дифузор ЕВС №3', '43.04.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Дифузор ЕВС №4', '43.04.030-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сопло ЕВС №1', '43.05.048-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сопло ЕВС №3', '43.05.057-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус сопла ЕВС №1', '43.06.048-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус сопла ЕВС №3', '43.06.057-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка сопла ЕВС №1', '43.07.018-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка сопла ЕВС №3', '43.07.018-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN15х10', '50.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN20х15', '50.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN25х20', '50.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN32х25', '50.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN40х32', '50.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN50х40', '50.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ52 DN50х40', '50.01.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN65х50', '50.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ52 DN65х50', '50.01.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN80х65', '50.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN100х80', '50.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN125х100', '50.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN150х125', '50.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN200х150', '50.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN250х200', '50.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN300х250', '50.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка КТ31 DN350х300', '50.01.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN15х10', '51.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN20х15', '51.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN25х20', '51.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN32х25', '51.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN40х32', '51.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN50х40', '51.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN65х50', '51.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN80х65', '51.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN100х80', '51.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN125х100', '51.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN150х125', '51.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN200х150', '51.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN250х200', '51.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN300х250', '51.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Пружина КТ31 DN350х300', '51.01.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN15х10', '52.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN20х15', '52.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN25х20', '52.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN32х25', '52.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN40х32', '52.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN50х40', '52.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN65х50', '52.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN80х65', '52.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN100х80', '52.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN125х100', '52.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN150х125', '52.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN200х150', '52.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN250х200', '52.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба КТ31 DN300х250', '52.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба патрубка КТ31 DN350х300', '52.02.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шайба патрубка КТ31 DN400х300', '52.02.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Монтажна петля КТ DN250', '52.03.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Монтажна петля КС DN200х200', '52.04.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Монтажна петля КС DN250х250', '52.04.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 4х11', '53.01.004-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 4х9', '53.01.004-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 4х40', '53.01.004-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 8х20', '53.01.008-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 10х20', '53.01.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт різьбовий М6', '53.02.006-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт різьбовий М8', '53.02.008-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт опорний М20', '53.03.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Упор БФ60 DN50х50', '53.04.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт БФ60 DN50х50', '53.05.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт БФ60 DN100х100', '53.05.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт БФ60 DN15x125', '53.05.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка БФ60 DN50х50', '53.06.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка БФ60 DN100х100', '53.06.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка БФ60 DN125x125', '53.06.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка БФ60 DN150x150', '53.06.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фіксатор 11с27п DN15', '53.07.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фіксатор 11с27п DN40', '53.07.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фіксатор 11с27п DN65', '53.07.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фіксатор 11с27п DN125', '53.07.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фіксатор 11с27п DN200', '53.07.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 11с31п1 DN15', '53.08.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 11с31п1 DN65', '53.08.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Штифт 11с31п1 DN125', '53.08.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Болт М10х1,5', '53.09.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 10х105 (D=8,97)', '54.01.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 10х125 (D=8,97)', '54.01.010-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 10х100 (D=8,97)', '54.01.010-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 12х100 (D=10,83)', '54.01.012-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 12х105 (D=10,83)', '54.01.012-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 12х115 (D=10,83)', '54.01.012-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х110 (D=14,66)', '54.01.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х133 (D=14,66)', '54.01.016-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х143 (D=14,66)', '54.01.016-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х170 (D=14,66)', '54.01.016-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х185 (D=14,66)', '54.01.016-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х210 (D=14,66)', '54.01.016-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х113 (D=14,66)', '54.01.016-007', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х58 (D=14,66)', '54.01.016-008', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х80 (D=14,66)', '54.01.016-009', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х100 (D=14,66)', '54.01.016-010', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х120 (D=14,66)', '54.01.016-011', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х140 (D=14,66)', '54.01.016-012', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х160 (D=14,66)', '54.01.016-013', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 16х225', '54.01.016-014', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х244 (D=18,34)', '54.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х250 (D=18,34)', '54.01.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х100 (D=18,34)', '54.01.020-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х110 (D=18,34)', '54.01.020-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х160 (D=18,34)', '54.01.020-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х170 (D=18,34)', '54.01.020-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 20х80 (D=18,34)', '54.01.020-007', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 24х345 (D=22)', '54.01.024-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 27х397 (D=25)', '54.01.027-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька кругла 27х465 (D=25)', '54.01.027-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 10х58 (S=10)', '54.02.010-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 10х65 (S=10)', '54.02.010-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 10х75 (S=10)', '54.02.010-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 10х86 (S=10)', '54.02.010-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 10х88 (S=10)', '54.02.010-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 10х110 (S=10)', '54.02.010-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 12х58 (S=12)', '54.02.012-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 12х65 (S=12)', '54.02.012-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 12х75 (S=12)', '54.02.012-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 12х72 (S=12)', '54.02.012-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х86 (S=15)', '54.02.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х88 (S=15)', '54.02.016-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х116 (S=15)', '54.02.016-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х163 (S=15)', '54.02.016-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х110 (S=15)', '54.02.016-005', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х173', '54.02.016-006', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 16х118', '54.02.016-007', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька шестигранна 20х220 (S=19)', '54.02.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шпилька спеціальна М8', '54.03.008-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка Т-ключа DN15', '55.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка Т-ключа DN40', '55.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка Т-ключа DN65', '55.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка Т-ключа DN200', '55.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Труба Т-ключа DN15', '55.02.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Труба Т-ключа DN40', '55.02.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Труба Т-ключа DN65', '55.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Труба Т-ключа DN200', '55.02.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки 11с31п1 DN25', '55.23.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки 11с31п1 DN40', '55.23.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки 11с31п1 DN65', '55.23.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки 11с31п1 DN100', '55.23.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки 11с31п1 DN125', '55.23.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки 11с31п1 DN200', '55.23.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ27 DN15', '55.27.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ27 DN25', '55.27.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ27 DN40', '55.27.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ27 DN65', '55.27.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ27 DN100', '55.27.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN15', '55.31.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN15', '55.31.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN32', '55.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN40', '55.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN50', '55.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN80', '55.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN100', '55.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ31 DN125х100', '_55.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Труба ручки КТ31 DN125', '55.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Труба ручки КТ31 DN200', '55.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ32 DN20', '55.32.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ42 DN32', '55.42.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ39п2 DN50', '55.49.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КМ51 DN15х15', '55.51.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КМ51 DN20х20', '55.51.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КМ51 DN32х32', '55.51.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КМ51 DN40х40', '55.51.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КМ51 DN65х65', '55.51.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки КТ52 DN100x80', '55.52.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки БФ60 DN50', '55.60.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Полоса ручки БФ60 DN125', '55.60.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN15х15', '56.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN20х20', '56.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN25х25', '56.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN32х32', '56.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN40х40', '56.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN50х50', '56.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN65х65', '56.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN80х80', '56.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Кришка КМ51 DN100х100', '56.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 21х10', '60.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 26х14', '60.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 36х20', '60.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 44х23', '60.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 56х32', '60.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 65х36', '60.01.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 68х38', '60.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля КТ22 DN50x40', '60.01.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 80х48', '60.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля КТ31 DN65х50', '60.01.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 102х60', '60.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 120х78', '60.01.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 120х75', '60.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 148х95', '60.01.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 152х96 ', '60.01.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 152х96 ', '60.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 167х98 ', '60.01.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 167х98', '60.01.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 162х98', '60.01.125-004', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 152х98 PN16', '60.01.125-008', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 148х95 PN16', '60.01.125-009', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 191х123 ', '60.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 191х123 PN16', '60.01.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 225х144', '60.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 312х198 PN25', '60.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 312x198 PN16', '60.01.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 381x234 PN25', '60.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 381x234 PN16', '60.01.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Куля 452x295', '60.01.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Диск БФ60 DN50х50', '60.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Диск БФ60 DN65х65', '60.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Диск БФ60 DN80х80', '60.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Диск БФ60 DN100х100', '60.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Диск БФ60 DN125х125', '60.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Диск БФ60 DN150х150', '60.02.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN15', '61.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ52 DN15х10', '61.01.015-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN20', '61.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN25', '61.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ031 DN25', '61.01.025-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN32', '61.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN50', '61.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ031 DN50', '61.01.050-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ031 DN65', '61.01.065-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN80', '61.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN80', '61.01.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ031 DN80', '61.01.080-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN100', '61.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN125', '61.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ031 DN125', '61.01.125-100', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN150  ', '61.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток 11с36п DN150x150 (35х85) ', '61.01.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ31 DN200', '61.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БФ60 DN50х50', '61.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БФ60 DN65х65', '61.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БФ60 DN80х80', '61.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БФ60 DN100х100', '61.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БФ60 DN125х125', '61.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БФ60 DN150х150', '61.02.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БГК DN25', '61.03.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БГК DN40', '61.03.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БГК DN80', '61.03.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БГК DN125', '61.03.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток БГК DN200', '61.03.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN25', '61.04.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN32', '61.04.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN40', '61.04.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN50', '61.04.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN65', '61.04.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN80', '61.04.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN100', '61.04.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN125', '61.04.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN150', '61.04.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток ПК перехідний DN200', '61.04.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток 11с31п1 DN25', '61.05.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток 11с31п1 DN50', '61.05.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток 11с31п1 DN65', '61.05.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток 11с31п1 DN125', '61.05.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток 11с31п1 DN200', '61.05.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN15', '61.06.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ27 DN15', '61.06.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN20', '61.06.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ27 DN20', '61.06.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN25', '61.06.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN32', '61.06.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN40', '61.06.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ27 DN40', '61.06.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ27 DN50', '61.06.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN65', '61.06.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ27 DN65', '61.06.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КМ51 DN100', '61.06.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ27 DN125', '61.06.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток пеерхідний DN300', '61.07.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN20', '61.09.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КT931 DN32', '61.09.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN40', '61.09.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN50', '61.09.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN80', '61.09.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN100', '61.09.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN125', '61.09.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN150', '61.09.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ931 DN200', '61.09.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ342 DN200х150', '61.09.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ331 DN250х200', '61.09.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ341 DN250х200', '61.09.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КТ331 DN300х250', '61.09.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток КС941 DN350x300', '61.09.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN15х10', '70.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КМ51 DN15х15', '70.01.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN15x15', '70.01.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі 11c31п DN15x10', '70.01.015-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN20х15', '70.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN20x20  ', '70.01.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі 11c31п DN20x15  ', '70.01.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN25х20', '70.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN25x25', '70.01.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі 11c31п DN25x20  ', '70.01.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN32х25', '70.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ52 DN32х25', '70.01.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN32x32', '70.01.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі 11c31п DN32x25', '70.01.032-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN40х32', '70.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ52 DN40х32', '70.01.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN40x40', '70.01.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN50х40', '70.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN50x50 ', '70.01.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN65х50', '70.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ52 DN65х50', '70.01.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ31 DN65x50 ', '70.01.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN80х65', '70.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN100х80', '70.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ52 DN100х80', '70.01.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КМ51 DN100х100', '70.01.100-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кулі КТ39 DN80x80', '70.01.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN125х100', '70.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN150х125', '70.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN200х150', '70.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN250х200', '70.01.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN300х250', '70.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КТ31 DN350х300', '70.01.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN25х25', '70.02.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN32х32', '70.02.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN40х40', '70.02.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN50х50', '70.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN65х65', '70.02.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN80х80', '70.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN125х100', '70.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN125x125', '70.02.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN200х150', '70.02.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN250х200', '70.02.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло КС41 DN250х250', '70.02.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN25х25', '70.03.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN32х32', '70.03.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN40х40', '70.03.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN65х50', '70.03.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN65х65', '70.03.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN100х80', '70.03.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN150х100', '70.03.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN125x125', '70.03.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN200х150', '70.03.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN250х200', '70.03.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN300х250', '70.03.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення корпуса КС41 DN350х300', '70.03.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN15', '70.04.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN15х10', '70.04.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ52 DN15х10', '70.04.015-102', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31п1 DN25', '70.04.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока 11с31п1 DN25', '70.04.025-103', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN32', '70.04.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN32 ', '70.04.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN65', '70.04.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31п1 DN65', '70.04.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN65х50', '70.04.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN80', '70.04.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN80 ', '70.04.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN125', '70.04.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31п1 DN125', '70.04.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN125 ', '70.04.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN150х125', '70.04.125-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN200', '70.04.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN200х150', '70.04.200-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN250', '70.04.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN250х200', '70.04.250-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока DN300', '70.04.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення штока КТ31 DN300х250', '70.04.300-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кришки КМ51 DN15х15', '70.05.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кришки КМ51 DN20х20', '70.05.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кришки КМ51 DN65х65', '70.05.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кришки КМ51 DN80х80', '70.05.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення кришки КМ51 DN100х100', '70.05.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ущільнення фланця КМ51 DN15х15', '70.06.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сальник нижній БФ60 DN50х50', '70.07.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сальник нижній БФ60 DN100х100', '70.07.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сальник нижній БФ60 DN125x125', '70.07.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сальник верхній БФ60 DN50х50', '70.08.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сальник верхній БФ60 DN100х100', '70.08.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сальник верхній БФ60 DN125x125', '70.08.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'насадка ручки КТ31 DN15 жовта (Н)', '71.01.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ31 DN25х20 жовта', '71.01.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ31 DN15х10 жовта', '71.01.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ21 DN25x20 синя', '71.01.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ27 DN20x15 біла', '71.01.020-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ31 DN80 жовта', '71.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ21 DN80 синя', '71.01.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки 25 біла', '71.01.025-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ31 DN100 жовта', '71.01.030-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ21 DN100 синя', '71.01.030-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ27 DN40 біла', '71.01.030-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КМ51 DN65 жовта ', '71.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Насадка ручки КТ27 DN65 біла', '71.01.040-201', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN15 жовта', '71.02.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN15 синя', '71.02.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN20 жовта', '71.02.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN20 синя', '71.02.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN25 жовта', '71.02.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN25 синя', '71.02.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN32 жовта', '71.02.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN32 синя', '71.02.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN40 жовта', '71.02.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN40 синя', '71.02.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN50 жовта', '71.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN50 синя', '71.02.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN65 жовта', '71.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN65 синя', '71.02.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN80 жовта', '71.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN80 синя', '71.02.080-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN100 жовта', '71.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка патрубка DN100 синя', '71.02.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN25 жовта', '71.03.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN32 жовта', '71.03.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця КТ32 DN32 жовта', '71.03.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN40 жовта', '71.03.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN50 жовта', '71.03.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN65 жовта', '71.03.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця 11с32п DN65 жовта', '71.03.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN80 жовта', '71.03.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN150 жовта (150х125)', '71.03.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Заглушка фланця DN150 жовта (150х150)', '71.03.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок ПЕ SDR11 БГК DN50', '71.04.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок ПЕ SDR11 БГК DN80', '71.04.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок ПЕ SDR11 БГК DN100', '71.04.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 007-009-19 ', '72.01.007-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 009-014-25', '72.01.009-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 12,6-17,6-25', '72.01.012-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 13,0-17,0-25', '72.01.013-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 15,0-20,0-30', '72.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 016-021-30', '72.01.016-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 018-021-19 ', '72.01.018-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 021-026-30', '72.01.021-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 023-026-19', '72.01.023-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 28,5-33,5-30', '72.01.028-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 029-032-19', '72.01.029-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 039-042-19   ', '72.01.039-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 45,5-51,5-30', '72.01.045-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 047-052-26', '72.01.047-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 056-061-26 ', '72.01.056-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 058-063-30', '72.01.057-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 071-076-26 ', '72.01.071-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 090-095-26', '72.01.090-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 112-117-26', '72.01.112-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 138-143-31 ', '72.01.138-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 164-170-35 ', '72.01.164-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове кільце 330-337-40 ', '72.01.330-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Гумове ущільнення DN350', '72.02.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ебонітова БФ60 DN50', '72.03.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ебонітова БФ60 DN65', '72.03.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ебонітова БФ60 DN80', '72.03.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ебонітова БФ60 DN100', '72.03.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ебонітова БФ60 DN125', '72.03.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Втулка ебонітова БФ60 DN150', '72.03.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('PART'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС64 DN25х25', '80.01.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС64 DN32х32', '80.01.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС64 DN40х40', '80.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС64 DN50х50', '80.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС64 DN80х80', '80.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС64 DN100х80', '80.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN50х50', '80.02.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN65х50', '80.02.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN65х65', '80.02.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN80х80', '80.02.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN100х80', '80.02.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN100х100', '80.02.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN125х100', '80.02.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN125х125', '80.02.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN150х100', '80.02.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN150х150', '80.02.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN200х150', '80.02.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN200х200', '80.02.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN250х200', '80.02.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN250х250', '80.02.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN300х250', '80.02.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN300х300', '80.02.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN350х300', '80.02.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка КС41 DN400х300', '80.02.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі БФ60 DN50х50', '80.04.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі БФ60 DN65х65', '80.04.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі БФ60 DN80х80', '80.04.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі БФ60 DN100х100', '80.04.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі БФ60 DN125х125', '80.04.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі БФ60 DN150х150', '80.04.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN25x20', '80.23.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN25x20', '80.23.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN32x25', '80.23.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN40x32', '80.23.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN50x40', '80.23.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN65x50', '80.23.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN80x65', '80.23.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN100x80', '80.23.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN125x100', '80.23.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN150x125', '80.23.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31п1 DN200x150', '80.23.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37п1 DN100x100', '80.25.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37п1 DN150x150', '80.25.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN15x10', '80.27.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27п DN15x10', '80.27.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN20x15', '80.27.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN20х15', '80.27.020-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN25х20', '80.27.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN25х20', '80.27.025-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN32х25', '80.27.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN32х25', '80.27.032-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN40х32', '80.27.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN40х32', '80.27.040-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN50х40', '80.27.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN50х40', '80.27.050-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN65х50', '80.27.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN65х50', '80.27.065-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN80х65', '80.27.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN80х65', '80.27.080-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN100х80', '80.27.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN100х80', '80.27.100-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN125х100', '80.27.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN125х100', '80.27.125-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN150х125', '80.27.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN150х125', '80.27.150-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN200х150', '80.27.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ27 DN200х150', '80.27.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ27 DN200х150', '80.27.200-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ28 DN15х10', '80.28.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус в зборі КТ28 DN15х10', '80.28.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN15х10', '80.30.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN20х15', '80.30.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN25х20', '80.30.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN25х20', '80.30.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN32х25', '80.30.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN32х25', '80.30.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN40х32', '80.30.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN40х32', '80.30.040-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN50х40', '80.30.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN65х50', '80.30.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN65х50', '80.30.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ30 DN89х65', '80.30.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN15х10', '80.31.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN20х15', '80.31.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN20х15', '80.31.020-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN25х20', '80.31.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN25х20', '80.31.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN32х25', '80.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN32х25', '80.31.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN40х32', '80.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN50х40', '80.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN65х50', '80.31.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN65х50', '80.31.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN80х65', '80.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN100х80', '80.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN125х100', '80.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN125х100', '80.31.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN150х125', '80.31.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN150х125', '80.31.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ31 DN200х150', '80.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ33 DN50x50', '80.33.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ34 DN15х10', '80.34.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ34 DN20х15', '80.34.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ34 DN25х20', '80.34.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ34 DN32х25', '80.34.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ34 DN40х32', '80.34.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ34 DN50х40', '80.34.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN15х15', '80.37.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN15х15', '80.37.015-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN25х25', '80.37.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN25х25', '80.37.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN100х100', '80.37.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN100х100', '80.37.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ37 DN150х150', '80.37.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ39 DN32х32', '80.39.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ39 DN50х50', '80.39.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ39 DN50х50', '80.39.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ39 DN65х65', '80.39.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN25х25', '80.41.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN25х25', '80.41.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN32х32', '80.41.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN32х32', '80.41.032-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN40х40', '80.41.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN65х50', '80.41.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN65х65', '80.41.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN100х80', '80.41.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN125х100', '80.41.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN125х100', '80.41.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС41 DN125х125', '80.41.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN15x10', '80.52.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN20х20', '80.52.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN25х20', '80.52.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN25х20', '80.52.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN32х25', '80.52.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN40х32', '80.52.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN50х40', '80.52.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN65х50', '80.52.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN80х65', '80.52.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN100х80', '80.52.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN125х80', '80.52.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN150х100', '80.52.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ52 DN200х150', '80.52.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід П-С ДСТУ Б В.2.7-177 DN50', '81.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід П-С ДСТУ Б В.2.7-177 DN80', '81.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Перехід П-С ДСТУ Б В.2.7-177 DN100', '81.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Т-ключ DN15', '82.01.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Т-ключ DN40', '82.01.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Т-ключ DN80', '82.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Т-ключ DN125', '82.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Т-ключ DN200', '82.01.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31п1 DN25', '82.23.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31п1 DN40', '82.23.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31п1 DN65', '82.23.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31п1 DN100', '82.23.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31п1 DN125', '82.23.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31п1 DN200', '82.23.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ27 DN15х10', '82.27.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ27 DN25', '82.27.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ27 DN40', '82.27.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ27 DN65', '82.27.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ27 DN100', '82.27.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ27 DN125', '82.27.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN15 чорна', '82.31.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN15 (нова)', '82.31.015-101', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN25х20 сіра', '82.31.025-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN32', '82.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN40 чорна', '82.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN50 чорна', '82.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN50х40 сіра', '82.31.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN65х50 сіра', '82.31.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN80 чорна', '82.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN100 чорна', '82.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN125 чорна', '82.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN125х100 сіра', '82.31.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ31 DN200 чорна', '82.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ32 DN20 чорна', '82.32.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КМ51 DN15х15 жовта', '82.51.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КМ51 DN20х20 жовта', '82.51.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КМ51 DN32х32 жовта', '82.51.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КМ51 DN40х40 жовта', '82.51.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КМ51 DN65х65 жовта', '82.51.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка КТ52 DN100x80', '82.52.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка БФ60 DN50', '82.60.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка БФ60 DN100', '82.60.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Ручка БФ60 DN125', '82.60.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло БФ60 DN50х50', '83.01.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло БФ60 DN65х65', '83.01.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло БФ60 DN80х80', '83.01.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло БФ60 DN100х100', '83.01.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло БФ60 DN125х125', '83.01.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Сідло БФ60 DN150х150', '83.01.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN350х300', '84.31.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ31 DN400х300', '84.31.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN350х300', '84.33.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ33 DN400х300', '84.33.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ37 DN300х300', '84.37.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Патрубок КТ38 DN300х300', '84.38.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Фіксатор М8 ручки БФ60 DN50х50', '85.01.008-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток перехідний 11с31п DN300x250', '87.01.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN25x20', '87.31.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN32x25', '87.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN40х32', '87.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN50х40', '87.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN65х50', '87.31.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN80х65', '87.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN100х80', '87.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN125х100', '87.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN150х125', '87.31.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Шток знімний ПК 11с031п DN200х150', '87.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Котушка перехідна 11с31п DN300x250', '87.31.300-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931п1 DN200x150', '89.23.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937п1 DN150x150', '89.25.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN20х15', '89.30.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN25х20', '89.30.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN32х25', '89.30.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN40х32', '89.30.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN50х40', '89.30.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN65х50', '89.30.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN80х65', '89.30.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN20х15', '89.31.020-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN25х20', '89.31.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN32х25', '89.31.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN40х32', '89.31.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN50х40', '89.31.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN65х50', '89.31.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN80х65', '89.31.080-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN100х80', '89.31.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN125х100', '89.31.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN125х100', '89.31.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ331 DN125х100', '89.31.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN150х125', '89.31.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN150х125', '89.31.150-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ331 DN150х125', '89.31.150-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN200х150', '89.31.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN250х200', '89.31.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN250х200', '89.31.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN300х250', '89.31.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN350х300', '89.31.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ931 DN400х300', '89.31.400-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN15х15', '89.37.015-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN25х25', '89.37.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN100х100', '89.37.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN100х100', '89.37.100-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN150х150', '89.37.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN200х200', '89.37.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN200х200', '89.37.200-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ937 DN250х250', '89.37.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ939 DN32х32', '89.39.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN50х50', '89.39.050-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN50х50', '89.39.050-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ930 DN65х65', '89.39.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN25х25', '89.41.025-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN32х32', '89.41.032-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN40х32', '89.41.040-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN65х50', '89.41.065-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN65х65', '89.41.065-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN100х80', '89.41.100-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN150х100', '89.41.125-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN150х100', '89.41.125-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС341 DN150х100', '89.41.125-003', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN150х150', '89.41.150-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN200х150', '89.41.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN250х200', '89.41.250-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN250х200', '89.41.250-002', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN300х250', '89.41.300-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КС941 DN350х300', '89.41.350-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-  PERFORM inventory.submit((NULL, NULL, 'Корпус КТ952 DN200х150', '89.52.200-001', 1, '2021-01-01', 'pcs', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-  	ARRAY[('pcs', 'pcs', 1)]::common.unit_conversion_type[],
-  	ARRAY[('ASSEMBLY'), ('STORABLE'), ('PRODUCIBLE'), ('CONSUMABLE')]::common.inventory_kind[]);
-
-
-
-  
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Крг-ст20-022', 'Крг-022-ст20', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Крг-ст20Х13-016', 'Крг-016-ст20Х13', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Крг-ст45-004,0', 'Крг-004,0-ст45', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Лст-ст3-003,0', 'Лст-003,0-ст3', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Лст-ст65Г-001,2', 'Лст-001,2-ст65Г', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Лст-ст20Х17-001,0', 'Лст-001,0-ст20Х17', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Плс-ст3-020х4', 'Плс-020х4-ст3', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Трб-ст20-057,0х03,5-Ш', 'Трб-057,0х03,5-ст20-Ш', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Трб-ст20-089,0х03,5-Ш', 'Трб-089,0х03,5-ст20-Ш', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Трб-ст20-089,0х03,0-Ш', 'Трб-089,0х03,0-ст20-Ш', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Трб-ст20Х13-068,0х04,0', 'Трб-068,0х04,0-ст20Х13', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Квд-ст3ПС-080х080', 'Квд-080х080-ст3ПС', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'ПЕ-15803-020', 'ПЕ-15803-020', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Ф-4', 'Ф-4', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Лст-ст20Х17-000,8', 'Лст-000,8-ст20Х17', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Лст-ст20Х17-004,4', 'Лст-004,4-ст20Х17', 1, '2021-01-01', 'kg', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('kg', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-  PERFORM inventory.submit(
-    (NULL, NULL, 'Трб-ст20Х13-068,0х03,5', 'Трб-068,0х03,5-ст20Х13', 1, '2021-01-01', 'm', 'PROPOSED', 'INVENTORY')::common.inventory_head,
-    ARRAY[('m', 'm', 1), ('m', 'kg', 2)]::common.unit_conversion_type[],
-    ARRAY[('BUYABLE'), ('STORABLE'), ('PRIMAL')]::common.inventory_kind[]
-  );
-
-
-
-END;
-$$;
-
-
-ALTER FUNCTION tests._load_inventory() OWNER TO postgres;
-
---
--- TOC entry 898 (class 1255 OID 55181)
+-- TOC entry 897 (class 1255 OID 55181)
 -- Name: _reset_data(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -27803,7 +20725,7 @@ $$;
 ALTER FUNCTION tests._reset_data() OWNER TO postgres;
 
 --
--- TOC entry 899 (class 1255 OID 55182)
+-- TOC entry 898 (class 1255 OID 55182)
 -- Name: _run_all(); Type: FUNCTION; Schema: tests; Owner: postgres
 --
 
@@ -27850,7 +20772,7 @@ $$;
 ALTER FUNCTION tests._run_all() OWNER TO postgres;
 
 --
--- TOC entry 900 (class 1255 OID 55183)
+-- TOC entry 899 (class 1255 OID 55183)
 -- Name: destroy(bigint); Type: FUNCTION; Schema: tooling; Owner: postgres
 --
 
@@ -27866,7 +20788,7 @@ $$;
 ALTER FUNCTION tooling.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 901 (class 1255 OID 55184)
+-- TOC entry 900 (class 1255 OID 55184)
 -- Name: get_head(bigint); Type: FUNCTION; Schema: tooling; Owner: postgres
 --
 
@@ -27894,7 +20816,7 @@ $$;
 ALTER FUNCTION tooling.get_head(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 902 (class 1255 OID 55185)
+-- TOC entry 901 (class 1255 OID 55185)
 -- Name: submit(common.tooling_head); Type: FUNCTION; Schema: tooling; Owner: postgres
 --
 
@@ -27949,7 +20871,7 @@ $$;
 ALTER FUNCTION tooling.submit(__head common.tooling_head) OWNER TO postgres;
 
 --
--- TOC entry 903 (class 1255 OID 55186)
+-- TOC entry 902 (class 1255 OID 55186)
 -- Name: get_domain(character varying); Type: FUNCTION; Schema: uom; Owner: postgres
 --
 
@@ -27967,7 +20889,7 @@ $$;
 ALTER FUNCTION uom.get_domain(_uom_code character varying) OWNER TO postgres;
 
 --
--- TOC entry 904 (class 1255 OID 55187)
+-- TOC entry 903 (class 1255 OID 55187)
 -- Name: get_factor(character varying, character varying); Type: FUNCTION; Schema: uom; Owner: postgres
 --
 
@@ -28017,7 +20939,7 @@ $$;
 ALTER FUNCTION uom.get_factor(_uom_code_src character varying, _uom_code_dst character varying) OWNER TO postgres;
 
 --
--- TOC entry 905 (class 1255 OID 55188)
+-- TOC entry 904 (class 1255 OID 55188)
 -- Name: get_head(character varying); Type: FUNCTION; Schema: uom; Owner: postgres
 --
 
@@ -28042,7 +20964,7 @@ $$;
 ALTER FUNCTION uom.get_head(__uom_code character varying) OWNER TO postgres;
 
 --
--- TOC entry 906 (class 1255 OID 55189)
+-- TOC entry 905 (class 1255 OID 55189)
 -- Name: destroy(bigint); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28060,8 +20982,8 @@ $$;
 ALTER FUNCTION work.destroy(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5071 (class 0 OID 0)
--- Dependencies: 906
+-- TOC entry 5070 (class 0 OID 0)
+-- Dependencies: 905
 -- Name: FUNCTION destroy(__document_id bigint); Type: COMMENT; Schema: work; Owner: postgres
 --
 
@@ -28069,7 +20991,7 @@ COMMENT ON FUNCTION work.destroy(__document_id bigint) IS 'delete work report';
 
 
 --
--- TOC entry 907 (class 1255 OID 55190)
+-- TOC entry 906 (class 1255 OID 55190)
 -- Name: disallow_editing_of_committed_document_body(); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28120,7 +21042,7 @@ $$;
 ALTER FUNCTION work.disallow_editing_of_committed_document_body() OWNER TO postgres;
 
 --
--- TOC entry 908 (class 1255 OID 55191)
+-- TOC entry 907 (class 1255 OID 55191)
 -- Name: do_commit(bigint, boolean); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28201,7 +21123,7 @@ $$;
 ALTER FUNCTION work.do_commit(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 909 (class 1255 OID 55192)
+-- TOC entry 908 (class 1255 OID 55192)
 -- Name: generate_display_name(date, character varying); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28230,7 +21152,7 @@ $$;
 ALTER FUNCTION work.generate_display_name(__document_date date, __facility_code character varying) OWNER TO postgres;
 
 --
--- TOC entry 910 (class 1255 OID 55193)
+-- TOC entry 909 (class 1255 OID 55193)
 -- Name: get_body(bigint); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28255,7 +21177,7 @@ $$;
 ALTER FUNCTION work.get_body(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 911 (class 1255 OID 55194)
+-- TOC entry 910 (class 1255 OID 55194)
 -- Name: get_gid_by_id(bigint); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28275,8 +21197,8 @@ $$;
 ALTER FUNCTION work.get_gid_by_id(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 5072 (class 0 OID 0)
--- Dependencies: 911
+-- TOC entry 5071 (class 0 OID 0)
+-- Dependencies: 910
 -- Name: FUNCTION get_gid_by_id(__document_id bigint); Type: COMMENT; Schema: work; Owner: postgres
 --
 
@@ -28284,7 +21206,7 @@ COMMENT ON FUNCTION work.get_gid_by_id(__document_id bigint) IS 'get uuid of wor
 
 
 --
--- TOC entry 912 (class 1255 OID 55195)
+-- TOC entry 911 (class 1255 OID 55195)
 -- Name: get_head(bigint); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28312,7 +21234,7 @@ $$;
 ALTER FUNCTION work.get_head(__document_id bigint) OWNER TO postgres;
 
 --
--- TOC entry 913 (class 1255 OID 55196)
+-- TOC entry 912 (class 1255 OID 55196)
 -- Name: get_id_by_gid(uuid); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28332,8 +21254,8 @@ $$;
 ALTER FUNCTION work.get_id_by_gid(__document_gid uuid) OWNER TO postgres;
 
 --
--- TOC entry 5073 (class 0 OID 0)
--- Dependencies: 913
+-- TOC entry 5072 (class 0 OID 0)
+-- Dependencies: 912
 -- Name: FUNCTION get_id_by_gid(__document_gid uuid); Type: COMMENT; Schema: work; Owner: postgres
 --
 
@@ -28341,7 +21263,7 @@ COMMENT ON FUNCTION work.get_id_by_gid(__document_gid uuid) IS 'get id of work r
 
 
 --
--- TOC entry 914 (class 1255 OID 55197)
+-- TOC entry 913 (class 1255 OID 55197)
 -- Name: numerator_nextval(character varying, integer); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28383,7 +21305,7 @@ $$;
 ALTER FUNCTION work.numerator_nextval(__facility_code character varying, __julianized_week integer) OWNER TO postgres;
 
 --
--- TOC entry 915 (class 1255 OID 55198)
+-- TOC entry 914 (class 1255 OID 55198)
 -- Name: resubmit(bigint, common.work_segment[]); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28420,7 +21342,7 @@ $$;
 ALTER FUNCTION work.resubmit(__document_id bigint, __body common.work_segment[]) OWNER TO postgres;
 
 --
--- TOC entry 916 (class 1255 OID 55199)
+-- TOC entry 915 (class 1255 OID 55199)
 -- Name: revert(bigint, boolean); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28501,7 +21423,7 @@ $$;
 ALTER FUNCTION work.revert(__document_id bigint, __apprise boolean) OWNER TO postgres;
 
 --
--- TOC entry 918 (class 1255 OID 55200)
+-- TOC entry 917 (class 1255 OID 55200)
 -- Name: submit(common.work_head, common.work_segment[]); Type: FUNCTION; Schema: work; Owner: postgres
 --
 
@@ -28563,7 +21485,7 @@ $$;
 ALTER FUNCTION work.submit(__head common.work_head, __body common.work_segment[]) OWNER TO postgres;
 
 --
--- TOC entry 4125 (class 2605 OID 55201)
+-- TOC entry 4124 (class 2605 OID 55201)
 -- Name: CAST (common.component_kind AS common.inventory_kind); Type: CAST; Schema: -; Owner: 
 --
 
@@ -28571,7 +21493,7 @@ CREATE CAST (common.component_kind AS common.inventory_kind) WITH FUNCTION commo
 
 
 --
--- TOC entry 4127 (class 2605 OID 55202)
+-- TOC entry 4126 (class 2605 OID 55202)
 -- Name: CAST (common.inbound_head AS common.document_head); Type: CAST; Schema: -; Owner: 
 --
 
@@ -28579,7 +21501,7 @@ CREATE CAST (common.inbound_head AS common.document_head) WITH FUNCTION common.c
 
 
 --
--- TOC entry 4126 (class 2605 OID 55203)
+-- TOC entry 4125 (class 2605 OID 55203)
 -- Name: CAST (common.material_kind AS common.inventory_kind); Type: CAST; Schema: -; Owner: 
 --
 
@@ -28587,7 +21509,7 @@ CREATE CAST (common.material_kind AS common.inventory_kind) WITH FUNCTION common
 
 
 --
--- TOC entry 4128 (class 2605 OID 55204)
+-- TOC entry 4127 (class 2605 OID 55204)
 -- Name: CAST (common.outbound_head AS common.document_head); Type: CAST; Schema: -; Owner: 
 --
 
@@ -28595,7 +21517,7 @@ CREATE CAST (common.outbound_head AS common.document_head) WITH FUNCTION common.
 
 
 --
--- TOC entry 4129 (class 2605 OID 55205)
+-- TOC entry 4128 (class 2605 OID 55205)
 -- Name: CAST (common.stocktake_body AS common.document_body); Type: CAST; Schema: -; Owner: 
 --
 
@@ -28622,7 +21544,7 @@ CREATE TABLE balance.process (
 ALTER TABLE balance.process OWNER TO postgres;
 
 --
--- TOC entry 5074 (class 0 OID 0)
+-- TOC entry 5073 (class 0 OID 0)
 -- Dependencies: 273
 -- Name: TABLE process; Type: COMMENT; Schema: balance; Owner: postgres
 --
@@ -28665,7 +21587,7 @@ CREATE TABLE balance.stock (
 ALTER TABLE balance.stock OWNER TO postgres;
 
 --
--- TOC entry 5075 (class 0 OID 0)
+-- TOC entry 5074 (class 0 OID 0)
 -- Dependencies: 275
 -- Name: TABLE stock; Type: COMMENT; Schema: balance; Owner: postgres
 --
@@ -28933,7 +21855,7 @@ CREATE SEQUENCE claim.head_id_seq
 ALTER TABLE claim.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5076 (class 0 OID 0)
+-- TOC entry 5075 (class 0 OID 0)
 -- Dependencies: 293
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: claim; Owner: postgres
 --
@@ -29014,7 +21936,7 @@ CREATE SEQUENCE common.exception_code_id_seq
 ALTER TABLE common.exception_code_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5077 (class 0 OID 0)
+-- TOC entry 5076 (class 0 OID 0)
 -- Dependencies: 298
 -- Name: exception_code_id_seq; Type: SEQUENCE OWNED BY; Schema: common; Owner: postgres
 --
@@ -29085,7 +22007,7 @@ CREATE SEQUENCE cutoff.head_id_seq
 ALTER TABLE cutoff.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5078 (class 0 OID 0)
+-- TOC entry 5077 (class 0 OID 0)
 -- Dependencies: 302
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: cutoff; Owner: postgres
 --
@@ -29125,7 +22047,7 @@ CREATE TABLE ebom.component (
 ALTER TABLE ebom.component OWNER TO postgres;
 
 --
--- TOC entry 5079 (class 0 OID 0)
+-- TOC entry 5078 (class 0 OID 0)
 -- Dependencies: 304
 -- Name: TABLE component; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29147,7 +22069,7 @@ INHERITS (ebom.component);
 ALTER TABLE ebom.assembly OWNER TO postgres;
 
 --
--- TOC entry 5080 (class 0 OID 0)
+-- TOC entry 5079 (class 0 OID 0)
 -- Dependencies: 305
 -- Name: TABLE assembly; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29174,7 +22096,7 @@ CREATE TABLE ebom.blueprint (
 ALTER TABLE ebom.blueprint OWNER TO postgres;
 
 --
--- TOC entry 5081 (class 0 OID 0)
+-- TOC entry 5080 (class 0 OID 0)
 -- Dependencies: 306
 -- Name: TABLE blueprint; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29196,7 +22118,7 @@ INHERITS (ebom.component);
 ALTER TABLE ebom.buyable OWNER TO postgres;
 
 --
--- TOC entry 5082 (class 0 OID 0)
+-- TOC entry 5081 (class 0 OID 0)
 -- Dependencies: 307
 -- Name: TABLE buyable; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29229,7 +22151,7 @@ CREATE TABLE ebom.definition (
 ALTER TABLE ebom.definition OWNER TO postgres;
 
 --
--- TOC entry 5083 (class 0 OID 0)
+-- TOC entry 5082 (class 0 OID 0)
 -- Dependencies: 308
 -- Name: TABLE definition; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29253,7 +22175,7 @@ CREATE SEQUENCE ebom.definition_id_seq
 ALTER TABLE ebom.definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5084 (class 0 OID 0)
+-- TOC entry 5083 (class 0 OID 0)
 -- Dependencies: 309
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
@@ -29277,7 +22199,7 @@ CREATE TABLE ebom.information (
 ALTER TABLE ebom.information OWNER TO postgres;
 
 --
--- TOC entry 5085 (class 0 OID 0)
+-- TOC entry 5084 (class 0 OID 0)
 -- Dependencies: 310
 -- Name: TABLE information; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29301,7 +22223,7 @@ CREATE SEQUENCE ebom.information_id_seq
 ALTER TABLE ebom.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5086 (class 0 OID 0)
+-- TOC entry 5085 (class 0 OID 0)
 -- Dependencies: 311
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: ebom; Owner: postgres
 --
@@ -29334,7 +22256,7 @@ CREATE VIEW ebom.list AS
 ALTER TABLE ebom.list OWNER TO postgres;
 
 --
--- TOC entry 5087 (class 0 OID 0)
+-- TOC entry 5086 (class 0 OID 0)
 -- Dependencies: 312
 -- Name: VIEW list; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29356,7 +22278,7 @@ INHERITS (ebom.component);
 ALTER TABLE ebom.part OWNER TO postgres;
 
 --
--- TOC entry 5088 (class 0 OID 0)
+-- TOC entry 5087 (class 0 OID 0)
 -- Dependencies: 313
 -- Name: TABLE part; Type: COMMENT; Schema: ebom; Owner: postgres
 --
@@ -29398,7 +22320,7 @@ CREATE SEQUENCE equipment.information_id_seq
 ALTER TABLE equipment.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5089 (class 0 OID 0)
+-- TOC entry 5088 (class 0 OID 0)
 -- Dependencies: 315
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: equipment; Owner: postgres
 --
@@ -29444,7 +22366,7 @@ CREATE TABLE facility.information (
 ALTER TABLE facility.information OWNER TO postgres;
 
 --
--- TOC entry 5090 (class 0 OID 0)
+-- TOC entry 5089 (class 0 OID 0)
 -- Dependencies: 317
 -- Name: COLUMN information.facility_type; Type: COMMENT; Schema: facility; Owner: postgres
 --
@@ -29466,7 +22388,7 @@ INHERITS (facility.information);
 ALTER TABLE facility.area OWNER TO postgres;
 
 --
--- TOC entry 5091 (class 0 OID 0)
+-- TOC entry 5090 (class 0 OID 0)
 -- Dependencies: 318
 -- Name: TABLE area; Type: COMMENT; Schema: facility; Owner: postgres
 --
@@ -29488,7 +22410,7 @@ INHERITS (facility.information);
 ALTER TABLE facility.enterprise OWNER TO postgres;
 
 --
--- TOC entry 5092 (class 0 OID 0)
+-- TOC entry 5091 (class 0 OID 0)
 -- Dependencies: 319
 -- Name: TABLE enterprise; Type: COMMENT; Schema: facility; Owner: postgres
 --
@@ -29512,7 +22434,7 @@ CREATE SEQUENCE facility.information_id_seq
 ALTER TABLE facility.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5093 (class 0 OID 0)
+-- TOC entry 5092 (class 0 OID 0)
 -- Dependencies: 320
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: facility; Owner: postgres
 --
@@ -29534,7 +22456,7 @@ INHERITS (facility.information);
 ALTER TABLE facility.line OWNER TO postgres;
 
 --
--- TOC entry 5094 (class 0 OID 0)
+-- TOC entry 5093 (class 0 OID 0)
 -- Dependencies: 321
 -- Name: TABLE line; Type: COMMENT; Schema: facility; Owner: postgres
 --
@@ -29576,7 +22498,7 @@ INHERITS (facility.information);
 ALTER TABLE facility.site OWNER TO postgres;
 
 --
--- TOC entry 5095 (class 0 OID 0)
+-- TOC entry 5094 (class 0 OID 0)
 -- Dependencies: 323
 -- Name: TABLE site; Type: COMMENT; Schema: facility; Owner: postgres
 --
@@ -29598,7 +22520,7 @@ INHERITS (facility.information);
 ALTER TABLE facility.zone OWNER TO postgres;
 
 --
--- TOC entry 5096 (class 0 OID 0)
+-- TOC entry 5095 (class 0 OID 0)
 -- Dependencies: 324
 -- Name: TABLE zone; Type: COMMENT; Schema: facility; Owner: postgres
 --
@@ -29625,7 +22547,7 @@ CREATE TABLE inventory.conglomeration (
 ALTER TABLE inventory.conglomeration OWNER TO postgres;
 
 --
--- TOC entry 5097 (class 0 OID 0)
+-- TOC entry 5096 (class 0 OID 0)
 -- Dependencies: 325
 -- Name: TABLE conglomeration; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29647,7 +22569,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.assembly OWNER TO postgres;
 
 --
--- TOC entry 5098 (class 0 OID 0)
+-- TOC entry 5097 (class 0 OID 0)
 -- Dependencies: 326
 -- Name: TABLE assembly; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29669,7 +22591,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.buyable OWNER TO postgres;
 
 --
--- TOC entry 5099 (class 0 OID 0)
+-- TOC entry 5098 (class 0 OID 0)
 -- Dependencies: 327
 -- Name: TABLE buyable; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29691,7 +22613,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.consumable OWNER TO postgres;
 
 --
--- TOC entry 5100 (class 0 OID 0)
+-- TOC entry 5099 (class 0 OID 0)
 -- Dependencies: 328
 -- Name: TABLE consumable; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29737,7 +22659,7 @@ CREATE SEQUENCE inventory.definition_id_seq
 ALTER TABLE inventory.definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5101 (class 0 OID 0)
+-- TOC entry 5100 (class 0 OID 0)
 -- Dependencies: 330
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: inventory; Owner: postgres
 --
@@ -29777,7 +22699,7 @@ CREATE SEQUENCE inventory.information_id_seq
 ALTER TABLE inventory.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5102 (class 0 OID 0)
+-- TOC entry 5101 (class 0 OID 0)
 -- Dependencies: 332
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: inventory; Owner: postgres
 --
@@ -29813,7 +22735,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.part OWNER TO postgres;
 
 --
--- TOC entry 5103 (class 0 OID 0)
+-- TOC entry 5102 (class 0 OID 0)
 -- Dependencies: 334
 -- Name: TABLE part; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29835,7 +22757,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.primal OWNER TO postgres;
 
 --
--- TOC entry 5104 (class 0 OID 0)
+-- TOC entry 5103 (class 0 OID 0)
 -- Dependencies: 335
 -- Name: TABLE primal; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29857,7 +22779,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.producible OWNER TO postgres;
 
 --
--- TOC entry 5105 (class 0 OID 0)
+-- TOC entry 5104 (class 0 OID 0)
 -- Dependencies: 336
 -- Name: TABLE producible; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29879,7 +22801,7 @@ INHERITS (inventory.conglomeration);
 ALTER TABLE inventory.salable OWNER TO postgres;
 
 --
--- TOC entry 5106 (class 0 OID 0)
+-- TOC entry 5105 (class 0 OID 0)
 -- Dependencies: 337
 -- Name: TABLE salable; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29914,7 +22836,7 @@ CREATE TABLE inventory.variety (
 ALTER TABLE inventory.variety OWNER TO postgres;
 
 --
--- TOC entry 5107 (class 0 OID 0)
+-- TOC entry 5106 (class 0 OID 0)
 -- Dependencies: 339
 -- Name: TABLE variety; Type: COMMENT; Schema: inventory; Owner: postgres
 --
@@ -29978,7 +22900,7 @@ CREATE SEQUENCE issue.head_id_seq
 ALTER TABLE issue.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5108 (class 0 OID 0)
+-- TOC entry 5107 (class 0 OID 0)
 -- Dependencies: 342
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: issue; Owner: postgres
 --
@@ -30067,7 +22989,7 @@ CREATE SEQUENCE mbom.definition_id_seq
 ALTER TABLE mbom.definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5109 (class 0 OID 0)
+-- TOC entry 5108 (class 0 OID 0)
 -- Dependencies: 347
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: mbom; Owner: postgres
 --
@@ -30108,7 +23030,7 @@ CREATE SEQUENCE mbom.information_id_seq
 ALTER TABLE mbom.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5110 (class 0 OID 0)
+-- TOC entry 5109 (class 0 OID 0)
 -- Dependencies: 349
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: mbom; Owner: postgres
 --
@@ -30163,7 +23085,7 @@ CREATE SEQUENCE operation.information_id_seq
 ALTER TABLE operation.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5111 (class 0 OID 0)
+-- TOC entry 5110 (class 0 OID 0)
 -- Dependencies: 352
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: operation; Owner: postgres
 --
@@ -30223,7 +23145,7 @@ CREATE SEQUENCE personnel.information_id_seq
 ALTER TABLE personnel.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5112 (class 0 OID 0)
+-- TOC entry 5111 (class 0 OID 0)
 -- Dependencies: 355
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: personnel; Owner: postgres
 --
@@ -30314,7 +23236,7 @@ CREATE SEQUENCE process.definition_id_seq
 ALTER TABLE process.definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5113 (class 0 OID 0)
+-- TOC entry 5112 (class 0 OID 0)
 -- Dependencies: 360
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: process; Owner: postgres
 --
@@ -30402,7 +23324,7 @@ CREATE SEQUENCE process.information_id_seq
 ALTER TABLE process.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5114 (class 0 OID 0)
+-- TOC entry 5113 (class 0 OID 0)
 -- Dependencies: 365
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: process; Owner: postgres
 --
@@ -30495,7 +23417,7 @@ CREATE SEQUENCE process.segment_id_seq
 ALTER TABLE process.segment_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5115 (class 0 OID 0)
+-- TOC entry 5114 (class 0 OID 0)
 -- Dependencies: 370
 -- Name: segment_id_seq; Type: SEQUENCE OWNED BY; Schema: process; Owner: postgres
 --
@@ -30540,7 +23462,7 @@ CREATE TABLE product.blueprint (
 ALTER TABLE product.blueprint OWNER TO postgres;
 
 --
--- TOC entry 5116 (class 0 OID 0)
+-- TOC entry 5115 (class 0 OID 0)
 -- Dependencies: 372
 -- Name: TABLE blueprint; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30564,7 +23486,7 @@ CREATE SEQUENCE product.blueprint_id_seq
 ALTER TABLE product.blueprint_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5117 (class 0 OID 0)
+-- TOC entry 5116 (class 0 OID 0)
 -- Dependencies: 373
 -- Name: blueprint_id_seq; Type: SEQUENCE OWNED BY; Schema: product; Owner: postgres
 --
@@ -30592,7 +23514,7 @@ CREATE TABLE product.definition (
 ALTER TABLE product.definition OWNER TO postgres;
 
 --
--- TOC entry 5118 (class 0 OID 0)
+-- TOC entry 5117 (class 0 OID 0)
 -- Dependencies: 374
 -- Name: TABLE definition; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30616,7 +23538,7 @@ CREATE SEQUENCE product.definition_id_seq
 ALTER TABLE product.definition_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5119 (class 0 OID 0)
+-- TOC entry 5118 (class 0 OID 0)
 -- Dependencies: 375
 -- Name: definition_id_seq; Type: SEQUENCE OWNED BY; Schema: product; Owner: postgres
 --
@@ -30638,7 +23560,7 @@ CREATE TABLE product.dependency (
 ALTER TABLE product.dependency OWNER TO postgres;
 
 --
--- TOC entry 5120 (class 0 OID 0)
+-- TOC entry 5119 (class 0 OID 0)
 -- Dependencies: 376
 -- Name: TABLE dependency; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30667,7 +23589,7 @@ CREATE TABLE product.information (
 ALTER TABLE product.information OWNER TO postgres;
 
 --
--- TOC entry 5121 (class 0 OID 0)
+-- TOC entry 5120 (class 0 OID 0)
 -- Dependencies: 377
 -- Name: TABLE information; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30691,7 +23613,7 @@ CREATE SEQUENCE product.information_id_seq
 ALTER TABLE product.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5122 (class 0 OID 0)
+-- TOC entry 5121 (class 0 OID 0)
 -- Dependencies: 378
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: product; Owner: postgres
 --
@@ -30724,7 +23646,7 @@ CREATE VIEW product.list AS
 ALTER TABLE product.list OWNER TO postgres;
 
 --
--- TOC entry 5123 (class 0 OID 0)
+-- TOC entry 5122 (class 0 OID 0)
 -- Dependencies: 379
 -- Name: VIEW list; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30753,7 +23675,7 @@ CREATE TABLE product.segment (
 ALTER TABLE product.segment OWNER TO postgres;
 
 --
--- TOC entry 5124 (class 0 OID 0)
+-- TOC entry 5123 (class 0 OID 0)
 -- Dependencies: 380
 -- Name: TABLE segment; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30777,7 +23699,7 @@ CREATE SEQUENCE product.segment_id_seq
 ALTER TABLE product.segment_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5125 (class 0 OID 0)
+-- TOC entry 5124 (class 0 OID 0)
 -- Dependencies: 381
 -- Name: segment_id_seq; Type: SEQUENCE OWNED BY; Schema: product; Owner: postgres
 --
@@ -30799,7 +23721,7 @@ CREATE TABLE product.tree (
 ALTER TABLE product.tree OWNER TO postgres;
 
 --
--- TOC entry 5126 (class 0 OID 0)
+-- TOC entry 5125 (class 0 OID 0)
 -- Dependencies: 382
 -- Name: TABLE tree; Type: COMMENT; Schema: product; Owner: postgres
 --
@@ -30861,7 +23783,7 @@ CREATE SEQUENCE receipt.head_id_seq
 ALTER TABLE receipt.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5127 (class 0 OID 0)
+-- TOC entry 5126 (class 0 OID 0)
 -- Dependencies: 385
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: receipt; Owner: postgres
 --
@@ -30936,7 +23858,7 @@ CREATE SEQUENCE request.head_id_seq
 ALTER TABLE request.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5128 (class 0 OID 0)
+-- TOC entry 5127 (class 0 OID 0)
 -- Dependencies: 389
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: request; Owner: postgres
 --
@@ -31009,7 +23931,7 @@ CREATE SEQUENCE response.head_id_seq
 ALTER TABLE response.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5129 (class 0 OID 0)
+-- TOC entry 5128 (class 0 OID 0)
 -- Dependencies: 393
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: response; Owner: postgres
 --
@@ -31132,7 +24054,7 @@ CREATE SEQUENCE stocktake.head_id_seq
 ALTER TABLE stocktake.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5130 (class 0 OID 0)
+-- TOC entry 5129 (class 0 OID 0)
 -- Dependencies: 399
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: stocktake; Owner: postgres
 --
@@ -31256,7 +24178,7 @@ CREATE SEQUENCE tooling.information_id_seq
 ALTER TABLE tooling.information_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5131 (class 0 OID 0)
+-- TOC entry 5130 (class 0 OID 0)
 -- Dependencies: 405
 -- Name: information_id_seq; Type: SEQUENCE OWNED BY; Schema: tooling; Owner: postgres
 --
@@ -31297,7 +24219,7 @@ CREATE TABLE uom.assignment (
 ALTER TABLE uom.assignment OWNER TO postgres;
 
 --
--- TOC entry 5132 (class 0 OID 0)
+-- TOC entry 5131 (class 0 OID 0)
 -- Dependencies: 407
 -- Name: TABLE assignment; Type: COMMENT; Schema: uom; Owner: postgres
 --
@@ -31336,7 +24258,7 @@ CREATE SEQUENCE uom.uom_role_uom_role_id_seq
 ALTER TABLE uom.uom_role_uom_role_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5133 (class 0 OID 0)
+-- TOC entry 5132 (class 0 OID 0)
 -- Dependencies: 409
 -- Name: uom_role_uom_role_id_seq; Type: SEQUENCE OWNED BY; Schema: uom; Owner: postgres
 --
@@ -31395,7 +24317,7 @@ CREATE SEQUENCE work.head_id_seq
 ALTER TABLE work.head_id_seq OWNER TO postgres;
 
 --
--- TOC entry 5134 (class 0 OID 0)
+-- TOC entry 5133 (class 0 OID 0)
 -- Dependencies: 412
 -- Name: head_id_seq; Type: SEQUENCE OWNED BY; Schema: work; Owner: postgres
 --
@@ -31418,7 +24340,7 @@ CREATE TABLE work.numerator (
 ALTER TABLE work.numerator OWNER TO postgres;
 
 --
--- TOC entry 4148 (class 2604 OID 56151)
+-- TOC entry 4147 (class 2604 OID 56151)
 -- Name: head id; Type: DEFAULT; Schema: claim; Owner: postgres
 --
 
@@ -31426,7 +24348,7 @@ ALTER TABLE ONLY claim.head ALTER COLUMN id SET DEFAULT nextval('claim.head_id_s
 
 
 --
--- TOC entry 4154 (class 2604 OID 56152)
+-- TOC entry 4153 (class 2604 OID 56152)
 -- Name: exception_code id; Type: DEFAULT; Schema: common; Owner: postgres
 --
 
@@ -31434,7 +24356,7 @@ ALTER TABLE ONLY common.exception_code ALTER COLUMN id SET DEFAULT nextval('comm
 
 
 --
--- TOC entry 4160 (class 2604 OID 56153)
+-- TOC entry 4159 (class 2604 OID 56153)
 -- Name: head id; Type: DEFAULT; Schema: cutoff; Owner: postgres
 --
 
@@ -31442,7 +24364,7 @@ ALTER TABLE ONLY cutoff.head ALTER COLUMN id SET DEFAULT nextval('cutoff.head_id
 
 
 --
--- TOC entry 4163 (class 2604 OID 56156)
+-- TOC entry 4162 (class 2604 OID 56156)
 -- Name: assembly uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -31450,7 +24372,7 @@ ALTER TABLE ONLY ebom.assembly ALTER COLUMN uom_code SET DEFAULT 'pcs'::characte
 
 
 --
--- TOC entry 4166 (class 2604 OID 56157)
+-- TOC entry 4165 (class 2604 OID 56157)
 -- Name: buyable uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -31458,7 +24380,7 @@ ALTER TABLE ONLY ebom.buyable ALTER COLUMN uom_code SET DEFAULT 'pcs'::character
 
 
 --
--- TOC entry 4176 (class 2604 OID 56158)
+-- TOC entry 4175 (class 2604 OID 56158)
 -- Name: definition id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -31466,7 +24388,7 @@ ALTER TABLE ONLY ebom.definition ALTER COLUMN id SET DEFAULT nextval('ebom.defin
 
 
 --
--- TOC entry 4179 (class 2604 OID 56159)
+-- TOC entry 4178 (class 2604 OID 56159)
 -- Name: information id; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -31474,7 +24396,7 @@ ALTER TABLE ONLY ebom.information ALTER COLUMN id SET DEFAULT nextval('ebom.info
 
 
 --
--- TOC entry 4180 (class 2604 OID 56160)
+-- TOC entry 4179 (class 2604 OID 56160)
 -- Name: part uom_code; Type: DEFAULT; Schema: ebom; Owner: postgres
 --
 
@@ -31482,7 +24404,7 @@ ALTER TABLE ONLY ebom.part ALTER COLUMN uom_code SET DEFAULT 'pcs'::character va
 
 
 --
--- TOC entry 4184 (class 2604 OID 56161)
+-- TOC entry 4183 (class 2604 OID 56161)
 -- Name: information id; Type: DEFAULT; Schema: equipment; Owner: postgres
 --
 
@@ -31490,7 +24412,7 @@ ALTER TABLE ONLY equipment.information ALTER COLUMN id SET DEFAULT nextval('equi
 
 
 --
--- TOC entry 4189 (class 2604 OID 56162)
+-- TOC entry 4188 (class 2604 OID 56162)
 -- Name: area id; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31498,7 +24420,7 @@ ALTER TABLE ONLY facility.area ALTER COLUMN id SET DEFAULT nextval('facility.inf
 
 
 --
--- TOC entry 4190 (class 2604 OID 56163)
+-- TOC entry 4189 (class 2604 OID 56163)
 -- Name: area gid; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31506,7 +24428,7 @@ ALTER TABLE ONLY facility.area ALTER COLUMN gid SET DEFAULT public.uuid_generate
 
 
 --
--- TOC entry 4191 (class 2604 OID 56164)
+-- TOC entry 4190 (class 2604 OID 56164)
 -- Name: area version_num; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31514,7 +24436,7 @@ ALTER TABLE ONLY facility.area ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4192 (class 2604 OID 56165)
+-- TOC entry 4191 (class 2604 OID 56165)
 -- Name: area published_date; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31522,7 +24444,7 @@ ALTER TABLE ONLY facility.area ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 4194 (class 2604 OID 56166)
+-- TOC entry 4193 (class 2604 OID 56166)
 -- Name: enterprise id; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31530,7 +24452,7 @@ ALTER TABLE ONLY facility.enterprise ALTER COLUMN id SET DEFAULT nextval('facili
 
 
 --
--- TOC entry 4195 (class 2604 OID 56167)
+-- TOC entry 4194 (class 2604 OID 56167)
 -- Name: enterprise gid; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31538,7 +24460,7 @@ ALTER TABLE ONLY facility.enterprise ALTER COLUMN gid SET DEFAULT public.uuid_ge
 
 
 --
--- TOC entry 4196 (class 2604 OID 56168)
+-- TOC entry 4195 (class 2604 OID 56168)
 -- Name: enterprise version_num; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31546,7 +24468,7 @@ ALTER TABLE ONLY facility.enterprise ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4197 (class 2604 OID 56169)
+-- TOC entry 4196 (class 2604 OID 56169)
 -- Name: enterprise published_date; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31554,7 +24476,7 @@ ALTER TABLE ONLY facility.enterprise ALTER COLUMN published_date SET DEFAULT now
 
 
 --
--- TOC entry 4188 (class 2604 OID 56170)
+-- TOC entry 4187 (class 2604 OID 56170)
 -- Name: information id; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31562,7 +24484,7 @@ ALTER TABLE ONLY facility.information ALTER COLUMN id SET DEFAULT nextval('facil
 
 
 --
--- TOC entry 4199 (class 2604 OID 56171)
+-- TOC entry 4198 (class 2604 OID 56171)
 -- Name: line id; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31570,7 +24492,7 @@ ALTER TABLE ONLY facility.line ALTER COLUMN id SET DEFAULT nextval('facility.inf
 
 
 --
--- TOC entry 4200 (class 2604 OID 56172)
+-- TOC entry 4199 (class 2604 OID 56172)
 -- Name: line gid; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31578,7 +24500,7 @@ ALTER TABLE ONLY facility.line ALTER COLUMN gid SET DEFAULT public.uuid_generate
 
 
 --
--- TOC entry 4201 (class 2604 OID 56173)
+-- TOC entry 4200 (class 2604 OID 56173)
 -- Name: line version_num; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31586,7 +24508,7 @@ ALTER TABLE ONLY facility.line ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4202 (class 2604 OID 56174)
+-- TOC entry 4201 (class 2604 OID 56174)
 -- Name: line published_date; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31594,7 +24516,7 @@ ALTER TABLE ONLY facility.line ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 4204 (class 2604 OID 56175)
+-- TOC entry 4203 (class 2604 OID 56175)
 -- Name: site id; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31602,7 +24524,7 @@ ALTER TABLE ONLY facility.site ALTER COLUMN id SET DEFAULT nextval('facility.inf
 
 
 --
--- TOC entry 4205 (class 2604 OID 56176)
+-- TOC entry 4204 (class 2604 OID 56176)
 -- Name: site gid; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31610,7 +24532,7 @@ ALTER TABLE ONLY facility.site ALTER COLUMN gid SET DEFAULT public.uuid_generate
 
 
 --
--- TOC entry 4206 (class 2604 OID 56177)
+-- TOC entry 4205 (class 2604 OID 56177)
 -- Name: site version_num; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31618,7 +24540,7 @@ ALTER TABLE ONLY facility.site ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4207 (class 2604 OID 56178)
+-- TOC entry 4206 (class 2604 OID 56178)
 -- Name: site published_date; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31626,7 +24548,7 @@ ALTER TABLE ONLY facility.site ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 4210 (class 2604 OID 56179)
+-- TOC entry 4209 (class 2604 OID 56179)
 -- Name: zone id; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31634,7 +24556,7 @@ ALTER TABLE ONLY facility.zone ALTER COLUMN id SET DEFAULT nextval('facility.inf
 
 
 --
--- TOC entry 4211 (class 2604 OID 56180)
+-- TOC entry 4210 (class 2604 OID 56180)
 -- Name: zone gid; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31642,7 +24564,7 @@ ALTER TABLE ONLY facility.zone ALTER COLUMN gid SET DEFAULT public.uuid_generate
 
 
 --
--- TOC entry 4212 (class 2604 OID 56181)
+-- TOC entry 4211 (class 2604 OID 56181)
 -- Name: zone version_num; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31650,7 +24572,7 @@ ALTER TABLE ONLY facility.zone ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4213 (class 2604 OID 56182)
+-- TOC entry 4212 (class 2604 OID 56182)
 -- Name: zone published_date; Type: DEFAULT; Schema: facility; Owner: postgres
 --
 
@@ -31658,7 +24580,7 @@ ALTER TABLE ONLY facility.zone ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 4217 (class 2604 OID 56183)
+-- TOC entry 4216 (class 2604 OID 56183)
 -- Name: assembly version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31666,7 +24588,7 @@ ALTER TABLE ONLY inventory.assembly ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4218 (class 2604 OID 56184)
+-- TOC entry 4217 (class 2604 OID 56184)
 -- Name: assembly published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31674,7 +24596,7 @@ ALTER TABLE ONLY inventory.assembly ALTER COLUMN published_date SET DEFAULT now(
 
 
 --
--- TOC entry 4220 (class 2604 OID 56185)
+-- TOC entry 4219 (class 2604 OID 56185)
 -- Name: buyable version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31682,7 +24604,7 @@ ALTER TABLE ONLY inventory.buyable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4221 (class 2604 OID 56186)
+-- TOC entry 4220 (class 2604 OID 56186)
 -- Name: buyable published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31690,7 +24612,7 @@ ALTER TABLE ONLY inventory.buyable ALTER COLUMN published_date SET DEFAULT now()
 
 
 --
--- TOC entry 4223 (class 2604 OID 56187)
+-- TOC entry 4222 (class 2604 OID 56187)
 -- Name: consumable version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31698,7 +24620,7 @@ ALTER TABLE ONLY inventory.consumable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4224 (class 2604 OID 56188)
+-- TOC entry 4223 (class 2604 OID 56188)
 -- Name: consumable published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31706,7 +24628,7 @@ ALTER TABLE ONLY inventory.consumable ALTER COLUMN published_date SET DEFAULT no
 
 
 --
--- TOC entry 4232 (class 2604 OID 56189)
+-- TOC entry 4231 (class 2604 OID 56189)
 -- Name: definition id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31714,7 +24636,7 @@ ALTER TABLE ONLY inventory.definition ALTER COLUMN id SET DEFAULT nextval('inven
 
 
 --
--- TOC entry 4235 (class 2604 OID 56190)
+-- TOC entry 4234 (class 2604 OID 56190)
 -- Name: information id; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31722,7 +24644,7 @@ ALTER TABLE ONLY inventory.information ALTER COLUMN id SET DEFAULT nextval('inve
 
 
 --
--- TOC entry 4236 (class 2604 OID 56191)
+-- TOC entry 4235 (class 2604 OID 56191)
 -- Name: part version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31730,7 +24652,7 @@ ALTER TABLE ONLY inventory.part ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4237 (class 2604 OID 56192)
+-- TOC entry 4236 (class 2604 OID 56192)
 -- Name: part published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31738,7 +24660,7 @@ ALTER TABLE ONLY inventory.part ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 4239 (class 2604 OID 56193)
+-- TOC entry 4238 (class 2604 OID 56193)
 -- Name: primal version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31746,7 +24668,7 @@ ALTER TABLE ONLY inventory.primal ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4240 (class 2604 OID 56194)
+-- TOC entry 4239 (class 2604 OID 56194)
 -- Name: primal published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31754,7 +24676,7 @@ ALTER TABLE ONLY inventory.primal ALTER COLUMN published_date SET DEFAULT now();
 
 
 --
--- TOC entry 4242 (class 2604 OID 56195)
+-- TOC entry 4241 (class 2604 OID 56195)
 -- Name: producible version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31762,7 +24684,7 @@ ALTER TABLE ONLY inventory.producible ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4243 (class 2604 OID 56196)
+-- TOC entry 4242 (class 2604 OID 56196)
 -- Name: producible published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31770,7 +24692,7 @@ ALTER TABLE ONLY inventory.producible ALTER COLUMN published_date SET DEFAULT no
 
 
 --
--- TOC entry 4245 (class 2604 OID 56197)
+-- TOC entry 4244 (class 2604 OID 56197)
 -- Name: salable version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31778,7 +24700,7 @@ ALTER TABLE ONLY inventory.salable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4246 (class 2604 OID 56198)
+-- TOC entry 4245 (class 2604 OID 56198)
 -- Name: salable published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31786,7 +24708,7 @@ ALTER TABLE ONLY inventory.salable ALTER COLUMN published_date SET DEFAULT now()
 
 
 --
--- TOC entry 4248 (class 2604 OID 56199)
+-- TOC entry 4247 (class 2604 OID 56199)
 -- Name: storable version_num; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31794,7 +24716,7 @@ ALTER TABLE ONLY inventory.storable ALTER COLUMN version_num SET DEFAULT 1;
 
 
 --
--- TOC entry 4249 (class 2604 OID 56200)
+-- TOC entry 4248 (class 2604 OID 56200)
 -- Name: storable published_date; Type: DEFAULT; Schema: inventory; Owner: postgres
 --
 
@@ -31802,7 +24724,7 @@ ALTER TABLE ONLY inventory.storable ALTER COLUMN published_date SET DEFAULT now(
 
 
 --
--- TOC entry 4255 (class 2604 OID 56201)
+-- TOC entry 4254 (class 2604 OID 56201)
 -- Name: head id; Type: DEFAULT; Schema: issue; Owner: postgres
 --
 
@@ -31810,7 +24732,7 @@ ALTER TABLE ONLY issue.head ALTER COLUMN id SET DEFAULT nextval('issue.head_id_s
 
 
 --
--- TOC entry 4260 (class 2604 OID 56202)
+-- TOC entry 4259 (class 2604 OID 56202)
 -- Name: consumable uom_code; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -31818,7 +24740,7 @@ ALTER TABLE ONLY mbom.consumable ALTER COLUMN uom_code SET DEFAULT 'pcs'::charac
 
 
 --
--- TOC entry 4267 (class 2604 OID 56203)
+-- TOC entry 4266 (class 2604 OID 56203)
 -- Name: definition id; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -31826,7 +24748,7 @@ ALTER TABLE ONLY mbom.definition ALTER COLUMN id SET DEFAULT nextval('mbom.defin
 
 
 --
--- TOC entry 4270 (class 2604 OID 56204)
+-- TOC entry 4269 (class 2604 OID 56204)
 -- Name: information id; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -31834,7 +24756,7 @@ ALTER TABLE ONLY mbom.information ALTER COLUMN id SET DEFAULT nextval('mbom.info
 
 
 --
--- TOC entry 4271 (class 2604 OID 56205)
+-- TOC entry 4270 (class 2604 OID 56205)
 -- Name: primal uom_code; Type: DEFAULT; Schema: mbom; Owner: postgres
 --
 
@@ -31842,7 +24764,7 @@ ALTER TABLE ONLY mbom.primal ALTER COLUMN uom_code SET DEFAULT 'pcs'::character 
 
 
 --
--- TOC entry 4275 (class 2604 OID 56206)
+-- TOC entry 4274 (class 2604 OID 56206)
 -- Name: information id; Type: DEFAULT; Schema: operation; Owner: postgres
 --
 
@@ -31850,7 +24772,7 @@ ALTER TABLE ONLY operation.information ALTER COLUMN id SET DEFAULT nextval('oper
 
 
 --
--- TOC entry 4278 (class 2604 OID 56207)
+-- TOC entry 4277 (class 2604 OID 56207)
 -- Name: information id; Type: DEFAULT; Schema: personnel; Owner: postgres
 --
 
@@ -31858,7 +24780,7 @@ ALTER TABLE ONLY personnel.information ALTER COLUMN id SET DEFAULT nextval('pers
 
 
 --
--- TOC entry 4281 (class 2604 OID 56208)
+-- TOC entry 4280 (class 2604 OID 56208)
 -- Name: consumable uom_code; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31866,7 +24788,7 @@ ALTER TABLE ONLY process.consumable ALTER COLUMN uom_code SET DEFAULT 'pcs'::cha
 
 
 --
--- TOC entry 4282 (class 2604 OID 56209)
+-- TOC entry 4281 (class 2604 OID 56209)
 -- Name: consumable rationing_qty; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31874,7 +24796,7 @@ ALTER TABLE ONLY process.consumable ALTER COLUMN rationing_qty SET DEFAULT 1;
 
 
 --
--- TOC entry 4287 (class 2604 OID 56210)
+-- TOC entry 4286 (class 2604 OID 56210)
 -- Name: definition id; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31882,7 +24804,7 @@ ALTER TABLE ONLY process.definition ALTER COLUMN id SET DEFAULT nextval('process
 
 
 --
--- TOC entry 4292 (class 2604 OID 56211)
+-- TOC entry 4291 (class 2604 OID 56211)
 -- Name: information id; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31890,7 +24812,7 @@ ALTER TABLE ONLY process.information ALTER COLUMN id SET DEFAULT nextval('proces
 
 
 --
--- TOC entry 4299 (class 2604 OID 56212)
+-- TOC entry 4298 (class 2604 OID 56212)
 -- Name: primal uom_code; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31898,7 +24820,7 @@ ALTER TABLE ONLY process.primal ALTER COLUMN uom_code SET DEFAULT 'pcs'::charact
 
 
 --
--- TOC entry 4300 (class 2604 OID 56213)
+-- TOC entry 4299 (class 2604 OID 56213)
 -- Name: primal rationing_qty; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31906,7 +24828,7 @@ ALTER TABLE ONLY process.primal ALTER COLUMN rationing_qty SET DEFAULT 1;
 
 
 --
--- TOC entry 4294 (class 2604 OID 56214)
+-- TOC entry 4293 (class 2604 OID 56214)
 -- Name: segment id; Type: DEFAULT; Schema: process; Owner: postgres
 --
 
@@ -31914,7 +24836,7 @@ ALTER TABLE ONLY process.segment ALTER COLUMN id SET DEFAULT nextval('process.se
 
 
 --
--- TOC entry 4306 (class 2604 OID 56215)
+-- TOC entry 4305 (class 2604 OID 56215)
 -- Name: blueprint id; Type: DEFAULT; Schema: product; Owner: postgres
 --
 
@@ -31922,7 +24844,7 @@ ALTER TABLE ONLY product.blueprint ALTER COLUMN id SET DEFAULT nextval('product.
 
 
 --
--- TOC entry 4311 (class 2604 OID 56216)
+-- TOC entry 4310 (class 2604 OID 56216)
 -- Name: definition id; Type: DEFAULT; Schema: product; Owner: postgres
 --
 
@@ -31930,7 +24852,7 @@ ALTER TABLE ONLY product.definition ALTER COLUMN id SET DEFAULT nextval('product
 
 
 --
--- TOC entry 4316 (class 2604 OID 56217)
+-- TOC entry 4315 (class 2604 OID 56217)
 -- Name: information id; Type: DEFAULT; Schema: product; Owner: postgres
 --
 
@@ -31938,7 +24860,7 @@ ALTER TABLE ONLY product.information ALTER COLUMN id SET DEFAULT nextval('produc
 
 
 --
--- TOC entry 4323 (class 2604 OID 56218)
+-- TOC entry 4322 (class 2604 OID 56218)
 -- Name: segment id; Type: DEFAULT; Schema: product; Owner: postgres
 --
 
@@ -31946,7 +24868,7 @@ ALTER TABLE ONLY product.segment ALTER COLUMN id SET DEFAULT nextval('product.se
 
 
 --
--- TOC entry 4328 (class 2604 OID 56219)
+-- TOC entry 4327 (class 2604 OID 56219)
 -- Name: head id; Type: DEFAULT; Schema: receipt; Owner: postgres
 --
 
@@ -31954,7 +24876,7 @@ ALTER TABLE ONLY receipt.head ALTER COLUMN id SET DEFAULT nextval('receipt.head_
 
 
 --
--- TOC entry 4335 (class 2604 OID 56220)
+-- TOC entry 4334 (class 2604 OID 56220)
 -- Name: head id; Type: DEFAULT; Schema: request; Owner: postgres
 --
 
@@ -31962,7 +24884,7 @@ ALTER TABLE ONLY request.head ALTER COLUMN id SET DEFAULT nextval('request.head_
 
 
 --
--- TOC entry 4342 (class 2604 OID 56222)
+-- TOC entry 4341 (class 2604 OID 56222)
 -- Name: head id; Type: DEFAULT; Schema: response; Owner: postgres
 --
 
@@ -31970,7 +24892,7 @@ ALTER TABLE ONLY response.head ALTER COLUMN id SET DEFAULT nextval('response.hea
 
 
 --
--- TOC entry 4349 (class 2604 OID 56223)
+-- TOC entry 4348 (class 2604 OID 56223)
 -- Name: head id; Type: DEFAULT; Schema: stocktake; Owner: postgres
 --
 
@@ -31978,7 +24900,7 @@ ALTER TABLE ONLY stocktake.head ALTER COLUMN id SET DEFAULT nextval('stocktake.h
 
 
 --
--- TOC entry 4353 (class 2604 OID 56224)
+-- TOC entry 4352 (class 2604 OID 56224)
 -- Name: information id; Type: DEFAULT; Schema: tooling; Owner: postgres
 --
 
@@ -31986,7 +24908,7 @@ ALTER TABLE ONLY tooling.information ALTER COLUMN id SET DEFAULT nextval('toolin
 
 
 --
--- TOC entry 4354 (class 2604 OID 56225)
+-- TOC entry 4353 (class 2604 OID 56225)
 -- Name: assignment uom_role_id; Type: DEFAULT; Schema: uom; Owner: postgres
 --
 
@@ -31994,7 +24916,7 @@ ALTER TABLE ONLY uom.assignment ALTER COLUMN uom_role_id SET DEFAULT nextval('uo
 
 
 --
--- TOC entry 4359 (class 2604 OID 56226)
+-- TOC entry 4358 (class 2604 OID 56226)
 -- Name: head id; Type: DEFAULT; Schema: work; Owner: postgres
 --
 
@@ -32002,7 +24924,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4882 (class 0 OID 55206)
+-- TOC entry 4881 (class 0 OID 55206)
 -- Dependencies: 273
 -- Data for Name: process; Type: TABLE DATA; Schema: balance; Owner: postgres
 --
@@ -32010,7 +24932,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4883 (class 0 OID 55214)
+-- TOC entry 4882 (class 0 OID 55214)
 -- Dependencies: 274
 -- Data for Name: segment; Type: TABLE DATA; Schema: balance; Owner: postgres
 --
@@ -32018,7 +24940,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4884 (class 0 OID 55222)
+-- TOC entry 4883 (class 0 OID 55222)
 -- Dependencies: 275
 -- Data for Name: stock; Type: TABLE DATA; Schema: balance; Owner: postgres
 --
@@ -32026,7 +24948,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4885 (class 0 OID 55231)
+-- TOC entry 4884 (class 0 OID 55231)
 -- Dependencies: 276
 -- Data for Name: cutoff_to_claim; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32034,7 +24956,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4886 (class 0 OID 55240)
+-- TOC entry 4885 (class 0 OID 55240)
 -- Dependencies: 277
 -- Data for Name: cutoff_to_issue; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32042,7 +24964,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4887 (class 0 OID 55243)
+-- TOC entry 4886 (class 0 OID 55243)
 -- Dependencies: 278
 -- Data for Name: cutoff_to_receipt; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32050,7 +24972,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4888 (class 0 OID 55249)
+-- TOC entry 4887 (class 0 OID 55249)
 -- Dependencies: 279
 -- Data for Name: cutoff_to_stocktake; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32058,7 +24980,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4889 (class 0 OID 55255)
+-- TOC entry 4888 (class 0 OID 55255)
 -- Dependencies: 280
 -- Data for Name: ebom_to_mbom; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32066,7 +24988,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4890 (class 0 OID 55258)
+-- TOC entry 4889 (class 0 OID 55258)
 -- Dependencies: 281
 -- Data for Name: ebom_to_process; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32074,7 +24996,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4891 (class 0 OID 55261)
+-- TOC entry 4890 (class 0 OID 55261)
 -- Dependencies: 282
 -- Data for Name: ebom_to_product; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32082,7 +25004,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4892 (class 0 OID 55267)
+-- TOC entry 4891 (class 0 OID 55267)
 -- Dependencies: 283
 -- Data for Name: mbom_to_process; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32090,7 +25012,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4893 (class 0 OID 55270)
+-- TOC entry 4892 (class 0 OID 55270)
 -- Dependencies: 284
 -- Data for Name: mbom_to_product; Type: TABLE DATA; Schema: binding; Owner: postgres
 --
@@ -32098,7 +25020,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4894 (class 0 OID 55273)
+-- TOC entry 4893 (class 0 OID 55273)
 -- Dependencies: 285
 -- Data for Name: benchmark; Type: TABLE DATA; Schema: calendar; Owner: postgres
 --
@@ -32106,7 +25028,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4895 (class 0 OID 55276)
+-- TOC entry 4894 (class 0 OID 55276)
 -- Dependencies: 286
 -- Data for Name: checkpoint; Type: TABLE DATA; Schema: calendar; Owner: postgres
 --
@@ -32114,7 +25036,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4896 (class 0 OID 55279)
+-- TOC entry 4895 (class 0 OID 55279)
 -- Dependencies: 287
 -- Data for Name: definition; Type: TABLE DATA; Schema: calendar; Owner: postgres
 --
@@ -32122,7 +25044,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4897 (class 0 OID 55287)
+-- TOC entry 4896 (class 0 OID 55287)
 -- Dependencies: 288
 -- Data for Name: information; Type: TABLE DATA; Schema: calendar; Owner: postgres
 --
@@ -32130,7 +25052,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4898 (class 0 OID 55290)
+-- TOC entry 4897 (class 0 OID 55290)
 -- Dependencies: 289
 -- Data for Name: workday; Type: TABLE DATA; Schema: calendar; Owner: postgres
 --
@@ -32138,7 +25060,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4899 (class 0 OID 55297)
+-- TOC entry 4898 (class 0 OID 55297)
 -- Dependencies: 290
 -- Data for Name: workweek; Type: TABLE DATA; Schema: calendar; Owner: postgres
 --
@@ -32146,7 +25068,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4900 (class 0 OID 55310)
+-- TOC entry 4899 (class 0 OID 55310)
 -- Dependencies: 291
 -- Data for Name: body; Type: TABLE DATA; Schema: claim; Owner: postgres
 --
@@ -32154,7 +25076,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4901 (class 0 OID 55316)
+-- TOC entry 4900 (class 0 OID 55316)
 -- Dependencies: 292
 -- Data for Name: head; Type: TABLE DATA; Schema: claim; Owner: postgres
 --
@@ -32162,7 +25084,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4903 (class 0 OID 55330)
+-- TOC entry 4902 (class 0 OID 55330)
 -- Dependencies: 294
 -- Data for Name: numerator; Type: TABLE DATA; Schema: claim; Owner: postgres
 --
@@ -32170,7 +25092,7 @@ ALTER TABLE ONLY work.head ALTER COLUMN id SET DEFAULT nextval('work.head_id_seq
 
 
 --
--- TOC entry 4904 (class 0 OID 55337)
+-- TOC entry 4903 (class 0 OID 55337)
 -- Dependencies: 295
 -- Data for Name: cutoff_policy; Type: TABLE DATA; Schema: common; Owner: postgres
 --
@@ -32183,7 +25105,7 @@ INSERT INTO common.cutoff_policy VALUES ('CUTOFF', 'DISABLED');
 
 
 --
--- TOC entry 4905 (class 0 OID 55341)
+-- TOC entry 4904 (class 0 OID 55341)
 -- Dependencies: 296
 -- Data for Name: document_abbrevation; Type: TABLE DATA; Schema: common; Owner: postgres
 --
@@ -32199,7 +25121,7 @@ INSERT INTO common.document_abbrevation VALUES ('CLAIM', 'CLA');
 
 
 --
--- TOC entry 4906 (class 0 OID 55348)
+-- TOC entry 4905 (class 0 OID 55348)
 -- Dependencies: 297
 -- Data for Name: exception_code; Type: TABLE DATA; Schema: common; Owner: postgres
 --
@@ -32217,7 +25139,7 @@ INSERT INTO common.exception_code VALUES (10, 'WMS WARNING 1 message', 'WMS NOTI
 
 
 --
--- TOC entry 4908 (class 0 OID 55356)
+-- TOC entry 4907 (class 0 OID 55356)
 -- Dependencies: 299
 -- Data for Name: stocktake_policy; Type: TABLE DATA; Schema: common; Owner: postgres
 --
@@ -32233,7 +25155,7 @@ INSERT INTO common.stocktake_policy VALUES ('CUTOFF', 'DISABLED');
 
 
 --
--- TOC entry 4909 (class 0 OID 55360)
+-- TOC entry 4908 (class 0 OID 55360)
 -- Dependencies: 300
 -- Data for Name: blocker; Type: TABLE DATA; Schema: cutoff; Owner: postgres
 --
@@ -32241,7 +25163,7 @@ INSERT INTO common.stocktake_policy VALUES ('CUTOFF', 'DISABLED');
 
 
 --
--- TOC entry 4910 (class 0 OID 55366)
+-- TOC entry 4909 (class 0 OID 55366)
 -- Dependencies: 301
 -- Data for Name: head; Type: TABLE DATA; Schema: cutoff; Owner: postgres
 --
@@ -32249,7 +25171,7 @@ INSERT INTO common.stocktake_policy VALUES ('CUTOFF', 'DISABLED');
 
 
 --
--- TOC entry 4912 (class 0 OID 55378)
+-- TOC entry 4911 (class 0 OID 55378)
 -- Dependencies: 303
 -- Data for Name: numerator; Type: TABLE DATA; Schema: cutoff; Owner: postgres
 --
@@ -32257,7 +25179,7 @@ INSERT INTO common.stocktake_policy VALUES ('CUTOFF', 'DISABLED');
 
 
 --
--- TOC entry 4914 (class 0 OID 55445)
+-- TOC entry 4913 (class 0 OID 55445)
 -- Dependencies: 305
 -- Data for Name: assembly; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32273,7 +25195,7 @@ INSERT INTO ebom.assembly VALUES (3, '82.31.050-002', 1, 1.0000, 'pcs', 'ASSEMBL
 
 
 --
--- TOC entry 4915 (class 0 OID 55453)
+-- TOC entry 4914 (class 0 OID 55453)
 -- Dependencies: 306
 -- Data for Name: blueprint; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32281,7 +25203,7 @@ INSERT INTO ebom.assembly VALUES (3, '82.31.050-002', 1, 1.0000, 'pcs', 'ASSEMBL
 
 
 --
--- TOC entry 4916 (class 0 OID 55460)
+-- TOC entry 4915 (class 0 OID 55460)
 -- Dependencies: 307
 -- Data for Name: buyable; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32298,7 +25220,7 @@ INSERT INTO ebom.buyable VALUES (3, 'шайба гроверна 16', 1, 8.0000,
 
 
 --
--- TOC entry 4913 (class 0 OID 55438)
+-- TOC entry 4912 (class 0 OID 55438)
 -- Dependencies: 304
 -- Data for Name: component; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32306,7 +25228,7 @@ INSERT INTO ebom.buyable VALUES (3, 'шайба гроверна 16', 1, 8.0000,
 
 
 --
--- TOC entry 4917 (class 0 OID 55468)
+-- TOC entry 4916 (class 0 OID 55468)
 -- Dependencies: 308
 -- Data for Name: definition; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32322,7 +25244,7 @@ INSERT INTO ebom.definition VALUES (15, '60f381ea-b439-11eb-bc30-f85971830086', 
 
 
 --
--- TOC entry 4919 (class 0 OID 55485)
+-- TOC entry 4918 (class 0 OID 55485)
 -- Dependencies: 310
 -- Data for Name: information; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32338,7 +25260,7 @@ INSERT INTO ebom.information VALUES (12, '60f3878a-b439-11eb-bc30-f85971830086',
 
 
 --
--- TOC entry 4921 (class 0 OID 55498)
+-- TOC entry 4920 (class 0 OID 55498)
 -- Dependencies: 313
 -- Data for Name: part; Type: TABLE DATA; Schema: ebom; Owner: postgres
 --
@@ -32378,7 +25300,7 @@ INSERT INTO ebom.part VALUES (3, '72.01.014-001', 1, 2.0000, 'pcs', 'PART');
 
 
 --
--- TOC entry 4922 (class 0 OID 55506)
+-- TOC entry 4921 (class 0 OID 55506)
 -- Dependencies: 314
 -- Data for Name: information; Type: TABLE DATA; Schema: equipment; Owner: postgres
 --
@@ -32386,7 +25308,7 @@ INSERT INTO ebom.part VALUES (3, '72.01.014-001', 1, 2.0000, 'pcs', 'PART');
 
 
 --
--- TOC entry 4925 (class 0 OID 55529)
+-- TOC entry 4924 (class 0 OID 55529)
 -- Dependencies: 318
 -- Data for Name: area; Type: TABLE DATA; Schema: facility; Owner: postgres
 --
@@ -32396,7 +25318,7 @@ INSERT INTO facility.area VALUES (9, 'f20d7196-01d1-11e7-b441-d4bed939923a', 'AR
 
 
 --
--- TOC entry 4926 (class 0 OID 55539)
+-- TOC entry 4925 (class 0 OID 55539)
 -- Dependencies: 319
 -- Data for Name: enterprise; Type: TABLE DATA; Schema: facility; Owner: postgres
 --
@@ -32405,7 +25327,7 @@ INSERT INTO facility.enterprise VALUES (1, 'a711da30-fa3a-11e7-8e63-d4bed939923a
 
 
 --
--- TOC entry 4924 (class 0 OID 55520)
+-- TOC entry 4923 (class 0 OID 55520)
 -- Dependencies: 317
 -- Data for Name: information; Type: TABLE DATA; Schema: facility; Owner: postgres
 --
@@ -32413,7 +25335,7 @@ INSERT INTO facility.enterprise VALUES (1, 'a711da30-fa3a-11e7-8e63-d4bed939923a
 
 
 --
--- TOC entry 4928 (class 0 OID 55551)
+-- TOC entry 4927 (class 0 OID 55551)
 -- Dependencies: 321
 -- Data for Name: line; Type: TABLE DATA; Schema: facility; Owner: postgres
 --
@@ -32421,7 +25343,7 @@ INSERT INTO facility.enterprise VALUES (1, 'a711da30-fa3a-11e7-8e63-d4bed939923a
 
 
 --
--- TOC entry 4929 (class 0 OID 55565)
+-- TOC entry 4928 (class 0 OID 55565)
 -- Dependencies: 323
 -- Data for Name: site; Type: TABLE DATA; Schema: facility; Owner: postgres
 --
@@ -32431,7 +25353,7 @@ INSERT INTO facility.site VALUES (7, 'f08b5682-fa3a-11e7-86da-d4bed939923a', 'SI
 
 
 --
--- TOC entry 4930 (class 0 OID 55576)
+-- TOC entry 4929 (class 0 OID 55576)
 -- Dependencies: 324
 -- Data for Name: zone; Type: TABLE DATA; Schema: facility; Owner: postgres
 --
@@ -32439,7 +25361,7 @@ INSERT INTO facility.site VALUES (7, 'f08b5682-fa3a-11e7-86da-d4bed939923a', 'SI
 
 
 --
--- TOC entry 4932 (class 0 OID 55594)
+-- TOC entry 4931 (class 0 OID 55594)
 -- Dependencies: 326
 -- Data for Name: assembly; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32454,7 +25376,7 @@ INSERT INTO inventory.assembly VALUES ('80.01.050-002', 1, 'Котушка 11с6
 
 
 --
--- TOC entry 4933 (class 0 OID 55603)
+-- TOC entry 4932 (class 0 OID 55603)
 -- Dependencies: 327
 -- Data for Name: buyable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32468,7 +25390,7 @@ INSERT INTO inventory.buyable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-с
 
 
 --
--- TOC entry 4931 (class 0 OID 55586)
+-- TOC entry 4930 (class 0 OID 55586)
 -- Dependencies: 325
 -- Data for Name: conglomeration; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32476,7 +25398,7 @@ INSERT INTO inventory.buyable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-с
 
 
 --
--- TOC entry 4934 (class 0 OID 55612)
+-- TOC entry 4933 (class 0 OID 55612)
 -- Dependencies: 328
 -- Data for Name: consumable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32509,7 +25431,7 @@ INSERT INTO inventory.consumable VALUES ('23.01.050-001.030', 1, 'Фланець
 
 
 --
--- TOC entry 4935 (class 0 OID 55621)
+-- TOC entry 4934 (class 0 OID 55621)
 -- Dependencies: 329
 -- Data for Name: definition; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32549,7 +25471,7 @@ INSERT INTO inventory.definition VALUES (32, 'ffdbd1ec-b5db-11eb-b4f1-f859718300
 
 
 --
--- TOC entry 4937 (class 0 OID 55635)
+-- TOC entry 4936 (class 0 OID 55635)
 -- Dependencies: 331
 -- Data for Name: information; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32589,7 +25511,7 @@ INSERT INTO inventory.information VALUES (32, 'ffdbacb2-b5db-11eb-b4f1-f85971830
 
 
 --
--- TOC entry 4939 (class 0 OID 55645)
+-- TOC entry 4938 (class 0 OID 55645)
 -- Dependencies: 333
 -- Data for Name: measurement; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32629,7 +25551,7 @@ INSERT INTO inventory.measurement VALUES (32, 'kg', 1);
 
 
 --
--- TOC entry 4940 (class 0 OID 55651)
+-- TOC entry 4939 (class 0 OID 55651)
 -- Dependencies: 334
 -- Data for Name: part; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32655,7 +25577,7 @@ INSERT INTO inventory.part VALUES ('22.16.050-101', 1, 'Фланець 11с22п 
 
 
 --
--- TOC entry 4941 (class 0 OID 55660)
+-- TOC entry 4940 (class 0 OID 55660)
 -- Dependencies: 335
 -- Data for Name: primal; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32664,7 +25586,7 @@ INSERT INTO inventory.primal VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-с�
 
 
 --
--- TOC entry 4942 (class 0 OID 55669)
+-- TOC entry 4941 (class 0 OID 55669)
 -- Dependencies: 336
 -- Data for Name: producible; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32698,7 +25620,7 @@ INSERT INTO inventory.producible VALUES ('23.01.050-001.030', 1, 'Фланець
 
 
 --
--- TOC entry 4943 (class 0 OID 55678)
+-- TOC entry 4942 (class 0 OID 55678)
 -- Dependencies: 337
 -- Data for Name: salable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32706,7 +25628,7 @@ INSERT INTO inventory.producible VALUES ('23.01.050-001.030', 1, 'Фланець
 
 
 --
--- TOC entry 4944 (class 0 OID 55687)
+-- TOC entry 4943 (class 0 OID 55687)
 -- Dependencies: 338
 -- Data for Name: storable; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32746,7 +25668,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4945 (class 0 OID 55696)
+-- TOC entry 4944 (class 0 OID 55696)
 -- Dependencies: 339
 -- Data for Name: variety; Type: TABLE DATA; Schema: inventory; Owner: postgres
 --
@@ -32754,7 +25676,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4946 (class 0 OID 55699)
+-- TOC entry 4945 (class 0 OID 55699)
 -- Dependencies: 340
 -- Data for Name: body; Type: TABLE DATA; Schema: issue; Owner: postgres
 --
@@ -32762,7 +25684,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4947 (class 0 OID 55705)
+-- TOC entry 4946 (class 0 OID 55705)
 -- Dependencies: 341
 -- Data for Name: head; Type: TABLE DATA; Schema: issue; Owner: postgres
 --
@@ -32770,7 +25692,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4949 (class 0 OID 55719)
+-- TOC entry 4948 (class 0 OID 55719)
 -- Dependencies: 343
 -- Data for Name: numerator; Type: TABLE DATA; Schema: issue; Owner: postgres
 --
@@ -32778,7 +25700,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4951 (class 0 OID 55733)
+-- TOC entry 4950 (class 0 OID 55733)
 -- Dependencies: 345
 -- Data for Name: consumable; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
@@ -32786,7 +25708,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4952 (class 0 OID 55741)
+-- TOC entry 4951 (class 0 OID 55741)
 -- Dependencies: 346
 -- Data for Name: definition; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
@@ -32794,7 +25716,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4954 (class 0 OID 55754)
+-- TOC entry 4953 (class 0 OID 55754)
 -- Dependencies: 348
 -- Data for Name: information; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
@@ -32802,7 +25724,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4950 (class 0 OID 55726)
+-- TOC entry 4949 (class 0 OID 55726)
 -- Dependencies: 344
 -- Data for Name: material; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
@@ -32810,7 +25732,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4956 (class 0 OID 55764)
+-- TOC entry 4955 (class 0 OID 55764)
 -- Dependencies: 350
 -- Data for Name: primal; Type: TABLE DATA; Schema: mbom; Owner: postgres
 --
@@ -32818,7 +25740,7 @@ INSERT INTO inventory.storable VALUES ('Квд-080х080-ст3ПС', 1, 'Квд-�
 
 
 --
--- TOC entry 4957 (class 0 OID 55772)
+-- TOC entry 4956 (class 0 OID 55772)
 -- Dependencies: 351
 -- Data for Name: information; Type: TABLE DATA; Schema: operation; Owner: postgres
 --
@@ -32828,7 +25750,7 @@ INSERT INTO operation.information VALUES (2, 'b1f2746c-b5dc-11eb-b4f1-f859718300
 
 
 --
--- TOC entry 4959 (class 0 OID 55786)
+-- TOC entry 4958 (class 0 OID 55786)
 -- Dependencies: 354
 -- Data for Name: information; Type: TABLE DATA; Schema: personnel; Owner: postgres
 --
@@ -32836,7 +25758,7 @@ INSERT INTO operation.information VALUES (2, 'b1f2746c-b5dc-11eb-b4f1-f859718300
 
 
 --
--- TOC entry 4962 (class 0 OID 55808)
+-- TOC entry 4961 (class 0 OID 55808)
 -- Dependencies: 358
 -- Data for Name: consumable; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32846,7 +25768,7 @@ INSERT INTO process.consumable VALUES (9, '23.01.050-001.030', 1, 1.0000, 'pcs',
 
 
 --
--- TOC entry 4963 (class 0 OID 55816)
+-- TOC entry 4962 (class 0 OID 55816)
 -- Dependencies: 359
 -- Data for Name: definition; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32857,7 +25779,7 @@ INSERT INTO process.definition VALUES (10, '3b503500-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4965 (class 0 OID 55825)
+-- TOC entry 4964 (class 0 OID 55825)
 -- Dependencies: 361
 -- Data for Name: dependency; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32865,7 +25787,7 @@ INSERT INTO process.definition VALUES (10, '3b503500-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4966 (class 0 OID 55828)
+-- TOC entry 4965 (class 0 OID 55828)
 -- Dependencies: 362
 -- Data for Name: equipment; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32873,7 +25795,7 @@ INSERT INTO process.definition VALUES (10, '3b503500-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4967 (class 0 OID 55834)
+-- TOC entry 4966 (class 0 OID 55834)
 -- Dependencies: 363
 -- Data for Name: facility; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32881,7 +25803,7 @@ INSERT INTO process.definition VALUES (10, '3b503500-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4968 (class 0 OID 55840)
+-- TOC entry 4967 (class 0 OID 55840)
 -- Dependencies: 364
 -- Data for Name: information; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32891,7 +25813,7 @@ INSERT INTO process.information VALUES (5, '3b502d62-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4961 (class 0 OID 55800)
+-- TOC entry 4960 (class 0 OID 55800)
 -- Dependencies: 357
 -- Data for Name: material; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32899,7 +25821,7 @@ INSERT INTO process.information VALUES (5, '3b502d62-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4971 (class 0 OID 55863)
+-- TOC entry 4970 (class 0 OID 55863)
 -- Dependencies: 368
 -- Data for Name: personnel; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32907,7 +25829,7 @@ INSERT INTO process.information VALUES (5, '3b502d62-b5dd-11eb-b4f1-f85971830086
 
 
 --
--- TOC entry 4972 (class 0 OID 55873)
+-- TOC entry 4971 (class 0 OID 55873)
 -- Dependencies: 369
 -- Data for Name: primal; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32916,7 +25838,7 @@ INSERT INTO process.primal VALUES (10, 'Квд-080х080-ст3ПС', 1, 3.2000, '
 
 
 --
--- TOC entry 4970 (class 0 OID 55853)
+-- TOC entry 4969 (class 0 OID 55853)
 -- Dependencies: 366
 -- Data for Name: segment; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32928,7 +25850,7 @@ INSERT INTO process.segment VALUES (11, 10, 'OPR-002', '5c6ba26b-8ccf-4959-8d9d-
 
 
 --
--- TOC entry 4974 (class 0 OID 55883)
+-- TOC entry 4973 (class 0 OID 55883)
 -- Dependencies: 371
 -- Data for Name: tooling; Type: TABLE DATA; Schema: process; Owner: postgres
 --
@@ -32936,7 +25858,7 @@ INSERT INTO process.segment VALUES (11, 10, 'OPR-002', '5c6ba26b-8ccf-4959-8d9d-
 
 
 --
--- TOC entry 4975 (class 0 OID 55889)
+-- TOC entry 4974 (class 0 OID 55889)
 -- Dependencies: 372
 -- Data for Name: blueprint; Type: TABLE DATA; Schema: product; Owner: postgres
 --
@@ -32944,7 +25866,7 @@ INSERT INTO process.segment VALUES (11, 10, 'OPR-002', '5c6ba26b-8ccf-4959-8d9d-
 
 
 --
--- TOC entry 4977 (class 0 OID 55902)
+-- TOC entry 4976 (class 0 OID 55902)
 -- Dependencies: 374
 -- Data for Name: definition; Type: TABLE DATA; Schema: product; Owner: postgres
 --
@@ -32955,7 +25877,7 @@ INSERT INTO product.definition VALUES (5, '96194c34-b43d-11eb-bc30-f85971830086'
 
 
 --
--- TOC entry 4979 (class 0 OID 55911)
+-- TOC entry 4978 (class 0 OID 55911)
 -- Dependencies: 376
 -- Data for Name: dependency; Type: TABLE DATA; Schema: product; Owner: postgres
 --
@@ -32965,7 +25887,7 @@ INSERT INTO product.dependency VALUES ('cf69640e-b43a-11eb-bc30-f85971830086', '
 
 
 --
--- TOC entry 4980 (class 0 OID 55914)
+-- TOC entry 4979 (class 0 OID 55914)
 -- Dependencies: 377
 -- Data for Name: information; Type: TABLE DATA; Schema: product; Owner: postgres
 --
@@ -32976,7 +25898,7 @@ INSERT INTO product.information VALUES (5, '9619455e-b43d-11eb-bc30-f85971830086
 
 
 --
--- TOC entry 4982 (class 0 OID 55931)
+-- TOC entry 4981 (class 0 OID 55931)
 -- Dependencies: 380
 -- Data for Name: segment; Type: TABLE DATA; Schema: product; Owner: postgres
 --
@@ -32988,7 +25910,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4984 (class 0 OID 55944)
+-- TOC entry 4983 (class 0 OID 55944)
 -- Dependencies: 382
 -- Data for Name: tree; Type: TABLE DATA; Schema: product; Owner: postgres
 --
@@ -32996,7 +25918,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4985 (class 0 OID 55947)
+-- TOC entry 4984 (class 0 OID 55947)
 -- Dependencies: 383
 -- Data for Name: body; Type: TABLE DATA; Schema: receipt; Owner: postgres
 --
@@ -33004,7 +25926,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4986 (class 0 OID 55953)
+-- TOC entry 4985 (class 0 OID 55953)
 -- Dependencies: 384
 -- Data for Name: head; Type: TABLE DATA; Schema: receipt; Owner: postgres
 --
@@ -33012,7 +25934,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4988 (class 0 OID 55966)
+-- TOC entry 4987 (class 0 OID 55966)
 -- Dependencies: 386
 -- Data for Name: numerator; Type: TABLE DATA; Schema: receipt; Owner: postgres
 --
@@ -33020,7 +25942,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4989 (class 0 OID 55973)
+-- TOC entry 4988 (class 0 OID 55973)
 -- Dependencies: 387
 -- Data for Name: body; Type: TABLE DATA; Schema: request; Owner: postgres
 --
@@ -33028,7 +25950,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4990 (class 0 OID 55979)
+-- TOC entry 4989 (class 0 OID 55979)
 -- Dependencies: 388
 -- Data for Name: head; Type: TABLE DATA; Schema: request; Owner: postgres
 --
@@ -33036,7 +25958,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4992 (class 0 OID 55992)
+-- TOC entry 4991 (class 0 OID 55992)
 -- Dependencies: 390
 -- Data for Name: numerator; Type: TABLE DATA; Schema: request; Owner: postgres
 --
@@ -33044,7 +25966,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4993 (class 0 OID 56026)
+-- TOC entry 4992 (class 0 OID 56026)
 -- Dependencies: 391
 -- Data for Name: body; Type: TABLE DATA; Schema: response; Owner: postgres
 --
@@ -33052,7 +25974,7 @@ INSERT INTO product.segment VALUES (4, '119c6c22-b43b-11eb-bc30-f85971830086', 4
 
 
 --
--- TOC entry 4994 (class 0 OID 56032)
+-- TOC entry 4993 (class 0 OID 56032)
 -- Dependencies: 392
 -- Data for Name: head; Type: TABLE DATA; Schema: response; Owner: postgres
 --
@@ -33061,7 +25983,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 4996 (class 0 OID 56044)
+-- TOC entry 4995 (class 0 OID 56044)
 -- Dependencies: 394
 -- Data for Name: numerator; Type: TABLE DATA; Schema: response; Owner: postgres
 --
@@ -33069,7 +25991,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 4997 (class 0 OID 56051)
+-- TOC entry 4996 (class 0 OID 56051)
 -- Dependencies: 395
 -- Data for Name: calendar; Type: TABLE DATA; Schema: schedule; Owner: postgres
 --
@@ -33077,7 +25999,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 4998 (class 0 OID 56054)
+-- TOC entry 4997 (class 0 OID 56054)
 -- Dependencies: 396
 -- Data for Name: head; Type: TABLE DATA; Schema: stockcard; Owner: postgres
 --
@@ -33085,7 +26007,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 4999 (class 0 OID 56061)
+-- TOC entry 4998 (class 0 OID 56061)
 -- Dependencies: 397
 -- Data for Name: body; Type: TABLE DATA; Schema: stocktake; Owner: postgres
 --
@@ -33093,7 +26015,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 5000 (class 0 OID 56067)
+-- TOC entry 4999 (class 0 OID 56067)
 -- Dependencies: 398
 -- Data for Name: head; Type: TABLE DATA; Schema: stocktake; Owner: postgres
 --
@@ -33101,7 +26023,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 5002 (class 0 OID 56079)
+-- TOC entry 5001 (class 0 OID 56079)
 -- Dependencies: 400
 -- Data for Name: numerator; Type: TABLE DATA; Schema: stocktake; Owner: postgres
 --
@@ -33109,7 +26031,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 5003 (class 0 OID 56101)
+-- TOC entry 5002 (class 0 OID 56101)
 -- Dependencies: 404
 -- Data for Name: information; Type: TABLE DATA; Schema: tooling; Owner: postgres
 --
@@ -33117,7 +26039,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 5005 (class 0 OID 56115)
+-- TOC entry 5004 (class 0 OID 56115)
 -- Dependencies: 407
 -- Data for Name: assignment; Type: TABLE DATA; Schema: uom; Owner: postgres
 --
@@ -33125,7 +26047,7 @@ INSERT INTO response.head VALUES (1, '8f8ca0b6-b503-11eb-a9ee-f85971830086', NUL
 
 
 --
--- TOC entry 5006 (class 0 OID 56118)
+-- TOC entry 5005 (class 0 OID 56118)
 -- Dependencies: 408
 -- Data for Name: information; Type: TABLE DATA; Schema: uom; Owner: postgres
 --
@@ -33143,7 +26065,7 @@ INSERT INTO uom.information VALUES ('ml', 'VOLUME', 'l', 0.001);
 
 
 --
--- TOC entry 5008 (class 0 OID 56126)
+-- TOC entry 5007 (class 0 OID 56126)
 -- Dependencies: 410
 -- Data for Name: body; Type: TABLE DATA; Schema: work; Owner: postgres
 --
@@ -33153,7 +26075,7 @@ INSERT INTO work.body VALUES (1, '5c6ba26b-8ccf-4959-8d9d-ca7bb02e4b47', 1000.00
 
 
 --
--- TOC entry 5009 (class 0 OID 56132)
+-- TOC entry 5008 (class 0 OID 56132)
 -- Dependencies: 411
 -- Data for Name: head; Type: TABLE DATA; Schema: work; Owner: postgres
 --
@@ -33162,7 +26084,7 @@ INSERT INTO work.head VALUES (1, '67a0de06-b70f-11eb-8a8a-f85971830086', 'W-01',
 
 
 --
--- TOC entry 5011 (class 0 OID 56144)
+-- TOC entry 5010 (class 0 OID 56144)
 -- Dependencies: 413
 -- Data for Name: numerator; Type: TABLE DATA; Schema: work; Owner: postgres
 --
@@ -33170,7 +26092,7 @@ INSERT INTO work.head VALUES (1, '67a0de06-b70f-11eb-8a8a-f85971830086', 'W-01',
 
 
 --
--- TOC entry 5135 (class 0 OID 0)
+-- TOC entry 5134 (class 0 OID 0)
 -- Dependencies: 293
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: claim; Owner: postgres
 --
@@ -33179,7 +26101,7 @@ SELECT pg_catalog.setval('claim.head_id_seq', 1, false);
 
 
 --
--- TOC entry 5136 (class 0 OID 0)
+-- TOC entry 5135 (class 0 OID 0)
 -- Dependencies: 298
 -- Name: exception_code_id_seq; Type: SEQUENCE SET; Schema: common; Owner: postgres
 --
@@ -33188,7 +26110,7 @@ SELECT pg_catalog.setval('common.exception_code_id_seq', 1, false);
 
 
 --
--- TOC entry 5137 (class 0 OID 0)
+-- TOC entry 5136 (class 0 OID 0)
 -- Dependencies: 302
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: cutoff; Owner: postgres
 --
@@ -33197,7 +26119,7 @@ SELECT pg_catalog.setval('cutoff.head_id_seq', 1, false);
 
 
 --
--- TOC entry 5138 (class 0 OID 0)
+-- TOC entry 5137 (class 0 OID 0)
 -- Dependencies: 309
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
@@ -33206,7 +26128,7 @@ SELECT pg_catalog.setval('ebom.definition_id_seq', 15, true);
 
 
 --
--- TOC entry 5139 (class 0 OID 0)
+-- TOC entry 5138 (class 0 OID 0)
 -- Dependencies: 311
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: ebom; Owner: postgres
 --
@@ -33215,7 +26137,7 @@ SELECT pg_catalog.setval('ebom.information_id_seq', 12, true);
 
 
 --
--- TOC entry 5140 (class 0 OID 0)
+-- TOC entry 5139 (class 0 OID 0)
 -- Dependencies: 315
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: equipment; Owner: postgres
 --
@@ -33224,7 +26146,7 @@ SELECT pg_catalog.setval('equipment.information_id_seq', 1, false);
 
 
 --
--- TOC entry 5141 (class 0 OID 0)
+-- TOC entry 5140 (class 0 OID 0)
 -- Dependencies: 320
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: facility; Owner: postgres
 --
@@ -33233,7 +26155,7 @@ SELECT pg_catalog.setval('facility.information_id_seq', 9, true);
 
 
 --
--- TOC entry 5142 (class 0 OID 0)
+-- TOC entry 5141 (class 0 OID 0)
 -- Dependencies: 330
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: inventory; Owner: postgres
 --
@@ -33242,7 +26164,7 @@ SELECT pg_catalog.setval('inventory.definition_id_seq', 32, true);
 
 
 --
--- TOC entry 5143 (class 0 OID 0)
+-- TOC entry 5142 (class 0 OID 0)
 -- Dependencies: 332
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: inventory; Owner: postgres
 --
@@ -33251,7 +26173,7 @@ SELECT pg_catalog.setval('inventory.information_id_seq', 32, true);
 
 
 --
--- TOC entry 5144 (class 0 OID 0)
+-- TOC entry 5143 (class 0 OID 0)
 -- Dependencies: 342
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: issue; Owner: postgres
 --
@@ -33260,7 +26182,7 @@ SELECT pg_catalog.setval('issue.head_id_seq', 1, false);
 
 
 --
--- TOC entry 5145 (class 0 OID 0)
+-- TOC entry 5144 (class 0 OID 0)
 -- Dependencies: 347
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: mbom; Owner: postgres
 --
@@ -33269,7 +26191,7 @@ SELECT pg_catalog.setval('mbom.definition_id_seq', 1, false);
 
 
 --
--- TOC entry 5146 (class 0 OID 0)
+-- TOC entry 5145 (class 0 OID 0)
 -- Dependencies: 349
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: mbom; Owner: postgres
 --
@@ -33278,7 +26200,7 @@ SELECT pg_catalog.setval('mbom.information_id_seq', 1, false);
 
 
 --
--- TOC entry 5147 (class 0 OID 0)
+-- TOC entry 5146 (class 0 OID 0)
 -- Dependencies: 352
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: operation; Owner: postgres
 --
@@ -33287,7 +26209,7 @@ SELECT pg_catalog.setval('operation.information_id_seq', 2, true);
 
 
 --
--- TOC entry 5148 (class 0 OID 0)
+-- TOC entry 5147 (class 0 OID 0)
 -- Dependencies: 355
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: personnel; Owner: postgres
 --
@@ -33296,7 +26218,7 @@ SELECT pg_catalog.setval('personnel.information_id_seq', 1, false);
 
 
 --
--- TOC entry 5149 (class 0 OID 0)
+-- TOC entry 5148 (class 0 OID 0)
 -- Dependencies: 360
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: process; Owner: postgres
 --
@@ -33305,7 +26227,7 @@ SELECT pg_catalog.setval('process.definition_id_seq', 10, true);
 
 
 --
--- TOC entry 5150 (class 0 OID 0)
+-- TOC entry 5149 (class 0 OID 0)
 -- Dependencies: 365
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: process; Owner: postgres
 --
@@ -33314,7 +26236,7 @@ SELECT pg_catalog.setval('process.information_id_seq', 5, true);
 
 
 --
--- TOC entry 5151 (class 0 OID 0)
+-- TOC entry 5150 (class 0 OID 0)
 -- Dependencies: 370
 -- Name: segment_id_seq; Type: SEQUENCE SET; Schema: process; Owner: postgres
 --
@@ -33323,7 +26245,7 @@ SELECT pg_catalog.setval('process.segment_id_seq', 11, true);
 
 
 --
--- TOC entry 5152 (class 0 OID 0)
+-- TOC entry 5151 (class 0 OID 0)
 -- Dependencies: 373
 -- Name: blueprint_id_seq; Type: SEQUENCE SET; Schema: product; Owner: postgres
 --
@@ -33332,7 +26254,7 @@ SELECT pg_catalog.setval('product.blueprint_id_seq', 12, true);
 
 
 --
--- TOC entry 5153 (class 0 OID 0)
+-- TOC entry 5152 (class 0 OID 0)
 -- Dependencies: 375
 -- Name: definition_id_seq; Type: SEQUENCE SET; Schema: product; Owner: postgres
 --
@@ -33341,7 +26263,7 @@ SELECT pg_catalog.setval('product.definition_id_seq', 5, true);
 
 
 --
--- TOC entry 5154 (class 0 OID 0)
+-- TOC entry 5153 (class 0 OID 0)
 -- Dependencies: 378
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: product; Owner: postgres
 --
@@ -33350,7 +26272,7 @@ SELECT pg_catalog.setval('product.information_id_seq', 5, true);
 
 
 --
--- TOC entry 5155 (class 0 OID 0)
+-- TOC entry 5154 (class 0 OID 0)
 -- Dependencies: 381
 -- Name: segment_id_seq; Type: SEQUENCE SET; Schema: product; Owner: postgres
 --
@@ -33359,7 +26281,7 @@ SELECT pg_catalog.setval('product.segment_id_seq', 6, true);
 
 
 --
--- TOC entry 5156 (class 0 OID 0)
+-- TOC entry 5155 (class 0 OID 0)
 -- Dependencies: 385
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: receipt; Owner: postgres
 --
@@ -33368,7 +26290,7 @@ SELECT pg_catalog.setval('receipt.head_id_seq', 1, false);
 
 
 --
--- TOC entry 5157 (class 0 OID 0)
+-- TOC entry 5156 (class 0 OID 0)
 -- Dependencies: 389
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: request; Owner: postgres
 --
@@ -33377,7 +26299,7 @@ SELECT pg_catalog.setval('request.head_id_seq', 1, false);
 
 
 --
--- TOC entry 5158 (class 0 OID 0)
+-- TOC entry 5157 (class 0 OID 0)
 -- Dependencies: 393
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: response; Owner: postgres
 --
@@ -33386,7 +26308,7 @@ SELECT pg_catalog.setval('response.head_id_seq', 1, true);
 
 
 --
--- TOC entry 5159 (class 0 OID 0)
+-- TOC entry 5158 (class 0 OID 0)
 -- Dependencies: 399
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: stocktake; Owner: postgres
 --
@@ -33395,7 +26317,7 @@ SELECT pg_catalog.setval('stocktake.head_id_seq', 1, false);
 
 
 --
--- TOC entry 5160 (class 0 OID 0)
+-- TOC entry 5159 (class 0 OID 0)
 -- Dependencies: 405
 -- Name: information_id_seq; Type: SEQUENCE SET; Schema: tooling; Owner: postgres
 --
@@ -33404,7 +26326,7 @@ SELECT pg_catalog.setval('tooling.information_id_seq', 1, false);
 
 
 --
--- TOC entry 5161 (class 0 OID 0)
+-- TOC entry 5160 (class 0 OID 0)
 -- Dependencies: 409
 -- Name: uom_role_uom_role_id_seq; Type: SEQUENCE SET; Schema: uom; Owner: postgres
 --
@@ -33413,7 +26335,7 @@ SELECT pg_catalog.setval('uom.uom_role_uom_role_id_seq', 1, false);
 
 
 --
--- TOC entry 5162 (class 0 OID 0)
+-- TOC entry 5161 (class 0 OID 0)
 -- Dependencies: 412
 -- Name: head_id_seq; Type: SEQUENCE SET; Schema: work; Owner: postgres
 --
@@ -33422,7 +26344,7 @@ SELECT pg_catalog.setval('work.head_id_seq', 1, true);
 
 
 --
--- TOC entry 4362 (class 2606 OID 56228)
+-- TOC entry 4361 (class 2606 OID 56228)
 -- Name: process process_pkey; Type: CONSTRAINT; Schema: balance; Owner: postgres
 --
 
@@ -33431,7 +26353,7 @@ ALTER TABLE ONLY balance.process
 
 
 --
--- TOC entry 4364 (class 2606 OID 56230)
+-- TOC entry 4363 (class 2606 OID 56230)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: balance; Owner: postgres
 --
 
@@ -33440,7 +26362,7 @@ ALTER TABLE ONLY balance.segment
 
 
 --
--- TOC entry 4366 (class 2606 OID 56232)
+-- TOC entry 4365 (class 2606 OID 56232)
 -- Name: stock stock_pkey; Type: CONSTRAINT; Schema: balance; Owner: postgres
 --
 
@@ -33449,7 +26371,7 @@ ALTER TABLE ONLY balance.stock
 
 
 --
--- TOC entry 4368 (class 2606 OID 56240)
+-- TOC entry 4367 (class 2606 OID 56240)
 -- Name: cutoff_to_claim cutoff_to_claim_claim_id_key; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33458,7 +26380,7 @@ ALTER TABLE ONLY binding.cutoff_to_claim
 
 
 --
--- TOC entry 4370 (class 2606 OID 56242)
+-- TOC entry 4369 (class 2606 OID 56242)
 -- Name: cutoff_to_claim cutoff_to_claim_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33467,7 +26389,7 @@ ALTER TABLE ONLY binding.cutoff_to_claim
 
 
 --
--- TOC entry 4372 (class 2606 OID 56252)
+-- TOC entry 4371 (class 2606 OID 56252)
 -- Name: cutoff_to_issue cutoff_to_issue_issue_id_key; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33476,7 +26398,7 @@ ALTER TABLE ONLY binding.cutoff_to_issue
 
 
 --
--- TOC entry 4374 (class 2606 OID 56254)
+-- TOC entry 4373 (class 2606 OID 56254)
 -- Name: cutoff_to_issue cutoff_to_issue_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33485,7 +26407,7 @@ ALTER TABLE ONLY binding.cutoff_to_issue
 
 
 --
--- TOC entry 4376 (class 2606 OID 56256)
+-- TOC entry 4375 (class 2606 OID 56256)
 -- Name: cutoff_to_receipt cutoff_to_receipt_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33494,7 +26416,7 @@ ALTER TABLE ONLY binding.cutoff_to_receipt
 
 
 --
--- TOC entry 4378 (class 2606 OID 56258)
+-- TOC entry 4377 (class 2606 OID 56258)
 -- Name: cutoff_to_receipt cutoff_to_receipt_receipt_id_key; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33503,7 +26425,7 @@ ALTER TABLE ONLY binding.cutoff_to_receipt
 
 
 --
--- TOC entry 4380 (class 2606 OID 56264)
+-- TOC entry 4379 (class 2606 OID 56264)
 -- Name: cutoff_to_stocktake cutoff_to_stocktake_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33512,7 +26434,7 @@ ALTER TABLE ONLY binding.cutoff_to_stocktake
 
 
 --
--- TOC entry 4382 (class 2606 OID 56266)
+-- TOC entry 4381 (class 2606 OID 56266)
 -- Name: cutoff_to_stocktake cutoff_to_stocktake_stocktake_id_key; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33521,7 +26443,7 @@ ALTER TABLE ONLY binding.cutoff_to_stocktake
 
 
 --
--- TOC entry 4384 (class 2606 OID 56274)
+-- TOC entry 4383 (class 2606 OID 56274)
 -- Name: ebom_to_mbom ebom_to_mbom_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33530,7 +26452,7 @@ ALTER TABLE ONLY binding.ebom_to_mbom
 
 
 --
--- TOC entry 4386 (class 2606 OID 56276)
+-- TOC entry 4385 (class 2606 OID 56276)
 -- Name: ebom_to_process ebom_to_process_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33539,7 +26461,7 @@ ALTER TABLE ONLY binding.ebom_to_process
 
 
 --
--- TOC entry 4388 (class 2606 OID 56278)
+-- TOC entry 4387 (class 2606 OID 56278)
 -- Name: ebom_to_product ebom_to_product_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33548,7 +26470,7 @@ ALTER TABLE ONLY binding.ebom_to_product
 
 
 --
--- TOC entry 4390 (class 2606 OID 56286)
+-- TOC entry 4389 (class 2606 OID 56286)
 -- Name: mbom_to_process mbom_to_process_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33557,7 +26479,7 @@ ALTER TABLE ONLY binding.mbom_to_process
 
 
 --
--- TOC entry 4392 (class 2606 OID 56288)
+-- TOC entry 4391 (class 2606 OID 56288)
 -- Name: mbom_to_product mbom_to_product_pkey; Type: CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -33566,7 +26488,7 @@ ALTER TABLE ONLY binding.mbom_to_product
 
 
 --
--- TOC entry 4394 (class 2606 OID 56290)
+-- TOC entry 4393 (class 2606 OID 56290)
 -- Name: benchmark benchmark_pkey; Type: CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -33575,7 +26497,7 @@ ALTER TABLE ONLY calendar.benchmark
 
 
 --
--- TOC entry 4396 (class 2606 OID 56292)
+-- TOC entry 4395 (class 2606 OID 56292)
 -- Name: checkpoint checkpoint_pkey; Type: CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -33584,7 +26506,7 @@ ALTER TABLE ONLY calendar.checkpoint
 
 
 --
--- TOC entry 4398 (class 2606 OID 56294)
+-- TOC entry 4397 (class 2606 OID 56294)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -33593,7 +26515,7 @@ ALTER TABLE ONLY calendar.definition
 
 
 --
--- TOC entry 4400 (class 2606 OID 56296)
+-- TOC entry 4399 (class 2606 OID 56296)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -33602,7 +26524,7 @@ ALTER TABLE ONLY calendar.information
 
 
 --
--- TOC entry 4402 (class 2606 OID 56298)
+-- TOC entry 4401 (class 2606 OID 56298)
 -- Name: workday workday_pkey; Type: CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -33611,7 +26533,7 @@ ALTER TABLE ONLY calendar.workday
 
 
 --
--- TOC entry 4404 (class 2606 OID 56300)
+-- TOC entry 4403 (class 2606 OID 56300)
 -- Name: workweek workweek_pkey; Type: CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -33620,7 +26542,7 @@ ALTER TABLE ONLY calendar.workweek
 
 
 --
--- TOC entry 4406 (class 2606 OID 56302)
+-- TOC entry 4405 (class 2606 OID 56302)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: claim; Owner: postgres
 --
 
@@ -33629,7 +26551,7 @@ ALTER TABLE ONLY claim.body
 
 
 --
--- TOC entry 4408 (class 2606 OID 56304)
+-- TOC entry 4407 (class 2606 OID 56304)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: claim; Owner: postgres
 --
 
@@ -33638,7 +26560,7 @@ ALTER TABLE ONLY claim.head
 
 
 --
--- TOC entry 4410 (class 2606 OID 56306)
+-- TOC entry 4409 (class 2606 OID 56306)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: claim; Owner: postgres
 --
 
@@ -33647,7 +26569,7 @@ ALTER TABLE ONLY claim.head
 
 
 --
--- TOC entry 4412 (class 2606 OID 56308)
+-- TOC entry 4411 (class 2606 OID 56308)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: claim; Owner: postgres
 --
 
@@ -33656,7 +26578,7 @@ ALTER TABLE ONLY claim.numerator
 
 
 --
--- TOC entry 4414 (class 2606 OID 56310)
+-- TOC entry 4413 (class 2606 OID 56310)
 -- Name: cutoff_policy cutoff_policy_pkey; Type: CONSTRAINT; Schema: common; Owner: postgres
 --
 
@@ -33665,7 +26587,7 @@ ALTER TABLE ONLY common.cutoff_policy
 
 
 --
--- TOC entry 4416 (class 2606 OID 56312)
+-- TOC entry 4415 (class 2606 OID 56312)
 -- Name: document_abbrevation document_abbrevation_pkey; Type: CONSTRAINT; Schema: common; Owner: postgres
 --
 
@@ -33674,7 +26596,7 @@ ALTER TABLE ONLY common.document_abbrevation
 
 
 --
--- TOC entry 4418 (class 2606 OID 56314)
+-- TOC entry 4417 (class 2606 OID 56314)
 -- Name: exception_code exception_code_condition_name_key; Type: CONSTRAINT; Schema: common; Owner: postgres
 --
 
@@ -33683,7 +26605,7 @@ ALTER TABLE ONLY common.exception_code
 
 
 --
--- TOC entry 4420 (class 2606 OID 56316)
+-- TOC entry 4419 (class 2606 OID 56316)
 -- Name: exception_code exception_code_errcode_key; Type: CONSTRAINT; Schema: common; Owner: postgres
 --
 
@@ -33692,7 +26614,7 @@ ALTER TABLE ONLY common.exception_code
 
 
 --
--- TOC entry 4422 (class 2606 OID 56318)
+-- TOC entry 4421 (class 2606 OID 56318)
 -- Name: exception_code exception_code_pkey; Type: CONSTRAINT; Schema: common; Owner: postgres
 --
 
@@ -33701,7 +26623,7 @@ ALTER TABLE ONLY common.exception_code
 
 
 --
--- TOC entry 4424 (class 2606 OID 56320)
+-- TOC entry 4423 (class 2606 OID 56320)
 -- Name: stocktake_policy stocktake_policy_pkey; Type: CONSTRAINT; Schema: common; Owner: postgres
 --
 
@@ -33710,7 +26632,7 @@ ALTER TABLE ONLY common.stocktake_policy
 
 
 --
--- TOC entry 4426 (class 2606 OID 56322)
+-- TOC entry 4425 (class 2606 OID 56322)
 -- Name: blocker blocker_pkey; Type: CONSTRAINT; Schema: cutoff; Owner: postgres
 --
 
@@ -33719,7 +26641,7 @@ ALTER TABLE ONLY cutoff.blocker
 
 
 --
--- TOC entry 4428 (class 2606 OID 56324)
+-- TOC entry 4427 (class 2606 OID 56324)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: cutoff; Owner: postgres
 --
 
@@ -33728,7 +26650,7 @@ ALTER TABLE ONLY cutoff.head
 
 
 --
--- TOC entry 4430 (class 2606 OID 56326)
+-- TOC entry 4429 (class 2606 OID 56326)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: cutoff; Owner: postgres
 --
 
@@ -33737,7 +26659,7 @@ ALTER TABLE ONLY cutoff.head
 
 
 --
--- TOC entry 4432 (class 2606 OID 56328)
+-- TOC entry 4431 (class 2606 OID 56328)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: cutoff; Owner: postgres
 --
 
@@ -33746,7 +26668,7 @@ ALTER TABLE ONLY cutoff.numerator
 
 
 --
--- TOC entry 4436 (class 2606 OID 56346)
+-- TOC entry 4435 (class 2606 OID 56346)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33755,7 +26677,7 @@ ALTER TABLE ONLY ebom.assembly
 
 
 --
--- TOC entry 4438 (class 2606 OID 56348)
+-- TOC entry 4437 (class 2606 OID 56348)
 -- Name: blueprint blueprint_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33764,7 +26686,7 @@ ALTER TABLE ONLY ebom.blueprint
 
 
 --
--- TOC entry 4440 (class 2606 OID 56350)
+-- TOC entry 4439 (class 2606 OID 56350)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33773,7 +26695,7 @@ ALTER TABLE ONLY ebom.buyable
 
 
 --
--- TOC entry 4434 (class 2606 OID 56352)
+-- TOC entry 4433 (class 2606 OID 56352)
 -- Name: component component_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33782,7 +26704,7 @@ ALTER TABLE ONLY ebom.component
 
 
 --
--- TOC entry 4442 (class 2606 OID 56354)
+-- TOC entry 4441 (class 2606 OID 56354)
 -- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33791,7 +26713,7 @@ ALTER TABLE ONLY ebom.definition
 
 
 --
--- TOC entry 4444 (class 2606 OID 56356)
+-- TOC entry 4443 (class 2606 OID 56356)
 -- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33800,7 +26722,7 @@ ALTER TABLE ONLY ebom.definition
 
 
 --
--- TOC entry 4446 (class 2606 OID 56358)
+-- TOC entry 4445 (class 2606 OID 56358)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33809,7 +26731,7 @@ ALTER TABLE ONLY ebom.definition
 
 
 --
--- TOC entry 4448 (class 2606 OID 56360)
+-- TOC entry 4447 (class 2606 OID 56360)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33818,7 +26740,7 @@ ALTER TABLE ONLY ebom.information
 
 
 --
--- TOC entry 4450 (class 2606 OID 56362)
+-- TOC entry 4449 (class 2606 OID 56362)
 -- Name: information information_part_code_key; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33827,7 +26749,7 @@ ALTER TABLE ONLY ebom.information
 
 
 --
--- TOC entry 4452 (class 2606 OID 56364)
+-- TOC entry 4451 (class 2606 OID 56364)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33836,7 +26758,7 @@ ALTER TABLE ONLY ebom.information
 
 
 --
--- TOC entry 4454 (class 2606 OID 56366)
+-- TOC entry 4453 (class 2606 OID 56366)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -33845,7 +26767,7 @@ ALTER TABLE ONLY ebom.part
 
 
 --
--- TOC entry 4456 (class 2606 OID 56368)
+-- TOC entry 4455 (class 2606 OID 56368)
 -- Name: information information_equipment_code_version_num_key; Type: CONSTRAINT; Schema: equipment; Owner: postgres
 --
 
@@ -33854,7 +26776,7 @@ ALTER TABLE ONLY equipment.information
 
 
 --
--- TOC entry 4458 (class 2606 OID 56370)
+-- TOC entry 4457 (class 2606 OID 56370)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: equipment; Owner: postgres
 --
 
@@ -33863,7 +26785,7 @@ ALTER TABLE ONLY equipment.information
 
 
 --
--- TOC entry 4460 (class 2606 OID 56372)
+-- TOC entry 4459 (class 2606 OID 56372)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: equipment; Owner: postgres
 --
 
@@ -33872,7 +26794,7 @@ ALTER TABLE ONLY equipment.information
 
 
 --
--- TOC entry 4464 (class 2606 OID 56374)
+-- TOC entry 4463 (class 2606 OID 56374)
 -- Name: area area_facility_code_key; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33881,7 +26803,7 @@ ALTER TABLE ONLY facility.area
 
 
 --
--- TOC entry 4466 (class 2606 OID 56376)
+-- TOC entry 4465 (class 2606 OID 56376)
 -- Name: area area_pkey; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33890,7 +26812,7 @@ ALTER TABLE ONLY facility.area
 
 
 --
--- TOC entry 4468 (class 2606 OID 56378)
+-- TOC entry 4467 (class 2606 OID 56378)
 -- Name: enterprise enterprise_facility_code_key; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33899,7 +26821,7 @@ ALTER TABLE ONLY facility.enterprise
 
 
 --
--- TOC entry 4470 (class 2606 OID 56380)
+-- TOC entry 4469 (class 2606 OID 56380)
 -- Name: enterprise enterprise_pkey; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33908,7 +26830,7 @@ ALTER TABLE ONLY facility.enterprise
 
 
 --
--- TOC entry 4462 (class 2606 OID 56382)
+-- TOC entry 4461 (class 2606 OID 56382)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33917,7 +26839,7 @@ ALTER TABLE ONLY facility.information
 
 
 --
--- TOC entry 4472 (class 2606 OID 56384)
+-- TOC entry 4471 (class 2606 OID 56384)
 -- Name: line line_facility_code_key; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33926,7 +26848,7 @@ ALTER TABLE ONLY facility.line
 
 
 --
--- TOC entry 4474 (class 2606 OID 56386)
+-- TOC entry 4473 (class 2606 OID 56386)
 -- Name: line line_pkey; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33935,7 +26857,7 @@ ALTER TABLE ONLY facility.line
 
 
 --
--- TOC entry 4476 (class 2606 OID 56388)
+-- TOC entry 4475 (class 2606 OID 56388)
 -- Name: site site_facility_code_key; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33944,7 +26866,7 @@ ALTER TABLE ONLY facility.site
 
 
 --
--- TOC entry 4478 (class 2606 OID 56390)
+-- TOC entry 4477 (class 2606 OID 56390)
 -- Name: site site_pkey; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33953,7 +26875,7 @@ ALTER TABLE ONLY facility.site
 
 
 --
--- TOC entry 4480 (class 2606 OID 56392)
+-- TOC entry 4479 (class 2606 OID 56392)
 -- Name: zone zone_facility_code_key; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33962,7 +26884,7 @@ ALTER TABLE ONLY facility.zone
 
 
 --
--- TOC entry 4482 (class 2606 OID 56394)
+-- TOC entry 4481 (class 2606 OID 56394)
 -- Name: zone zone_pkey; Type: CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -33971,7 +26893,7 @@ ALTER TABLE ONLY facility.zone
 
 
 --
--- TOC entry 4486 (class 2606 OID 56396)
+-- TOC entry 4485 (class 2606 OID 56396)
 -- Name: assembly assembly_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -33980,7 +26902,7 @@ ALTER TABLE ONLY inventory.assembly
 
 
 --
--- TOC entry 4488 (class 2606 OID 56398)
+-- TOC entry 4487 (class 2606 OID 56398)
 -- Name: buyable buyable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -33989,7 +26911,7 @@ ALTER TABLE ONLY inventory.buyable
 
 
 --
--- TOC entry 4484 (class 2606 OID 56400)
+-- TOC entry 4483 (class 2606 OID 56400)
 -- Name: conglomeration conglomeration_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -33998,7 +26920,7 @@ ALTER TABLE ONLY inventory.conglomeration
 
 
 --
--- TOC entry 4490 (class 2606 OID 56402)
+-- TOC entry 4489 (class 2606 OID 56402)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34007,7 +26929,7 @@ ALTER TABLE ONLY inventory.consumable
 
 
 --
--- TOC entry 4492 (class 2606 OID 56404)
+-- TOC entry 4491 (class 2606 OID 56404)
 -- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34016,7 +26938,7 @@ ALTER TABLE ONLY inventory.definition
 
 
 --
--- TOC entry 4494 (class 2606 OID 56406)
+-- TOC entry 4493 (class 2606 OID 56406)
 -- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34025,7 +26947,7 @@ ALTER TABLE ONLY inventory.definition
 
 
 --
--- TOC entry 4496 (class 2606 OID 56408)
+-- TOC entry 4495 (class 2606 OID 56408)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34034,7 +26956,7 @@ ALTER TABLE ONLY inventory.definition
 
 
 --
--- TOC entry 4498 (class 2606 OID 56410)
+-- TOC entry 4497 (class 2606 OID 56410)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34043,7 +26965,7 @@ ALTER TABLE ONLY inventory.information
 
 
 --
--- TOC entry 4500 (class 2606 OID 56412)
+-- TOC entry 4499 (class 2606 OID 56412)
 -- Name: information information_part_code; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34052,7 +26974,7 @@ ALTER TABLE ONLY inventory.information
 
 
 --
--- TOC entry 4502 (class 2606 OID 56414)
+-- TOC entry 4501 (class 2606 OID 56414)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34061,7 +26983,7 @@ ALTER TABLE ONLY inventory.information
 
 
 --
--- TOC entry 4516 (class 2606 OID 56416)
+-- TOC entry 4515 (class 2606 OID 56416)
 -- Name: variety kind_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34070,7 +26992,7 @@ ALTER TABLE ONLY inventory.variety
 
 
 --
--- TOC entry 4504 (class 2606 OID 56418)
+-- TOC entry 4503 (class 2606 OID 56418)
 -- Name: measurement measurement_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34079,7 +27001,7 @@ ALTER TABLE ONLY inventory.measurement
 
 
 --
--- TOC entry 4506 (class 2606 OID 56420)
+-- TOC entry 4505 (class 2606 OID 56420)
 -- Name: part part_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34088,7 +27010,7 @@ ALTER TABLE ONLY inventory.part
 
 
 --
--- TOC entry 4508 (class 2606 OID 56422)
+-- TOC entry 4507 (class 2606 OID 56422)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34097,7 +27019,7 @@ ALTER TABLE ONLY inventory.primal
 
 
 --
--- TOC entry 4510 (class 2606 OID 56424)
+-- TOC entry 4509 (class 2606 OID 56424)
 -- Name: producible producible_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34106,7 +27028,7 @@ ALTER TABLE ONLY inventory.producible
 
 
 --
--- TOC entry 4512 (class 2606 OID 56426)
+-- TOC entry 4511 (class 2606 OID 56426)
 -- Name: salable salable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34115,7 +27037,7 @@ ALTER TABLE ONLY inventory.salable
 
 
 --
--- TOC entry 4514 (class 2606 OID 56428)
+-- TOC entry 4513 (class 2606 OID 56428)
 -- Name: storable storable_pkey; Type: CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -34124,7 +27046,7 @@ ALTER TABLE ONLY inventory.storable
 
 
 --
--- TOC entry 4518 (class 2606 OID 56430)
+-- TOC entry 4517 (class 2606 OID 56430)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: issue; Owner: postgres
 --
 
@@ -34133,7 +27055,7 @@ ALTER TABLE ONLY issue.body
 
 
 --
--- TOC entry 4520 (class 2606 OID 56432)
+-- TOC entry 4519 (class 2606 OID 56432)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: issue; Owner: postgres
 --
 
@@ -34142,7 +27064,7 @@ ALTER TABLE ONLY issue.head
 
 
 --
--- TOC entry 4522 (class 2606 OID 56434)
+-- TOC entry 4521 (class 2606 OID 56434)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: issue; Owner: postgres
 --
 
@@ -34151,7 +27073,7 @@ ALTER TABLE ONLY issue.head
 
 
 --
--- TOC entry 4524 (class 2606 OID 56436)
+-- TOC entry 4523 (class 2606 OID 56436)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: issue; Owner: postgres
 --
 
@@ -34160,7 +27082,7 @@ ALTER TABLE ONLY issue.numerator
 
 
 --
--- TOC entry 4528 (class 2606 OID 56438)
+-- TOC entry 4527 (class 2606 OID 56438)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34169,7 +27091,7 @@ ALTER TABLE ONLY mbom.consumable
 
 
 --
--- TOC entry 4530 (class 2606 OID 56440)
+-- TOC entry 4529 (class 2606 OID 56440)
 -- Name: definition definition_gid_key; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34178,7 +27100,7 @@ ALTER TABLE ONLY mbom.definition
 
 
 --
--- TOC entry 4532 (class 2606 OID 56442)
+-- TOC entry 4531 (class 2606 OID 56442)
 -- Name: definition definition_information_id_version_num_key; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34187,7 +27109,7 @@ ALTER TABLE ONLY mbom.definition
 
 
 --
--- TOC entry 4534 (class 2606 OID 56444)
+-- TOC entry 4533 (class 2606 OID 56444)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34196,7 +27118,7 @@ ALTER TABLE ONLY mbom.definition
 
 
 --
--- TOC entry 4536 (class 2606 OID 56446)
+-- TOC entry 4535 (class 2606 OID 56446)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34205,7 +27127,7 @@ ALTER TABLE ONLY mbom.information
 
 
 --
--- TOC entry 4526 (class 2606 OID 56448)
+-- TOC entry 4525 (class 2606 OID 56448)
 -- Name: material material_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34214,7 +27136,7 @@ ALTER TABLE ONLY mbom.material
 
 
 --
--- TOC entry 4538 (class 2606 OID 56450)
+-- TOC entry 4537 (class 2606 OID 56450)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -34223,7 +27145,7 @@ ALTER TABLE ONLY mbom.primal
 
 
 --
--- TOC entry 4540 (class 2606 OID 56452)
+-- TOC entry 4539 (class 2606 OID 56452)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -34232,7 +27154,7 @@ ALTER TABLE ONLY operation.information
 
 
 --
--- TOC entry 4542 (class 2606 OID 56454)
+-- TOC entry 4541 (class 2606 OID 56454)
 -- Name: information information_operation_code_version_num_key; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -34241,7 +27163,7 @@ ALTER TABLE ONLY operation.information
 
 
 --
--- TOC entry 4544 (class 2606 OID 56456)
+-- TOC entry 4543 (class 2606 OID 56456)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: operation; Owner: postgres
 --
 
@@ -34250,7 +27172,7 @@ ALTER TABLE ONLY operation.information
 
 
 --
--- TOC entry 4546 (class 2606 OID 56458)
+-- TOC entry 4545 (class 2606 OID 56458)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: personnel; Owner: postgres
 --
 
@@ -34259,7 +27181,7 @@ ALTER TABLE ONLY personnel.information
 
 
 --
--- TOC entry 4548 (class 2606 OID 56460)
+-- TOC entry 4547 (class 2606 OID 56460)
 -- Name: information information_personnel_code_version_num_key; Type: CONSTRAINT; Schema: personnel; Owner: postgres
 --
 
@@ -34268,7 +27190,7 @@ ALTER TABLE ONLY personnel.information
 
 
 --
--- TOC entry 4550 (class 2606 OID 56462)
+-- TOC entry 4549 (class 2606 OID 56462)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: personnel; Owner: postgres
 --
 
@@ -34277,7 +27199,7 @@ ALTER TABLE ONLY personnel.information
 
 
 --
--- TOC entry 4554 (class 2606 OID 56464)
+-- TOC entry 4553 (class 2606 OID 56464)
 -- Name: consumable consumable_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34286,7 +27208,7 @@ ALTER TABLE ONLY process.consumable
 
 
 --
--- TOC entry 4556 (class 2606 OID 56466)
+-- TOC entry 4555 (class 2606 OID 56466)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34295,7 +27217,7 @@ ALTER TABLE ONLY process.definition
 
 
 --
--- TOC entry 4558 (class 2606 OID 56468)
+-- TOC entry 4557 (class 2606 OID 56468)
 -- Name: dependency dependency_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34304,7 +27226,7 @@ ALTER TABLE ONLY process.dependency
 
 
 --
--- TOC entry 4560 (class 2606 OID 56470)
+-- TOC entry 4559 (class 2606 OID 56470)
 -- Name: equipment equipment_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34313,7 +27235,7 @@ ALTER TABLE ONLY process.equipment
 
 
 --
--- TOC entry 4562 (class 2606 OID 56472)
+-- TOC entry 4561 (class 2606 OID 56472)
 -- Name: facility facility_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34322,7 +27244,7 @@ ALTER TABLE ONLY process.facility
 
 
 --
--- TOC entry 4564 (class 2606 OID 56474)
+-- TOC entry 4563 (class 2606 OID 56474)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34331,7 +27253,7 @@ ALTER TABLE ONLY process.information
 
 
 --
--- TOC entry 4552 (class 2606 OID 56476)
+-- TOC entry 4551 (class 2606 OID 56476)
 -- Name: material material_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34340,7 +27262,7 @@ ALTER TABLE ONLY process.material
 
 
 --
--- TOC entry 4570 (class 2606 OID 56478)
+-- TOC entry 4569 (class 2606 OID 56478)
 -- Name: personnel personnel_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34349,7 +27271,7 @@ ALTER TABLE ONLY process.personnel
 
 
 --
--- TOC entry 4572 (class 2606 OID 56480)
+-- TOC entry 4571 (class 2606 OID 56480)
 -- Name: primal primal_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34358,7 +27280,7 @@ ALTER TABLE ONLY process.primal
 
 
 --
--- TOC entry 4566 (class 2606 OID 56482)
+-- TOC entry 4565 (class 2606 OID 56482)
 -- Name: segment segment_gid_key; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34367,7 +27289,7 @@ ALTER TABLE ONLY process.segment
 
 
 --
--- TOC entry 4568 (class 2606 OID 56484)
+-- TOC entry 4567 (class 2606 OID 56484)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34376,7 +27298,7 @@ ALTER TABLE ONLY process.segment
 
 
 --
--- TOC entry 4574 (class 2606 OID 56486)
+-- TOC entry 4573 (class 2606 OID 56486)
 -- Name: tooling tooling_pkey; Type: CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -34385,7 +27307,7 @@ ALTER TABLE ONLY process.tooling
 
 
 --
--- TOC entry 4576 (class 2606 OID 56488)
+-- TOC entry 4575 (class 2606 OID 56488)
 -- Name: blueprint blueprint_gid_key; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34394,7 +27316,7 @@ ALTER TABLE ONLY product.blueprint
 
 
 --
--- TOC entry 4578 (class 2606 OID 56490)
+-- TOC entry 4577 (class 2606 OID 56490)
 -- Name: blueprint blueprint_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34403,7 +27325,7 @@ ALTER TABLE ONLY product.blueprint
 
 
 --
--- TOC entry 4580 (class 2606 OID 56492)
+-- TOC entry 4579 (class 2606 OID 56492)
 -- Name: definition definition_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34412,7 +27334,7 @@ ALTER TABLE ONLY product.definition
 
 
 --
--- TOC entry 4582 (class 2606 OID 56494)
+-- TOC entry 4581 (class 2606 OID 56494)
 -- Name: dependency dependency_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34421,7 +27343,7 @@ ALTER TABLE ONLY product.dependency
 
 
 --
--- TOC entry 4584 (class 2606 OID 56496)
+-- TOC entry 4583 (class 2606 OID 56496)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34430,7 +27352,7 @@ ALTER TABLE ONLY product.information
 
 
 --
--- TOC entry 4586 (class 2606 OID 56498)
+-- TOC entry 4585 (class 2606 OID 56498)
 -- Name: segment segment_gid_key; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34439,7 +27361,7 @@ ALTER TABLE ONLY product.segment
 
 
 --
--- TOC entry 4588 (class 2606 OID 56500)
+-- TOC entry 4587 (class 2606 OID 56500)
 -- Name: segment segment_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34448,7 +27370,7 @@ ALTER TABLE ONLY product.segment
 
 
 --
--- TOC entry 4590 (class 2606 OID 56502)
+-- TOC entry 4589 (class 2606 OID 56502)
 -- Name: tree tree_pkey; Type: CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -34457,7 +27379,7 @@ ALTER TABLE ONLY product.tree
 
 
 --
--- TOC entry 4592 (class 2606 OID 56504)
+-- TOC entry 4591 (class 2606 OID 56504)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: receipt; Owner: postgres
 --
 
@@ -34466,7 +27388,7 @@ ALTER TABLE ONLY receipt.body
 
 
 --
--- TOC entry 4594 (class 2606 OID 56506)
+-- TOC entry 4593 (class 2606 OID 56506)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: receipt; Owner: postgres
 --
 
@@ -34475,7 +27397,7 @@ ALTER TABLE ONLY receipt.head
 
 
 --
--- TOC entry 4596 (class 2606 OID 56508)
+-- TOC entry 4595 (class 2606 OID 56508)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: receipt; Owner: postgres
 --
 
@@ -34484,7 +27406,7 @@ ALTER TABLE ONLY receipt.head
 
 
 --
--- TOC entry 4598 (class 2606 OID 56510)
+-- TOC entry 4597 (class 2606 OID 56510)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: receipt; Owner: postgres
 --
 
@@ -34493,7 +27415,7 @@ ALTER TABLE ONLY receipt.numerator
 
 
 --
--- TOC entry 4600 (class 2606 OID 56512)
+-- TOC entry 4599 (class 2606 OID 56512)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: request; Owner: postgres
 --
 
@@ -34502,7 +27424,7 @@ ALTER TABLE ONLY request.body
 
 
 --
--- TOC entry 4602 (class 2606 OID 56514)
+-- TOC entry 4601 (class 2606 OID 56514)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: request; Owner: postgres
 --
 
@@ -34511,7 +27433,7 @@ ALTER TABLE ONLY request.head
 
 
 --
--- TOC entry 4604 (class 2606 OID 56516)
+-- TOC entry 4603 (class 2606 OID 56516)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: request; Owner: postgres
 --
 
@@ -34520,7 +27442,7 @@ ALTER TABLE ONLY request.head
 
 
 --
--- TOC entry 4606 (class 2606 OID 56518)
+-- TOC entry 4605 (class 2606 OID 56518)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: request; Owner: postgres
 --
 
@@ -34529,7 +27451,7 @@ ALTER TABLE ONLY request.numerator
 
 
 --
--- TOC entry 4608 (class 2606 OID 56528)
+-- TOC entry 4607 (class 2606 OID 56528)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: response; Owner: postgres
 --
 
@@ -34538,7 +27460,7 @@ ALTER TABLE ONLY response.body
 
 
 --
--- TOC entry 4610 (class 2606 OID 56530)
+-- TOC entry 4609 (class 2606 OID 56530)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: response; Owner: postgres
 --
 
@@ -34547,7 +27469,7 @@ ALTER TABLE ONLY response.head
 
 
 --
--- TOC entry 4612 (class 2606 OID 56532)
+-- TOC entry 4611 (class 2606 OID 56532)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: response; Owner: postgres
 --
 
@@ -34556,7 +27478,7 @@ ALTER TABLE ONLY response.head
 
 
 --
--- TOC entry 4614 (class 2606 OID 56534)
+-- TOC entry 4613 (class 2606 OID 56534)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: response; Owner: postgres
 --
 
@@ -34565,7 +27487,7 @@ ALTER TABLE ONLY response.numerator
 
 
 --
--- TOC entry 4616 (class 2606 OID 56536)
+-- TOC entry 4615 (class 2606 OID 56536)
 -- Name: calendar calendar_pkey; Type: CONSTRAINT; Schema: schedule; Owner: postgres
 --
 
@@ -34574,7 +27496,7 @@ ALTER TABLE ONLY schedule.calendar
 
 
 --
--- TOC entry 4619 (class 2606 OID 56538)
+-- TOC entry 4618 (class 2606 OID 56538)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: stockcard; Owner: postgres
 --
 
@@ -34583,7 +27505,7 @@ ALTER TABLE ONLY stockcard.head
 
 
 --
--- TOC entry 4621 (class 2606 OID 56540)
+-- TOC entry 4620 (class 2606 OID 56540)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: stocktake; Owner: postgres
 --
 
@@ -34592,7 +27514,7 @@ ALTER TABLE ONLY stocktake.body
 
 
 --
--- TOC entry 4623 (class 2606 OID 56542)
+-- TOC entry 4622 (class 2606 OID 56542)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: stocktake; Owner: postgres
 --
 
@@ -34601,7 +27523,7 @@ ALTER TABLE ONLY stocktake.head
 
 
 --
--- TOC entry 4625 (class 2606 OID 56544)
+-- TOC entry 4624 (class 2606 OID 56544)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: stocktake; Owner: postgres
 --
 
@@ -34610,7 +27532,7 @@ ALTER TABLE ONLY stocktake.head
 
 
 --
--- TOC entry 4627 (class 2606 OID 56546)
+-- TOC entry 4626 (class 2606 OID 56546)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: stocktake; Owner: postgres
 --
 
@@ -34619,7 +27541,7 @@ ALTER TABLE ONLY stocktake.numerator
 
 
 --
--- TOC entry 4629 (class 2606 OID 56548)
+-- TOC entry 4628 (class 2606 OID 56548)
 -- Name: information information_gid_key; Type: CONSTRAINT; Schema: tooling; Owner: postgres
 --
 
@@ -34628,7 +27550,7 @@ ALTER TABLE ONLY tooling.information
 
 
 --
--- TOC entry 4631 (class 2606 OID 56550)
+-- TOC entry 4630 (class 2606 OID 56550)
 -- Name: information information_pkey; Type: CONSTRAINT; Schema: tooling; Owner: postgres
 --
 
@@ -34637,7 +27559,7 @@ ALTER TABLE ONLY tooling.information
 
 
 --
--- TOC entry 4633 (class 2606 OID 56552)
+-- TOC entry 4632 (class 2606 OID 56552)
 -- Name: information information_tooling_code_version_num_key; Type: CONSTRAINT; Schema: tooling; Owner: postgres
 --
 
@@ -34646,7 +27568,7 @@ ALTER TABLE ONLY tooling.information
 
 
 --
--- TOC entry 4639 (class 2606 OID 56554)
+-- TOC entry 4638 (class 2606 OID 56554)
 -- Name: information uom_pkey; Type: CONSTRAINT; Schema: uom; Owner: postgres
 --
 
@@ -34655,7 +27577,7 @@ ALTER TABLE ONLY uom.information
 
 
 --
--- TOC entry 4635 (class 2606 OID 56556)
+-- TOC entry 4634 (class 2606 OID 56556)
 -- Name: assignment uom_role_pkey; Type: CONSTRAINT; Schema: uom; Owner: postgres
 --
 
@@ -34664,7 +27586,7 @@ ALTER TABLE ONLY uom.assignment
 
 
 --
--- TOC entry 4637 (class 2606 OID 56558)
+-- TOC entry 4636 (class 2606 OID 56558)
 -- Name: assignment uom_role_uom_role_code_key; Type: CONSTRAINT; Schema: uom; Owner: postgres
 --
 
@@ -34673,7 +27595,7 @@ ALTER TABLE ONLY uom.assignment
 
 
 --
--- TOC entry 4641 (class 2606 OID 56560)
+-- TOC entry 4640 (class 2606 OID 56560)
 -- Name: body body_pkey; Type: CONSTRAINT; Schema: work; Owner: postgres
 --
 
@@ -34682,7 +27604,7 @@ ALTER TABLE ONLY work.body
 
 
 --
--- TOC entry 4643 (class 2606 OID 56562)
+-- TOC entry 4642 (class 2606 OID 56562)
 -- Name: head head_gid_key; Type: CONSTRAINT; Schema: work; Owner: postgres
 --
 
@@ -34691,7 +27613,7 @@ ALTER TABLE ONLY work.head
 
 
 --
--- TOC entry 4645 (class 2606 OID 56564)
+-- TOC entry 4644 (class 2606 OID 56564)
 -- Name: head head_pkey; Type: CONSTRAINT; Schema: work; Owner: postgres
 --
 
@@ -34700,7 +27622,7 @@ ALTER TABLE ONLY work.head
 
 
 --
--- TOC entry 4647 (class 2606 OID 56566)
+-- TOC entry 4646 (class 2606 OID 56566)
 -- Name: numerator numerator_pkey; Type: CONSTRAINT; Schema: work; Owner: postgres
 --
 
@@ -34709,7 +27631,7 @@ ALTER TABLE ONLY work.numerator
 
 
 --
--- TOC entry 4617 (class 1259 OID 56567)
+-- TOC entry 4616 (class 1259 OID 56567)
 -- Name: head_document_kind_facility_code_part_code_idx; Type: INDEX; Schema: stockcard; Owner: postgres
 --
 
@@ -34717,7 +27639,7 @@ CREATE INDEX head_document_kind_facility_code_part_code_idx ON stockcard.head US
 
 
 --
--- TOC entry 4726 (class 2620 OID 56568)
+-- TOC entry 4725 (class 2620 OID 56568)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: claim; Owner: postgres
 --
 
@@ -34725,7 +27647,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4727 (class 2620 OID 56569)
+-- TOC entry 4726 (class 2620 OID 56569)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: claim; Owner: postgres
 --
 
@@ -34733,7 +27655,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4728 (class 2620 OID 56570)
+-- TOC entry 4727 (class 2620 OID 56570)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: claim; Owner: postgres
 --
 
@@ -34741,7 +27663,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON claim.head FOR EACH ROW EXECUT
 
 
 --
--- TOC entry 4729 (class 2620 OID 56571)
+-- TOC entry 4728 (class 2620 OID 56571)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: cutoff; Owner: postgres
 --
 
@@ -34749,7 +27671,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON cutoff.head FOR EACH ROW EXECU
 
 
 --
--- TOC entry 4730 (class 2620 OID 56578)
+-- TOC entry 4729 (class 2620 OID 56578)
 -- Name: definition disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: ebom; Owner: postgres
 --
 
@@ -34757,7 +27679,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4731 (class 2620 OID 56579)
+-- TOC entry 4730 (class 2620 OID 56579)
 -- Name: definition set_prev_doc_fsmt; Type: TRIGGER; Schema: ebom; Owner: postgres
 --
 
@@ -34765,7 +27687,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON ebom.definition FOR EACH ROW E
 
 
 --
--- TOC entry 4732 (class 2620 OID 56580)
+-- TOC entry 4731 (class 2620 OID 56580)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: issue; Owner: postgres
 --
 
@@ -34773,7 +27695,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4733 (class 2620 OID 56581)
+-- TOC entry 4732 (class 2620 OID 56581)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: issue; Owner: postgres
 --
 
@@ -34781,7 +27703,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4734 (class 2620 OID 56582)
+-- TOC entry 4733 (class 2620 OID 56582)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: issue; Owner: postgres
 --
 
@@ -34789,7 +27711,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON issue.head FOR EACH ROW EXECUT
 
 
 --
--- TOC entry 4735 (class 2620 OID 56583)
+-- TOC entry 4734 (class 2620 OID 56583)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: receipt; Owner: postgres
 --
 
@@ -34797,7 +27719,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4736 (class 2620 OID 56584)
+-- TOC entry 4735 (class 2620 OID 56584)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: receipt; Owner: postgres
 --
 
@@ -34805,7 +27727,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4737 (class 2620 OID 56585)
+-- TOC entry 4736 (class 2620 OID 56585)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: receipt; Owner: postgres
 --
 
@@ -34813,7 +27735,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON receipt.head FOR EACH ROW EXEC
 
 
 --
--- TOC entry 4738 (class 2620 OID 56586)
+-- TOC entry 4737 (class 2620 OID 56586)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: request; Owner: postgres
 --
 
@@ -34821,7 +27743,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4739 (class 2620 OID 56587)
+-- TOC entry 4738 (class 2620 OID 56587)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: request; Owner: postgres
 --
 
@@ -34829,7 +27751,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4740 (class 2620 OID 56588)
+-- TOC entry 4739 (class 2620 OID 56588)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: request; Owner: postgres
 --
 
@@ -34837,7 +27759,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON request.head FOR EACH ROW EXEC
 
 
 --
--- TOC entry 4741 (class 2620 OID 56592)
+-- TOC entry 4740 (class 2620 OID 56592)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: response; Owner: postgres
 --
 
@@ -34845,7 +27767,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4742 (class 2620 OID 56593)
+-- TOC entry 4741 (class 2620 OID 56593)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: response; Owner: postgres
 --
 
@@ -34853,7 +27775,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4743 (class 2620 OID 56594)
+-- TOC entry 4742 (class 2620 OID 56594)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: response; Owner: postgres
 --
 
@@ -34861,7 +27783,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON response.head FOR EACH ROW EXE
 
 
 --
--- TOC entry 4744 (class 2620 OID 56595)
+-- TOC entry 4743 (class 2620 OID 56595)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: stocktake; Owner: postgres
 --
 
@@ -34869,7 +27791,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4745 (class 2620 OID 56596)
+-- TOC entry 4744 (class 2620 OID 56596)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: stocktake; Owner: postgres
 --
 
@@ -34877,7 +27799,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4746 (class 2620 OID 56597)
+-- TOC entry 4745 (class 2620 OID 56597)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: stocktake; Owner: postgres
 --
 
@@ -34885,7 +27807,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON stocktake.head FOR EACH ROW EX
 
 
 --
--- TOC entry 4747 (class 2620 OID 56598)
+-- TOC entry 4746 (class 2620 OID 56598)
 -- Name: body disallow_editing_of_committed_document_body; Type: TRIGGER; Schema: work; Owner: postgres
 --
 
@@ -34893,7 +27815,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_body BEFORE INSERT OR DELE
 
 
 --
--- TOC entry 4748 (class 2620 OID 56599)
+-- TOC entry 4747 (class 2620 OID 56599)
 -- Name: head disallow_editing_of_committed_document_head; Type: TRIGGER; Schema: work; Owner: postgres
 --
 
@@ -34901,7 +27823,7 @@ CREATE TRIGGER disallow_editing_of_committed_document_head BEFORE DELETE OR UPDA
 
 
 --
--- TOC entry 4749 (class 2620 OID 56600)
+-- TOC entry 4748 (class 2620 OID 56600)
 -- Name: head set_prev_doc_fsmt; Type: TRIGGER; Schema: work; Owner: postgres
 --
 
@@ -34909,7 +27831,7 @@ CREATE TRIGGER set_prev_doc_fsmt BEFORE UPDATE ON work.head FOR EACH ROW EXECUTE
 
 
 --
--- TOC entry 4648 (class 2606 OID 56611)
+-- TOC entry 4647 (class 2606 OID 56611)
 -- Name: cutoff_to_claim cutoff_to_claim_claim_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34918,7 +27840,7 @@ ALTER TABLE ONLY binding.cutoff_to_claim
 
 
 --
--- TOC entry 4649 (class 2606 OID 56616)
+-- TOC entry 4648 (class 2606 OID 56616)
 -- Name: cutoff_to_claim cutoff_to_claim_cutoff_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34927,7 +27849,7 @@ ALTER TABLE ONLY binding.cutoff_to_claim
 
 
 --
--- TOC entry 4650 (class 2606 OID 56641)
+-- TOC entry 4649 (class 2606 OID 56641)
 -- Name: cutoff_to_issue cutoff_to_issue_cutoff_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34936,7 +27858,7 @@ ALTER TABLE ONLY binding.cutoff_to_issue
 
 
 --
--- TOC entry 4651 (class 2606 OID 56646)
+-- TOC entry 4650 (class 2606 OID 56646)
 -- Name: cutoff_to_issue cutoff_to_issue_issue_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34945,7 +27867,7 @@ ALTER TABLE ONLY binding.cutoff_to_issue
 
 
 --
--- TOC entry 4652 (class 2606 OID 56651)
+-- TOC entry 4651 (class 2606 OID 56651)
 -- Name: cutoff_to_receipt cutoff_to_receipt_cutoff_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34954,7 +27876,7 @@ ALTER TABLE ONLY binding.cutoff_to_receipt
 
 
 --
--- TOC entry 4653 (class 2606 OID 56656)
+-- TOC entry 4652 (class 2606 OID 56656)
 -- Name: cutoff_to_receipt cutoff_to_receipt_receipt_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34963,7 +27885,7 @@ ALTER TABLE ONLY binding.cutoff_to_receipt
 
 
 --
--- TOC entry 4654 (class 2606 OID 56671)
+-- TOC entry 4653 (class 2606 OID 56671)
 -- Name: cutoff_to_stocktake cutoff_to_stocktake_cutoff_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34972,7 +27894,7 @@ ALTER TABLE ONLY binding.cutoff_to_stocktake
 
 
 --
--- TOC entry 4655 (class 2606 OID 56676)
+-- TOC entry 4654 (class 2606 OID 56676)
 -- Name: cutoff_to_stocktake cutoff_to_stocktake_stocktake_id_fkey; Type: FK CONSTRAINT; Schema: binding; Owner: postgres
 --
 
@@ -34981,7 +27903,7 @@ ALTER TABLE ONLY binding.cutoff_to_stocktake
 
 
 --
--- TOC entry 4656 (class 2606 OID 56701)
+-- TOC entry 4655 (class 2606 OID 56701)
 -- Name: definition definition_calendar_date_fkey; Type: FK CONSTRAINT; Schema: calendar; Owner: postgres
 --
 
@@ -34990,7 +27912,7 @@ ALTER TABLE ONLY calendar.definition
 
 
 --
--- TOC entry 4657 (class 2606 OID 56706)
+-- TOC entry 4656 (class 2606 OID 56706)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: claim; Owner: postgres
 --
 
@@ -34999,7 +27921,7 @@ ALTER TABLE ONLY claim.body
 
 
 --
--- TOC entry 4658 (class 2606 OID 56711)
+-- TOC entry 4657 (class 2606 OID 56711)
 -- Name: blocker blocker_head_id_fkey; Type: FK CONSTRAINT; Schema: cutoff; Owner: postgres
 --
 
@@ -35008,7 +27930,7 @@ ALTER TABLE ONLY cutoff.blocker
 
 
 --
--- TOC entry 4659 (class 2606 OID 56726)
+-- TOC entry 4658 (class 2606 OID 56726)
 -- Name: assembly assembly_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35017,7 +27939,7 @@ ALTER TABLE ONLY ebom.assembly
 
 
 --
--- TOC entry 4660 (class 2606 OID 56731)
+-- TOC entry 4659 (class 2606 OID 56731)
 -- Name: assembly assembly_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35026,7 +27948,7 @@ ALTER TABLE ONLY ebom.assembly
 
 
 --
--- TOC entry 4661 (class 2606 OID 56736)
+-- TOC entry 4660 (class 2606 OID 56736)
 -- Name: assembly assembly_uom_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35035,7 +27957,7 @@ ALTER TABLE ONLY ebom.assembly
 
 
 --
--- TOC entry 4662 (class 2606 OID 56741)
+-- TOC entry 4661 (class 2606 OID 56741)
 -- Name: blueprint blueprint_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35044,7 +27966,7 @@ ALTER TABLE ONLY ebom.blueprint
 
 
 --
--- TOC entry 4663 (class 2606 OID 56746)
+-- TOC entry 4662 (class 2606 OID 56746)
 -- Name: blueprint blueprint_uom_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35053,7 +27975,7 @@ ALTER TABLE ONLY ebom.blueprint
 
 
 --
--- TOC entry 4664 (class 2606 OID 56751)
+-- TOC entry 4663 (class 2606 OID 56751)
 -- Name: buyable buyable_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35062,7 +27984,7 @@ ALTER TABLE ONLY ebom.buyable
 
 
 --
--- TOC entry 4665 (class 2606 OID 56756)
+-- TOC entry 4664 (class 2606 OID 56756)
 -- Name: buyable buyable_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35071,7 +27993,7 @@ ALTER TABLE ONLY ebom.buyable
 
 
 --
--- TOC entry 4666 (class 2606 OID 56761)
+-- TOC entry 4665 (class 2606 OID 56761)
 -- Name: buyable buyable_uom_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35080,7 +28002,7 @@ ALTER TABLE ONLY ebom.buyable
 
 
 --
--- TOC entry 4667 (class 2606 OID 56766)
+-- TOC entry 4666 (class 2606 OID 56766)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35089,7 +28011,7 @@ ALTER TABLE ONLY ebom.definition
 
 
 --
--- TOC entry 4668 (class 2606 OID 56771)
+-- TOC entry 4667 (class 2606 OID 56771)
 -- Name: definition definition_uom_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35098,7 +28020,7 @@ ALTER TABLE ONLY ebom.definition
 
 
 --
--- TOC entry 4669 (class 2606 OID 56776)
+-- TOC entry 4668 (class 2606 OID 56776)
 -- Name: part part_definition_id_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35107,7 +28029,7 @@ ALTER TABLE ONLY ebom.part
 
 
 --
--- TOC entry 4670 (class 2606 OID 56781)
+-- TOC entry 4669 (class 2606 OID 56781)
 -- Name: part part_part_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35116,7 +28038,7 @@ ALTER TABLE ONLY ebom.part
 
 
 --
--- TOC entry 4671 (class 2606 OID 56786)
+-- TOC entry 4670 (class 2606 OID 56786)
 -- Name: part part_uom_code_fkey; Type: FK CONSTRAINT; Schema: ebom; Owner: postgres
 --
 
@@ -35125,7 +28047,7 @@ ALTER TABLE ONLY ebom.part
 
 
 --
--- TOC entry 4672 (class 2606 OID 56791)
+-- TOC entry 4671 (class 2606 OID 56791)
 -- Name: area area_parent_facility_code_fkey; Type: FK CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -35134,7 +28056,7 @@ ALTER TABLE ONLY facility.area
 
 
 --
--- TOC entry 4673 (class 2606 OID 56796)
+-- TOC entry 4672 (class 2606 OID 56796)
 -- Name: line line_parent_facility_code_fkey; Type: FK CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -35143,7 +28065,7 @@ ALTER TABLE ONLY facility.line
 
 
 --
--- TOC entry 4674 (class 2606 OID 56801)
+-- TOC entry 4673 (class 2606 OID 56801)
 -- Name: site site_parent_facility_code_fkey; Type: FK CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -35152,7 +28074,7 @@ ALTER TABLE ONLY facility.site
 
 
 --
--- TOC entry 4675 (class 2606 OID 56806)
+-- TOC entry 4674 (class 2606 OID 56806)
 -- Name: zone zone_parent_facility_code_fkey; Type: FK CONSTRAINT; Schema: facility; Owner: postgres
 --
 
@@ -35161,7 +28083,7 @@ ALTER TABLE ONLY facility.zone
 
 
 --
--- TOC entry 4676 (class 2606 OID 56811)
+-- TOC entry 4675 (class 2606 OID 56811)
 -- Name: assembly assembly_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35170,7 +28092,7 @@ ALTER TABLE ONLY inventory.assembly
 
 
 --
--- TOC entry 4677 (class 2606 OID 56816)
+-- TOC entry 4676 (class 2606 OID 56816)
 -- Name: buyable buyable_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35179,7 +28101,7 @@ ALTER TABLE ONLY inventory.buyable
 
 
 --
--- TOC entry 4678 (class 2606 OID 56821)
+-- TOC entry 4677 (class 2606 OID 56821)
 -- Name: consumable consumable_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35188,7 +28110,7 @@ ALTER TABLE ONLY inventory.consumable
 
 
 --
--- TOC entry 4679 (class 2606 OID 56826)
+-- TOC entry 4678 (class 2606 OID 56826)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35197,7 +28119,7 @@ ALTER TABLE ONLY inventory.definition
 
 
 --
--- TOC entry 4680 (class 2606 OID 56831)
+-- TOC entry 4679 (class 2606 OID 56831)
 -- Name: measurement measurement_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35206,7 +28128,7 @@ ALTER TABLE ONLY inventory.measurement
 
 
 --
--- TOC entry 4681 (class 2606 OID 56836)
+-- TOC entry 4680 (class 2606 OID 56836)
 -- Name: part part_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35215,7 +28137,7 @@ ALTER TABLE ONLY inventory.part
 
 
 --
--- TOC entry 4682 (class 2606 OID 56841)
+-- TOC entry 4681 (class 2606 OID 56841)
 -- Name: primal primal_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35224,7 +28146,7 @@ ALTER TABLE ONLY inventory.primal
 
 
 --
--- TOC entry 4683 (class 2606 OID 56846)
+-- TOC entry 4682 (class 2606 OID 56846)
 -- Name: producible producible_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35233,7 +28155,7 @@ ALTER TABLE ONLY inventory.producible
 
 
 --
--- TOC entry 4684 (class 2606 OID 56851)
+-- TOC entry 4683 (class 2606 OID 56851)
 -- Name: salable salable_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35242,7 +28164,7 @@ ALTER TABLE ONLY inventory.salable
 
 
 --
--- TOC entry 4685 (class 2606 OID 56856)
+-- TOC entry 4684 (class 2606 OID 56856)
 -- Name: storable storable_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35251,7 +28173,7 @@ ALTER TABLE ONLY inventory.storable
 
 
 --
--- TOC entry 4686 (class 2606 OID 56861)
+-- TOC entry 4685 (class 2606 OID 56861)
 -- Name: variety variety_definition_id_fkey; Type: FK CONSTRAINT; Schema: inventory; Owner: postgres
 --
 
@@ -35260,7 +28182,7 @@ ALTER TABLE ONLY inventory.variety
 
 
 --
--- TOC entry 4687 (class 2606 OID 56866)
+-- TOC entry 4686 (class 2606 OID 56866)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: issue; Owner: postgres
 --
 
@@ -35269,7 +28191,7 @@ ALTER TABLE ONLY issue.body
 
 
 --
--- TOC entry 4688 (class 2606 OID 56871)
+-- TOC entry 4687 (class 2606 OID 56871)
 -- Name: consumable consumable_definition_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -35278,7 +28200,7 @@ ALTER TABLE ONLY mbom.consumable
 
 
 --
--- TOC entry 4689 (class 2606 OID 56876)
+-- TOC entry 4688 (class 2606 OID 56876)
 -- Name: consumable consumable_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -35287,7 +28209,7 @@ ALTER TABLE ONLY mbom.consumable
 
 
 --
--- TOC entry 4690 (class 2606 OID 56881)
+-- TOC entry 4689 (class 2606 OID 56881)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -35296,7 +28218,7 @@ ALTER TABLE ONLY mbom.definition
 
 
 --
--- TOC entry 4691 (class 2606 OID 56886)
+-- TOC entry 4690 (class 2606 OID 56886)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -35305,7 +28227,7 @@ ALTER TABLE ONLY mbom.information
 
 
 --
--- TOC entry 4692 (class 2606 OID 56891)
+-- TOC entry 4691 (class 2606 OID 56891)
 -- Name: primal primal_definition_id_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -35314,7 +28236,7 @@ ALTER TABLE ONLY mbom.primal
 
 
 --
--- TOC entry 4693 (class 2606 OID 56896)
+-- TOC entry 4692 (class 2606 OID 56896)
 -- Name: primal primal_part_code_fkey; Type: FK CONSTRAINT; Schema: mbom; Owner: postgres
 --
 
@@ -35323,7 +28245,7 @@ ALTER TABLE ONLY mbom.primal
 
 
 --
--- TOC entry 4694 (class 2606 OID 56901)
+-- TOC entry 4693 (class 2606 OID 56901)
 -- Name: consumable consumable_part_code_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35332,7 +28254,7 @@ ALTER TABLE ONLY process.consumable
 
 
 --
--- TOC entry 4695 (class 2606 OID 56906)
+-- TOC entry 4694 (class 2606 OID 56906)
 -- Name: consumable consumable_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35341,7 +28263,7 @@ ALTER TABLE ONLY process.consumable
 
 
 --
--- TOC entry 4696 (class 2606 OID 56911)
+-- TOC entry 4695 (class 2606 OID 56911)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35350,7 +28272,7 @@ ALTER TABLE ONLY process.definition
 
 
 --
--- TOC entry 4697 (class 2606 OID 56916)
+-- TOC entry 4696 (class 2606 OID 56916)
 -- Name: dependency dependency_ancestor_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35359,7 +28281,7 @@ ALTER TABLE ONLY process.dependency
 
 
 --
--- TOC entry 4698 (class 2606 OID 56921)
+-- TOC entry 4697 (class 2606 OID 56921)
 -- Name: dependency dependency_descendant_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35368,7 +28290,7 @@ ALTER TABLE ONLY process.dependency
 
 
 --
--- TOC entry 4699 (class 2606 OID 56926)
+-- TOC entry 4698 (class 2606 OID 56926)
 -- Name: equipment equipment_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35377,7 +28299,7 @@ ALTER TABLE ONLY process.equipment
 
 
 --
--- TOC entry 4700 (class 2606 OID 56931)
+-- TOC entry 4699 (class 2606 OID 56931)
 -- Name: facility facility_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35386,7 +28308,7 @@ ALTER TABLE ONLY process.facility
 
 
 --
--- TOC entry 4701 (class 2606 OID 56936)
+-- TOC entry 4700 (class 2606 OID 56936)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35395,7 +28317,7 @@ ALTER TABLE ONLY process.information
 
 
 --
--- TOC entry 4702 (class 2606 OID 56941)
+-- TOC entry 4701 (class 2606 OID 56941)
 -- Name: information information_uom_code_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35404,7 +28326,7 @@ ALTER TABLE ONLY process.information
 
 
 --
--- TOC entry 4704 (class 2606 OID 56946)
+-- TOC entry 4703 (class 2606 OID 56946)
 -- Name: personnel personnel_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35413,7 +28335,7 @@ ALTER TABLE ONLY process.personnel
 
 
 --
--- TOC entry 4705 (class 2606 OID 56951)
+-- TOC entry 4704 (class 2606 OID 56951)
 -- Name: primal primal_part_code_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35422,7 +28344,7 @@ ALTER TABLE ONLY process.primal
 
 
 --
--- TOC entry 4706 (class 2606 OID 56956)
+-- TOC entry 4705 (class 2606 OID 56956)
 -- Name: primal primal_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35431,7 +28353,7 @@ ALTER TABLE ONLY process.primal
 
 
 --
--- TOC entry 4703 (class 2606 OID 56961)
+-- TOC entry 4702 (class 2606 OID 56961)
 -- Name: segment segment_definition_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35440,7 +28362,7 @@ ALTER TABLE ONLY process.segment
 
 
 --
--- TOC entry 4707 (class 2606 OID 56966)
+-- TOC entry 4706 (class 2606 OID 56966)
 -- Name: tooling tooling_segment_id_fkey; Type: FK CONSTRAINT; Schema: process; Owner: postgres
 --
 
@@ -35449,7 +28371,7 @@ ALTER TABLE ONLY process.tooling
 
 
 --
--- TOC entry 4708 (class 2606 OID 56971)
+-- TOC entry 4707 (class 2606 OID 56971)
 -- Name: blueprint blueprint_definition_id_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35458,7 +28380,7 @@ ALTER TABLE ONLY product.blueprint
 
 
 --
--- TOC entry 4709 (class 2606 OID 56976)
+-- TOC entry 4708 (class 2606 OID 56976)
 -- Name: blueprint blueprint_uom_code_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35467,7 +28389,7 @@ ALTER TABLE ONLY product.blueprint
 
 
 --
--- TOC entry 4710 (class 2606 OID 56981)
+-- TOC entry 4709 (class 2606 OID 56981)
 -- Name: definition definition_information_id_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35476,7 +28398,7 @@ ALTER TABLE ONLY product.definition
 
 
 --
--- TOC entry 4711 (class 2606 OID 56986)
+-- TOC entry 4710 (class 2606 OID 56986)
 -- Name: dependency dependency_ancestor_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35485,7 +28407,7 @@ ALTER TABLE ONLY product.dependency
 
 
 --
--- TOC entry 4712 (class 2606 OID 56991)
+-- TOC entry 4711 (class 2606 OID 56991)
 -- Name: dependency dependency_descendant_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35494,7 +28416,7 @@ ALTER TABLE ONLY product.dependency
 
 
 --
--- TOC entry 4713 (class 2606 OID 56996)
+-- TOC entry 4712 (class 2606 OID 56996)
 -- Name: information information_part_code_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35503,7 +28425,7 @@ ALTER TABLE ONLY product.information
 
 
 --
--- TOC entry 4714 (class 2606 OID 57001)
+-- TOC entry 4713 (class 2606 OID 57001)
 -- Name: information information_uom_code_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35512,7 +28434,7 @@ ALTER TABLE ONLY product.information
 
 
 --
--- TOC entry 4715 (class 2606 OID 57006)
+-- TOC entry 4714 (class 2606 OID 57006)
 -- Name: segment segment_definition_id_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35521,7 +28443,7 @@ ALTER TABLE ONLY product.segment
 
 
 --
--- TOC entry 4716 (class 2606 OID 57011)
+-- TOC entry 4715 (class 2606 OID 57011)
 -- Name: segment segment_part_code_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35530,7 +28452,7 @@ ALTER TABLE ONLY product.segment
 
 
 --
--- TOC entry 4717 (class 2606 OID 57016)
+-- TOC entry 4716 (class 2606 OID 57016)
 -- Name: segment segment_uom_code_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35539,7 +28461,7 @@ ALTER TABLE ONLY product.segment
 
 
 --
--- TOC entry 4718 (class 2606 OID 57021)
+-- TOC entry 4717 (class 2606 OID 57021)
 -- Name: tree tree_ancestor_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35548,7 +28470,7 @@ ALTER TABLE ONLY product.tree
 
 
 --
--- TOC entry 4719 (class 2606 OID 57026)
+-- TOC entry 4718 (class 2606 OID 57026)
 -- Name: tree tree_descendant_fkey; Type: FK CONSTRAINT; Schema: product; Owner: postgres
 --
 
@@ -35557,7 +28479,7 @@ ALTER TABLE ONLY product.tree
 
 
 --
--- TOC entry 4720 (class 2606 OID 57031)
+-- TOC entry 4719 (class 2606 OID 57031)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: receipt; Owner: postgres
 --
 
@@ -35566,7 +28488,7 @@ ALTER TABLE ONLY receipt.body
 
 
 --
--- TOC entry 4721 (class 2606 OID 57036)
+-- TOC entry 4720 (class 2606 OID 57036)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: request; Owner: postgres
 --
 
@@ -35575,7 +28497,7 @@ ALTER TABLE ONLY request.body
 
 
 --
--- TOC entry 4722 (class 2606 OID 57046)
+-- TOC entry 4721 (class 2606 OID 57046)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: response; Owner: postgres
 --
 
@@ -35584,7 +28506,7 @@ ALTER TABLE ONLY response.body
 
 
 --
--- TOC entry 4723 (class 2606 OID 57051)
+-- TOC entry 4722 (class 2606 OID 57051)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: stocktake; Owner: postgres
 --
 
@@ -35593,7 +28515,7 @@ ALTER TABLE ONLY stocktake.body
 
 
 --
--- TOC entry 4724 (class 2606 OID 57056)
+-- TOC entry 4723 (class 2606 OID 57056)
 -- Name: information uom_base_uom_code_fkey; Type: FK CONSTRAINT; Schema: uom; Owner: postgres
 --
 
@@ -35602,7 +28524,7 @@ ALTER TABLE ONLY uom.information
 
 
 --
--- TOC entry 4725 (class 2606 OID 57061)
+-- TOC entry 4724 (class 2606 OID 57061)
 -- Name: body body_head_id_fkey; Type: FK CONSTRAINT; Schema: work; Owner: postgres
 --
 
@@ -35610,7 +28532,7 @@ ALTER TABLE ONLY work.body
     ADD CONSTRAINT body_head_id_fkey FOREIGN KEY (head_id) REFERENCES work.head(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
--- Completed on 2021-05-19 14:16:10 EEST
+-- Completed on 2021-05-19 14:20:36 EEST
 
 --
 -- PostgreSQL database dump complete
