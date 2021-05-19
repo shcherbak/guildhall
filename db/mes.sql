@@ -5,7 +5,7 @@
 -- Dumped from database version 11.12 (Debian 11.12-0+deb10u1)
 -- Dumped by pg_dump version 11.12 (Debian 11.12-0+deb10u1)
 
--- Started on 2021-05-19 14:10:25 EEST
+-- Started on 2021-05-19 14:16:09 EEST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -35610,7 +35610,7 @@ ALTER TABLE ONLY work.body
     ADD CONSTRAINT body_head_id_fkey FOREIGN KEY (head_id) REFERENCES work.head(id) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
--- Completed on 2021-05-19 14:10:25 EEST
+-- Completed on 2021-05-19 14:16:10 EEST
 
 --
 -- PostgreSQL database dump complete
